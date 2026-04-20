@@ -34,7 +34,7 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertEqual(bundle["bundle_metadata"]["bundle_id"], "bundle.speckify-planning-export")
         self.assertEqual(
             bundle["bundle_metadata"]["decomposition_profile"],
-            "rupify-split-dependencies-v2",
+            "rupify-split-dependencies-v3",
         )
         self.assertEqual(len(bundle["source_anchors"]), 29)
         self.assertEqual(len(bundle["spec_units"]), 39)
@@ -368,7 +368,18 @@ class BundleGenerationTests(unittest.TestCase):
         )
         self.assertEqual(
             redeem_reward["dependencies"],
-            ["iu.rupify.non-functional-requirement-6"],
+            [
+                "iu.rupify.redeem-reward-extension-1",
+                "iu.rupify.redeem-reward-extension-2",
+                "iu.rupify.redeem-reward-extension-3",
+                "iu.rupify.redeem-reward-step-1",
+                "iu.rupify.redeem-reward-step-2.validate-available-points",
+                "iu.rupify.redeem-reward-step-2.validate-eligibility",
+                "iu.rupify.redeem-reward-step-3.reserve-reward",
+                "iu.rupify.redeem-reward-step-3.update-member-balance",
+                "iu.rupify.redeem-reward-step-4",
+                "iu.rupify.non-functional-requirement-6",
+            ],
         )
         self.assertEqual(
             acceptance_constraint["dependencies"],
@@ -448,6 +459,68 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertEqual(
             block_publish["dependencies"],
             ["iu.rupify.guard-condition-2.require-validation-approval"],
+        )
+
+    def test_generated_bundle_splits_broad_loyalty_functional_requirements(self) -> None:
+        """Broad loyalty functional requirements should decompose into narrower obligations."""
+        export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        functional_requirement_1_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.functional-requirements.functional-requirement-1"
+            ]
+        )
+        functional_requirement_2_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.functional-requirements.functional-requirement-2"
+            ]
+        )
+
+        self.assertEqual(
+            functional_requirement_1_units,
+            [
+                "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+                "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+            ],
+        )
+        self.assertEqual(
+            functional_requirement_2_units,
+            [
+                "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+                "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+            ],
+        )
+
+    def test_generated_bundle_turns_loyalty_use_cases_into_orchestration_units(self) -> None:
+        """Use-case units should depend on their underlying step and extension units."""
+        export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        browse_rewards = next(
+            item for item in bundle["implementation_units"] if item["id"] == "iu.rupify.browse-rewards"
+        )
+        self.assertEqual(
+            browse_rewards["title"],
+            "Implement use-case flow: Browse Rewards",
+        )
+        self.assertEqual(
+            browse_rewards["summary"],
+            "Coordinate the Browse Rewards flow across its steps and extension handling.",
+        )
+        self.assertEqual(
+            browse_rewards["dependencies"],
+            [
+                "iu.rupify.browse-rewards-extension-1",
+                "iu.rupify.browse-rewards-step-1",
+                "iu.rupify.browse-rewards-step-2.display-points-balance",
+                "iu.rupify.browse-rewards-step-2.display-rewards",
+                "iu.rupify.browse-rewards-step-3",
+            ],
         )
 
 

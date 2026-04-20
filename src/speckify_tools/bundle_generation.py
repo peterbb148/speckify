@@ -146,6 +146,38 @@ def _split_functional_requirement_text(text: str) -> list[dict[str, str]]:
             },
         ]
 
+    if "maintain reward catalog entries and campaign rules" in lowered:
+        return [
+            {
+                "suffix": "maintain-reward-catalog-entries",
+                "title": "Maintain reward catalog entries",
+                "summary": "Allow operations managers to maintain reward catalog entries.",
+                "acceptance": "Operations managers can maintain reward catalog entries.",
+            },
+            {
+                "suffix": "maintain-campaign-rules",
+                "title": "Maintain campaign rules",
+                "summary": "Allow operations managers to maintain campaign rules.",
+                "acceptance": "Operations managers can maintain campaign rules.",
+            },
+        ]
+
+    if "integrate with payment confirmation and downstream reporting sources" in lowered:
+        return [
+            {
+                "suffix": "integrate-payment-confirmation",
+                "title": "Integrate payment confirmation",
+                "summary": "Integrate the platform with payment confirmation sources.",
+                "acceptance": "The platform integrates with payment confirmation sources.",
+            },
+            {
+                "suffix": "integrate-reporting-sources",
+                "title": "Integrate reporting sources",
+                "summary": "Integrate the platform with downstream reporting sources.",
+                "acceptance": "The platform integrates with downstream reporting sources.",
+            },
+        ]
+
     return []
 
 
@@ -377,6 +409,16 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
         slices = _split_guard_condition_text(element)
         if slices:
             return slices
+    if element.family == "use_cases":
+        use_case_name = _element_title(element)
+        return [
+            {
+                "suffix": None,
+                "title": use_case_name,
+                "summary": f"Coordinate the {use_case_name} flow across its steps and extension handling.",
+                "acceptance": f"The {use_case_name} flow is supported end to end.",
+            }
+        ]
 
     return [
         {
@@ -402,6 +444,8 @@ def _implementation_title(element: RupifyElement, title: str) -> str:
         return f"Implement scenario handling: {title}"
     if element.family == "guard_conditions":
         return f"Implement guard enforcement: {title}"
+    if element.family == "use_cases":
+        return f"Implement use-case flow: {title}"
     return f"Implement {title}"
 
 
@@ -416,6 +460,8 @@ def _implementation_summary(element: RupifyElement, title: str, summary: str, ac
     if element.family == "functional_requirements":
         return summary
     if element.family in {"scenarios", "guard_conditions"}:
+        return summary
+    if element.family == "use_cases":
         return summary
     return f"Implement the behavior described by {title.lower()}."
 
@@ -478,6 +524,12 @@ def _verification_contract(
         setup_requirements = ["A request reaches the boundary where the guard condition must be checked."]
         expected_outcomes = [f"The guard enforcement is applied correctly: {acceptance}"]
         failure_conditions = [f"The guard condition is not enforced as required: {acceptance}"]
+
+    elif element.family == "use_cases":
+        verification_intent = f"Confirm the use-case flow is supported end to end for {title.lower()}."
+        setup_requirements = ["The actor can start the use-case flow through its normal entry point."]
+        expected_outcomes = [f"The use-case flow completes as intended: {acceptance}"]
+        failure_conditions = [f"The use-case flow is incomplete or broken: {acceptance}"]
 
     return {
         "implementation_unit_id": implementation_unit_id,
@@ -583,6 +635,72 @@ def _derive_relationships(
                     "rule_type": "ordered_sequence",
                     "notes": [
                         "Recombine system-of-record maintenance and reporting export into the original broad requirement.",
+                    ],
+                }
+            )
+            continue
+
+        if {
+            "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+            "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+        }.issubset(member_id_set):
+            from_id = "iu.rupify.functional-requirement-1.maintain-campaign-rules"
+            to_id = "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
+            ordered_spec_ids = [
+                "su.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+                "su.rupify.functional-requirement-1.maintain-campaign-rules",
+            ]
+            implementation_index[from_id]["dependencies"].append(to_id)
+            dependency_edges.append(
+                {
+                    "id": "dep.functional-requirement-1.maintain-campaign-rules-soft-sequence",
+                    "from_implementation_unit_id": from_id,
+                    "to_implementation_unit_id": to_id,
+                    "dependency_type": "soft_sequence",
+                    "reason": "Campaign rule maintenance should build on maintained reward catalog entries.",
+                }
+            )
+            assembly_rules.append(
+                {
+                    "id": "assembly.functional-requirement-1",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": ordered_spec_ids,
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine reward catalog entry maintenance and campaign rule maintenance into the original broad requirement.",
+                    ],
+                }
+            )
+            continue
+
+        if {
+            "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+            "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+        }.issubset(member_id_set):
+            from_id = "iu.rupify.functional-requirement-2.integrate-reporting-sources"
+            to_id = "iu.rupify.functional-requirement-2.integrate-payment-confirmation"
+            ordered_spec_ids = [
+                "su.rupify.functional-requirement-2.integrate-payment-confirmation",
+                "su.rupify.functional-requirement-2.integrate-reporting-sources",
+            ]
+            implementation_index[from_id]["dependencies"].append(to_id)
+            dependency_edges.append(
+                {
+                    "id": "dep.functional-requirement-2.integrate-reporting-sources-soft-sequence",
+                    "from_implementation_unit_id": from_id,
+                    "to_implementation_unit_id": to_id,
+                    "dependency_type": "soft_sequence",
+                    "reason": "Reporting-source integration should follow the upstream payment-confirmation integration surface.",
+                }
+            )
+            assembly_rules.append(
+                {
+                    "id": "assembly.functional-requirement-2",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": ordered_spec_ids,
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine payment-confirmation and reporting-source integration into the original broad requirement.",
                     ],
                 }
             )
@@ -779,6 +897,16 @@ def _derive_relationships(
             )
         return ordered_groups
 
+    def use_case_ids() -> list[str]:
+        """Collect normative ready use-case ids with generated units."""
+        ids: list[str] = []
+        for element in export.elements:
+            if element.family != "use_cases" or not element.normative_ready:
+                continue
+            if implementation_ids_for_element(element.id):
+                ids.append(element.id)
+        return sorted(ids)
+
     for step_groups in ordered_use_case_step_groups():
         for previous_ids, current_ids in zip(step_groups, step_groups[1:]):
             for current_id in current_ids:
@@ -789,6 +917,24 @@ def _derive_relationships(
                         "requires",
                         "Later use-case steps depend on the earlier step in the same ordered flow.",
                     )
+
+    for use_case_id in use_case_ids():
+        use_case_unit_ids = implementation_ids_for_element(use_case_id)
+        related_unit_ids: list[str] = []
+        for element in export.elements:
+            if not element.normative_ready:
+                continue
+            if element.id.startswith(f"{use_case_id}-"):
+                related_unit_ids.extend(implementation_ids_for_element(element.id))
+
+        for use_case_unit_id in use_case_unit_ids:
+            for related_unit_id in sorted(set(related_unit_ids)):
+                add_dependency(
+                    use_case_unit_id,
+                    related_unit_id,
+                    "requires",
+                    "Use-case orchestration depends on the linked step and extension units.",
+                )
 
     for trace_link in export.trace_links:
         link_type = str(trace_link.raw.get("link_type", ""))
@@ -971,7 +1117,7 @@ def generate_planning_bundle(
             "generated_at": generated_at,
             "source_model_id": source_model_id or project_id,
             "source_model_version": source_model_version,
-            "decomposition_profile": "rupify-split-dependencies-v2",
+            "decomposition_profile": "rupify-split-dependencies-v3",
         },
         "source_summary": {
             "source_system": "rupify",
@@ -981,7 +1127,7 @@ def generate_planning_bundle(
             "notes": [
                 "Generated directly from imported Rupify planning export records.",
                 "Deterministic decomposition splits selected ready normative source elements into smaller planning units.",
-                "Dependency edges and assembly rules are derived for split workflow, scenario, guard, and transition structures.",
+                "Dependency edges and assembly rules are derived for split workflow, scenario, guard, transition, and use-case orchestration structures.",
             ],
         },
         "source_anchors": source_anchors,

@@ -1,15 +1,15 @@
 {
   "bundle_id": "bundle.speckify-planning-export",
-  "decomposition_profile": "rupify-split-dependencies-v2",
+  "decomposition_profile": "rupify-split-dependencies-v3",
   "counts": {
     "source_anchors": 62,
-    "spec_units": 76,
-    "implementation_units": 76,
-    "verification_units": 76,
-    "trace_bundles": 76,
-    "dependency_edges": 54,
-    "assembly_rules": 10,
-    "rendered_issues": 76
+    "spec_units": 78,
+    "implementation_units": 78,
+    "verification_units": 78,
+    "trace_bundles": 78,
+    "dependency_edges": 83,
+    "assembly_rules": 12,
+    "rendered_issues": 78
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",
@@ -46,18 +46,18 @@
     ],
     "transition_dependencies": [
       {
-        "id": "dep.rupify.guard-condition-2.require-validation-approval.requires-rupify.guard-condition-2.block-publish-without-approval",
-        "from_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
-        "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
-        "dependency_type": "requires",
-        "reason": "Guard enforcement depends on recognizing the guard prerequisite first."
+        "id": "dep.functional-requirement-1.maintain-campaign-rules-soft-sequence",
+        "from_implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+        "to_implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+        "dependency_type": "soft_sequence",
+        "reason": "Campaign rule maintenance should build on maintained reward catalog entries."
       },
       {
-        "id": "dep.rupify.scenario-invalid-catalog-change.reject-publication.requires-rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
-        "from_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
-        "to_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
-        "dependency_type": "requires",
-        "reason": "Scenario resolution depends on first identifying the triggering condition."
+        "id": "dep.functional-requirement-2.integrate-reporting-sources-soft-sequence",
+        "from_implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+        "to_implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+        "dependency_type": "soft_sequence",
+        "reason": "Reporting-source integration should follow the upstream payment-confirmation integration surface."
       }
     ]
   }

@@ -5,11 +5,11 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 76
-- Generated verification units: 76
-- Trace bundles: 76
-- Dependency edges: 54
-- Assembly rules: 10
+- Generated implementation units: 78
+- Generated verification units: 78
+- Trace bundles: 78
+- Dependency edges: 83
+- Assembly rules: 12
 
 ## Implementation Units
 
@@ -161,23 +161,45 @@ Project: `speckify-planning-export`
 
 ### Functional Requirements
 
-#### Implement workflow support: functional-requirement-1
+#### Implement workflow support: Maintain reward catalog entries
 
-- ID: `iu.rupify.functional-requirement-1`
-- Summary: The system must allow operations managers to maintain reward catalog entries and campaign rules.
+- ID: `iu.rupify.functional-requirement-1.maintain-reward-catalog-entries`
+- Summary: Allow operations managers to maintain reward catalog entries.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
-  - The system must allow operations managers to maintain reward catalog entries and campaign rules.
+  - Operations managers can maintain reward catalog entries.
 
-#### Implement workflow support: functional-requirement-2
+#### Implement workflow support: Maintain campaign rules
 
-- ID: `iu.rupify.functional-requirement-2`
-- Summary: The platform must integrate with payment confirmation and downstream reporting sources.
+- ID: `iu.rupify.functional-requirement-1.maintain-campaign-rules`
+- Summary: Allow operations managers to maintain campaign rules.
+- Source lineage:
+  - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
+- Dependencies:
+  - `iu.rupify.functional-requirement-1.maintain-reward-catalog-entries`
+- Acceptance criteria:
+  - Operations managers can maintain campaign rules.
+
+#### Implement workflow support: Integrate payment confirmation
+
+- ID: `iu.rupify.functional-requirement-2.integrate-payment-confirmation`
+- Summary: Integrate the platform with payment confirmation sources.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
-  - The platform must integrate with payment confirmation and downstream reporting sources.
+  - The platform integrates with payment confirmation sources.
+
+#### Implement workflow support: Integrate reporting sources
+
+- ID: `iu.rupify.functional-requirement-2.integrate-reporting-sources`
+- Summary: Integrate the platform with downstream reporting sources.
+- Source lineage:
+  - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
+- Dependencies:
+  - `iu.rupify.functional-requirement-2.integrate-payment-confirmation`
+- Acceptance criteria:
+  - The platform integrates with downstream reporting sources.
 
 ### Guard Conditions
 
@@ -763,50 +785,81 @@ Project: `speckify-planning-export`
 
 ### Use Cases
 
-#### Implement Browse Rewards
+#### Implement use-case flow: Browse Rewards
 
 - ID: `iu.rupify.browse-rewards`
-- Summary: Implement the behavior described by browse rewards.
+- Summary: Coordinate the Browse Rewards flow across its steps and extension handling.
 - Source lineage:
   - `anchor.rupify.use-cases.browse-rewards` (requirement: `browse-rewards`)
+- Dependencies:
+  - `iu.rupify.browse-rewards-extension-1`
+  - `iu.rupify.browse-rewards-step-1`
+  - `iu.rupify.browse-rewards-step-2.display-points-balance`
+  - `iu.rupify.browse-rewards-step-2.display-rewards`
+  - `iu.rupify.browse-rewards-step-3`
 - Acceptance criteria:
-  - Browse Rewards
+  - The Browse Rewards flow is supported end to end.
 
-#### Implement Enroll Member
+#### Implement use-case flow: Enroll Member
 
 - ID: `iu.rupify.enroll-member`
-- Summary: Implement the behavior described by enroll member.
+- Summary: Coordinate the Enroll Member flow across its steps and extension handling.
 - Source lineage:
   - `anchor.rupify.use-cases.enroll-member` (requirement: `enroll-member`)
+- Dependencies:
+  - `iu.rupify.enroll-member-extension-1`
+  - `iu.rupify.enroll-member-step-1`
+  - `iu.rupify.enroll-member-step-2`
+  - `iu.rupify.enroll-member-step-3`
 - Acceptance criteria:
-  - Enroll Member
+  - The Enroll Member flow is supported end to end.
 
-#### Implement Manage Reward Catalog
+#### Implement use-case flow: Manage Reward Catalog
 
 - ID: `iu.rupify.manage-reward-catalog`
-- Summary: Implement the behavior described by manage reward catalog.
+- Summary: Coordinate the Manage Reward Catalog flow across its steps and extension handling.
 - Source lineage:
   - `anchor.rupify.use-cases.manage-reward-catalog` (requirement: `manage-reward-catalog`)
+- Dependencies:
+  - `iu.rupify.manage-reward-catalog-extension-1`
+  - `iu.rupify.manage-reward-catalog-step-1`
+  - `iu.rupify.manage-reward-catalog-step-2`
+  - `iu.rupify.manage-reward-catalog-step-3.publish-change`
+  - `iu.rupify.manage-reward-catalog-step-3.validate-change`
 - Acceptance criteria:
-  - Manage Reward Catalog
+  - The Manage Reward Catalog flow is supported end to end.
 
-#### Implement Redeem Reward
+#### Implement use-case flow: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Coordinate the Redeem Reward flow across its steps and extension handling.
 - Source lineage:
   - `anchor.rupify.use-cases.redeem-reward` (requirement: `redeem-reward`)
 - Dependencies:
+  - `iu.rupify.redeem-reward-extension-1`
+  - `iu.rupify.redeem-reward-extension-2`
+  - `iu.rupify.redeem-reward-extension-3`
+  - `iu.rupify.redeem-reward-step-1`
+  - `iu.rupify.redeem-reward-step-2.validate-available-points`
+  - `iu.rupify.redeem-reward-step-2.validate-eligibility`
+  - `iu.rupify.redeem-reward-step-3.reserve-reward`
+  - `iu.rupify.redeem-reward-step-3.update-member-balance`
+  - `iu.rupify.redeem-reward-step-4`
   - `iu.rupify.non-functional-requirement-6`
 - Acceptance criteria:
-  - Redeem Reward
+  - The Redeem Reward flow is supported end to end.
 
-#### Implement Review Redemption Analytics
+#### Implement use-case flow: Review Redemption Analytics
 
 - ID: `iu.rupify.review-redemption-analytics`
-- Summary: Implement the behavior described by review redemption analytics.
+- Summary: Coordinate the Review Redemption Analytics flow across its steps and extension handling.
 - Source lineage:
   - `anchor.rupify.use-cases.review-redemption-analytics` (requirement: `review-redemption-analytics`)
+- Dependencies:
+  - `iu.rupify.review-redemption-analytics-extension-1`
+  - `iu.rupify.review-redemption-analytics-step-1`
+  - `iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics`
+  - `iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics`
 - Acceptance criteria:
-  - Review Redemption Analytics
+  - The Review Redemption Analytics flow is supported end to end.
 
