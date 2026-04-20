@@ -68,5 +68,6 @@ definitions.
 
 - [Speckify design note](docs/speckify-design-note.md)
 - [Input contract and initial schemas](docs/input-contract-and-schemas.md)
+- [Decomposition and validation rules](docs/decomposition-and-validation-rules.md)
 - [Rupify downstream planning contract](docs/rupify-downstream-contract.md)
 - [Rupify upstream note](docs/rupify-upstream-note.md)

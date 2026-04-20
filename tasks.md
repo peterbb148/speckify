@@ -7,3 +7,4 @@
 - [DONE] 2026-04-20 Add `.gitignore` for Python artifacts and `.DS_Store`
 - [DONE] 2026-04-20 Define Speckify input contract and initial schemas
 - [DONE] 2026-04-20 Specify the Rupify downstream planning contract
+- [DONE] 2026-04-20 Define Speckify decomposition and validation rules
