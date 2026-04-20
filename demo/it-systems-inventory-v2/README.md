@@ -11,21 +11,22 @@ This demo verifies two things:
 
 1. whether the Rupify hand-off export can be imported cleanly with no additional changes
    required
-2. whether Speckify can produce a first specification artifact from that real hand-off
-   bundle
-
-The current demo output is a single consolidated Speckified specification document. That
-is a first demo artifact, not the full long-term Speckify output model. The broader design
-still targets structured planning bundles, issue-ready artifacts, and verification
-definitions.
+2. whether Speckify can run the real import, generation, validation, and rendering path
+   against that bundle and produce stable checked-in outputs
 
 ## Layout
 
 - `input/`: unchanged copy of the upstream Rupify hand-off export used for this demo
 - `output/import-report.json`: structured import analysis
 - `output/import-report.md`: human-readable import analysis
-- `output/speckified-specification.md`: first consolidated Speckified specification
-  artifact derived from the imported bundle
+- `output/planning-bundle.json`: generated Speckify planning bundle
+- `output/rendered-issues/`: issue-ready Markdown projections generated from the bundle
+- `output/speckified-specification.md`: consolidated specification view generated from the
+  bundle
+
+These checked-in files are the end-to-end regression surface for this demo. If the Rupify
+hand-off contract or Speckify generation pipeline drifts, the regression test should fail
+instead of silently changing behavior.
 
 ## Run
 

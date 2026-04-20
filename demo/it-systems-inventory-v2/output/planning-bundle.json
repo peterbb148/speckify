@@ -1,0 +1,3023 @@
+{
+  "bundle_metadata": {
+    "bundle_id": "bundle.speckify-planning-export",
+    "schema_version": 1,
+    "bundle_version": 1,
+    "generated_at": "2026-04-20T14:00:00Z",
+    "source_model_id": "rupify-model",
+    "source_model_version": 1,
+    "decomposition_profile": "rupify-one-to-one-v1"
+  },
+  "source_summary": {
+    "source_system": "rupify",
+    "project_id": "speckify-planning-export",
+    "project_name": "rupify-model",
+    "export_version": 1,
+    "notes": [
+      "Generated directly from imported Rupify planning export records.",
+      "First-pass mapping uses one ready normative source element to one planning unit."
+    ]
+  },
+  "source_anchors": [
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-1",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 2,
+        "source_key": "constraints"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-2",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-3",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-4",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-5",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-6",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-7",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-requirement-8",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1",
+      "source_system": "rupify",
+      "source_type": "constraint",
+      "source_id": "acceptance-constraint-success-1",
+      "view": "constraint",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 2,
+        "source_key": "success_criteria"
+      }
+    },
+    {
+      "id": "anchor.rupify.domain-invariants.domain-invariant-1",
+      "source_system": "rupify",
+      "source_type": "domain_invariant",
+      "source_id": "domain-invariant-1",
+      "view": "domain",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 5,
+        "source_key": "business_rules"
+      }
+    },
+    {
+      "id": "anchor.rupify.domain-invariants.domain-invariant-2",
+      "source_system": "rupify",
+      "source_type": "domain_invariant",
+      "source_id": "domain-invariant-2",
+      "view": "domain",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 5,
+        "source_key": "business_rules"
+      }
+    },
+    {
+      "id": "anchor.rupify.domain-invariants.domain-invariant-3",
+      "source_system": "rupify",
+      "source_type": "domain_invariant",
+      "source_id": "domain-invariant-3",
+      "view": "domain",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 5,
+        "source_key": "business_rules"
+      }
+    },
+    {
+      "id": "anchor.rupify.functional-requirements.functional-requirement-1",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "functional-requirement-1",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "workflow_scope"
+      }
+    },
+    {
+      "id": "anchor.rupify.functional-requirements.functional-requirement-2",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "functional-requirement-2",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 3,
+        "source_key": "integrations"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-1",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-1",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 2,
+        "source_key": "constraints"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-2",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-2",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-3",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-3",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-4",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-4",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-5",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-5",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-6",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-6",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-7",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-7",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.non-functional-requirements.non-functional-requirement-8",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "non_functional-requirement-8",
+      "view": "requirements",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "non_functional_requirements"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-invariants.state-invariant-1",
+      "source_system": "rupify",
+      "source_type": "state_invariant",
+      "source_id": "state-invariant-1",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 5,
+        "source_key": "business_rules"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-invariants.state-invariant-2",
+      "source_system": "rupify",
+      "source_type": "state_invariant",
+      "source_id": "state-invariant-2",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 5,
+        "source_key": "business_rules"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-invariants.state-invariant-3",
+      "source_system": "rupify",
+      "source_type": "state_invariant",
+      "source_id": "state-invariant-3",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 5,
+        "source_key": "business_rules"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-transitions.state-transition-1",
+      "source_system": "rupify",
+      "source_type": "state_transition",
+      "source_id": "state-transition-1",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 6,
+        "source_key": "states_and_transitions"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-transitions.state-transition-2",
+      "source_system": "rupify",
+      "source_type": "state_transition",
+      "source_id": "state-transition-2",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 6,
+        "source_key": "states_and_transitions"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-transitions.state-transition-3",
+      "source_system": "rupify",
+      "source_type": "state_transition",
+      "source_id": "state-transition-3",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 6,
+        "source_key": "states_and_transitions"
+      }
+    },
+    {
+      "id": "anchor.rupify.state-transitions.state-transition-4",
+      "source_system": "rupify",
+      "source_type": "state_transition",
+      "source_id": "state-transition-4",
+      "view": "state",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 6,
+        "source_key": "states_and_transitions"
+      }
+    }
+  ],
+  "spec_units": [
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-1",
+      "title": "Acceptance Constraint 1",
+      "summary": "UI must be web based",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-2",
+      "title": "Acceptance Constraint 2",
+      "summary": "SSO",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-2."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-3",
+      "title": "Acceptance Constraint 3",
+      "summary": "role-based access",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-3."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-4",
+      "title": "Acceptance Constraint 4",
+      "summary": "audit trail",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-4."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-5",
+      "title": "Acceptance Constraint 5",
+      "summary": "search",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-5."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-6",
+      "title": "Acceptance Constraint 6",
+      "summary": "filtering",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-6."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-7",
+      "title": "Acceptance Constraint 7",
+      "summary": "performance (regular >1s for web page rendering)",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-7."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-requirement-8",
+      "title": "Acceptance Constraint 8",
+      "summary": "availability >=99%",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-requirement-8."
+      ]
+    },
+    {
+      "id": "su.rupify.acceptance-constraint-success-1",
+      "title": "Success Criterion 1",
+      "summary": "Better planning of IT systems purchasing and life cycle",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+      ],
+      "obligation_kind": "constraint",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify acceptance_constraints element acceptance-constraint-success-1."
+      ]
+    },
+    {
+      "id": "su.rupify.domain-invariant-1",
+      "title": "Rule 1",
+      "summary": "A System must have a business owner before it becomes Active.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-1"
+      ],
+      "obligation_kind": "domain_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify domain_invariants element domain-invariant-1."
+      ]
+    },
+    {
+      "id": "su.rupify.domain-invariant-2",
+      "title": "Rule 2",
+      "summary": "A System lifecycle state change requires approval for deprecation.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-2"
+      ],
+      "obligation_kind": "domain_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify domain_invariants element domain-invariant-2."
+      ]
+    },
+    {
+      "id": "su.rupify.domain-invariant-3",
+      "title": "Rule 3",
+      "summary": "A System must record vendor and contract dates.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "obligation_kind": "domain_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify domain_invariants element domain-invariant-3."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-1",
+      "title": "functional-requirement-1",
+      "summary": "Yes business processes like stage gates and approval states must be supported",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-2",
+      "title": "functional-requirement-2",
+      "summary": "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-2."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-1",
+      "title": "non_functional-requirement-1",
+      "summary": "UI must be web based",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-2",
+      "title": "non_functional-requirement-2",
+      "summary": "SSO",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-2."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-3",
+      "title": "non_functional-requirement-3",
+      "summary": "role-based access",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-3."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-4",
+      "title": "non_functional-requirement-4",
+      "summary": "audit trail",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-4."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-5",
+      "title": "non_functional-requirement-5",
+      "summary": "search",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-5."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-6",
+      "title": "non_functional-requirement-6",
+      "summary": "filtering",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-6."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-7",
+      "title": "non_functional-requirement-7",
+      "summary": "performance (regular >1s for web page rendering)",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-7."
+      ]
+    },
+    {
+      "id": "su.rupify.non-functional-requirement-8",
+      "title": "non_functional-requirement-8",
+      "summary": "availability >=99%",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify non_functional_requirements element non_functional-requirement-8."
+      ]
+    },
+    {
+      "id": "su.rupify.state-invariant-1",
+      "title": "Rule 1",
+      "summary": "A System must have a business owner before it becomes Active.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-1"
+      ],
+      "obligation_kind": "state_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_invariants element state-invariant-1."
+      ]
+    },
+    {
+      "id": "su.rupify.state-invariant-2",
+      "title": "Rule 2",
+      "summary": "A System lifecycle state change requires approval for deprecation.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-2"
+      ],
+      "obligation_kind": "state_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_invariants element state-invariant-2."
+      ]
+    },
+    {
+      "id": "su.rupify.state-invariant-3",
+      "title": "Rule 3",
+      "summary": "A System must record vendor and contract dates.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "obligation_kind": "state_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_invariants element state-invariant-3."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-1",
+      "title": "state-transition-1",
+      "summary": "System: Proposed -> Active -> Retiring -> Retired",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-1."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-2",
+      "title": "state-transition-2",
+      "summary": "System: Proposed -> Active -> Retiring -> Retired",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-2."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-3",
+      "title": "state-transition-3",
+      "summary": "System: Proposed -> Active -> Retiring -> Retired",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-3."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-4",
+      "title": "state-transition-4",
+      "summary": "System: Active -> Deprecated",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-4."
+      ]
+    }
+  ],
+  "implementation_units": [
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-1",
+      "title": "Implement Acceptance Constraint 1",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "UI must be web based"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "UI must be web based"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-1.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-2",
+      "title": "Implement Acceptance Constraint 2",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-2.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "SSO"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "SSO"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-2.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-3",
+      "title": "Implement Acceptance Constraint 3",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-3.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "role-based access"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "role-based access"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-3.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-4",
+      "title": "Implement Acceptance Constraint 4",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-4.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-4"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "audit trail"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "audit trail"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-4"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-4."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-4.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-5",
+      "title": "Implement Acceptance Constraint 5",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-5.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-5"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "search"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "search"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-5"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-5."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-5.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-6",
+      "title": "Implement Acceptance Constraint 6",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-6.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-6"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "filtering"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "filtering"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-6"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-6."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-6.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-7",
+      "title": "Implement Acceptance Constraint 7",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-7.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-7"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-7"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-7."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-7.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-requirement-8",
+      "title": "Implement Acceptance Constraint 8",
+      "summary": "Implement the planned behavior for acceptance-constraint-requirement-8.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-8"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "availability >=99%"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "availability >=99%"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-8"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-requirement-8."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-8.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.acceptance-constraint-success-1",
+      "title": "Implement Success Criterion 1",
+      "summary": "Implement the planned behavior for acceptance-constraint-success-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.acceptance-constraint-success-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Better planning of IT systems purchasing and life cycle"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Better planning of IT systems purchasing and life cycle"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-success-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element acceptance-constraint-success-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-1.",
+      "labels": [
+        "planning",
+        "acceptance-constraints"
+      ]
+    },
+    {
+      "id": "iu.rupify.domain-invariant-1",
+      "title": "Implement Rule 1",
+      "summary": "Implement the planned behavior for domain-invariant-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.domain-invariant-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element domain-invariant-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-1.",
+      "labels": [
+        "planning",
+        "domain-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.domain-invariant-2",
+      "title": "Implement Rule 2",
+      "summary": "Implement the planned behavior for domain-invariant-2.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.domain-invariant-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element domain-invariant-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-2.",
+      "labels": [
+        "planning",
+        "domain-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.domain-invariant-3",
+      "title": "Implement Rule 3",
+      "summary": "Implement the planned behavior for domain-invariant-3.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.domain-invariant-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "A System must record vendor and contract dates."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A System must record vendor and contract dates."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element domain-invariant-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-3.",
+      "labels": [
+        "planning",
+        "domain-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-1",
+      "title": "Implement functional-requirement-1",
+      "summary": "Implement the planned behavior for functional-requirement-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Yes business processes like stage gates and approval states must be supported"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Yes business processes like stage gates and approval states must be supported"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-2",
+      "title": "Implement functional-requirement-2",
+      "summary": "Implement the planned behavior for functional-requirement-2.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-1",
+      "title": "Implement non_functional-requirement-1",
+      "summary": "Implement the planned behavior for non_functional-requirement-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "UI must be web based"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "UI must be web based"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-1.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-2",
+      "title": "Implement non_functional-requirement-2",
+      "summary": "Implement the planned behavior for non_functional-requirement-2.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "SSO"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "SSO"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-2.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-3",
+      "title": "Implement non_functional-requirement-3",
+      "summary": "Implement the planned behavior for non_functional-requirement-3.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "role-based access"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "role-based access"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-3.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-4",
+      "title": "Implement non_functional-requirement-4",
+      "summary": "Implement the planned behavior for non_functional-requirement-4.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-4"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "audit trail"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "audit trail"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-4"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-4."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-4.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-5",
+      "title": "Implement non_functional-requirement-5",
+      "summary": "Implement the planned behavior for non_functional-requirement-5.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-5"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "search"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "search"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-5"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-5."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-5.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-6",
+      "title": "Implement non_functional-requirement-6",
+      "summary": "Implement the planned behavior for non_functional-requirement-6.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-6"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "filtering"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "filtering"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-6"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-6."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-6.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-7",
+      "title": "Implement non_functional-requirement-7",
+      "summary": "Implement the planned behavior for non_functional-requirement-7.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-7"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-7"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-7."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-7.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.non-functional-requirement-8",
+      "title": "Implement non_functional-requirement-8",
+      "summary": "Implement the planned behavior for non_functional-requirement-8.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.non-functional-requirement-8"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "availability >=99%"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "availability >=99%"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-8"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element non_functional-requirement-8."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-8.",
+      "labels": [
+        "planning",
+        "non-functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-invariant-1",
+      "title": "Implement Rule 1",
+      "summary": "Implement the planned behavior for state-invariant-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-invariant-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-invariant-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-1.",
+      "labels": [
+        "planning",
+        "state-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-invariant-2",
+      "title": "Implement Rule 2",
+      "summary": "Implement the planned behavior for state-invariant-2.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-invariant-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-invariant-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-2.",
+      "labels": [
+        "planning",
+        "state-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-invariant-3",
+      "title": "Implement Rule 3",
+      "summary": "Implement the planned behavior for state-invariant-3.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-invariant-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "A System must record vendor and contract dates."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A System must record vendor and contract dates."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-invariant-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-3.",
+      "labels": [
+        "planning",
+        "state-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-1",
+      "title": "Implement state-transition-1",
+      "summary": "Implement the planned behavior for state-transition-1.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-1"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-2",
+      "title": "Implement state-transition-2",
+      "summary": "Implement the planned behavior for state-transition-2.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-3",
+      "title": "Implement state-transition-3",
+      "summary": "Implement the planned behavior for state-transition-3.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-4",
+      "title": "Implement state-transition-4",
+      "summary": "Implement the planned behavior for state-transition-4.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-4"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "System: Active -> Deprecated"
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System: Active -> Deprecated"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-4"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-4."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-4.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    }
+  ],
+  "verification_units": [
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-1",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
+      "title": "Verify Acceptance Constraint 1",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+      ],
+      "observables": [
+        "UI must be web based"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "UI must be web based"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-2",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
+      "title": "Verify Acceptance Constraint 2",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-2.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+      ],
+      "observables": [
+        "SSO"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "SSO"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-3",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
+      "title": "Verify Acceptance Constraint 3",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-3.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+      ],
+      "observables": [
+        "role-based access"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "role-based access"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-4",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
+      "title": "Verify Acceptance Constraint 4",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-4.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+      ],
+      "observables": [
+        "audit trail"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "audit trail"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-4."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-5",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
+      "title": "Verify Acceptance Constraint 5",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-5.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+      ],
+      "observables": [
+        "search"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "search"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-5."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-6",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
+      "title": "Verify Acceptance Constraint 6",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-6.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+      ],
+      "observables": [
+        "filtering"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "filtering"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-6."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-7",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
+      "title": "Verify Acceptance Constraint 7",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-7.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+      ],
+      "observables": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-7."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-requirement-8",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
+      "title": "Verify Acceptance Constraint 8",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-8.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
+      ],
+      "observables": [
+        "availability >=99%"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "availability >=99%"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-requirement-8."
+      ]
+    },
+    {
+      "id": "vu.rupify.acceptance-constraint-success-1",
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
+      "title": "Verify Success Criterion 1",
+      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-success-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+      ],
+      "observables": [
+        "Better planning of IT systems purchasing and life cycle"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "Better planning of IT systems purchasing and life cycle"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from acceptance-constraint-success-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.domain-invariant-1",
+      "implementation_unit_id": "iu.rupify.domain-invariant-1",
+      "title": "Verify Rule 1",
+      "verification_intent": "Confirm the implementation satisfies domain-invariant-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-1"
+      ],
+      "observables": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from domain-invariant-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.domain-invariant-2",
+      "implementation_unit_id": "iu.rupify.domain-invariant-2",
+      "title": "Verify Rule 2",
+      "verification_intent": "Confirm the implementation satisfies domain-invariant-2.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-2"
+      ],
+      "observables": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from domain-invariant-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.domain-invariant-3",
+      "implementation_unit_id": "iu.rupify.domain-invariant-3",
+      "title": "Verify Rule 3",
+      "verification_intent": "Confirm the implementation satisfies domain-invariant-3.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "observables": [
+        "A System must record vendor and contract dates."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "A System must record vendor and contract dates."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from domain-invariant-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-1",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1",
+      "title": "Verify functional-requirement-1",
+      "verification_intent": "Confirm the implementation satisfies functional-requirement-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "observables": [
+        "Yes business processes like stage gates and approval states must be supported"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "Yes business processes like stage gates and approval states must be supported"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from functional-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-2",
+      "implementation_unit_id": "iu.rupify.functional-requirement-2",
+      "title": "Verify functional-requirement-2",
+      "verification_intent": "Confirm the implementation satisfies functional-requirement-2.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "observables": [
+        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from functional-requirement-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-1",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
+      "title": "Verify non_functional-requirement-1",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+      ],
+      "observables": [
+        "UI must be web based"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "UI must be web based"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-2",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
+      "title": "Verify non_functional-requirement-2",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-2.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+      ],
+      "observables": [
+        "SSO"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "SSO"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-3",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
+      "title": "Verify non_functional-requirement-3",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-3.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+      ],
+      "observables": [
+        "role-based access"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "role-based access"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-4",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
+      "title": "Verify non_functional-requirement-4",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-4.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+      ],
+      "observables": [
+        "audit trail"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "audit trail"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-4."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-5",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
+      "title": "Verify non_functional-requirement-5",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-5.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+      ],
+      "observables": [
+        "search"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "search"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-5."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-6",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
+      "title": "Verify non_functional-requirement-6",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-6.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+      ],
+      "observables": [
+        "filtering"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "filtering"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-6."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-7",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
+      "title": "Verify non_functional-requirement-7",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-7.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+      ],
+      "observables": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "performance (regular >1s for web page rendering)"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-7."
+      ]
+    },
+    {
+      "id": "vu.rupify.non-functional-requirement-8",
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
+      "title": "Verify non_functional-requirement-8",
+      "verification_intent": "Confirm the implementation satisfies non_functional-requirement-8.",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+      ],
+      "observables": [
+        "availability >=99%"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "availability >=99%"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from non_functional-requirement-8."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-invariant-1",
+      "implementation_unit_id": "iu.rupify.state-invariant-1",
+      "title": "Verify Rule 1",
+      "verification_intent": "Confirm the implementation satisfies state-invariant-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-1"
+      ],
+      "observables": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "A System must have a business owner before it becomes Active."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-invariant-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-invariant-2",
+      "implementation_unit_id": "iu.rupify.state-invariant-2",
+      "title": "Verify Rule 2",
+      "verification_intent": "Confirm the implementation satisfies state-invariant-2.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-2"
+      ],
+      "observables": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "A System lifecycle state change requires approval for deprecation."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-invariant-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-invariant-3",
+      "implementation_unit_id": "iu.rupify.state-invariant-3",
+      "title": "Verify Rule 3",
+      "verification_intent": "Confirm the implementation satisfies state-invariant-3.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "observables": [
+        "A System must record vendor and contract dates."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "A System must record vendor and contract dates."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-invariant-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-1",
+      "implementation_unit_id": "iu.rupify.state-transition-1",
+      "title": "Verify state-transition-1",
+      "verification_intent": "Confirm the implementation satisfies state-transition-1.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "observables": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-transition-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-2",
+      "implementation_unit_id": "iu.rupify.state-transition-2",
+      "title": "Verify state-transition-2",
+      "verification_intent": "Confirm the implementation satisfies state-transition-2.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "observables": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-transition-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-3",
+      "implementation_unit_id": "iu.rupify.state-transition-3",
+      "title": "Verify state-transition-3",
+      "verification_intent": "Confirm the implementation satisfies state-transition-3.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "observables": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System: Proposed -> Active -> Retiring -> Retired"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-transition-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-4",
+      "implementation_unit_id": "iu.rupify.state-transition-4",
+      "title": "Verify state-transition-4",
+      "verification_intent": "Confirm the implementation satisfies state-transition-4.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "observables": [
+        "System: Active -> Deprecated"
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System: Active -> Deprecated"
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "First-pass verification contract derived directly from state-transition-4."
+      ]
+    }
+  ],
+  "trace_bundles": [
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-2",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-3",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-4",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-4"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-4"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-4."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-5",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-5"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-5"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-5."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-6",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-6"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-6"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-6"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-6."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-7",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-7"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-7"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-7"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-7."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-requirement-8",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-requirement-8"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-requirement-8"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-8"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-8."
+      ]
+    },
+    {
+      "id": "tb.rupify.acceptance-constraint-success-1",
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.acceptance-constraint-success-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.acceptance-constraint-success-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-success-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for acceptance-constraint-success-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.domain-invariant-1",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.domain-invariant-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.domain-invariant-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for domain-invariant-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.domain-invariant-2",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.domain-invariant-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.domain-invariant-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for domain-invariant-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.domain-invariant-3",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.domain-invariant-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.domain-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for domain-invariant-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for functional-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-2",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for functional-requirement-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-2",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-3",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-4",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-4"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-4"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-4."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-5",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-5"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-5"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-5."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-6",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-6"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-6"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-6"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-6."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-7",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-7"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-7"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-7"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-7."
+      ]
+    },
+    {
+      "id": "tb.rupify.non-functional-requirement-8",
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.non-functional-requirement-8"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.non-functional-requirement-8"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-8"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for non_functional-requirement-8."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-invariant-1",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-invariant-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-invariant-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-invariant-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-invariant-2",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-invariant-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-invariant-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-invariant-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-invariant-3",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-invariant-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-invariant-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-1",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-1"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-transition-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-2",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-transition-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-3",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-transition-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-4",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-4"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-4"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-source-to-one-planning-unit derivation for state-transition-4."
+      ]
+    }
+  ],
+  "dependency_edges": [],
+  "assembly_rules": [],
+  "unresolved_ambiguities": [],
+  "rendered_issues": [
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
+      "issue_title": "Implement Acceptance Constraint 1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-1.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1`\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-1.\n- Observable: UI must be web based\n- Expected outcome: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
+      "issue_title": "Implement Acceptance Constraint 2",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-2.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2`\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-2.\n- Observable: SSO\n- Expected outcome: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
+      "issue_title": "Implement Acceptance Constraint 3",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-3.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3`\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-3.\n- Observable: role-based access\n- Expected outcome: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
+      "issue_title": "Implement Acceptance Constraint 4",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-4.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-4.\n- Observable: audit trail\n- Expected outcome: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
+      "issue_title": "Implement Acceptance Constraint 5",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-5.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5`\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-5.\n- Observable: search\n- Expected outcome: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
+      "issue_title": "Implement Acceptance Constraint 6",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-6.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6`\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-6.\n- Observable: filtering\n- Expected outcome: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
+      "issue_title": "Implement Acceptance Constraint 7",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-7.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7`\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-7.\n- Observable: performance (regular >1s for web page rendering)\n- Expected outcome: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
+      "issue_title": "Implement Acceptance Constraint 8",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-8.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8`\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-8.\n- Observable: availability >=99%\n- Expected outcome: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
+      "issue_title": "Implement Success Criterion 1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-success-1.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1`\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-success-1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Expected outcome: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-1",
+      "issue_title": "Implement Rule 1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for domain-invariant-1.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-1`\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies domain-invariant-1.\n- Observable: A System must have a business owner before it becomes Active.\n- Expected outcome: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-2",
+      "issue_title": "Implement Rule 2",
+      "issue_body": "## Summary\n\nImplement the planned behavior for domain-invariant-2.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2`\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies domain-invariant-2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Expected outcome: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-3",
+      "issue_title": "Implement Rule 3",
+      "issue_body": "## Summary\n\nImplement the planned behavior for domain-invariant-3.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3`\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies domain-invariant-3.\n- Observable: A System must record vendor and contract dates.\n- Expected outcome: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-1",
+      "issue_title": "Implement functional-requirement-1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for functional-requirement-1.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1`\n\n## Scope\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Acceptance Criteria\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies functional-requirement-1.\n- Observable: Yes business processes like stage gates and approval states must be supported\n- Expected outcome: Yes business processes like stage gates and approval states must be supported\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2",
+      "issue_title": "Implement functional-requirement-2",
+      "issue_body": "## Summary\n\nImplement the planned behavior for functional-requirement-2.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2`\n\n## Scope\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Acceptance Criteria\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies functional-requirement-2.\n- Observable: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Expected outcome: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
+      "issue_title": "Implement non_functional-requirement-1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-1.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-1`\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-1.\n- Observable: UI must be web based\n- Expected outcome: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
+      "issue_title": "Implement non_functional-requirement-2",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-2.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-2`\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-2.\n- Observable: SSO\n- Expected outcome: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
+      "issue_title": "Implement non_functional-requirement-3",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-3.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-3`\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-3.\n- Observable: role-based access\n- Expected outcome: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
+      "issue_title": "Implement non_functional-requirement-4",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-4.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-4`\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-4.\n- Observable: audit trail\n- Expected outcome: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-4.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
+      "issue_title": "Implement non_functional-requirement-5",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-5.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-5`\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-5.\n- Observable: search\n- Expected outcome: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-5.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
+      "issue_title": "Implement non_functional-requirement-6",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-6.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-6`\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-6.\n- Observable: filtering\n- Expected outcome: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-6.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
+      "issue_title": "Implement non_functional-requirement-7",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-7.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7`\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-7.\n- Observable: performance (regular >1s for web page rendering)\n- Expected outcome: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
+      "issue_title": "Implement non_functional-requirement-8",
+      "issue_body": "## Summary\n\nImplement the planned behavior for non_functional-requirement-8.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-8`\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies non_functional-requirement-8.\n- Observable: availability >=99%\n- Expected outcome: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-8.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-1",
+      "issue_title": "Implement Rule 1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-invariant-1.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-1`\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-invariant-1.\n- Observable: A System must have a business owner before it becomes Active.\n- Expected outcome: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-2",
+      "issue_title": "Implement Rule 2",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-invariant-2.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2`\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-invariant-2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Expected outcome: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-3",
+      "issue_title": "Implement Rule 3",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-invariant-3.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3`\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-invariant-3.\n- Observable: A System must record vendor and contract dates.\n- Expected outcome: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-1",
+      "issue_title": "Implement state-transition-1",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-1.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Acceptance Criteria\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-1.\n- Observable: System: Proposed -> Active -> Retiring -> Retired\n- Expected outcome: System: Proposed -> Active -> Retiring -> Retired\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2",
+      "issue_title": "Implement state-transition-2",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-2.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Acceptance Criteria\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-2.\n- Observable: System: Proposed -> Active -> Retiring -> Retired\n- Expected outcome: System: Proposed -> Active -> Retiring -> Retired\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3",
+      "issue_title": "Implement state-transition-3",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-3.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Acceptance Criteria\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-3.\n- Observable: System: Proposed -> Active -> Retiring -> Retired\n- Expected outcome: System: Proposed -> Active -> Retiring -> Retired\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-4",
+      "issue_title": "Implement state-transition-4",
+      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-4.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4`\n\n## Scope\n\n- System: Active -> Deprecated\n\n## Acceptance Criteria\n\n- System: Active -> Deprecated\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-4.\n- Observable: System: Active -> Deprecated\n- Expected outcome: System: Active -> Deprecated\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
+    }
+  ]
+}

@@ -7,7 +7,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+from .bundle_generation import generate_planning_bundle_file
+from .rendering import render_specification_markdown
 from .rupify_import import RupifyPlanningExport, import_rupify_export, import_rupify_export_file
+
+DEMO_GENERATED_AT = "2026-04-20T14:00:00Z"
 
 
 def load_json(path: str | Path) -> dict[str, Any]:
@@ -222,78 +226,6 @@ def render_import_report_markdown(report: dict[str, Any], source_path: str | Pat
     return "\n".join(lines) + "\n"
 
 
-def render_speckified_specification_markdown(
-    report: dict[str, Any],
-    source_path: str | Path,
-) -> str:
-    """Render a first Speckified specification from the importable subset.
-
-    Args:
-        report: Structured import analysis report.
-        source_path: Source export path.
-
-    Returns:
-        Markdown specification text.
-    """
-    lines = [
-        "# Speckified Specification",
-        "",
-        f"Source export: `{source_path}`",
-        "",
-        "## Import Status",
-        "",
-    ]
-
-    if report["clean_import"]:
-        lines.append("- The Rupify hand-off bundle imported cleanly with no additional changes required.")
-    else:
-        lines.append(
-            "- The Rupify hand-off bundle did not import cleanly as-is. This specification is derived from the importable subset only."
-        )
-        lines.append(
-            "- No manual edits were applied to the upstream export; blocked areas are reported separately."
-        )
-
-    lines.extend(
-        [
-            "",
-            "## Importable Normative Core",
-            "",
-        ]
-    )
-
-    if not report["importable_ready_normative_by_family"]:
-        lines.append("- No importable ready normative elements were found.")
-    else:
-        for family, items in report["importable_ready_normative_by_family"].items():
-            lines.append(f"### {family.replace('_', ' ').title()}")
-            lines.append("")
-            for item in items:
-                label = item["name"] or item["id"]
-                text = item["text"] or ""
-                if text:
-                    lines.append(f"- `{item['id']}` {label}: {text}")
-                else:
-                    lines.append(f"- `{item['id']}` {label}")
-            lines.append("")
-
-    lines.extend(["## Import Blockers", ""])
-    if report["errors"]:
-        lines.extend(f"- {item}" for item in report["errors"])
-    else:
-        lines.append("- None")
-
-    lines.extend(["", "## Notes", ""])
-    lines.append(
-        "- This document is a first Speckified specification artifact produced from the real Rupify hand-off export."
-    )
-    lines.append(
-        "- It intentionally excludes ambiguous or structurally blocked areas rather than patching upstream data."
-    )
-
-    return "\n".join(lines) + "\n"
-
-
 def write_demo_outputs(source_export: str | Path, demo_dir: str | Path) -> dict[str, Any]:
     """Write demo import outputs for a Rupify hand-off export.
 
@@ -308,19 +240,28 @@ def write_demo_outputs(source_export: str | Path, demo_dir: str | Path) -> dict[
     demo_root = Path(demo_dir)
     input_dir = demo_root / "input"
     output_dir = demo_root / "output"
+    rendered_issues_dir = output_dir / "rendered-issues"
     input_dir.mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True, exist_ok=True)
+    rendered_issues_dir.mkdir(parents=True, exist_ok=True)
+    for existing_issue in rendered_issues_dir.glob("*.md"):
+        existing_issue.unlink()
 
     raw_text = source_path.read_text()
     (input_dir / source_path.name).write_text(raw_text)
 
     report = analyze_imported_rupify_export(import_rupify_export_file(source_path))
+    bundle = generate_planning_bundle_file(source_path, generated_at=DEMO_GENERATED_AT)
 
     (output_dir / "import-report.json").write_text(json.dumps(report, indent=2))
     (output_dir / "import-report.md").write_text(
         render_import_report_markdown(report, source_path)
     )
+    (output_dir / "planning-bundle.json").write_text(json.dumps(bundle, indent=2))
     (output_dir / "speckified-specification.md").write_text(
-        render_speckified_specification_markdown(report, source_path)
+        render_specification_markdown(bundle)
     )
+    for issue in bundle["rendered_issues"]:
+        issue_path = rendered_issues_dir / f"{issue['implementation_unit_id']}.md"
+        issue_path.write_text(issue["issue_body"])
     return report
