@@ -66,6 +66,7 @@ definitions.
 
 ## Design Notes
 
+- [GitHub SpecKit Constitution](docs/github-speckit-constitution.md)
 - [Speckify design note](docs/speckify-design-note.md)
 - [Input contract and initial schemas](docs/input-contract-and-schemas.md)
 - [Decomposition and validation rules](docs/decomposition-and-validation-rules.md)
