@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-8`
+- Issue slug: `iu-rupify-acceptance-constraint-requirement-8`
+- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`
+- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8`
+- Verification units: `vu.rupify.acceptance-constraint-requirement-8`
+- Depends on:
+  - `iu.rupify.non-functional-requirement-8` (Implement constraint: non_functional-requirement-8)
+- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-8.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'availability >=99%'.

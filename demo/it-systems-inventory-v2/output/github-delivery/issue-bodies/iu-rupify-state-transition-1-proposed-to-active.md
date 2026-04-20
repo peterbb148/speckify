@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-transition-1.proposed-to-active`
+- Issue slug: `iu-rupify-state-transition-1-proposed-to-active`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-transitions`
+- Source anchors: `anchor.rupify.state-transitions.state-transition-1`
+- Verification units: `vu.rupify.state-transition-1.proposed-to-active`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of state-transition-1.
+
 ## Summary
 
 Transition the system lifecycle from Proposed to Active.

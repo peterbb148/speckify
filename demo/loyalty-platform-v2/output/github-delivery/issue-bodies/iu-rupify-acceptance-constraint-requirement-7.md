@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-7`
+- Issue slug: `iu-rupify-acceptance-constraint-requirement-7`
+- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`
+- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7`
+- Verification units: `vu.rupify.acceptance-constraint-requirement-7`
+- Depends on:
+  - `iu.rupify.non-functional-requirement-7` (Implement constraint: non_functional-requirement-7)
+- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-7.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.

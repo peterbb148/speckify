@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.non-functional-requirement-1`
+- Issue slug: `iu-rupify-non-functional-requirement-1`
+- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`
+- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-1`
+- Verification units: `vu.rupify.non-functional-requirement-1`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-1.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'The system must protect member and reward transactions with appropriate security controls.'.

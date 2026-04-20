@@ -1,3 +1,15 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-transition-4.published-to-retired`
+- Issue slug: `iu-rupify-state-transition-4-published-to-retired`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-transitions`
+- Source anchors: `anchor.rupify.state-transitions.state-transition-4`
+- Verification units: `vu.rupify.state-transition-4.published-to-retired`
+- Depends on:
+  - `iu.rupify.state-transition-4.draft-to-published` (Implement lifecycle transition: Draft to Published)
+  - `iu.rupify.guard-condition-2` (Implement Guard Condition 2)
+- Reverse impact hint: Changes here may require upstream review of state-transition-4.
+
 ## Summary
 
 Transition the system lifecycle from Published to Retired.

@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.enroll-member-step-2`
+- Issue slug: `iu-rupify-enroll-member-step-2`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-case-steps`
+- Source anchors: `anchor.rupify.use-case-steps.enroll-member-step-2`
+- Verification units: `vu.rupify.enroll-member-step-2`
+- Depends on:
+  - `iu.rupify.enroll-member-step-1` (Implement Enroll Member)
+- Reverse impact hint: Changes here may require upstream review of enroll-member-step-2.
+
 ## Summary
 
 Implement the behavior described by enroll member.

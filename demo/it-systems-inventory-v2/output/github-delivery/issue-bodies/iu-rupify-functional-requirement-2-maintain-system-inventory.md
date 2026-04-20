@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.functional-requirement-2.maintain-system-inventory`
+- Issue slug: `iu-rupify-functional-requirement-2-maintain-system-inventory`
+- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`
+- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-2`
+- Verification units: `vu.rupify.functional-requirement-2.maintain-system-inventory`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of functional-requirement-2.
+
 ## Summary
 
 Maintain the CMDB-style system inventory record for IT applications and systems.

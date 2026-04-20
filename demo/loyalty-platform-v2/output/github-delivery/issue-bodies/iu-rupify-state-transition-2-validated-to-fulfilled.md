@@ -1,3 +1,15 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-transition-2.validated-to-fulfilled`
+- Issue slug: `iu-rupify-state-transition-2-validated-to-fulfilled`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-transitions`
+- Source anchors: `anchor.rupify.state-transitions.state-transition-2`
+- Verification units: `vu.rupify.state-transition-2.validated-to-fulfilled`
+- Depends on:
+  - `iu.rupify.state-transition-2.requested-to-validated` (Implement lifecycle transition: Requested to Validated)
+  - `iu.rupify.guard-condition-2` (Implement Guard Condition 2)
+- Reverse impact hint: Changes here may require upstream review of state-transition-2.
+
 ## Summary
 
 Transition the system lifecycle from Validated to Fulfilled.

@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.functional-requirement-1.approval-states`
+- Issue slug: `iu-rupify-functional-requirement-1-approval-states`
+- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`
+- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-1`
+- Verification units: `vu.rupify.functional-requirement-1.approval-states`
+- Depends on:
+  - `iu.rupify.functional-requirement-1.stage-gates` (Implement workflow support: Support stage gates)
+- Reverse impact hint: Changes here may require upstream review of functional-requirement-1.
+
 ## Summary
 
 Support business process approval states.

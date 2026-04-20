@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics`
+- Issue slug: `iu-rupify-review-redemption-analytics-step-2-show-redemption-metrics`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-case-steps`
+- Source anchors: `anchor.rupify.use-case-steps.review-redemption-analytics-step-2`
+- Verification units: `vu.rupify.review-redemption-analytics-step-2.show-redemption-metrics`
+- Depends on:
+  - `iu.rupify.review-redemption-analytics-step-1` (Implement Review Redemption Analytics)
+- Reverse impact hint: Changes here may require upstream review of review-redemption-analytics-step-2.
+
 ## Summary
 
 Implement the behavior described by show redemption metrics.

@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.non-functional-requirement-2`
+- Issue slug: `iu-rupify-non-functional-requirement-2`
+- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`
+- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-2`
+- Verification units: `vu.rupify.non-functional-requirement-2`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-2.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'SSO'.

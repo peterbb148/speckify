@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.redeem-reward-extension-3`
+- Issue slug: `iu-rupify-redeem-reward-extension-3`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-case-steps`
+- Source anchors: `anchor.rupify.use-case-steps.redeem-reward-extension-3`
+- Verification units: `vu.rupify.redeem-reward-extension-3`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of redeem-reward-extension-3.
+
 ## Summary
 
 Implement the behavior described by redeem reward.

@@ -1,3 +1,15 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.redeem-reward-step-4`
+- Issue slug: `iu-rupify-redeem-reward-step-4`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-case-steps`
+- Source anchors: `anchor.rupify.use-case-steps.redeem-reward-step-4`
+- Verification units: `vu.rupify.redeem-reward-step-4`
+- Depends on:
+  - `iu.rupify.redeem-reward-step-3.reserve-reward` (Implement Reserve reward)
+  - `iu.rupify.redeem-reward-step-3.update-member-balance` (Implement Update member balance)
+- Reverse impact hint: Changes here may require upstream review of redeem-reward-step-4.
+
 ## Summary
 
 Implement the behavior described by redeem reward.
