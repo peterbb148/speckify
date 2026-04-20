@@ -106,7 +106,7 @@ class ReviewFixtureTests(unittest.TestCase):
             review_summary["decomposition_profile"],
             bundle["bundle_metadata"]["decomposition_profile"],
         )
-        self.assertEqual(review_summary["counts"]["implementation_units"], 66)
+        self.assertEqual(review_summary["counts"]["implementation_units"], 71)
         self.assertEqual(review_summary["counts"]["source_anchors"], 62)
 
 

@@ -268,10 +268,10 @@
       "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-1."
     },
     {
-      "implementation_unit_id": "iu.rupify.browse-rewards-step-2",
-      "issue_slug": "iu-rupify-browse-rewards-step-2",
-      "title": "Implement Browse Rewards",
-      "body_markdown": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- System displays available rewards and points balance.\n\n## Acceptance Criteria\n\n- System displays available rewards and points balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: System displays available rewards and points balance.\n- Expected outcome: System displays available rewards and points balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n",
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-points-balance",
+      "issue_slug": "iu-rupify-browse-rewards-step-2-display-points-balance",
+      "title": "Implement Display points balance",
+      "body_markdown": "## Summary\n\nImplement the behavior described by display points balance.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- Display the member's current points balance.\n\n## Acceptance Criteria\n\n- The system displays the member's points balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies display points balance.\n- Observable: The system displays the member's points balance.\n- Expected outcome: The system displays the member's points balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n",
       "labels": [
         "speckify",
         "planning",
@@ -283,7 +283,27 @@
         "anchor.rupify.use-case-steps.browse-rewards-step-2"
       ],
       "verification_unit_ids": [
-        "vu.rupify.browse-rewards-step-2"
+        "vu.rupify.browse-rewards-step-2.display-points-balance"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-rewards",
+      "issue_slug": "iu-rupify-browse-rewards-step-2-display-rewards",
+      "title": "Implement Display available rewards",
+      "body_markdown": "## Summary\n\nImplement the behavior described by display available rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- Display the rewards that are available to the member.\n\n## Acceptance Criteria\n\n- The system displays available rewards to the member.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies display available rewards.\n- Observable: The system displays available rewards to the member.\n- Expected outcome: The system displays available rewards to the member.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-2.display-rewards"
       ],
       "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-2."
     },
@@ -628,10 +648,10 @@
       "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-2."
     },
     {
-      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3",
-      "issue_slug": "iu-rupify-manage-reward-catalog-step-3",
-      "title": "Implement Manage Reward Catalog",
-      "body_markdown": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- System validates and publishes the change.\n\n## Acceptance Criteria\n\n- System validates and publishes the change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: System validates and publishes the change.\n- Expected outcome: System validates and publishes the change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n",
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.publish-change",
+      "issue_slug": "iu-rupify-manage-reward-catalog-step-3-publish-change",
+      "title": "Implement Publish catalog change",
+      "body_markdown": "## Summary\n\nImplement the behavior described by publish catalog change.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- Publish the catalog configuration change after validation.\n\n## Acceptance Criteria\n\n- The system publishes the catalog configuration change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies publish catalog change.\n- Observable: The system publishes the catalog configuration change.\n- Expected outcome: The system publishes the catalog configuration change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n",
       "labels": [
         "speckify",
         "planning",
@@ -643,7 +663,27 @@
         "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
       ],
       "verification_unit_ids": [
-        "vu.rupify.manage-reward-catalog-step-3"
+        "vu.rupify.manage-reward-catalog-step-3.publish-change"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.validate-change",
+      "issue_slug": "iu-rupify-manage-reward-catalog-step-3-validate-change",
+      "title": "Implement Validate catalog change",
+      "body_markdown": "## Summary\n\nImplement the behavior described by validate catalog change.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- Validate the proposed catalog configuration change.\n\n## Acceptance Criteria\n\n- The system validates the catalog configuration change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies validate catalog change.\n- Observable: The system validates the catalog configuration change.\n- Expected outcome: The system validates the catalog configuration change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-3.validate-change"
       ],
       "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-3."
     },
@@ -888,10 +928,10 @@
       "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-1."
     },
     {
-      "implementation_unit_id": "iu.rupify.redeem-reward-step-2",
-      "issue_slug": "iu-rupify-redeem-reward-step-2",
-      "title": "Implement Redeem Reward",
-      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- System validates reward eligibility and available points.\n\n## Acceptance Criteria\n\n- System validates reward eligibility and available points.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System validates reward eligibility and available points.\n- Expected outcome: System validates reward eligibility and available points.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n",
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-available-points",
+      "issue_slug": "iu-rupify-redeem-reward-step-2-validate-available-points",
+      "title": "Implement Validate available points",
+      "body_markdown": "## Summary\n\nImplement the behavior described by validate available points.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- Validate that the member has enough points for the redemption.\n\n## Acceptance Criteria\n\n- The system validates available points for the redemption.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies validate available points.\n- Observable: The system validates available points for the redemption.\n- Expected outcome: The system validates available points for the redemption.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n",
       "labels": [
         "speckify",
         "planning",
@@ -903,15 +943,35 @@
         "anchor.rupify.use-case-steps.redeem-reward-step-2"
       ],
       "verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-2"
+        "vu.rupify.redeem-reward-step-2.validate-available-points"
       ],
       "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-2."
     },
     {
-      "implementation_unit_id": "iu.rupify.redeem-reward-step-3",
-      "issue_slug": "iu-rupify-redeem-reward-step-3",
-      "title": "Implement Redeem Reward",
-      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- System reserves the reward and updates the member balance.\n\n## Acceptance Criteria\n\n- System reserves the reward and updates the member balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System reserves the reward and updates the member balance.\n- Expected outcome: System reserves the reward and updates the member balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n",
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-eligibility",
+      "issue_slug": "iu-rupify-redeem-reward-step-2-validate-eligibility",
+      "title": "Implement Validate reward eligibility",
+      "body_markdown": "## Summary\n\nImplement the behavior described by validate reward eligibility.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- Validate that the selected reward is eligible for redemption.\n\n## Acceptance Criteria\n\n- The system validates reward eligibility.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies validate reward eligibility.\n- Observable: The system validates reward eligibility.\n- Expected outcome: The system validates reward eligibility.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-2.validate-eligibility"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3.reserve-reward",
+      "issue_slug": "iu-rupify-redeem-reward-step-3-reserve-reward",
+      "title": "Implement Reserve reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by reserve reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- Reserve the selected reward for the member.\n\n## Acceptance Criteria\n\n- The system reserves the selected reward.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies reserve reward.\n- Observable: The system reserves the selected reward.\n- Expected outcome: The system reserves the selected reward.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n",
       "labels": [
         "speckify",
         "planning",
@@ -923,7 +983,27 @@
         "anchor.rupify.use-case-steps.redeem-reward-step-3"
       ],
       "verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-3"
+        "vu.rupify.redeem-reward-step-3.reserve-reward"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3.update-member-balance",
+      "issue_slug": "iu-rupify-redeem-reward-step-3-update-member-balance",
+      "title": "Implement Update member balance",
+      "body_markdown": "## Summary\n\nImplement the behavior described by update member balance.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- Update the member balance after the reward reservation.\n\n## Acceptance Criteria\n\n- The system updates the member balance after reservation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies update member balance.\n- Observable: The system updates the member balance after reservation.\n- Expected outcome: The system updates the member balance after reservation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-3.update-member-balance"
       ],
       "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-3."
     },
@@ -1008,10 +1088,10 @@
       "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-step-1."
     },
     {
-      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2",
-      "issue_slug": "iu-rupify-review-redemption-analytics-step-2",
-      "title": "Implement Review Redemption Analytics",
-      "body_markdown": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- System shows redemption and campaign metrics.\n\n## Acceptance Criteria\n\n- System shows redemption and campaign metrics.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: System shows redemption and campaign metrics.\n- Expected outcome: System shows redemption and campaign metrics.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n",
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "issue_slug": "iu-rupify-review-redemption-analytics-step-2-show-campaign-metrics",
+      "title": "Implement Show campaign metrics",
+      "body_markdown": "## Summary\n\nImplement the behavior described by show campaign metrics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- Show campaign metrics in the analytics dashboard.\n\n## Acceptance Criteria\n\n- The system shows campaign metrics in the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies show campaign metrics.\n- Observable: The system shows campaign metrics in the analytics dashboard.\n- Expected outcome: The system shows campaign metrics in the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n",
       "labels": [
         "speckify",
         "planning",
@@ -1023,7 +1103,27 @@
         "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
       ],
       "verification_unit_ids": [
-        "vu.rupify.review-redemption-analytics-step-2"
+        "vu.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "issue_slug": "iu-rupify-review-redemption-analytics-step-2-show-redemption-metrics",
+      "title": "Implement Show redemption metrics",
+      "body_markdown": "## Summary\n\nImplement the behavior described by show redemption metrics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- Show redemption metrics in the analytics dashboard.\n\n## Acceptance Criteria\n\n- The system shows redemption metrics in the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies show redemption metrics.\n- Observable: The system shows redemption metrics in the analytics dashboard.\n- Expected outcome: The system shows redemption metrics in the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
       ],
       "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-step-2."
     },

@@ -812,10 +812,10 @@
     "status": "proposed"
   },
   {
-    "id": "feedback.iu.rupify.browse-rewards-step-2.weak-verification-distinction",
+    "id": "feedback.iu.rupify.browse-rewards-step-2.display-rewards.weak-verification-distinction",
     "feedback_type": "clarify_element",
-    "change_record_id": "change.iu.rupify.browse-rewards-step-2.weak-verification-distinction",
-    "summary": "Implement Browse Rewards: Observable and expected outcome are effectively identical.",
+    "change_record_id": "change.iu.rupify.browse-rewards-step-2.display-rewards.weak-verification-distinction",
+    "summary": "Implement Display available rewards: Observable and expected outcome are effectively identical.",
     "target_source_ids": [
       "browse-rewards-step-2"
     ],
@@ -829,13 +829,42 @@
     ],
     "impact": {
       "affected_spec_unit_ids": [
-        "su.rupify.browse-rewards-step-2"
+        "su.rupify.browse-rewards-step-2.display-rewards"
       ],
       "affected_implementation_unit_ids": [
-        "iu.rupify.browse-rewards-step-2"
+        "iu.rupify.browse-rewards-step-2.display-rewards"
       ],
       "affected_verification_unit_ids": [
-        "vu.rupify.browse-rewards-step-2"
+        "vu.rupify.browse-rewards-step-2.display-rewards"
+      ]
+    },
+    "status": "proposed"
+  },
+  {
+    "id": "feedback.iu.rupify.browse-rewards-step-2.display-points-balance.weak-verification-distinction",
+    "feedback_type": "clarify_element",
+    "change_record_id": "change.iu.rupify.browse-rewards-step-2.display-points-balance.weak-verification-distinction",
+    "summary": "Implement Display points balance: Observable and expected outcome are effectively identical.",
+    "target_source_ids": [
+      "browse-rewards-step-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.use-case-steps.browse-rewards-step-2"
+    ],
+    "reason": "Observable and expected outcome are effectively identical.",
+    "proposed_upstream_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.use-case-steps.browse-rewards-step-2."
+    ],
+    "impact": {
+      "affected_spec_unit_ids": [
+        "su.rupify.browse-rewards-step-2.display-points-balance"
+      ],
+      "affected_implementation_unit_ids": [
+        "iu.rupify.browse-rewards-step-2.display-points-balance"
+      ],
+      "affected_verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-2.display-points-balance"
       ]
     },
     "status": "proposed"
@@ -1073,10 +1102,10 @@
     "status": "proposed"
   },
   {
-    "id": "feedback.iu.rupify.manage-reward-catalog-step-3.weak-verification-distinction",
+    "id": "feedback.iu.rupify.manage-reward-catalog-step-3.validate-change.weak-verification-distinction",
     "feedback_type": "clarify_element",
-    "change_record_id": "change.iu.rupify.manage-reward-catalog-step-3.weak-verification-distinction",
-    "summary": "Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.",
+    "change_record_id": "change.iu.rupify.manage-reward-catalog-step-3.validate-change.weak-verification-distinction",
+    "summary": "Implement Validate catalog change: Observable and expected outcome are effectively identical.",
     "target_source_ids": [
       "manage-reward-catalog-step-3"
     ],
@@ -1090,13 +1119,42 @@
     ],
     "impact": {
       "affected_spec_unit_ids": [
-        "su.rupify.manage-reward-catalog-step-3"
+        "su.rupify.manage-reward-catalog-step-3.validate-change"
       ],
       "affected_implementation_unit_ids": [
-        "iu.rupify.manage-reward-catalog-step-3"
+        "iu.rupify.manage-reward-catalog-step-3.validate-change"
       ],
       "affected_verification_unit_ids": [
-        "vu.rupify.manage-reward-catalog-step-3"
+        "vu.rupify.manage-reward-catalog-step-3.validate-change"
+      ]
+    },
+    "status": "proposed"
+  },
+  {
+    "id": "feedback.iu.rupify.manage-reward-catalog-step-3.publish-change.weak-verification-distinction",
+    "feedback_type": "clarify_element",
+    "change_record_id": "change.iu.rupify.manage-reward-catalog-step-3.publish-change.weak-verification-distinction",
+    "summary": "Implement Publish catalog change: Observable and expected outcome are effectively identical.",
+    "target_source_ids": [
+      "manage-reward-catalog-step-3"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+    ],
+    "reason": "Observable and expected outcome are effectively identical.",
+    "proposed_upstream_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.use-case-steps.manage-reward-catalog-step-3."
+    ],
+    "impact": {
+      "affected_spec_unit_ids": [
+        "su.rupify.manage-reward-catalog-step-3.publish-change"
+      ],
+      "affected_implementation_unit_ids": [
+        "iu.rupify.manage-reward-catalog-step-3.publish-change"
+      ],
+      "affected_verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-3.publish-change"
       ]
     },
     "status": "proposed"
@@ -1218,10 +1276,10 @@
     "status": "proposed"
   },
   {
-    "id": "feedback.iu.rupify.redeem-reward-step-2.weak-verification-distinction",
+    "id": "feedback.iu.rupify.redeem-reward-step-2.validate-eligibility.weak-verification-distinction",
     "feedback_type": "clarify_element",
-    "change_record_id": "change.iu.rupify.redeem-reward-step-2.weak-verification-distinction",
-    "summary": "Implement Redeem Reward: Observable and expected outcome are effectively identical.",
+    "change_record_id": "change.iu.rupify.redeem-reward-step-2.validate-eligibility.weak-verification-distinction",
+    "summary": "Implement Validate reward eligibility: Observable and expected outcome are effectively identical.",
     "target_source_ids": [
       "redeem-reward-step-2"
     ],
@@ -1235,22 +1293,51 @@
     ],
     "impact": {
       "affected_spec_unit_ids": [
-        "su.rupify.redeem-reward-step-2"
+        "su.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "affected_implementation_unit_ids": [
-        "iu.rupify.redeem-reward-step-2"
+        "iu.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "affected_verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-2"
+        "vu.rupify.redeem-reward-step-2.validate-eligibility"
       ]
     },
     "status": "proposed"
   },
   {
-    "id": "feedback.iu.rupify.redeem-reward-step-3.weak-verification-distinction",
+    "id": "feedback.iu.rupify.redeem-reward-step-2.validate-available-points.weak-verification-distinction",
     "feedback_type": "clarify_element",
-    "change_record_id": "change.iu.rupify.redeem-reward-step-3.weak-verification-distinction",
-    "summary": "Implement Redeem Reward: Observable and expected outcome are effectively identical.",
+    "change_record_id": "change.iu.rupify.redeem-reward-step-2.validate-available-points.weak-verification-distinction",
+    "summary": "Implement Validate available points: Observable and expected outcome are effectively identical.",
+    "target_source_ids": [
+      "redeem-reward-step-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.use-case-steps.redeem-reward-step-2"
+    ],
+    "reason": "Observable and expected outcome are effectively identical.",
+    "proposed_upstream_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.use-case-steps.redeem-reward-step-2."
+    ],
+    "impact": {
+      "affected_spec_unit_ids": [
+        "su.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "affected_implementation_unit_ids": [
+        "iu.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "affected_verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-2.validate-available-points"
+      ]
+    },
+    "status": "proposed"
+  },
+  {
+    "id": "feedback.iu.rupify.redeem-reward-step-3.reserve-reward.weak-verification-distinction",
+    "feedback_type": "clarify_element",
+    "change_record_id": "change.iu.rupify.redeem-reward-step-3.reserve-reward.weak-verification-distinction",
+    "summary": "Implement Reserve reward: Observable and expected outcome are effectively identical.",
     "target_source_ids": [
       "redeem-reward-step-3"
     ],
@@ -1264,13 +1351,42 @@
     ],
     "impact": {
       "affected_spec_unit_ids": [
-        "su.rupify.redeem-reward-step-3"
+        "su.rupify.redeem-reward-step-3.reserve-reward"
       ],
       "affected_implementation_unit_ids": [
-        "iu.rupify.redeem-reward-step-3"
+        "iu.rupify.redeem-reward-step-3.reserve-reward"
       ],
       "affected_verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-3"
+        "vu.rupify.redeem-reward-step-3.reserve-reward"
+      ]
+    },
+    "status": "proposed"
+  },
+  {
+    "id": "feedback.iu.rupify.redeem-reward-step-3.update-member-balance.weak-verification-distinction",
+    "feedback_type": "clarify_element",
+    "change_record_id": "change.iu.rupify.redeem-reward-step-3.update-member-balance.weak-verification-distinction",
+    "summary": "Implement Update member balance: Observable and expected outcome are effectively identical.",
+    "target_source_ids": [
+      "redeem-reward-step-3"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.use-case-steps.redeem-reward-step-3"
+    ],
+    "reason": "Observable and expected outcome are effectively identical.",
+    "proposed_upstream_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.use-case-steps.redeem-reward-step-3."
+    ],
+    "impact": {
+      "affected_spec_unit_ids": [
+        "su.rupify.redeem-reward-step-3.update-member-balance"
+      ],
+      "affected_implementation_unit_ids": [
+        "iu.rupify.redeem-reward-step-3.update-member-balance"
+      ],
+      "affected_verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-3.update-member-balance"
       ]
     },
     "status": "proposed"
@@ -1363,10 +1479,10 @@
     "status": "proposed"
   },
   {
-    "id": "feedback.iu.rupify.review-redemption-analytics-step-2.weak-verification-distinction",
+    "id": "feedback.iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics.weak-verification-distinction",
     "feedback_type": "clarify_element",
-    "change_record_id": "change.iu.rupify.review-redemption-analytics-step-2.weak-verification-distinction",
-    "summary": "Implement Review Redemption Analytics: Observable and expected outcome are effectively identical.",
+    "change_record_id": "change.iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics.weak-verification-distinction",
+    "summary": "Implement Show redemption metrics: Observable and expected outcome are effectively identical.",
     "target_source_ids": [
       "review-redemption-analytics-step-2"
     ],
@@ -1380,13 +1496,42 @@
     ],
     "impact": {
       "affected_spec_unit_ids": [
-        "su.rupify.review-redemption-analytics-step-2"
+        "su.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
       ],
       "affected_implementation_unit_ids": [
-        "iu.rupify.review-redemption-analytics-step-2"
+        "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
       ],
       "affected_verification_unit_ids": [
-        "vu.rupify.review-redemption-analytics-step-2"
+        "vu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
+      ]
+    },
+    "status": "proposed"
+  },
+  {
+    "id": "feedback.iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics.weak-verification-distinction",
+    "feedback_type": "clarify_element",
+    "change_record_id": "change.iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics.weak-verification-distinction",
+    "summary": "Implement Show campaign metrics: Observable and expected outcome are effectively identical.",
+    "target_source_ids": [
+      "review-redemption-analytics-step-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+    ],
+    "reason": "Observable and expected outcome are effectively identical.",
+    "proposed_upstream_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.use-case-steps.review-redemption-analytics-step-2."
+    ],
+    "impact": {
+      "affected_spec_unit_ids": [
+        "su.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
+      ],
+      "affected_implementation_unit_ids": [
+        "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
+      ],
+      "affected_verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
       ]
     },
     "status": "proposed"

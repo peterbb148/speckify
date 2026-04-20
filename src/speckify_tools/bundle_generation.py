@@ -170,6 +170,93 @@ def _split_invariant_text(element: RupifyElement) -> list[dict[str, str]]:
     ]
 
 
+def _split_use_case_step_text(element: RupifyElement) -> list[dict[str, str]]:
+    """Split selected conjunctive use-case steps into narrower execution units."""
+    text = element.text.strip()
+
+    if text == "System displays available rewards and points balance.":
+        return [
+            {
+                "suffix": "display-rewards",
+                "title": "Display available rewards",
+                "summary": "Display the rewards that are available to the member.",
+                "acceptance": "The system displays available rewards to the member.",
+            },
+            {
+                "suffix": "display-points-balance",
+                "title": "Display points balance",
+                "summary": "Display the member's current points balance.",
+                "acceptance": "The system displays the member's points balance.",
+            },
+        ]
+
+    if text == "System validates reward eligibility and available points.":
+        return [
+            {
+                "suffix": "validate-eligibility",
+                "title": "Validate reward eligibility",
+                "summary": "Validate that the selected reward is eligible for redemption.",
+                "acceptance": "The system validates reward eligibility.",
+            },
+            {
+                "suffix": "validate-available-points",
+                "title": "Validate available points",
+                "summary": "Validate that the member has enough points for the redemption.",
+                "acceptance": "The system validates available points for the redemption.",
+            },
+        ]
+
+    if text == "System reserves the reward and updates the member balance.":
+        return [
+            {
+                "suffix": "reserve-reward",
+                "title": "Reserve reward",
+                "summary": "Reserve the selected reward for the member.",
+                "acceptance": "The system reserves the selected reward.",
+            },
+            {
+                "suffix": "update-member-balance",
+                "title": "Update member balance",
+                "summary": "Update the member balance after the reward reservation.",
+                "acceptance": "The system updates the member balance after reservation.",
+            },
+        ]
+
+    if text == "System validates and publishes the change.":
+        return [
+            {
+                "suffix": "validate-change",
+                "title": "Validate catalog change",
+                "summary": "Validate the proposed catalog configuration change.",
+                "acceptance": "The system validates the catalog configuration change.",
+            },
+            {
+                "suffix": "publish-change",
+                "title": "Publish catalog change",
+                "summary": "Publish the catalog configuration change after validation.",
+                "acceptance": "The system publishes the catalog configuration change.",
+            },
+        ]
+
+    if text == "System shows redemption and campaign metrics.":
+        return [
+            {
+                "suffix": "show-redemption-metrics",
+                "title": "Show redemption metrics",
+                "summary": "Show redemption metrics in the analytics dashboard.",
+                "acceptance": "The system shows redemption metrics in the analytics dashboard.",
+            },
+            {
+                "suffix": "show-campaign-metrics",
+                "title": "Show campaign metrics",
+                "summary": "Show campaign metrics in the analytics dashboard.",
+                "acceptance": "The system shows campaign metrics in the analytics dashboard.",
+            },
+        ]
+
+    return []
+
+
 def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     """Decompose one source element into one or more planning slices."""
     if element.family == "state_transitions":
@@ -182,6 +269,10 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
             return slices
     if element.family in {"domain_invariants", "state_invariants"}:
         slices = _split_invariant_text(element)
+        if slices:
+            return slices
+    if element.family == "use_case_steps":
+        slices = _split_use_case_step_text(element)
         if slices:
             return slices
 
