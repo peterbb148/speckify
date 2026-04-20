@@ -112,20 +112,60 @@ def _split_functional_requirement_text(text: str) -> list[dict[str, str]]:
     """Split a simple conjunctive functional requirement into separate obligations."""
     lowered = text.lower()
     marker = "stage gates and approval states"
-    if marker not in lowered:
+    if marker in lowered:
+        return [
+            {
+                "suffix": "stage-gates",
+                "title": "Support stage gates",
+                "summary": "Support business process stage gates.",
+                "acceptance": "Business process stage gates are supported.",
+            },
+            {
+                "suffix": "approval-states",
+                "title": "Support approval states",
+                "summary": "Support business process approval states.",
+                "acceptance": "Business process approval states are supported.",
+            },
+        ]
+
+    marker = "cmdb for it applications/systems"
+    export_marker = "export data to various system for reporting"
+    if marker in lowered and export_marker in lowered:
+        return [
+            {
+                "suffix": "maintain-system-inventory",
+                "title": "Maintain system inventory record",
+                "summary": "Maintain the CMDB-style system inventory record for IT applications and systems.",
+                "acceptance": "The system inventory record can be maintained as the CMDB for IT applications and systems.",
+            },
+            {
+                "suffix": "export-reporting-data",
+                "title": "Export reporting data",
+                "summary": "Export system inventory data to downstream reporting systems.",
+                "acceptance": "System inventory data can be exported to downstream reporting systems.",
+            },
+        ]
+
+    return []
+
+
+def _split_invariant_text(element: RupifyElement) -> list[dict[str, str]]:
+    """Split a multi-obligation invariant into narrower planning slices."""
+    lowered = element.text.lower()
+    if "vendor and contract dates" not in lowered:
         return []
     return [
         {
-            "suffix": "stage-gates",
-            "title": "Support stage gates",
-            "summary": "Support business process stage gates.",
-            "acceptance": "Business process stage gates are supported.",
+            "suffix": "record-vendor",
+            "title": "Record vendor",
+            "summary": "Record vendor information for the system.",
+            "acceptance": "The system records vendor information.",
         },
         {
-            "suffix": "approval-states",
-            "title": "Support approval states",
-            "summary": "Support business process approval states.",
-            "acceptance": "Business process approval states are supported.",
+            "suffix": "record-contract-dates",
+            "title": "Record contract dates",
+            "summary": "Record contract dates for the system.",
+            "acceptance": "The system records contract dates.",
         },
     ]
 
@@ -138,6 +178,10 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
             return slices
     if element.family == "functional_requirements":
         slices = _split_functional_requirement_text(element.text)
+        if slices:
+            return slices
+    if element.family in {"domain_invariants", "state_invariants"}:
+        slices = _split_invariant_text(element)
         if slices:
             return slices
 
@@ -285,6 +329,56 @@ def _derive_relationships(
                     "rule_type": "ordered_sequence",
                     "notes": [
                         "Recombine split workflow concerns into the original conjunctive requirement.",
+                    ],
+                }
+            )
+            continue
+
+        if source_anchor_id == "anchor.rupify.functional-requirements.functional-requirement-2":
+            from_id = "iu.rupify.functional-requirement-2.export-reporting-data"
+            to_id = "iu.rupify.functional-requirement-2.maintain-system-inventory"
+            implementation_index[from_id]["dependencies"].append(to_id)
+            dependency_edges.append(
+                {
+                    "id": "dep.functional-requirement-2.export-reporting-data-soft-sequence",
+                    "from_implementation_unit_id": from_id,
+                    "to_implementation_unit_id": to_id,
+                    "dependency_type": "soft_sequence",
+                    "reason": "Reporting exports depend on a maintained system inventory record.",
+                }
+            )
+            assembly_rules.append(
+                {
+                    "id": "assembly.functional-requirement-2",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        "su.rupify.functional-requirement-2.maintain-system-inventory",
+                        "su.rupify.functional-requirement-2.export-reporting-data",
+                    ],
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine system-of-record maintenance and reporting export into the original broad requirement.",
+                    ],
+                }
+            )
+            continue
+
+        if source_anchor_id in {
+            "anchor.rupify.domain-invariants.domain-invariant-3",
+            "anchor.rupify.state-invariants.state-invariant-3",
+        }:
+            assembly_rules.append(
+                {
+                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        spec_id
+                        for item in sorted(members, key=lambda item: item["id"])
+                        for spec_id in item["derived_from_spec_unit_ids"]
+                    ],
+                    "rule_type": "constraint_overlay",
+                    "notes": [
+                        "Recombine split invariant details back into the original invariant statement.",
                     ],
                 }
             )

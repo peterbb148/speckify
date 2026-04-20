@@ -554,9 +554,23 @@
       ]
     },
     {
-      "id": "su.rupify.domain-invariant-3",
-      "title": "Rule 3",
-      "summary": "A System must record vendor and contract dates.",
+      "id": "su.rupify.domain-invariant-3.record-vendor",
+      "title": "Record vendor",
+      "summary": "Record vendor information for the system.",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "obligation_kind": "domain_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify domain_invariants element domain-invariant-3."
+      ]
+    },
+    {
+      "id": "su.rupify.domain-invariant-3.record-contract-dates",
+      "title": "Record contract dates",
+      "summary": "Record contract dates for the system.",
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-3"
       ],
@@ -596,9 +610,23 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-2",
-      "title": "functional-requirement-2",
-      "summary": "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.",
+      "id": "su.rupify.functional-requirement-2.maintain-system-inventory",
+      "title": "Maintain system inventory record",
+      "summary": "Maintain the CMDB-style system inventory record for IT applications and systems.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-2."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-2.export-reporting-data",
+      "title": "Export reporting data",
+      "summary": "Export system inventory data to downstream reporting systems.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
@@ -750,9 +778,23 @@
       ]
     },
     {
-      "id": "su.rupify.state-invariant-3",
-      "title": "Rule 3",
-      "summary": "A System must record vendor and contract dates.",
+      "id": "su.rupify.state-invariant-3.record-vendor",
+      "title": "Record vendor",
+      "summary": "Record vendor information for the system.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "obligation_kind": "state_invariant",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_invariants element state-invariant-3."
+      ]
+    },
+    {
+      "id": "su.rupify.state-invariant-3.record-contract-dates",
+      "title": "Record contract dates",
+      "summary": "Record contract dates for the system.",
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-3"
       ],
@@ -1247,26 +1289,57 @@
       ]
     },
     {
-      "id": "iu.rupify.domain-invariant-3",
-      "title": "Enforce invariant: Rule 3",
-      "summary": "Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.",
+      "id": "iu.rupify.domain-invariant-3.record-vendor",
+      "title": "Enforce invariant: Record vendor",
+      "summary": "Ensure the invariant 'The system records vendor information.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.domain-invariant-3"
+        "su.rupify.domain-invariant-3.record-vendor"
       ],
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-3"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "A System must record vendor and contract dates."
+        "Record vendor information for the system."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "A System must record vendor and contract dates."
+        "The system records vendor information."
       ],
       "verification_unit_ids": [
-        "vu.rupify.domain-invariant-3"
+        "vu.rupify.domain-invariant-3.record-vendor"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element domain-invariant-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-3.",
+      "labels": [
+        "planning",
+        "domain-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.domain-invariant-3.record-contract-dates",
+      "title": "Enforce invariant: Record contract dates",
+      "summary": "Ensure the invariant 'The system records contract dates.' is enforced in the implemented behavior.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.domain-invariant-3.record-contract-dates"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Record contract dates for the system."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system records contract dates."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3.record-contract-dates"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element domain-invariant-3."
@@ -1342,26 +1415,59 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-2",
-      "title": "Implement workflow support: functional-requirement-2",
-      "summary": "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.",
+      "id": "iu.rupify.functional-requirement-2.maintain-system-inventory",
+      "title": "Implement workflow support: Maintain system inventory record",
+      "summary": "Maintain the CMDB-style system inventory record for IT applications and systems.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-2"
+        "su.rupify.functional-requirement-2.maintain-system-inventory"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+        "Maintain the CMDB-style system inventory record for IT applications and systems."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+        "The system inventory record can be maintained as the CMDB for IT applications and systems."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-2"
+        "vu.rupify.functional-requirement-2.maintain-system-inventory"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-2.export-reporting-data",
+      "title": "Implement workflow support: Export reporting data",
+      "summary": "Export system inventory data to downstream reporting systems.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.export-reporting-data"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "dependencies": [
+        "iu.rupify.functional-requirement-2.maintain-system-inventory"
+      ],
+      "implementation_scope": [
+        "Export system inventory data to downstream reporting systems."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System inventory data can be exported to downstream reporting systems."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.export-reporting-data"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-2."
@@ -1683,26 +1789,57 @@
       ]
     },
     {
-      "id": "iu.rupify.state-invariant-3",
-      "title": "Enforce invariant: Rule 3",
-      "summary": "Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.",
+      "id": "iu.rupify.state-invariant-3.record-vendor",
+      "title": "Enforce invariant: Record vendor",
+      "summary": "Ensure the invariant 'The system records vendor information.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.state-invariant-3"
+        "su.rupify.state-invariant-3.record-vendor"
       ],
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-3"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "A System must record vendor and contract dates."
+        "Record vendor information for the system."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "A System must record vendor and contract dates."
+        "The system records vendor information."
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-invariant-3"
+        "vu.rupify.state-invariant-3.record-vendor"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-invariant-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-3.",
+      "labels": [
+        "planning",
+        "state-invariants"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-invariant-3.record-contract-dates",
+      "title": "Enforce invariant: Record contract dates",
+      "summary": "Ensure the invariant 'The system records contract dates.' is enforced in the implemented behavior.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-invariant-3.record-contract-dates"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Record contract dates for the system."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system records contract dates."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-3.record-contract-dates"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element state-invariant-3."
@@ -2317,27 +2454,54 @@
       ]
     },
     {
-      "id": "vu.rupify.domain-invariant-3",
-      "title": "Verify Rule 3",
+      "id": "vu.rupify.domain-invariant-3.record-vendor",
+      "title": "Verify Record vendor",
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-3"
       ],
-      "implementation_unit_id": "iu.rupify.domain-invariant-3",
-      "verification_intent": "Confirm the invariant remains enforced for rule 3.",
+      "implementation_unit_id": "iu.rupify.domain-invariant-3.record-vendor",
+      "verification_intent": "Confirm the invariant remains enforced for record vendor.",
       "observables": [
-        "A System must record vendor and contract dates."
+        "The system records vendor information."
       ],
       "setup_requirements": [
         "A representative system record exists in a state where the rule applies."
       ],
       "expected_outcomes": [
-        "The invariant remains true: A System must record vendor and contract dates."
+        "The invariant remains true: The system records vendor information."
       ],
       "failure_conditions": [
-        "The invariant is breached: A System must record vendor and contract dates."
+        "The invariant is breached: The system records vendor information."
       ],
       "invariants_preserved": [
-        "A System must record vendor and contract dates."
+        "The system records vendor information."
+      ],
+      "notes": [
+        "Derived from decomposition slice of domain-invariant-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.domain-invariant-3.record-contract-dates",
+      "title": "Verify Record contract dates",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "implementation_unit_id": "iu.rupify.domain-invariant-3.record-contract-dates",
+      "verification_intent": "Confirm the invariant remains enforced for record contract dates.",
+      "observables": [
+        "The system records contract dates."
+      ],
+      "setup_requirements": [
+        "A representative system record exists in a state where the rule applies."
+      ],
+      "expected_outcomes": [
+        "The invariant remains true: The system records contract dates."
+      ],
+      "failure_conditions": [
+        "The invariant is breached: The system records contract dates."
+      ],
+      "invariants_preserved": [
+        "The system records contract dates."
       ],
       "notes": [
         "Derived from decomposition slice of domain-invariant-3."
@@ -2394,24 +2558,49 @@
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-2",
-      "title": "Verify functional-requirement-2",
+      "id": "vu.rupify.functional-requirement-2.maintain-system-inventory",
+      "title": "Verify Maintain system inventory record",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "verification_intent": "Confirm workflow support is present for functional-requirement-2.",
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.maintain-system-inventory",
+      "verification_intent": "Confirm workflow support is present for maintain system inventory record.",
       "observables": [
-        "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+        "The system inventory record can be maintained as the CMDB for IT applications and systems."
       ],
       "setup_requirements": [
         "The relevant workflow capability is reachable in the system."
       ],
       "expected_outcomes": [
-        "The workflow behavior is supported: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+        "The workflow behavior is supported: The system inventory record can be maintained as the CMDB for IT applications and systems."
       ],
       "failure_conditions": [
-        "The workflow behavior is missing or incomplete: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+        "The workflow behavior is missing or incomplete: The system inventory record can be maintained as the CMDB for IT applications and systems."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-2.export-reporting-data",
+      "title": "Verify Export reporting data",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.export-reporting-data",
+      "verification_intent": "Confirm workflow support is present for export reporting data.",
+      "observables": [
+        "System inventory data can be exported to downstream reporting systems."
+      ],
+      "setup_requirements": [
+        "The relevant workflow capability is reachable in the system."
+      ],
+      "expected_outcomes": [
+        "The workflow behavior is supported: System inventory data can be exported to downstream reporting systems."
+      ],
+      "failure_conditions": [
+        "The workflow behavior is missing or incomplete: System inventory data can be exported to downstream reporting systems."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -2673,27 +2862,54 @@
       ]
     },
     {
-      "id": "vu.rupify.state-invariant-3",
-      "title": "Verify Rule 3",
+      "id": "vu.rupify.state-invariant-3.record-vendor",
+      "title": "Verify Record vendor",
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-3"
       ],
-      "implementation_unit_id": "iu.rupify.state-invariant-3",
-      "verification_intent": "Confirm the invariant remains enforced for rule 3.",
+      "implementation_unit_id": "iu.rupify.state-invariant-3.record-vendor",
+      "verification_intent": "Confirm the invariant remains enforced for record vendor.",
       "observables": [
-        "A System must record vendor and contract dates."
+        "The system records vendor information."
       ],
       "setup_requirements": [
         "A representative system record exists in a state where the rule applies."
       ],
       "expected_outcomes": [
-        "The invariant remains true: A System must record vendor and contract dates."
+        "The invariant remains true: The system records vendor information."
       ],
       "failure_conditions": [
-        "The invariant is breached: A System must record vendor and contract dates."
+        "The invariant is breached: The system records vendor information."
       ],
       "invariants_preserved": [
-        "A System must record vendor and contract dates."
+        "The system records vendor information."
+      ],
+      "notes": [
+        "Derived from decomposition slice of state-invariant-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-invariant-3.record-contract-dates",
+      "title": "Verify Record contract dates",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "implementation_unit_id": "iu.rupify.state-invariant-3.record-contract-dates",
+      "verification_intent": "Confirm the invariant remains enforced for record contract dates.",
+      "observables": [
+        "The system records contract dates."
+      ],
+      "setup_requirements": [
+        "A representative system record exists in a state where the rule applies."
+      ],
+      "expected_outcomes": [
+        "The invariant remains true: The system records contract dates."
+      ],
+      "failure_conditions": [
+        "The invariant is breached: The system records contract dates."
+      ],
+      "invariants_preserved": [
+        "The system records contract dates."
       ],
       "notes": [
         "Derived from decomposition slice of state-invariant-3."
@@ -3171,18 +3387,37 @@
       ]
     },
     {
-      "id": "tb.rupify.domain-invariant-3",
+      "id": "tb.rupify.domain-invariant-3.record-vendor",
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-3"
       ],
       "spec_unit_ids": [
-        "su.rupify.domain-invariant-3"
+        "su.rupify.domain-invariant-3.record-vendor"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.domain-invariant-3"
+        "iu.rupify.domain-invariant-3.record-vendor"
       ],
       "verification_unit_ids": [
-        "vu.rupify.domain-invariant-3"
+        "vu.rupify.domain-invariant-3.record-vendor"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of domain-invariant-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.domain-invariant-3.record-contract-dates",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.domain-invariant-3.record-contract-dates"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.domain-invariant-3.record-contract-dates"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3.record-contract-dates"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -3228,18 +3463,37 @@
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-2",
+      "id": "tb.rupify.functional-requirement-2.maintain-system-inventory",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-2"
+        "su.rupify.functional-requirement-2.maintain-system-inventory"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-2"
+        "iu.rupify.functional-requirement-2.maintain-system-inventory"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-2"
+        "vu.rupify.functional-requirement-2.maintain-system-inventory"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-2.export-reporting-data",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-2.export-reporting-data"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-2.export-reporting-data"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.export-reporting-data"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -3437,18 +3691,37 @@
       ]
     },
     {
-      "id": "tb.rupify.state-invariant-3",
+      "id": "tb.rupify.state-invariant-3.record-vendor",
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-3"
       ],
       "spec_unit_ids": [
-        "su.rupify.state-invariant-3"
+        "su.rupify.state-invariant-3.record-vendor"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.state-invariant-3"
+        "iu.rupify.state-invariant-3.record-vendor"
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-invariant-3"
+        "vu.rupify.state-invariant-3.record-vendor"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-invariant-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-invariant-3.record-contract-dates",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-invariant-3.record-contract-dates"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-invariant-3.record-contract-dates"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-3.record-contract-dates"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -3655,6 +3928,13 @@
       "reason": "Approval states are coordinated workflow behavior that should follow stage-gate support."
     },
     {
+      "id": "dep.functional-requirement-2.export-reporting-data-soft-sequence",
+      "from_implementation_unit_id": "iu.rupify.functional-requirement-2.export-reporting-data",
+      "to_implementation_unit_id": "iu.rupify.functional-requirement-2.maintain-system-inventory",
+      "dependency_type": "soft_sequence",
+      "reason": "Reporting exports depend on a maintained system inventory record."
+    },
+    {
       "id": "dep.rupify.state-transition-1.active-to-retiring.requires-rupify.state-transition-1.proposed-to-active",
       "from_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
       "to_implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
@@ -3699,6 +3979,20 @@
   ],
   "assembly_rules": [
     {
+      "id": "assembly.domain-invariant-3",
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.domain-invariant-3.record-contract-dates",
+        "su.rupify.domain-invariant-3.record-vendor"
+      ],
+      "rule_type": "constraint_overlay",
+      "notes": [
+        "Recombine split invariant details back into the original invariant statement."
+      ]
+    },
+    {
       "id": "assembly.functional-requirement-1",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
@@ -3710,6 +4004,34 @@
       "rule_type": "ordered_sequence",
       "notes": [
         "Recombine split workflow concerns into the original conjunctive requirement."
+      ]
+    },
+    {
+      "id": "assembly.functional-requirement-2",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.maintain-system-inventory",
+        "su.rupify.functional-requirement-2.export-reporting-data"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine system-of-record maintenance and reporting export into the original broad requirement."
+      ]
+    },
+    {
+      "id": "assembly.state-invariant-3",
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.state-invariant-3.record-contract-dates",
+        "su.rupify.state-invariant-3.record-vendor"
+      ],
+      "rule_type": "constraint_overlay",
+      "notes": [
+        "Recombine split invariant details back into the original invariant statement."
       ]
     },
     {
@@ -3816,9 +4138,14 @@
       "issue_body": "## Summary\n\nEnsure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2` (domain_invariant: `domain-invariant-2`)\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.\n- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.domain-invariant-3",
-      "issue_title": "Enforce invariant: Rule 3",
-      "issue_body": "## Summary\n\nEnsure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 3.\n- Observable: A System must record vendor and contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must record vendor and contract dates.\n- Failure condition: The invariant is breached: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
+      "implementation_unit_id": "iu.rupify.domain-invariant-3.record-vendor",
+      "issue_title": "Enforce invariant: Record vendor",
+      "issue_body": "## Summary\n\nEnsure the invariant 'The system records vendor information.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- Record vendor information for the system.\n\n## Acceptance Criteria\n\n- The system records vendor information.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record vendor.\n- Observable: The system records vendor information.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records vendor information.\n- Failure condition: The invariant is breached: The system records vendor information.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-3.record-contract-dates",
+      "issue_title": "Enforce invariant: Record contract dates",
+      "issue_body": "## Summary\n\nEnsure the invariant 'The system records contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- Record contract dates for the system.\n\n## Acceptance Criteria\n\n- The system records contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record contract dates.\n- Observable: The system records contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records contract dates.\n- Failure condition: The invariant is breached: The system records contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
@@ -3831,9 +4158,14 @@
       "issue_body": "## Summary\n\nSupport business process approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support business process approval states.\n\n## Acceptance Criteria\n\n- Business process approval states are supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support approval states.\n- Observable: Business process approval states are supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Business process approval states are supported.\n- Failure condition: The workflow behavior is missing or incomplete: Business process approval states are supported.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-1.stage-gates`: Approval states are coordinated workflow behavior that should follow stage-gate support.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "issue_title": "Implement workflow support: functional-requirement-2",
-      "issue_body": "## Summary\n\nI think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Acceptance Criteria\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Failure condition: The workflow behavior is missing or incomplete: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.maintain-system-inventory",
+      "issue_title": "Implement workflow support: Maintain system inventory record",
+      "issue_body": "## Summary\n\nMaintain the CMDB-style system inventory record for IT applications and systems.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Maintain the CMDB-style system inventory record for IT applications and systems.\n\n## Acceptance Criteria\n\n- The system inventory record can be maintained as the CMDB for IT applications and systems.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for maintain system inventory record.\n- Observable: The system inventory record can be maintained as the CMDB for IT applications and systems.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The system inventory record can be maintained as the CMDB for IT applications and systems.\n- Failure condition: The workflow behavior is missing or incomplete: The system inventory record can be maintained as the CMDB for IT applications and systems.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.export-reporting-data",
+      "issue_title": "Implement workflow support: Export reporting data",
+      "issue_body": "## Summary\n\nExport system inventory data to downstream reporting systems.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Export system inventory data to downstream reporting systems.\n\n## Acceptance Criteria\n\n- System inventory data can be exported to downstream reporting systems.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for export reporting data.\n- Observable: System inventory data can be exported to downstream reporting systems.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: System inventory data can be exported to downstream reporting systems.\n- Failure condition: The workflow behavior is missing or incomplete: System inventory data can be exported to downstream reporting systems.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-2.maintain-system-inventory`: Reporting exports depend on a maintained system inventory record.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
@@ -3886,9 +4218,14 @@
       "issue_body": "## Summary\n\nEnsure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2` (state_invariant: `state-invariant-2`)\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.\n- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.state-invariant-3",
-      "issue_title": "Enforce invariant: Rule 3",
-      "issue_body": "## Summary\n\nEnsure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 3.\n- Observable: A System must record vendor and contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must record vendor and contract dates.\n- Failure condition: The invariant is breached: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
+      "implementation_unit_id": "iu.rupify.state-invariant-3.record-vendor",
+      "issue_title": "Enforce invariant: Record vendor",
+      "issue_body": "## Summary\n\nEnsure the invariant 'The system records vendor information.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)\n\n## Scope\n\n- Record vendor information for the system.\n\n## Acceptance Criteria\n\n- The system records vendor information.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record vendor.\n- Observable: The system records vendor information.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records vendor information.\n- Failure condition: The invariant is breached: The system records vendor information.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-3.record-contract-dates",
+      "issue_title": "Enforce invariant: Record contract dates",
+      "issue_body": "## Summary\n\nEnsure the invariant 'The system records contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)\n\n## Scope\n\n- Record contract dates for the system.\n\n## Acceptance Criteria\n\n- The system records contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record contract dates.\n- Observable: The system records contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records contract dates.\n- Failure condition: The invariant is breached: The system records contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",

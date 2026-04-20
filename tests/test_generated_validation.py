@@ -27,9 +27,9 @@ class GeneratedValidationTests(unittest.TestCase):
             bundle["bundle_metadata"]["decomposition_profile"],
             "rupify-split-dependencies-v1",
         )
-        self.assertEqual(len(bundle["trace_bundles"]), 36)
-        self.assertEqual(len(bundle["dependency_edges"]), 7)
-        self.assertEqual(len(bundle["assembly_rules"]), 4)
+        self.assertEqual(len(bundle["trace_bundles"]), 39)
+        self.assertEqual(len(bundle["dependency_edges"]), 8)
+        self.assertEqual(len(bundle["assembly_rules"]), 7)
 
     def test_broken_generated_bundle_fails_reference_validation(self) -> None:
         """Reference drift in a generated bundle should fail explicitly."""
