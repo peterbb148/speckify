@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for active to deprecated.
+Transition the system lifecycle from Active to Deprecated.
 
 ## Source Lineage
 
-- `anchor.rupify.state-transitions.state-transition-4`
+- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)
 
 ## Scope
 

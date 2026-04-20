@@ -10,6 +10,20 @@ def _index_by_id(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return {item["id"]: item for item in items}
 
 
+def _anchor_label(anchor: dict[str, Any]) -> str:
+    """Render a human-readable lineage label for one source anchor."""
+    source_type = anchor.get("source_type", "source")
+    source_id = anchor.get("source_id", "")
+    return f"`{anchor['id']}` ({source_type}: `{source_id}`)"
+
+
+def _family_heading(implementation_unit: dict[str, Any]) -> str:
+    """Derive a presentation grouping heading from labels."""
+    labels = implementation_unit.get("labels", [])
+    family_label = next((label for label in labels if label != "planning"), "other")
+    return family_label.replace("-", " ").replace("_", " ").title()
+
+
 def render_issue_body(
     implementation_unit: dict[str, Any],
     verification_units: list[dict[str, Any]],
@@ -26,7 +40,11 @@ def render_issue_body(
         "",
     ]
     for anchor_id in implementation_unit.get("source_anchor_ids", []):
-        lines.append(f"- `{anchor_id}`")
+        anchor = source_anchors.get(anchor_id)
+        if anchor:
+            lines.append(f"- {_anchor_label(anchor)}")
+        else:
+            lines.append(f"- `{anchor_id}`")
 
     lines.extend(["", "## Scope", ""])
     for item in implementation_unit.get("implementation_scope", []):
@@ -121,6 +139,7 @@ def render_issue_projections(bundle: dict[str, Any]) -> list[dict[str, str]]:
 def render_specification_markdown(bundle: dict[str, Any]) -> str:
     """Render a consolidated specification view from a planning bundle."""
     source_summary = bundle["source_summary"]
+    source_anchors = _index_by_id(bundle.get("source_anchors", []))
     lines = [
         "# Speckified Specification",
         "",
@@ -132,22 +151,39 @@ def render_specification_markdown(bundle: dict[str, Any]) -> str:
         f"- Generated implementation units: {len(bundle.get('implementation_units', []))}",
         f"- Generated verification units: {len(bundle.get('verification_units', []))}",
         f"- Trace bundles: {len(bundle.get('trace_bundles', []))}",
+        f"- Dependency edges: {len(bundle.get('dependency_edges', []))}",
+        f"- Assembly rules: {len(bundle.get('assembly_rules', []))}",
         "",
         "## Implementation Units",
         "",
     ]
 
+    grouped: dict[str, list[dict[str, Any]]] = {}
     for implementation_unit in bundle.get("implementation_units", []):
-        lines.append(f"### {implementation_unit['title']}")
+        grouped.setdefault(_family_heading(implementation_unit), []).append(implementation_unit)
+
+    for family_heading, items in sorted(grouped.items()):
+        lines.append(f"### {family_heading}")
         lines.append("")
-        lines.append(f"- ID: `{implementation_unit['id']}`")
-        lines.append(f"- Summary: {implementation_unit['summary']}")
-        lines.append("- Source lineage:")
-        for anchor_id in implementation_unit.get("source_anchor_ids", []):
-            lines.append(f"  - `{anchor_id}`")
-        lines.append("- Acceptance criteria:")
-        for criterion in implementation_unit.get("acceptance_criteria", []):
-            lines.append(f"  - {criterion}")
-        lines.append("")
+        for implementation_unit in items:
+            lines.append(f"#### {implementation_unit['title']}")
+            lines.append("")
+            lines.append(f"- ID: `{implementation_unit['id']}`")
+            lines.append(f"- Summary: {implementation_unit['summary']}")
+            lines.append("- Source lineage:")
+            for anchor_id in implementation_unit.get("source_anchor_ids", []):
+                anchor = source_anchors.get(anchor_id)
+                if anchor:
+                    lines.append(f"  - {_anchor_label(anchor)}")
+                else:
+                    lines.append(f"  - `{anchor_id}`")
+            if implementation_unit.get("dependencies"):
+                lines.append("- Dependencies:")
+                for dependency in implementation_unit["dependencies"]:
+                    lines.append(f"  - `{dependency}`")
+            lines.append("- Acceptance criteria:")
+            for criterion in implementation_unit.get("acceptance_criteria", []):
+                lines.append(f"  - {criterion}")
+            lines.append("")
 
     return "\n".join(lines) + "\n"

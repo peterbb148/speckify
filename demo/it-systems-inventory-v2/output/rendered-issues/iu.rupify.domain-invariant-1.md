@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for rule 1.
+Ensure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.
 
 ## Source Lineage
 
-- `anchor.rupify.domain-invariants.domain-invariant-1`
+- `anchor.rupify.domain-invariants.domain-invariant-1` (domain_invariant: `domain-invariant-1`)
 
 ## Scope
 

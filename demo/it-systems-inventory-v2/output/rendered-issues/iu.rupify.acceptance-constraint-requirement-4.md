@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for acceptance constraint 4.
+Deliver behavior that satisfies the constraint 'audit trail'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)
 
 ## Scope
 

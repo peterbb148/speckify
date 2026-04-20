@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for proposed to active.
+Transition the system lifecycle from Proposed to Active.
 
 ## Source Lineage
 
-- `anchor.rupify.state-transitions.state-transition-2`
+- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)
 
 ## Scope
 

@@ -49,7 +49,9 @@ class RenderingTests(unittest.TestCase):
         self.assertIn("# Speckified Specification", specification)
         self.assertIn("## Overview", specification)
         self.assertIn("## Implementation Units", specification)
-        self.assertIn("Implement Acceptance Constraint 1", specification)
+        self.assertIn("### Acceptance Constraints", specification)
+        self.assertIn("#### Implement constraint: Acceptance Constraint 1", specification)
+        self.assertIn("- Dependency edges:", specification)
 
     def test_rendered_issue_projection_includes_derived_dependency_reason(self) -> None:
         """Rendered issues should surface derived dependency information."""
@@ -85,6 +87,23 @@ class RenderingTests(unittest.TestCase):
         self.assertIn("Setup requirement: The system starts in the Active state.", rendered_issue["issue_body"])
         self.assertIn("Failure condition:", rendered_issue["issue_body"])
         self.assertIn("unexpected state instead of Deprecated", rendered_issue["issue_body"])
+
+    def test_rendered_issue_projection_enriches_source_lineage_display(self) -> None:
+        """Rendered issues should show readable lineage alongside stable ids."""
+        bundle = generate_planning_bundle_file(
+            RUPIFY_EXPORT,
+            generated_at="2026-04-20T13:30:00Z",
+        )
+        rendered_issue = next(
+            item
+            for item in bundle["rendered_issues"]
+            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.stage-gates"
+        )
+
+        self.assertIn(
+            "`anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)",
+            rendered_issue["issue_body"],
+        )
 
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for non_functional-requirement-5.
+Deliver behavior that satisfies the constraint 'search'.
 
 ## Source Lineage
 
-- `anchor.rupify.non-functional-requirements.non-functional-requirement-5`
+- `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)
 
 ## Scope
 

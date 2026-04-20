@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for retiring to retired.
+Transition the system lifecycle from Retiring to Retired.
 
 ## Source Lineage
 
-- `anchor.rupify.state-transitions.state-transition-1`
+- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)
 
 ## Scope
 

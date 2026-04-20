@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for acceptance constraint 5.
+Deliver behavior that satisfies the constraint 'search'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)
 
 ## Scope
 

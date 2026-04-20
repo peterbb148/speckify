@@ -151,6 +151,32 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     ]
 
 
+def _implementation_title(element: RupifyElement, title: str) -> str:
+    """Derive a more usable implementation title."""
+    if element.family in {"acceptance_constraints", "non_functional_requirements"}:
+        return f"Implement constraint: {title}"
+    if element.family in {"domain_invariants", "state_invariants"}:
+        return f"Enforce invariant: {title}"
+    if element.family == "state_transitions":
+        return f"Implement lifecycle transition: {title}"
+    if element.family == "functional_requirements":
+        return f"Implement workflow support: {title}"
+    return f"Implement {title}"
+
+
+def _implementation_summary(element: RupifyElement, title: str, summary: str, acceptance: str) -> str:
+    """Derive a more usable implementation summary."""
+    if element.family in {"acceptance_constraints", "non_functional_requirements"}:
+        return f"Deliver behavior that satisfies the constraint '{acceptance}'."
+    if element.family in {"domain_invariants", "state_invariants"}:
+        return f"Ensure the invariant '{acceptance}' is enforced in the implemented behavior."
+    if element.family == "state_transitions":
+        return summary
+    if element.family == "functional_requirements":
+        return summary
+    return f"Implement the behavior described by {title.lower()}."
+
+
 def _verification_contract(
     element: RupifyElement,
     title: str,
@@ -387,8 +413,8 @@ def generate_planning_bundle(
             implementation_units.append(
                 {
                     "id": implementation_unit_id,
-                    "title": f"Implement {title}",
-                    "summary": f"Implement the planned behavior for {title.lower()}.",
+                    "title": _implementation_title(element, title),
+                    "summary": _implementation_summary(element, title, summary, acceptance),
                     "derived_from_spec_unit_ids": [spec_unit_id],
                     "source_anchor_ids": [anchor_id],
                     "dependencies": [],

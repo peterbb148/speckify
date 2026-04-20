@@ -93,6 +93,13 @@ class BundleGenerationTests(unittest.TestCase):
                 "vu.rupify.functional-requirement-1.stage-gates",
             ],
         )
+        stage_gates = next(
+            item
+            for item in implementation_units
+            if item["id"] == "iu.rupify.functional-requirement-1.stage-gates"
+        )
+        self.assertEqual(stage_gates["title"], "Implement workflow support: Support stage gates")
+        self.assertEqual(stage_gates["summary"], "Support business process stage gates.")
 
     def test_generated_bundle_splits_multi_step_state_transition_chain(self) -> None:
         """A chain transition should decompose into separate transition pairs."""

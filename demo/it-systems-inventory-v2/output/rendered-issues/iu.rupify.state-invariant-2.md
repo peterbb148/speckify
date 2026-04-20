@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for rule 2.
+Ensure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.
 
 ## Source Lineage
 
-- `anchor.rupify.state-invariants.state-invariant-2`
+- `anchor.rupify.state-invariants.state-invariant-2` (state_invariant: `state-invariant-2`)
 
 ## Scope
 

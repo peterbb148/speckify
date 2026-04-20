@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for non_functional-requirement-4.
+Deliver behavior that satisfies the constraint 'audit trail'.
 
 ## Source Lineage
 
-- `anchor.rupify.non-functional-requirements.non-functional-requirement-4`
+- `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)
 
 ## Scope
 
