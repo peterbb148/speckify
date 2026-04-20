@@ -14,13 +14,18 @@ This demo verifies two things:
 2. whether Speckify can produce a first specification artifact from that real hand-off
    bundle
 
+The current demo output is a single consolidated Speckified specification document. That
+is a first demo artifact, not the full long-term Speckify output model. The broader design
+still targets structured planning bundles, issue-ready artifacts, and verification
+definitions.
+
 ## Layout
 
 - `input/`: unchanged copy of the upstream Rupify hand-off export used for this demo
 - `output/import-report.json`: structured import analysis
 - `output/import-report.md`: human-readable import analysis
-- `output/speckified-specification.md`: first Speckified specification artifact derived
-  from the importable subset
+- `output/speckified-specification.md`: first consolidated Speckified specification
+  artifact derived from the imported bundle
 
 ## Run
 

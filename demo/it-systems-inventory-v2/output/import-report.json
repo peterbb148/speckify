@@ -1,20 +1,13 @@
 {
   "source_export_kind": "speckify_planning_export",
-  "clean_import": false,
-  "errors": [
-    "Duplicate element id: functional-requirement-1",
-    "Duplicate element id: non_functional-requirement-1",
-    "Unresolved trace references detected: 10"
-  ],
-  "warnings": [
-    "Duplicate ready_normative_id in summary: functional-requirement-1",
-    "Duplicate ready_normative_id in summary: non_functional-requirement-1"
-  ],
+  "clean_import": true,
+  "errors": [],
+  "warnings": [],
   "counts": {
-    "element_count": 72,
+    "element_count": 82,
     "trace_link_count": 127,
     "ready_normative_count": 29,
-    "importable_ready_normative_count": 25,
+    "importable_ready_normative_count": 29,
     "blocked_or_partial_normative_count": 29
   },
   "family_counts": {
@@ -26,6 +19,8 @@
     "domain_invariants": 3,
     "functional_requirements": 2,
     "guard_conditions": 2,
+    "interaction_messages": 2,
+    "interaction_realizations": 8,
     "interfaces": 2,
     "non_functional_requirements": 8,
     "relationships": 7,
@@ -37,70 +32,17 @@
     "use_cases": 8
   },
   "readiness_counts": {
-    "": 33,
+    "": 43,
     "blocked": 10,
     "ready": 29
   },
   "semantic_counts": {
+    "": 10,
     "informative": 14,
     "normative": 58
   },
-  "duplicate_element_ids": [
-    "functional-requirement-1",
-    "non_functional-requirement-1"
-  ],
-  "unresolved_trace_references": [
-    {
-      "trace_id": "trace-artifact-interaction-model-message-flows-interaction-message-1",
-      "field": "from_id",
-      "ref_id": "interaction-message-1"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-message-flows-interaction-message-2",
-      "field": "from_id",
-      "ref_id": "interaction-message-2"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-1",
-      "field": "from_id",
-      "ref_id": "interaction-realization-1"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-2",
-      "field": "from_id",
-      "ref_id": "interaction-realization-2"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-3",
-      "field": "from_id",
-      "ref_id": "interaction-realization-3"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-4",
-      "field": "from_id",
-      "ref_id": "interaction-realization-4"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-5",
-      "field": "from_id",
-      "ref_id": "interaction-realization-5"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-6",
-      "field": "from_id",
-      "ref_id": "interaction-realization-6"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-7",
-      "field": "from_id",
-      "ref_id": "interaction-realization-7"
-    },
-    {
-      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-8",
-      "field": "from_id",
-      "ref_id": "interaction-realization-8"
-    }
-  ],
+  "duplicate_element_ids": [],
+  "unresolved_trace_references": [],
   "summary": {
     "blocking_ambiguity_count": 0,
     "ready_normative_count": 29,
@@ -171,34 +113,56 @@
         "text": "A System must record vendor and contract dates."
       }
     ],
+    "functional_requirements": [
+      {
+        "id": "functional-requirement-1",
+        "name": "",
+        "text": "Yes business processes like stage gates and approval states must be supported"
+      },
+      {
+        "id": "functional-requirement-2",
+        "name": "",
+        "text": "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+      }
+    ],
     "non_functional_requirements": [
+      {
+        "id": "non_functional-requirement-1",
+        "name": "",
+        "text": "UI must be web based"
+      },
       {
         "id": "non_functional-requirement-2",
         "name": "",
-        "text": "role-based access"
+        "text": "SSO"
       },
       {
         "id": "non_functional-requirement-3",
         "name": "",
-        "text": "audit trail"
+        "text": "role-based access"
       },
       {
         "id": "non_functional-requirement-4",
         "name": "",
-        "text": "search"
+        "text": "audit trail"
       },
       {
         "id": "non_functional-requirement-5",
         "name": "",
-        "text": "filtering"
+        "text": "search"
       },
       {
         "id": "non_functional-requirement-6",
         "name": "",
-        "text": "performance (regular >1s for web page rendering)"
+        "text": "filtering"
       },
       {
         "id": "non_functional-requirement-7",
+        "name": "",
+        "text": "performance (regular >1s for web page rendering)"
+      },
+      {
+        "id": "non_functional-requirement-8",
         "name": "",
         "text": "availability >=99%"
       }

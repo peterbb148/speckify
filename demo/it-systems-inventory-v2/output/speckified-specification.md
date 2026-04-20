@@ -4,8 +4,7 @@ Source export: `/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inven
 
 ## Import Status
 
-- The Rupify hand-off bundle did not import cleanly as-is. This specification is derived from the importable subset only.
-- No manual edits were applied to the upstream export; blocked areas are reported separately.
+- The Rupify hand-off bundle imported cleanly with no additional changes required.
 
 ## Importable Normative Core
 
@@ -27,14 +26,21 @@ Source export: `/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inven
 - `domain-invariant-2` Rule 2: A System lifecycle state change requires approval for deprecation.
 - `domain-invariant-3` Rule 3: A System must record vendor and contract dates.
 
+### Functional Requirements
+
+- `functional-requirement-1` functional-requirement-1: Yes business processes like stage gates and approval states must be supported
+- `functional-requirement-2` functional-requirement-2: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+
 ### Non Functional Requirements
 
-- `non_functional-requirement-2` non_functional-requirement-2: role-based access
-- `non_functional-requirement-3` non_functional-requirement-3: audit trail
-- `non_functional-requirement-4` non_functional-requirement-4: search
-- `non_functional-requirement-5` non_functional-requirement-5: filtering
-- `non_functional-requirement-6` non_functional-requirement-6: performance (regular >1s for web page rendering)
-- `non_functional-requirement-7` non_functional-requirement-7: availability >=99%
+- `non_functional-requirement-1` non_functional-requirement-1: UI must be web based
+- `non_functional-requirement-2` non_functional-requirement-2: SSO
+- `non_functional-requirement-3` non_functional-requirement-3: role-based access
+- `non_functional-requirement-4` non_functional-requirement-4: audit trail
+- `non_functional-requirement-5` non_functional-requirement-5: search
+- `non_functional-requirement-6` non_functional-requirement-6: filtering
+- `non_functional-requirement-7` non_functional-requirement-7: performance (regular >1s for web page rendering)
+- `non_functional-requirement-8` non_functional-requirement-8: availability >=99%
 
 ### State Invariants
 
@@ -51,9 +57,7 @@ Source export: `/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inven
 
 ## Import Blockers
 
-- Duplicate element id: functional-requirement-1
-- Duplicate element id: non_functional-requirement-1
-- Unresolved trace references detected: 10
+- None
 
 ## Notes
 
