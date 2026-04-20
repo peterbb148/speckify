@@ -84,3 +84,17 @@ definitions.
 - [Fixture overview](fixtures/README.md)
 - [Example Rupify export](fixtures/rupify-export/authentication-basic.json)
 - [Expected Speckify bundle](fixtures/speckify-bundle/authentication-basic.bundle.json)
+
+## Validation
+
+Install dependencies with `uv sync`, then validate the example bundle with:
+
+```bash
+uv run speckify-validate-bundle fixtures/speckify-bundle/authentication-basic.bundle.json
+```
+
+Run the current tests with:
+
+```bash
+uv run python -m unittest discover
+```
