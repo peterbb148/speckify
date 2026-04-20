@@ -35,6 +35,7 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertEqual(len(bundle["implementation_units"]), 29)
         self.assertEqual(len(bundle["verification_units"]), 29)
         self.assertEqual(len(bundle["trace_bundles"]), 29)
+        self.assertEqual(len(bundle["rendered_issues"]), 29)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
         validate_bundle(bundle, SCHEMA_DIR)
