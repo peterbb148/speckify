@@ -1,0 +1,10 @@
+{
+  "export_metadata": {
+    "export_kind": "speckify_github_delivery_export",
+    "bundle_id": "bundle.speckify-planning-export",
+    "generated_at": "2026-04-20T14:00:00Z",
+    "source_system": "rupify",
+    "project_id": "speckify-planning-export"
+  },
+  "issues": []
+}

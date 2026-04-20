@@ -95,6 +95,20 @@ class ReviewFixtureTests(unittest.TestCase):
             warning_pairs,
         )
 
+    def test_loyalty_platform_review_summary_matches_demo_bundle(self) -> None:
+        """The second real-world review summary should reflect the loyalty demo bundle."""
+        loyalty_demo_output = ROOT / "demo" / "loyalty-platform" / "output"
+        bundle = json.loads((loyalty_demo_output / "planning-bundle.json").read_text())
+        review_summary = json.loads((REVIEW_ROOT / "loyalty-platform-summary.json").read_text())
+
+        self.assertEqual(review_summary["bundle_id"], bundle["bundle_metadata"]["bundle_id"])
+        self.assertEqual(
+            review_summary["decomposition_profile"],
+            bundle["bundle_metadata"]["decomposition_profile"],
+        )
+        self.assertEqual(review_summary["counts"]["implementation_units"], 0)
+        self.assertEqual(review_summary["counts"]["source_anchors"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
