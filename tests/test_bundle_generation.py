@@ -34,13 +34,13 @@ class BundleGenerationTests(unittest.TestCase):
             "rupify-split-dependencies-v1",
         )
         self.assertEqual(len(bundle["source_anchors"]), 29)
-        self.assertEqual(len(bundle["spec_units"]), 36)
-        self.assertEqual(len(bundle["implementation_units"]), 36)
-        self.assertEqual(len(bundle["verification_units"]), 36)
-        self.assertEqual(len(bundle["trace_bundles"]), 36)
-        self.assertEqual(len(bundle["dependency_edges"]), 7)
-        self.assertEqual(len(bundle["assembly_rules"]), 4)
-        self.assertEqual(len(bundle["rendered_issues"]), 36)
+        self.assertEqual(len(bundle["spec_units"]), 39)
+        self.assertEqual(len(bundle["implementation_units"]), 39)
+        self.assertEqual(len(bundle["verification_units"]), 39)
+        self.assertEqual(len(bundle["trace_bundles"]), 39)
+        self.assertEqual(len(bundle["dependency_edges"]), 8)
+        self.assertEqual(len(bundle["assembly_rules"]), 7)
+        self.assertEqual(len(bundle["rendered_issues"]), 39)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
         validate_bundle(bundle, SCHEMA_DIR)
@@ -161,6 +161,28 @@ class BundleGenerationTests(unittest.TestCase):
             ],
         )
 
+        export_reporting = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.functional-requirement-2.export-reporting-data"
+        )
+        inventory_rule = next(
+            item
+            for item in bundle["assembly_rules"]
+            if item["id"] == "assembly.functional-requirement-2"
+        )
+        self.assertEqual(
+            export_reporting["dependencies"],
+            ["iu.rupify.functional-requirement-2.maintain-system-inventory"],
+        )
+        self.assertEqual(
+            inventory_rule["member_spec_unit_ids"],
+            [
+                "su.rupify.functional-requirement-2.maintain-system-inventory",
+                "su.rupify.functional-requirement-2.export-reporting-data",
+            ],
+        )
+
     def test_generated_bundle_strengthens_verification_contracts(self) -> None:
         """Verification units should include family-specific setup and failure details."""
         export = import_rupify_export_file(RUPIFY_EXPORT)
@@ -191,6 +213,41 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertIn("starts in the Active state", transition["setup_requirements"][0])
         self.assertTrue(any("unexpected state" in item for item in transition["failure_conditions"]))
         self.assertTrue(any("violates the stated constraint" in item for item in constraint["failure_conditions"]))
+
+    def test_generated_bundle_expands_broad_requirement_and_invariant_slices(self) -> None:
+        """Broader requirement and invariant families should decompose into narrower units."""
+        export = import_rupify_export_file(RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        functional_requirement_2_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.functional-requirements.functional-requirement-2"
+            ]
+        )
+        domain_invariant_3_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.domain-invariants.domain-invariant-3"
+            ]
+        )
+
+        self.assertEqual(
+            functional_requirement_2_units,
+            [
+                "iu.rupify.functional-requirement-2.export-reporting-data",
+                "iu.rupify.functional-requirement-2.maintain-system-inventory",
+            ],
+        )
+        self.assertEqual(
+            domain_invariant_3_units,
+            [
+                "iu.rupify.domain-invariant-3.record-contract-dates",
+                "iu.rupify.domain-invariant-3.record-vendor",
+            ],
+        )
 
 
 if __name__ == "__main__":

@@ -3,13 +3,13 @@
   "decomposition_profile": "rupify-split-dependencies-v1",
   "counts": {
     "source_anchors": 29,
-    "spec_units": 36,
-    "implementation_units": 36,
-    "verification_units": 36,
-    "trace_bundles": 36,
-    "dependency_edges": 7,
-    "assembly_rules": 4,
-    "rendered_issues": 36
+    "spec_units": 39,
+    "implementation_units": 39,
+    "verification_units": 39,
+    "trace_bundles": 39,
+    "dependency_edges": 8,
+    "assembly_rules": 7,
+    "rendered_issues": 39
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",

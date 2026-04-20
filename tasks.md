@@ -27,3 +27,4 @@
 - [DONE] 2026-04-20 Strengthen verification unit generation from source constraints and invariants
 - [DONE] 2026-04-20 Improve rendered issue and specification quality for human implementation use
 - [DONE] 2026-04-20 Add quality review fixtures for generated planning artifacts
+- [DONE] 2026-04-20 Expand semantic decomposition across broader requirement and domain families

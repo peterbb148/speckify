@@ -5,11 +5,11 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 36
-- Generated verification units: 36
-- Trace bundles: 36
-- Dependency edges: 7
-- Assembly rules: 4
+- Generated implementation units: 39
+- Generated verification units: 39
+- Trace bundles: 39
+- Dependency edges: 8
+- Assembly rules: 7
 
 ## Implementation Units
 
@@ -116,14 +116,23 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System lifecycle state change requires approval for deprecation.
 
-#### Enforce invariant: Rule 3
+#### Enforce invariant: Record vendor
 
-- ID: `iu.rupify.domain-invariant-3`
-- Summary: Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.
+- ID: `iu.rupify.domain-invariant-3.record-vendor`
+- Summary: Ensure the invariant 'The system records vendor information.' is enforced in the implemented behavior.
 - Source lineage:
   - `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)
 - Acceptance criteria:
-  - A System must record vendor and contract dates.
+  - The system records vendor information.
+
+#### Enforce invariant: Record contract dates
+
+- ID: `iu.rupify.domain-invariant-3.record-contract-dates`
+- Summary: Ensure the invariant 'The system records contract dates.' is enforced in the implemented behavior.
+- Source lineage:
+  - `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)
+- Acceptance criteria:
+  - The system records contract dates.
 
 ### Functional Requirements
 
@@ -147,14 +156,25 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Business process approval states are supported.
 
-#### Implement workflow support: functional-requirement-2
+#### Implement workflow support: Maintain system inventory record
 
-- ID: `iu.rupify.functional-requirement-2`
-- Summary: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+- ID: `iu.rupify.functional-requirement-2.maintain-system-inventory`
+- Summary: Maintain the CMDB-style system inventory record for IT applications and systems.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
-  - I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+  - The system inventory record can be maintained as the CMDB for IT applications and systems.
+
+#### Implement workflow support: Export reporting data
+
+- ID: `iu.rupify.functional-requirement-2.export-reporting-data`
+- Summary: Export system inventory data to downstream reporting systems.
+- Source lineage:
+  - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
+- Dependencies:
+  - `iu.rupify.functional-requirement-2.maintain-system-inventory`
+- Acceptance criteria:
+  - System inventory data can be exported to downstream reporting systems.
 
 ### Non Functional Requirements
 
@@ -250,14 +270,23 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System lifecycle state change requires approval for deprecation.
 
-#### Enforce invariant: Rule 3
+#### Enforce invariant: Record vendor
 
-- ID: `iu.rupify.state-invariant-3`
-- Summary: Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.
+- ID: `iu.rupify.state-invariant-3.record-vendor`
+- Summary: Ensure the invariant 'The system records vendor information.' is enforced in the implemented behavior.
 - Source lineage:
   - `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)
 - Acceptance criteria:
-  - A System must record vendor and contract dates.
+  - The system records vendor information.
+
+#### Enforce invariant: Record contract dates
+
+- ID: `iu.rupify.state-invariant-3.record-contract-dates`
+- Summary: Ensure the invariant 'The system records contract dates.' is enforced in the implemented behavior.
+- Source lineage:
+  - `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)
+- Acceptance criteria:
+  - The system records contract dates.
 
 ### State Transitions
 
