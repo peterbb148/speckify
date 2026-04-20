@@ -20,6 +20,52 @@ def _index_rendered_issues(bundle: dict[str, Any]) -> dict[str, dict[str, str]]:
     }
 
 
+def _dependency_titles(
+    implementation_unit: dict[str, Any],
+    implementation_units: dict[str, dict[str, Any]],
+) -> list[dict[str, str]]:
+    """Resolve dependency ids into id/title pairs."""
+    resolved: list[dict[str, str]] = []
+    for dependency_id in implementation_unit.get("dependencies", []):
+        dependency = implementation_units.get(dependency_id)
+        resolved.append(
+            {
+                "implementation_unit_id": dependency_id,
+                "title": dependency["title"] if dependency else dependency_id,
+            }
+        )
+    return resolved
+
+
+def _render_delivery_issue_body(issue: dict[str, Any], rendered_body: str) -> str:
+    """Render a GitHub-ready delivery issue body with creation metadata."""
+    lines = [
+        "## Delivery Metadata",
+        "",
+        f"- Implementation unit id: `{issue['implementation_unit_id']}`",
+        f"- Issue slug: `{issue['issue_slug']}`",
+        f"- Labels: {', '.join(f'`{label}`' for label in issue['labels'])}",
+        f"- Source anchors: {', '.join(f'`{anchor_id}`' for anchor_id in issue['source_anchor_ids'])}",
+        f"- Verification units: {', '.join(f'`{verification_id}`' for verification_id in issue['verification_unit_ids'])}",
+    ]
+    if issue["dependency_titles"]:
+        lines.append("- Depends on:")
+        for dependency in issue["dependency_titles"]:
+            lines.append(
+                "  - "
+                f"`{dependency['implementation_unit_id']}`"
+                f" ({dependency['title']})"
+            )
+    else:
+        lines.append("- Depends on: none")
+
+    if issue["reverse_impact_hint"]:
+        lines.append(f"- Reverse impact hint: {issue['reverse_impact_hint']}")
+
+    lines.extend(["", rendered_body.strip(), ""])
+    return "\n".join(lines)
+
+
 def _github_labels(implementation_unit: dict[str, Any], source_summary: dict[str, Any]) -> list[str]:
     """Derive deterministic GitHub labels for one implementation unit."""
     labels = ["speckify", "planning", f"source:{source_summary['source_system']}"]
@@ -41,21 +87,31 @@ def build_github_delivery_export(bundle: dict[str, Any]) -> dict[str, Any]:
     source_summary = bundle["source_summary"]
 
     issues: list[dict[str, Any]] = []
-    for implementation_unit_id in sorted(rendered_issues):
+    for sequence_number, implementation_unit_id in enumerate(sorted(rendered_issues), start=1):
         implementation_unit = implementation_units[implementation_unit_id]
         rendered_issue = rendered_issues[implementation_unit_id]
+        issue_slug = implementation_unit_id.replace(".", "-")
+        dependency_titles = _dependency_titles(implementation_unit, implementation_units)
+        issue = {
+            "sequence_number": sequence_number,
+            "implementation_unit_id": implementation_unit_id,
+            "issue_slug": issue_slug,
+            "title": rendered_issue["issue_title"],
+            "labels": _github_labels(implementation_unit, source_summary),
+            "dependency_ids": implementation_unit.get("dependencies", []),
+            "dependency_titles": dependency_titles,
+            "source_anchor_ids": implementation_unit.get("source_anchor_ids", []),
+            "verification_unit_ids": implementation_unit.get("verification_unit_ids", []),
+            "reverse_impact_hint": implementation_unit.get("reverse_impact_hint", ""),
+        }
+        issue["body_markdown"] = _render_delivery_issue_body(issue, rendered_issue["issue_body"])
+        issue["create_payload"] = {
+            "title": issue["title"],
+            "body_path": f"issue-bodies/{issue_slug}.md",
+            "labels": issue["labels"],
+        }
         issues.append(
-            {
-                "implementation_unit_id": implementation_unit_id,
-                "issue_slug": implementation_unit_id.replace(".", "-"),
-                "title": rendered_issue["issue_title"],
-                "body_markdown": rendered_issue["issue_body"],
-                "labels": _github_labels(implementation_unit, source_summary),
-                "dependency_ids": implementation_unit.get("dependencies", []),
-                "source_anchor_ids": implementation_unit.get("source_anchor_ids", []),
-                "verification_unit_ids": implementation_unit.get("verification_unit_ids", []),
-                "reverse_impact_hint": implementation_unit.get("reverse_impact_hint", ""),
-            }
+            issue
         )
 
     return {
@@ -84,8 +140,8 @@ def render_github_delivery_readme(delivery_export: dict[str, Any]) -> str:
         "",
         "## Files",
         "",
-        "- `issues.json`: machine-readable issue export for batch delivery workflows",
-        "- `issue-bodies/*.md`: per-issue Markdown bodies aligned to the rendered planning issues",
+        "- `issues.json`: machine-readable issue export with `create_payload` fields for issue creation",
+        "- `issue-bodies/*.md`: per-issue Markdown bodies with delivery metadata plus planning content",
         "",
     ]
     return "\n".join(lines) + "\n"

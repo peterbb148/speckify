@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.functional-requirement-2`
+- Issue slug: `iu-rupify-functional-requirement-2`
+- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`
+- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-2`
+- Verification units: `vu.rupify.functional-requirement-2`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of functional-requirement-2.
+
 ## Summary
 
 The platform must integrate with payment confirmation and downstream reporting sources.

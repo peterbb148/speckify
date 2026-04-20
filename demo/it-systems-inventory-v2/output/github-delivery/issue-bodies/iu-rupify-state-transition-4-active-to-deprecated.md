@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-transition-4.active-to-deprecated`
+- Issue slug: `iu-rupify-state-transition-4-active-to-deprecated`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-transitions`
+- Source anchors: `anchor.rupify.state-transitions.state-transition-4`
+- Verification units: `vu.rupify.state-transition-4.active-to-deprecated`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of state-transition-4.
+
 ## Summary
 
 Transition the system lifecycle from Active to Deprecated.

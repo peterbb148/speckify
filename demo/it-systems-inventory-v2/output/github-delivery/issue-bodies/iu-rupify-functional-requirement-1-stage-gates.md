@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.functional-requirement-1.stage-gates`
+- Issue slug: `iu-rupify-functional-requirement-1-stage-gates`
+- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`
+- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-1`
+- Verification units: `vu.rupify.functional-requirement-1.stage-gates`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of functional-requirement-1.
+
 ## Summary
 
 Support business process stage gates.

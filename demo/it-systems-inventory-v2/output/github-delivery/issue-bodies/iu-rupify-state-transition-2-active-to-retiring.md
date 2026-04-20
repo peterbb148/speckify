@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-transition-2.active-to-retiring`
+- Issue slug: `iu-rupify-state-transition-2-active-to-retiring`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-transitions`
+- Source anchors: `anchor.rupify.state-transitions.state-transition-2`
+- Verification units: `vu.rupify.state-transition-2.active-to-retiring`
+- Depends on:
+  - `iu.rupify.state-transition-2.proposed-to-active` (Implement lifecycle transition: Proposed to Active)
+- Reverse impact hint: Changes here may require upstream review of state-transition-2.
+
 ## Summary
 
 Transition the system lifecycle from Active to Retiring.

@@ -1,3 +1,15 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.browse-rewards-step-3`
+- Issue slug: `iu-rupify-browse-rewards-step-3`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-case-steps`
+- Source anchors: `anchor.rupify.use-case-steps.browse-rewards-step-3`
+- Verification units: `vu.rupify.browse-rewards-step-3`
+- Depends on:
+  - `iu.rupify.browse-rewards-step-2.display-points-balance` (Implement Display points balance)
+  - `iu.rupify.browse-rewards-step-2.display-rewards` (Implement Display available rewards)
+- Reverse impact hint: Changes here may require upstream review of browse-rewards-step-3.
+
 ## Summary
 
 Implement the behavior described by browse rewards.

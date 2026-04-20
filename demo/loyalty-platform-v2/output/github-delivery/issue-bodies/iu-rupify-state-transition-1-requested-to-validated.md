@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-transition-1.requested-to-validated`
+- Issue slug: `iu-rupify-state-transition-1-requested-to-validated`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-transitions`
+- Source anchors: `anchor.rupify.state-transitions.state-transition-1`
+- Verification units: `vu.rupify.state-transition-1.requested-to-validated`
+- Depends on:
+  - `iu.rupify.guard-condition-2` (Implement Guard Condition 2)
+- Reverse impact hint: Changes here may require upstream review of state-transition-1.
+
 ## Summary
 
 Transition the system lifecycle from Requested to Validated.

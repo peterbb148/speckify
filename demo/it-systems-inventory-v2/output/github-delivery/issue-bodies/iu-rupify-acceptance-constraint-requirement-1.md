@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-1`
+- Issue slug: `iu-rupify-acceptance-constraint-requirement-1`
+- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`
+- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1`
+- Verification units: `vu.rupify.acceptance-constraint-requirement-1`
+- Depends on:
+  - `iu.rupify.non-functional-requirement-1` (Implement constraint: non_functional-requirement-1)
+- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-1.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'UI must be web based'.

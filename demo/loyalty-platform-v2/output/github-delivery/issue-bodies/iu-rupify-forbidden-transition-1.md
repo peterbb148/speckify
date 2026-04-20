@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.forbidden-transition-1`
+- Issue slug: `iu-rupify-forbidden-transition-1`
+- Labels: `speckify`, `planning`, `source:rupify`, `forbidden-transitions`
+- Source anchors: `anchor.rupify.forbidden-transitions.forbidden-transition-1`
+- Verification units: `vu.rupify.forbidden-transition-1`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of forbidden-transition-1.
+
 ## Summary
 
 Implement the behavior described by forbidden transition 1.

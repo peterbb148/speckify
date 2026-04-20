@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.review-redemption-analytics`
+- Issue slug: `iu-rupify-review-redemption-analytics`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-cases`
+- Source anchors: `anchor.rupify.use-cases.review-redemption-analytics`
+- Verification units: `vu.rupify.review-redemption-analytics`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of review-redemption-analytics.
+
 ## Summary
 
 Implement the behavior described by review redemption analytics.

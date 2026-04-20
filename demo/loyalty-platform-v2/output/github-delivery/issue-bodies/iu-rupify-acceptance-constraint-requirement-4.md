@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-4`
+- Issue slug: `iu-rupify-acceptance-constraint-requirement-4`
+- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`
+- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`
+- Verification units: `vu.rupify.acceptance-constraint-requirement-4`
+- Depends on:
+  - `iu.rupify.non-functional-requirement-4` (Implement constraint: non_functional-requirement-4)
+- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-4.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'The system must allow customers to enroll in the loyalty program digitally.'.

@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.state-invariant-1`
+- Issue slug: `iu-rupify-state-invariant-1`
+- Labels: `speckify`, `planning`, `source:rupify`, `state-invariants`
+- Source anchors: `anchor.rupify.state-invariants.state-invariant-1`
+- Verification units: `vu.rupify.state-invariant-1`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of state-invariant-1.
+
 ## Summary
 
 Ensure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.

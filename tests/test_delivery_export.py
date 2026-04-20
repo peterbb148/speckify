@@ -36,9 +36,11 @@ class DeliveryExportTests(unittest.TestCase):
             delivery_export["export_metadata"]["export_kind"],
             "speckify_github_delivery_export",
         )
+        self.assertEqual(delivery_export["issues"][0]["sequence_number"], 1)
+        self.assertIn("create_payload", delivery_export["issues"][0])
 
-    def test_delivery_export_reuses_rendered_issue_markdown(self) -> None:
-        """Delivery issue bodies should stay aligned with rendered planning issue bodies."""
+    def test_delivery_export_wraps_rendered_issue_markdown_with_delivery_metadata(self) -> None:
+        """Delivery issue bodies should add GitHub-creation metadata above the planning body."""
         bundle = generate_planning_bundle_file(
             RUPIFY_EXPORT,
             generated_at="2026-04-20T14:00:00Z",
@@ -56,11 +58,26 @@ class DeliveryExportTests(unittest.TestCase):
             if item["implementation_unit_id"] == delivery_issue["implementation_unit_id"]
         )
 
-        self.assertEqual(delivery_issue["body_markdown"], rendered_issue["issue_body"])
+        self.assertTrue(delivery_issue["body_markdown"].endswith(rendered_issue["issue_body"]))
+        self.assertIn("## Delivery Metadata", delivery_issue["body_markdown"])
+        self.assertIn("Implementation unit id", delivery_issue["body_markdown"])
         self.assertIn("functional-requirements", delivery_issue["labels"])
         self.assertIn(
             "iu.rupify.functional-requirement-1.stage-gates",
             delivery_issue["dependency_ids"],
+        )
+        self.assertEqual(
+            delivery_issue["create_payload"]["body_path"],
+            "issue-bodies/iu-rupify-functional-requirement-1-approval-states.md",
+        )
+        self.assertEqual(
+            delivery_issue["dependency_titles"],
+            [
+                {
+                    "implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
+                    "title": "Implement workflow support: Support stage gates",
+                }
+            ],
         )
 
     def test_demo_delivery_export_matches_current_golden_bundle(self) -> None:

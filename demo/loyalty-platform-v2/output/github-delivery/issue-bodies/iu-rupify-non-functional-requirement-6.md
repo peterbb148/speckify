@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.non-functional-requirement-6`
+- Issue slug: `iu-rupify-non-functional-requirement-6`
+- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`
+- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-6`
+- Verification units: `vu.rupify.non-functional-requirement-6`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-6.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'The system must allow members to redeem rewards when eligibility conditions are satisfied.'.

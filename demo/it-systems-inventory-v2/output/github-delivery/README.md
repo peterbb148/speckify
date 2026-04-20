@@ -8,6 +8,6 @@
 
 ## Files
 
-- `issues.json`: machine-readable issue export for batch delivery workflows
-- `issue-bodies/*.md`: per-issue Markdown bodies aligned to the rendered planning issues
+- `issues.json`: machine-readable issue export with `create_payload` fields for issue creation
+- `issue-bodies/*.md`: per-issue Markdown bodies with delivery metadata plus planning content
 

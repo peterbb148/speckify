@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.scenario-missing-payment-confirmation`
+- Issue slug: `iu-rupify-scenario-missing-payment-confirmation`
+- Labels: `speckify`, `planning`, `source:rupify`, `scenarios`
+- Source anchors: `anchor.rupify.scenarios.scenario-missing-payment-confirmation`
+- Verification units: `vu.rupify.scenario-missing-payment-confirmation`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of scenario-missing-payment-confirmation.
+
 ## Summary
 
 Implement the behavior described by missing payment confirmation.

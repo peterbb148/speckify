@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.manage-reward-catalog`
+- Issue slug: `iu-rupify-manage-reward-catalog`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-cases`
+- Source anchors: `anchor.rupify.use-cases.manage-reward-catalog`
+- Verification units: `vu.rupify.manage-reward-catalog`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of manage-reward-catalog.
+
 ## Summary
 
 Implement the behavior described by manage reward catalog.

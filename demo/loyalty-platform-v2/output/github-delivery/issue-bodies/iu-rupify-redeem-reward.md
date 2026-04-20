@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.redeem-reward`
+- Issue slug: `iu-rupify-redeem-reward`
+- Labels: `speckify`, `planning`, `source:rupify`, `use-cases`
+- Source anchors: `anchor.rupify.use-cases.redeem-reward`
+- Verification units: `vu.rupify.redeem-reward`
+- Depends on:
+  - `iu.rupify.non-functional-requirement-6` (Implement constraint: non_functional-requirement-6)
+- Reverse impact hint: Changes here may require upstream review of redeem-reward.
+
 ## Summary
 
 Implement the behavior described by redeem reward.

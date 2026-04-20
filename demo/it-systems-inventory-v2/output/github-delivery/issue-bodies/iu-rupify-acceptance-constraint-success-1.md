@@ -1,3 +1,13 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.acceptance-constraint-success-1`
+- Issue slug: `iu-rupify-acceptance-constraint-success-1`
+- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`
+- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1`
+- Verification units: `vu.rupify.acceptance-constraint-success-1`
+- Depends on: none
+- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-success-1.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.

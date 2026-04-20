@@ -1,3 +1,14 @@
+## Delivery Metadata
+
+- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-2`
+- Issue slug: `iu-rupify-acceptance-constraint-requirement-2`
+- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`
+- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2`
+- Verification units: `vu.rupify.acceptance-constraint-requirement-2`
+- Depends on:
+  - `iu.rupify.non-functional-requirement-2` (Implement constraint: non_functional-requirement-2)
+- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-2.
+
 ## Summary
 
 Deliver behavior that satisfies the constraint 'The member-facing experience must remain usable on common digital channels.'.
