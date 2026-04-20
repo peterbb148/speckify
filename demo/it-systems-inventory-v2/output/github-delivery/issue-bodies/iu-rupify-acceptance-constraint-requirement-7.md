@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'performance (regular >1s for web
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-7`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

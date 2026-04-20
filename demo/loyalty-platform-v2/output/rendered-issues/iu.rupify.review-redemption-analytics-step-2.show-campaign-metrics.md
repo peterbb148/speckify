@@ -22,7 +22,7 @@ Implement the behavior described by show campaign metrics.
 
 ## Dependencies
 
-- None
+- `iu.rupify.review-redemption-analytics-step-1`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

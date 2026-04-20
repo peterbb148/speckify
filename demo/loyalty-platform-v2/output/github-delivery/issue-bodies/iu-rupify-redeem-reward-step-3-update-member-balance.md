@@ -22,7 +22,8 @@ Implement the behavior described by update member balance.
 
 ## Dependencies
 
-- None
+- `iu.rupify.redeem-reward-step-2.validate-available-points`: Later use-case steps depend on the earlier step in the same ordered flow.
+- `iu.rupify.redeem-reward-step-2.validate-eligibility`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

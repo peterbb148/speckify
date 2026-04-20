@@ -22,7 +22,7 @@ Implement the behavior described by manage reward catalog.
 
 ## Dependencies
 
-- None
+- `iu.rupify.manage-reward-catalog-step-1`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

@@ -41,7 +41,7 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertEqual(len(bundle["implementation_units"]), 39)
         self.assertEqual(len(bundle["verification_units"]), 39)
         self.assertEqual(len(bundle["trace_bundles"]), 39)
-        self.assertEqual(len(bundle["dependency_edges"]), 8)
+        self.assertEqual(len(bundle["dependency_edges"]), 16)
         self.assertEqual(len(bundle["assembly_rules"]), 7)
         self.assertEqual(len(bundle["rendered_issues"]), 39)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
@@ -335,6 +335,46 @@ class BundleGenerationTests(unittest.TestCase):
                 "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
             ],
         )
+
+    def test_generated_bundle_derives_loyalty_step_and_trace_dependencies(self) -> None:
+        """Loyalty V2 should derive dependencies from step order and explicit trace links."""
+        export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        validate_available_points = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.redeem-reward-step-2.validate-available-points"
+        )
+        redeem_reward = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.redeem-reward"
+        )
+        acceptance_constraint = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.acceptance-constraint-requirement-6"
+        )
+        transition = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.state-transition-4.draft-to-published"
+        )
+
+        self.assertEqual(
+            validate_available_points["dependencies"],
+            ["iu.rupify.redeem-reward-step-1"],
+        )
+        self.assertEqual(
+            redeem_reward["dependencies"],
+            ["iu.rupify.non-functional-requirement-6"],
+        )
+        self.assertEqual(
+            acceptance_constraint["dependencies"],
+            ["iu.rupify.non-functional-requirement-6"],
+        )
+        self.assertIn("iu.rupify.guard-condition-2", transition["dependencies"])
 
 
 if __name__ == "__main__":

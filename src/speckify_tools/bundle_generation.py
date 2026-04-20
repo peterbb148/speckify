@@ -373,6 +373,7 @@ def _verification_contract(
 def _derive_relationships(
     implementation_units: list[dict[str, Any]],
     spec_units: list[dict[str, Any]],
+    export: RupifyPlanningExport,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     """Derive dependency edges, assembly rules, and updated implementation units."""
     implementation_index = {item["id"]: item for item in implementation_units}
@@ -391,8 +392,6 @@ def _derive_relationships(
     for item in implementation_units:
         source_anchor_id = item["source_anchor_ids"][0]
         source_groups.setdefault(source_anchor_id, []).append(item)
-
-    spec_by_id = {item["id"]: item for item in spec_units}
 
     for source_anchor_id, members in source_groups.items():
         member_ids = sorted(item["id"] for item in members)
@@ -528,6 +527,114 @@ def _derive_relationships(
                 }
             )
 
+    elements_by_id = {element.id: element for element in export.elements}
+    anchor_by_element_id = {element_id: _anchor_id(element) for element_id, element in elements_by_id.items()}
+
+    def add_dependency(
+        from_id: str,
+        to_id: str,
+        dependency_type: str,
+        reason: str,
+    ) -> None:
+        """Add a deterministic dependency edge when both units exist."""
+        if from_id not in implementation_index or to_id not in implementation_index:
+            return
+        if to_id not in implementation_index[from_id]["dependencies"]:
+            implementation_index[from_id]["dependencies"].append(to_id)
+
+        edge_id = (
+            f"dep.{from_id.replace('iu.', '')}.{dependency_type}-{to_id.replace('iu.', '')}"
+        )
+        if any(item["id"] == edge_id for item in dependency_edges):
+            return
+        dependency_edges.append(
+            {
+                "id": edge_id,
+                "from_implementation_unit_id": from_id,
+                "to_implementation_unit_id": to_id,
+                "dependency_type": dependency_type,
+                "reason": reason,
+            }
+        )
+
+    def implementation_ids_for_element(element_id: str) -> list[str]:
+        """Resolve generated implementation ids for one source element."""
+        anchor_id = anchor_by_element_id.get(element_id, "")
+        if not anchor_id:
+            return []
+        return sorted(
+            item["id"]
+            for item in implementation_units
+            if item["source_anchor_ids"] == [anchor_id]
+        )
+
+    def ordered_use_case_step_groups() -> list[list[list[str]]]:
+        """Collect ordered step groups for each use case."""
+        grouped_steps: dict[str, dict[int, list[str]]] = {}
+        for element in export.elements:
+            if element.family != "use_case_steps" or not element.normative_ready:
+                continue
+            if "-step-" not in element.id:
+                continue
+            prefix, step_number = element.id.rsplit("-step-", 1)
+            if not step_number.isdigit():
+                continue
+            step_ids = implementation_ids_for_element(element.id)
+            if not step_ids:
+                continue
+            grouped_steps.setdefault(prefix, {})[int(step_number)] = step_ids
+
+        ordered_groups: list[list[list[str]]] = []
+        for prefix in sorted(grouped_steps):
+            ordered_groups.append(
+                [grouped_steps[prefix][number] for number in sorted(grouped_steps[prefix])]
+            )
+        return ordered_groups
+
+    for step_groups in ordered_use_case_step_groups():
+        for previous_ids, current_ids in zip(step_groups, step_groups[1:]):
+            for current_id in current_ids:
+                for previous_id in previous_ids:
+                    add_dependency(
+                        current_id,
+                        previous_id,
+                        "requires",
+                        "Later use-case steps depend on the earlier step in the same ordered flow.",
+                    )
+
+    for trace_link in export.trace_links:
+        link_type = str(trace_link.raw.get("link_type", ""))
+
+        if link_type == "acceptance_constraint_to_requirement":
+            for from_id in implementation_ids_for_element(trace_link.from_id):
+                for to_id in implementation_ids_for_element(trace_link.to_id):
+                    add_dependency(
+                        from_id,
+                        to_id,
+                        "soft_sequence",
+                        "Acceptance-constraint work should follow the linked underlying requirement.",
+                    )
+
+        if link_type == "requirement_to_use_case":
+            for from_id in implementation_ids_for_element(trace_link.to_id):
+                for to_id in implementation_ids_for_element(trace_link.from_id):
+                    add_dependency(
+                        from_id,
+                        to_id,
+                        "soft_sequence",
+                        "Use-case implementation should follow the linked requirement intent.",
+                    )
+
+        if link_type == "guard_to_transition":
+            for transition_id in implementation_ids_for_element(trace_link.to_id):
+                for guard_id in implementation_ids_for_element(trace_link.from_id):
+                    add_dependency(
+                        transition_id,
+                        guard_id,
+                        "requires",
+                        "Transition implementation depends on the linked guard condition.",
+                    )
+
     return list(implementation_index.values()), dependency_edges, assembly_rules
 
 
@@ -656,6 +763,7 @@ def generate_planning_bundle(
     implementation_units, dependency_edges, assembly_rules = _derive_relationships(
         implementation_units,
         spec_units,
+        export,
     )
 
     unresolved_ambiguities = [

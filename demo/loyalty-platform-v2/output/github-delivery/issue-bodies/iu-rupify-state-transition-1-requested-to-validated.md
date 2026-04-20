@@ -25,7 +25,7 @@ Transition the system lifecycle from Requested to Validated.
 
 ## Dependencies
 
-- None
+- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.
 
 ## Drift Checks
 

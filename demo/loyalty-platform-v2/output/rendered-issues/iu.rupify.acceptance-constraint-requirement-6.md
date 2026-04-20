@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'The system must allow members to
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-6`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

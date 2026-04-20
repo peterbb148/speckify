@@ -957,7 +957,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-1"
+      ],
       "implementation_scope": [
         "UI must be web based"
       ],
@@ -988,7 +990,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-2"
+      ],
       "implementation_scope": [
         "SSO"
       ],
@@ -1019,7 +1023,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-3"
+      ],
       "implementation_scope": [
         "role-based access"
       ],
@@ -1050,7 +1056,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-4"
+      ],
       "implementation_scope": [
         "audit trail"
       ],
@@ -1081,7 +1089,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-5"
+      ],
       "implementation_scope": [
         "search"
       ],
@@ -1112,7 +1122,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-6"
+      ],
       "implementation_scope": [
         "filtering"
       ],
@@ -1143,7 +1155,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-7"
+      ],
       "implementation_scope": [
         "performance (regular >1s for web page rendering)"
       ],
@@ -1174,7 +1188,9 @@
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.non-functional-requirement-8"
+      ],
       "implementation_scope": [
         "availability >=99%"
       ],
@@ -3975,6 +3991,62 @@
       "to_implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
       "dependency_type": "requires",
       "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-1.soft_sequence-rupify.non-functional-requirement-1",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-1",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-2.soft_sequence-rupify.non-functional-requirement-2",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-2",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-3.soft_sequence-rupify.non-functional-requirement-3",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-3",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-4.soft_sequence-rupify.non-functional-requirement-4",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-4",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-5.soft_sequence-rupify.non-functional-requirement-5",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-5",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-6.soft_sequence-rupify.non-functional-requirement-6",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-6",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-7.soft_sequence-rupify.non-functional-requirement-7",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-7",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
+    },
+    {
+      "id": "dep.rupify.acceptance-constraint-requirement-8.soft_sequence-rupify.non-functional-requirement-8",
+      "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
+      "to_implementation_unit_id": "iu.rupify.non-functional-requirement-8",
+      "dependency_type": "soft_sequence",
+      "reason": "Acceptance-constraint work should follow the linked underlying requirement."
     }
   ],
   "assembly_rules": [
@@ -4085,42 +4157,42 @@
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
       "issue_title": "Implement constraint: Acceptance Constraint 1",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-1`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
       "issue_title": "Implement constraint: Acceptance Constraint 2",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-2`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
       "issue_title": "Implement constraint: Acceptance Constraint 3",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-3`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
       "issue_title": "Implement constraint: Acceptance Constraint 4",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-4`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
       "issue_title": "Implement constraint: Acceptance Constraint 5",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-5`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
       "issue_title": "Implement constraint: Acceptance Constraint 6",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-6`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
       "issue_title": "Implement constraint: Acceptance Constraint 7",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-7`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
       "issue_title": "Implement constraint: Acceptance Constraint 8",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-8`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",

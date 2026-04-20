@@ -22,7 +22,8 @@ Implement the behavior described by redeem reward.
 
 ## Dependencies
 
-- None
+- `iu.rupify.redeem-reward-step-3.reserve-reward`: Later use-case steps depend on the earlier step in the same ordered flow.
+- `iu.rupify.redeem-reward-step-3.update-member-balance`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

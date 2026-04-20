@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'The system must protect member a
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-1`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

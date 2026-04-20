@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'The platform must support integr
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-3`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

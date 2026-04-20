@@ -22,7 +22,7 @@ Implement the behavior described by display available rewards.
 
 ## Dependencies
 
-- None
+- `iu.rupify.browse-rewards-step-1`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

@@ -26,6 +26,7 @@ Transition the system lifecycle from Published to Retired.
 ## Dependencies
 
 - `iu.rupify.state-transition-4.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.
+- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.
 
 ## Drift Checks
 

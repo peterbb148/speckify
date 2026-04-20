@@ -8,7 +8,7 @@ Project: `speckify-planning-export`
 - Generated implementation units: 71
 - Generated verification units: 71
 - Trace bundles: 71
-- Dependency edges: 4
+- Dependency edges: 40
 - Assembly rules: 5
 
 ## Implementation Units
@@ -21,6 +21,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The system must protect member and reward transactions with appropriate security controls.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-1`
 - Acceptance criteria:
   - The system must protect member and reward transactions with appropriate security controls.
 
@@ -30,6 +32,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The member-facing experience must remain usable on common digital channels.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-2`
 - Acceptance criteria:
   - The member-facing experience must remain usable on common digital channels.
 
@@ -39,6 +43,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The platform must support integrations with external systems such as payment confirmation and reporting sources.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-3`
 - Acceptance criteria:
   - The platform must support integrations with external systems such as payment confirmation and reporting sources.
 
@@ -48,6 +54,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The system must allow customers to enroll in the loyalty program digitally.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-4`
 - Acceptance criteria:
   - The system must allow customers to enroll in the loyalty program digitally.
 
@@ -57,6 +65,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The system must show point balance and available rewards to eligible members.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-5`
 - Acceptance criteria:
   - The system must show point balance and available rewards to eligible members.
 
@@ -66,6 +76,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The system must allow members to redeem rewards when eligibility conditions are satisfied.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-6`
 - Acceptance criteria:
   - The system must allow members to redeem rewards when eligibility conditions are satisfied.
 
@@ -75,6 +87,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-7`
 - Acceptance criteria:
   - The system must provide reporting on redemptions and campaign performance.
 
@@ -307,6 +321,8 @@ Project: `speckify-planning-export`
 - Summary: Transition the system lifecycle from Requested to Validated.
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)
+- Dependencies:
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Requested to Validated.
 
@@ -318,6 +334,7 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)
 - Dependencies:
   - `iu.rupify.state-transition-1.requested-to-validated`
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Validated to Fulfilled.
 
@@ -327,6 +344,8 @@ Project: `speckify-planning-export`
 - Summary: Transition the system lifecycle from Requested to Validated.
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)
+- Dependencies:
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Requested to Validated.
 
@@ -338,6 +357,7 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)
 - Dependencies:
   - `iu.rupify.state-transition-2.requested-to-validated`
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Validated to Fulfilled.
 
@@ -347,6 +367,8 @@ Project: `speckify-planning-export`
 - Summary: Transition the system lifecycle from Requested to Rejected.
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)
+- Dependencies:
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Requested to Rejected.
 
@@ -356,6 +378,8 @@ Project: `speckify-planning-export`
 - Summary: Transition the system lifecycle from Draft to Published.
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)
+- Dependencies:
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Draft to Published.
 
@@ -367,6 +391,7 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)
 - Dependencies:
   - `iu.rupify.state-transition-4.draft-to-published`
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Published to Retired.
 
@@ -376,6 +401,8 @@ Project: `speckify-planning-export`
 - Summary: Transition the system lifecycle from Draft to Published.
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)
+- Dependencies:
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Draft to Published.
 
@@ -387,6 +414,7 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)
 - Dependencies:
   - `iu.rupify.state-transition-5.draft-to-published`
+  - `iu.rupify.guard-condition-2`
 - Acceptance criteria:
   - System can move from Published to Retired.
 
@@ -416,6 +444,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by display available rewards.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)
+- Dependencies:
+  - `iu.rupify.browse-rewards-step-1`
 - Acceptance criteria:
   - The system displays available rewards to the member.
 
@@ -425,6 +455,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by display points balance.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)
+- Dependencies:
+  - `iu.rupify.browse-rewards-step-1`
 - Acceptance criteria:
   - The system displays the member's points balance.
 
@@ -434,6 +466,9 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by browse rewards.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-3` (requirement: `browse-rewards-step-3`)
+- Dependencies:
+  - `iu.rupify.browse-rewards-step-2.display-points-balance`
+  - `iu.rupify.browse-rewards-step-2.display-rewards`
 - Acceptance criteria:
   - Customer filters or sorts the catalog.
 
@@ -461,6 +496,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by enroll member.
 - Source lineage:
   - `anchor.rupify.use-case-steps.enroll-member-step-2` (requirement: `enroll-member-step-2`)
+- Dependencies:
+  - `iu.rupify.enroll-member-step-1`
 - Acceptance criteria:
   - Customer provides the required details and consents.
 
@@ -470,6 +507,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by enroll member.
 - Source lineage:
   - `anchor.rupify.use-case-steps.enroll-member-step-3` (requirement: `enroll-member-step-3`)
+- Dependencies:
+  - `iu.rupify.enroll-member-step-2`
 - Acceptance criteria:
   - System validates the submission and creates the member account.
 
@@ -497,6 +536,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by manage reward catalog.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-2` (requirement: `manage-reward-catalog-step-2`)
+- Dependencies:
+  - `iu.rupify.manage-reward-catalog-step-1`
 - Acceptance criteria:
   - Operations Manager updates reward configuration.
 
@@ -506,6 +547,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by validate catalog change.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)
+- Dependencies:
+  - `iu.rupify.manage-reward-catalog-step-2`
 - Acceptance criteria:
   - The system validates the catalog configuration change.
 
@@ -515,6 +558,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by publish catalog change.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)
+- Dependencies:
+  - `iu.rupify.manage-reward-catalog-step-2`
 - Acceptance criteria:
   - The system publishes the catalog configuration change.
 
@@ -560,6 +605,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by validate reward eligibility.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)
+- Dependencies:
+  - `iu.rupify.redeem-reward-step-1`
 - Acceptance criteria:
   - The system validates reward eligibility.
 
@@ -569,6 +616,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by validate available points.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)
+- Dependencies:
+  - `iu.rupify.redeem-reward-step-1`
 - Acceptance criteria:
   - The system validates available points for the redemption.
 
@@ -578,6 +627,9 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by reserve reward.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)
+- Dependencies:
+  - `iu.rupify.redeem-reward-step-2.validate-available-points`
+  - `iu.rupify.redeem-reward-step-2.validate-eligibility`
 - Acceptance criteria:
   - The system reserves the selected reward.
 
@@ -587,6 +639,9 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by update member balance.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)
+- Dependencies:
+  - `iu.rupify.redeem-reward-step-2.validate-available-points`
+  - `iu.rupify.redeem-reward-step-2.validate-eligibility`
 - Acceptance criteria:
   - The system updates the member balance after reservation.
 
@@ -596,6 +651,9 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by redeem reward.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-4` (requirement: `redeem-reward-step-4`)
+- Dependencies:
+  - `iu.rupify.redeem-reward-step-3.reserve-reward`
+  - `iu.rupify.redeem-reward-step-3.update-member-balance`
 - Acceptance criteria:
   - System confirms redemption to the customer.
 
@@ -623,6 +681,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by show redemption metrics.
 - Source lineage:
   - `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)
+- Dependencies:
+  - `iu.rupify.review-redemption-analytics-step-1`
 - Acceptance criteria:
   - The system shows redemption metrics in the analytics dashboard.
 
@@ -632,6 +692,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by show campaign metrics.
 - Source lineage:
   - `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)
+- Dependencies:
+  - `iu.rupify.review-redemption-analytics-step-1`
 - Acceptance criteria:
   - The system shows campaign metrics in the analytics dashboard.
 
@@ -670,6 +732,8 @@ Project: `speckify-planning-export`
 - Summary: Implement the behavior described by redeem reward.
 - Source lineage:
   - `anchor.rupify.use-cases.redeem-reward` (requirement: `redeem-reward`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-6`
 - Acceptance criteria:
   - Redeem Reward
 

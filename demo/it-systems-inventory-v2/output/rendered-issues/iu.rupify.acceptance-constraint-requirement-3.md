@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'role-based access'.
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-3`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

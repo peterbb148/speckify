@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'search'.
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-5`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

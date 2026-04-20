@@ -22,7 +22,7 @@ Implement the behavior described by publish catalog change.
 
 ## Dependencies
 
-- None
+- `iu.rupify.manage-reward-catalog-step-2`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

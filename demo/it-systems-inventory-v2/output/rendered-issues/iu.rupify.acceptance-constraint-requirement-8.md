@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'availability >=99%'.
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-8`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 
