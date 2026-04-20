@@ -25,7 +25,8 @@ Transition the system lifecycle from Requested to Rejected.
 
 ## Dependencies
 
-- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.
 
 ## Drift Checks
 

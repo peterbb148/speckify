@@ -4,7 +4,7 @@
 - Bundle id: `bundle.speckify-planning-export`
 - Source system: `rupify`
 - Project id: `speckify-planning-export`
-- Issue count: 71
+- Issue count: 76
 
 ## Files
 

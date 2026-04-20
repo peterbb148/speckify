@@ -6,7 +6,7 @@
     "generated_at": "2026-04-20T14:00:00Z",
     "source_model_id": "rupify-model",
     "source_model_version": 1,
-    "decomposition_profile": "rupify-split-dependencies-v1"
+    "decomposition_profile": "rupify-split-dependencies-v2"
   },
   "source_summary": {
     "source_system": "rupify",
@@ -15,8 +15,8 @@
     "export_version": 1,
     "notes": [
       "Generated directly from imported Rupify planning export records.",
-      "First-pass decomposition splits selected ready normative source elements into smaller planning units.",
-      "Deterministic dependency edges and assembly rules are derived for split workflow and transition chains."
+      "Deterministic decomposition splits selected ready normative source elements into smaller planning units.",
+      "Dependency edges and assembly rules are derived for split workflow, scenario, guard, and transition structures."
     ]
   },
   "source_anchors": [
@@ -1053,9 +1053,23 @@
       ]
     },
     {
-      "id": "su.rupify.guard-condition-2",
-      "title": "Guard Condition 2",
-      "summary": "Catalog validation approval is required before a reward becomes Published",
+      "id": "su.rupify.guard-condition-2.require-validation-approval",
+      "title": "Require catalog validation approval",
+      "summary": "Require catalog validation approval before a reward can be published.",
+      "source_anchor_ids": [
+        "anchor.rupify.guard-conditions.guard-condition-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify guard_conditions element guard-condition-2."
+      ]
+    },
+    {
+      "id": "su.rupify.guard-condition-2.block-publish-without-approval",
+      "title": "Block publish without approval",
+      "summary": "Block a reward from becoming published when catalog validation approval is missing.",
       "source_anchor_ids": [
         "anchor.rupify.guard-conditions.guard-condition-2"
       ],
@@ -1165,9 +1179,9 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-invalid-catalog-change",
-      "title": "Invalid Catalog Change",
-      "summary": "Publication is rejected because the new reward configuration would break an active offer.",
+      "id": "su.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "title": "Detect active offer conflict",
+      "summary": "Detect that the new reward configuration would break an active offer.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
@@ -1179,9 +1193,23 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-missing-payment-confirmation",
-      "title": "Missing Payment Confirmation",
-      "summary": "Redemption pauses until dependent payment confirmation arrives.",
+      "id": "su.rupify.scenario-invalid-catalog-change.reject-publication",
+      "title": "Reject invalid publication",
+      "summary": "Reject publication when the reward configuration would break an active offer.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "title": "Await payment confirmation",
+      "summary": "Detect that dependent payment confirmation has not yet arrived.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
@@ -1193,9 +1221,23 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-reporting-delay",
-      "title": "Reporting Delay",
-      "summary": "Analytics view is partial because a reporting source is delayed.",
+      "id": "su.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "title": "Pause redemption",
+      "summary": "Pause redemption until the dependent payment confirmation arrives.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "title": "Detect reporting source delay",
+      "summary": "Detect that a reporting source is delayed for the analytics view.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
@@ -1207,9 +1249,37 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-reward-inventory-exhausted",
-      "title": "Reward Inventory Exhausted",
-      "summary": "Redemption fails because no reward inventory remains.",
+      "id": "su.rupify.scenario-reporting-delay.show-partial-analytics",
+      "title": "Show partial analytics view",
+      "summary": "Show a partial analytics view when a reporting source is delayed.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "title": "Detect exhausted reward inventory",
+      "summary": "Detect that no reward inventory remains for the redemption.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "title": "Fail redemption without inventory",
+      "summary": "Fail redemption when no reward inventory remains.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
@@ -2335,26 +2405,59 @@
       ]
     },
     {
-      "id": "iu.rupify.guard-condition-2",
-      "title": "Implement Guard Condition 2",
-      "summary": "Implement the behavior described by guard condition 2.",
+      "id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "title": "Implement guard enforcement: Require catalog validation approval",
+      "summary": "Require catalog validation approval before a reward can be published.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.guard-condition-2"
+        "su.rupify.guard-condition-2.require-validation-approval"
       ],
       "source_anchor_ids": [
         "anchor.rupify.guard-conditions.guard-condition-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Catalog validation approval is required before a reward becomes Published"
+        "Require catalog validation approval before a reward can be published."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Catalog validation approval is required before a reward becomes Published"
+        "Catalog validation approval is required before a reward becomes Published."
       ],
       "verification_unit_ids": [
-        "vu.rupify.guard-condition-2"
+        "vu.rupify.guard-condition-2.require-validation-approval"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element guard-condition-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of guard-condition-2.",
+      "labels": [
+        "planning",
+        "guard-conditions"
+      ]
+    },
+    {
+      "id": "iu.rupify.guard-condition-2.block-publish-without-approval",
+      "title": "Implement guard enforcement: Block publish without approval",
+      "summary": "Block a reward from becoming published when catalog validation approval is missing.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.guard-condition-2.block-publish-without-approval"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.guard-conditions.guard-condition-2"
+      ],
+      "dependencies": [
+        "iu.rupify.guard-condition-2.require-validation-approval"
+      ],
+      "implementation_scope": [
+        "Block a reward from becoming published when catalog validation approval is missing."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "A reward does not become Published without catalog validation approval."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.guard-condition-2.block-publish-without-approval"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element guard-condition-2."
@@ -2583,26 +2686,26 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-invalid-catalog-change",
-      "title": "Implement Invalid Catalog Change",
-      "summary": "Implement the behavior described by invalid catalog change.",
+      "id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "title": "Implement scenario handling: Detect active offer conflict",
+      "summary": "Detect that the new reward configuration would break an active offer.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-invalid-catalog-change"
+        "su.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "Detect that the new reward configuration would break an active offer."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "The system detects when a new reward configuration would break an active offer."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-invalid-catalog-change"
+        "vu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-invalid-catalog-change."
@@ -2614,26 +2717,59 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-missing-payment-confirmation",
-      "title": "Implement Missing Payment Confirmation",
-      "summary": "Implement the behavior described by missing payment confirmation.",
+      "id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+      "title": "Implement scenario handling: Reject invalid publication",
+      "summary": "Reject publication when the reward configuration would break an active offer.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-missing-payment-confirmation"
+        "su.rupify.scenario-invalid-catalog-change.reject-publication"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"
+      ],
+      "implementation_scope": [
+        "Reject publication when the reward configuration would break an active offer."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Publication is rejected when the new reward configuration would break an active offer."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change.reject-publication"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-invalid-catalog-change."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-invalid-catalog-change.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "title": "Implement scenario handling: Await payment confirmation",
+      "summary": "Detect that dependent payment confirmation has not yet arrived.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.await-payment-confirmation"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "Detect that dependent payment confirmation has not yet arrived."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "The system recognizes when dependent payment confirmation is still missing."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-missing-payment-confirmation"
+        "vu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-missing-payment-confirmation."
@@ -2645,26 +2781,59 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-reporting-delay",
-      "title": "Implement Reporting Delay",
-      "summary": "Implement the behavior described by reporting delay.",
+      "id": "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "title": "Implement scenario handling: Pause redemption",
+      "summary": "Pause redemption until the dependent payment confirmation arrives.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-reporting-delay"
+        "su.rupify.scenario-missing-payment-confirmation.pause-redemption"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation"
+      ],
+      "implementation_scope": [
+        "Pause redemption until the dependent payment confirmation arrives."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Redemption remains paused until dependent payment confirmation arrives."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation.pause-redemption"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-missing-payment-confirmation."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-missing-payment-confirmation.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "title": "Implement scenario handling: Detect reporting source delay",
+      "summary": "Detect that a reporting source is delayed for the analytics view.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.detect-reporting-delay"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Analytics view is partial because a reporting source is delayed."
+        "Detect that a reporting source is delayed for the analytics view."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Analytics view is partial because a reporting source is delayed."
+        "The system detects when a reporting source is delayed."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reporting-delay"
+        "vu.rupify.scenario-reporting-delay.detect-reporting-delay"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-reporting-delay."
@@ -2676,26 +2845,92 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-reward-inventory-exhausted",
-      "title": "Implement Reward Inventory Exhausted",
-      "summary": "Implement the behavior described by reward inventory exhausted.",
+      "id": "iu.rupify.scenario-reporting-delay.show-partial-analytics",
+      "title": "Implement scenario handling: Show partial analytics view",
+      "summary": "Show a partial analytics view when a reporting source is delayed.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-reward-inventory-exhausted"
+        "su.rupify.scenario-reporting-delay.show-partial-analytics"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-reporting-delay.detect-reporting-delay"
+      ],
+      "implementation_scope": [
+        "Show a partial analytics view when a reporting source is delayed."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The analytics view remains partial while a reporting source is delayed."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay.show-partial-analytics"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-reporting-delay."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reporting-delay.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "title": "Implement scenario handling: Detect exhausted reward inventory",
+      "summary": "Detect that no reward inventory remains for the redemption.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Redemption fails because no reward inventory remains."
+        "Detect that no reward inventory remains for the redemption."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Redemption fails because no reward inventory remains."
+        "The system detects when no reward inventory remains for the requested redemption."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reward-inventory-exhausted"
+        "vu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-reward-inventory-exhausted."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reward-inventory-exhausted.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "title": "Implement scenario handling: Fail redemption without inventory",
+      "summary": "Fail redemption when no reward inventory remains.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.fail-redemption"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory"
+      ],
+      "implementation_scope": [
+        "Fail redemption when no reward inventory remains."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Redemption fails when no reward inventory remains."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted.fail-redemption"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-reward-inventory-exhausted."
@@ -2779,7 +3014,8 @@
         "anchor.rupify.state-transitions.state-transition-1"
       ],
       "dependencies": [
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Requested to Validated."
@@ -2813,7 +3049,8 @@
       ],
       "dependencies": [
         "iu.rupify.state-transition-1.requested-to-validated",
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Validated to Fulfilled."
@@ -2846,7 +3083,8 @@
         "anchor.rupify.state-transitions.state-transition-2"
       ],
       "dependencies": [
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Requested to Validated."
@@ -2880,7 +3118,8 @@
       ],
       "dependencies": [
         "iu.rupify.state-transition-2.requested-to-validated",
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Validated to Fulfilled."
@@ -2913,7 +3152,8 @@
         "anchor.rupify.state-transitions.state-transition-3"
       ],
       "dependencies": [
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Requested to Rejected."
@@ -2946,7 +3186,8 @@
         "anchor.rupify.state-transitions.state-transition-4"
       ],
       "dependencies": [
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Draft to Published."
@@ -2980,7 +3221,8 @@
       ],
       "dependencies": [
         "iu.rupify.state-transition-4.draft-to-published",
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Published to Retired."
@@ -3013,7 +3255,8 @@
         "anchor.rupify.state-transitions.state-transition-5"
       ],
       "dependencies": [
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Draft to Published."
@@ -3047,7 +3290,8 @@
       ],
       "dependencies": [
         "iu.rupify.state-transition-5.draft-to-published",
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_scope": [
         "Transition the system lifecycle from Published to Retired."
@@ -4502,21 +4746,50 @@
       ]
     },
     {
-      "id": "vu.rupify.guard-condition-2",
-      "title": "Verify Guard Condition 2",
+      "id": "vu.rupify.guard-condition-2.require-validation-approval",
+      "title": "Verify Require catalog validation approval",
       "source_anchor_ids": [
         "anchor.rupify.guard-conditions.guard-condition-2"
       ],
-      "implementation_unit_id": "iu.rupify.guard-condition-2",
-      "verification_intent": "Confirm the implementation satisfies guard condition 2.",
+      "implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "verification_intent": "Confirm the guard enforcement is applied for require catalog validation approval.",
       "observables": [
-        "Catalog validation approval is required before a reward becomes Published"
+        "Catalog validation approval is required before a reward becomes Published."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "A request reaches the boundary where the guard condition must be checked."
+      ],
       "expected_outcomes": [
-        "Catalog validation approval is required before a reward becomes Published"
+        "The guard enforcement is applied correctly: Catalog validation approval is required before a reward becomes Published."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The guard condition is not enforced as required: Catalog validation approval is required before a reward becomes Published."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of guard-condition-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.guard-condition-2.block-publish-without-approval",
+      "title": "Verify Block publish without approval",
+      "source_anchor_ids": [
+        "anchor.rupify.guard-conditions.guard-condition-2"
+      ],
+      "implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
+      "verification_intent": "Confirm the guard enforcement is applied for block publish without approval.",
+      "observables": [
+        "A reward does not become Published without catalog validation approval."
+      ],
+      "setup_requirements": [
+        "A request reaches the boundary where the guard condition must be checked."
+      ],
+      "expected_outcomes": [
+        "The guard enforcement is applied correctly: A reward does not become Published without catalog validation approval."
+      ],
+      "failure_conditions": [
+        "The guard condition is not enforced as required: A reward does not become Published without catalog validation approval."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of guard-condition-2."
@@ -4698,84 +4971,200 @@
       ]
     },
     {
-      "id": "vu.rupify.scenario-invalid-catalog-change",
-      "title": "Verify Invalid Catalog Change",
+      "id": "vu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "title": "Verify Detect active offer conflict",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change",
-      "verification_intent": "Confirm the implementation satisfies invalid catalog change.",
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "verification_intent": "Confirm the scenario handling behaves correctly for detect active offer conflict.",
       "observables": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "The system detects when a new reward configuration would break an active offer."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
       "expected_outcomes": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "The scenario outcome is handled correctly: The system detects when a new reward configuration would break an active offer."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: The system detects when a new reward configuration would break an active offer."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of scenario-invalid-catalog-change."
       ]
     },
     {
-      "id": "vu.rupify.scenario-missing-payment-confirmation",
-      "title": "Verify Missing Payment Confirmation",
+      "id": "vu.rupify.scenario-invalid-catalog-change.reject-publication",
+      "title": "Verify Reject invalid publication",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reject invalid publication.",
+      "observables": [
+        "Publication is rejected when the new reward configuration would break an active offer."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: Publication is rejected when the new reward configuration would break an active offer."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: Publication is rejected when the new reward configuration would break an active offer."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "title": "Verify Await payment confirmation",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation",
-      "verification_intent": "Confirm the implementation satisfies missing payment confirmation.",
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "verification_intent": "Confirm the scenario handling behaves correctly for await payment confirmation.",
       "observables": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "The system recognizes when dependent payment confirmation is still missing."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
       "expected_outcomes": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "The scenario outcome is handled correctly: The system recognizes when dependent payment confirmation is still missing."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: The system recognizes when dependent payment confirmation is still missing."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of scenario-missing-payment-confirmation."
       ]
     },
     {
-      "id": "vu.rupify.scenario-reporting-delay",
-      "title": "Verify Reporting Delay",
+      "id": "vu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "title": "Verify Pause redemption",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "verification_intent": "Confirm the scenario handling behaves correctly for pause redemption.",
+      "observables": [
+        "Redemption remains paused until dependent payment confirmation arrives."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: Redemption remains paused until dependent payment confirmation arrives."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: Redemption remains paused until dependent payment confirmation arrives."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "title": "Verify Detect reporting source delay",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-reporting-delay",
-      "verification_intent": "Confirm the implementation satisfies reporting delay.",
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "verification_intent": "Confirm the scenario handling behaves correctly for detect reporting source delay.",
       "observables": [
-        "Analytics view is partial because a reporting source is delayed."
+        "The system detects when a reporting source is delayed."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
       "expected_outcomes": [
-        "Analytics view is partial because a reporting source is delayed."
+        "The scenario outcome is handled correctly: The system detects when a reporting source is delayed."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: The system detects when a reporting source is delayed."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of scenario-reporting-delay."
       ]
     },
     {
-      "id": "vu.rupify.scenario-reward-inventory-exhausted",
-      "title": "Verify Reward Inventory Exhausted",
+      "id": "vu.rupify.scenario-reporting-delay.show-partial-analytics",
+      "title": "Verify Show partial analytics view",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.show-partial-analytics",
+      "verification_intent": "Confirm the scenario handling behaves correctly for show partial analytics view.",
+      "observables": [
+        "The analytics view remains partial while a reporting source is delayed."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: The analytics view remains partial while a reporting source is delayed."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: The analytics view remains partial while a reporting source is delayed."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "title": "Verify Detect exhausted reward inventory",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted",
-      "verification_intent": "Confirm the implementation satisfies reward inventory exhausted.",
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "verification_intent": "Confirm the scenario handling behaves correctly for detect exhausted reward inventory.",
       "observables": [
-        "Redemption fails because no reward inventory remains."
+        "The system detects when no reward inventory remains for the requested redemption."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
       "expected_outcomes": [
-        "Redemption fails because no reward inventory remains."
+        "The scenario outcome is handled correctly: The system detects when no reward inventory remains for the requested redemption."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: The system detects when no reward inventory remains for the requested redemption."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "title": "Verify Fail redemption without inventory",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "verification_intent": "Confirm the scenario handling behaves correctly for fail redemption without inventory.",
+      "observables": [
+        "Redemption fails when no reward inventory remains."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: Redemption fails when no reward inventory remains."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: Redemption fails when no reward inventory remains."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of scenario-reward-inventory-exhausted."
@@ -6048,18 +6437,37 @@
       ]
     },
     {
-      "id": "tb.rupify.guard-condition-2",
+      "id": "tb.rupify.guard-condition-2.require-validation-approval",
       "source_anchor_ids": [
         "anchor.rupify.guard-conditions.guard-condition-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.guard-condition-2"
+        "su.rupify.guard-condition-2.require-validation-approval"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.guard-condition-2"
+        "iu.rupify.guard-condition-2.require-validation-approval"
       ],
       "verification_unit_ids": [
-        "vu.rupify.guard-condition-2"
+        "vu.rupify.guard-condition-2.require-validation-approval"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of guard-condition-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.guard-condition-2.block-publish-without-approval",
+      "source_anchor_ids": [
+        "anchor.rupify.guard-conditions.guard-condition-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.guard-condition-2.block-publish-without-approval"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.guard-condition-2.block-publish-without-approval"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.guard-condition-2.block-publish-without-approval"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6200,18 +6608,18 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-invalid-catalog-change",
+      "id": "tb.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-invalid-catalog-change"
+        "su.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-invalid-catalog-change"
+        "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-invalid-catalog-change"
+        "vu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6219,18 +6627,37 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-missing-payment-confirmation",
+      "id": "tb.rupify.scenario-invalid-catalog-change.reject-publication",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-invalid-catalog-change.reject-publication"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-invalid-catalog-change.reject-publication"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change.reject-publication"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-missing-payment-confirmation"
+        "su.rupify.scenario-missing-payment-confirmation.await-payment-confirmation"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-missing-payment-confirmation"
+        "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-missing-payment-confirmation"
+        "vu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6238,18 +6665,37 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-reporting-delay",
+      "id": "tb.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.pause-redemption"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-missing-payment-confirmation.pause-redemption"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation.pause-redemption"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reporting-delay.detect-reporting-delay",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-reporting-delay"
+        "su.rupify.scenario-reporting-delay.detect-reporting-delay"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-reporting-delay"
+        "iu.rupify.scenario-reporting-delay.detect-reporting-delay"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reporting-delay"
+        "vu.rupify.scenario-reporting-delay.detect-reporting-delay"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6257,18 +6703,56 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-reward-inventory-exhausted",
+      "id": "tb.rupify.scenario-reporting-delay.show-partial-analytics",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.show-partial-analytics"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-reporting-delay.show-partial-analytics"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay.show-partial-analytics"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-reward-inventory-exhausted"
+        "su.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-reward-inventory-exhausted"
+        "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reward-inventory-exhausted"
+        "vu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.fail-redemption"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted.fail-redemption"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -7095,6 +7579,41 @@
   ],
   "dependency_edges": [
     {
+      "id": "dep.rupify.guard-condition-2.block-publish-without-approval.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Guard enforcement depends on recognizing the guard prerequisite first."
+    },
+    {
+      "id": "dep.rupify.scenario-invalid-catalog-change.reject-publication.requires-rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "from_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+      "to_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "dependency_type": "requires",
+      "reason": "Scenario resolution depends on first identifying the triggering condition."
+    },
+    {
+      "id": "dep.rupify.scenario-missing-payment-confirmation.pause-redemption.requires-rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "from_implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "to_implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "dependency_type": "requires",
+      "reason": "Scenario resolution depends on first identifying the triggering condition."
+    },
+    {
+      "id": "dep.rupify.scenario-reporting-delay.show-partial-analytics.requires-rupify.scenario-reporting-delay.detect-reporting-delay",
+      "from_implementation_unit_id": "iu.rupify.scenario-reporting-delay.show-partial-analytics",
+      "to_implementation_unit_id": "iu.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "dependency_type": "requires",
+      "reason": "Scenario resolution depends on first identifying the triggering condition."
+    },
+    {
+      "id": "dep.rupify.scenario-reward-inventory-exhausted.fail-redemption.requires-rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "from_implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "to_implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "dependency_type": "requires",
+      "reason": "Scenario resolution depends on first identifying the triggering condition."
+    },
+    {
       "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.state-transition-1.requested-to-validated",
       "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
       "to_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
@@ -7305,65 +7824,128 @@
       "reason": "Acceptance-constraint work should follow the linked underlying requirement."
     },
     {
-      "id": "dep.rupify.state-transition-1.requested-to-validated.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-1.requested-to-validated.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-1.requested-to-validated.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-2.requested-to-validated.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-2.requested-to-validated.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-2.validated-to-fulfilled.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-2.requested-to-validated.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-2.validated-to-fulfilled.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-3.requested-to-rejected.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-2.validated-to-fulfilled.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-3.requested-to-rejected.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-3.requested-to-rejected",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-4.draft-to-published.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-3.requested-to-rejected.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-3.requested-to-rejected",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-4.draft-to-published.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-4.draft-to-published",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-4.published-to-retired.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-4.draft-to-published.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-4.draft-to-published",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-4.published-to-retired.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-4.published-to-retired",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-5.draft-to-published.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-4.published-to-retired.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-4.published-to-retired",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-5.draft-to-published.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-5.draft-to-published",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
     {
-      "id": "dep.rupify.state-transition-5.published-to-retired.requires-rupify.guard-condition-2",
+      "id": "dep.rupify.state-transition-5.draft-to-published.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-5.draft-to-published",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-5.published-to-retired.requires-rupify.guard-condition-2.block-publish-without-approval",
       "from_implementation_unit_id": "iu.rupify.state-transition-5.published-to-retired",
-      "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
+      "dependency_type": "requires",
+      "reason": "Transition implementation depends on the linked guard condition."
+    },
+    {
+      "id": "dep.rupify.state-transition-5.published-to-retired.requires-rupify.guard-condition-2.require-validation-approval",
+      "from_implementation_unit_id": "iu.rupify.state-transition-5.published-to-retired",
+      "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
       "dependency_type": "requires",
       "reason": "Transition implementation depends on the linked guard condition."
     },
@@ -7387,6 +7969,76 @@
       "rule_type": "constraint_overlay",
       "notes": [
         "Recombine split invariant details back into the original invariant statement."
+      ]
+    },
+    {
+      "id": "assembly.guard-condition-2",
+      "source_anchor_ids": [
+        "anchor.rupify.guard-conditions.guard-condition-2"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.guard-condition-2.require-validation-approval",
+        "su.rupify.guard-condition-2.block-publish-without-approval"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine guard prerequisite and enforcement behavior into the original guard condition."
+      ]
+    },
+    {
+      "id": "assembly.scenario-invalid-catalog-change",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+        "su.rupify.scenario-invalid-catalog-change.reject-publication"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine scenario trigger detection and outcome handling into the original scenario statement."
+      ]
+    },
+    {
+      "id": "assembly.scenario-missing-payment-confirmation",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+        "su.rupify.scenario-missing-payment-confirmation.pause-redemption"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine scenario trigger detection and outcome handling into the original scenario statement."
+      ]
+    },
+    {
+      "id": "assembly.scenario-reporting-delay",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.detect-reporting-delay",
+        "su.rupify.scenario-reporting-delay.show-partial-analytics"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine scenario trigger detection and outcome handling into the original scenario statement."
+      ]
+    },
+    {
+      "id": "assembly.scenario-reward-inventory-exhausted",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+        "su.rupify.scenario-reward-inventory-exhausted.fail-redemption"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine scenario trigger detection and outcome handling into the original scenario statement."
       ]
     },
     {
@@ -7529,9 +8181,14 @@
       "issue_body": "## Summary\n\nThe platform must integrate with payment confirmation and downstream reporting sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Acceptance Criteria\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: The platform must integrate with payment confirmation and downstream reporting sources.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The platform must integrate with payment confirmation and downstream reporting sources.\n- Failure condition: The workflow behavior is missing or incomplete: The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.guard-condition-2",
-      "issue_title": "Implement Guard Condition 2",
-      "issue_body": "## Summary\n\nImplement the behavior described by guard condition 2.\n\n## Source Lineage\n\n- `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)\n\n## Scope\n\n- Catalog validation approval is required before a reward becomes Published\n\n## Acceptance Criteria\n\n- Catalog validation approval is required before a reward becomes Published\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies guard condition 2.\n- Observable: Catalog validation approval is required before a reward becomes Published\n- Expected outcome: Catalog validation approval is required before a reward becomes Published\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element guard-condition-2.\n"
+      "implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+      "issue_title": "Implement guard enforcement: Require catalog validation approval",
+      "issue_body": "## Summary\n\nRequire catalog validation approval before a reward can be published.\n\n## Source Lineage\n\n- `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)\n\n## Scope\n\n- Require catalog validation approval before a reward can be published.\n\n## Acceptance Criteria\n\n- Catalog validation approval is required before a reward becomes Published.\n\n## Verification Shape\n\n- Intent: Confirm the guard enforcement is applied for require catalog validation approval.\n- Observable: Catalog validation approval is required before a reward becomes Published.\n- Setup requirement: A request reaches the boundary where the guard condition must be checked.\n- Expected outcome: The guard enforcement is applied correctly: Catalog validation approval is required before a reward becomes Published.\n- Failure condition: The guard condition is not enforced as required: Catalog validation approval is required before a reward becomes Published.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element guard-condition-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
+      "issue_title": "Implement guard enforcement: Block publish without approval",
+      "issue_body": "## Summary\n\nBlock a reward from becoming published when catalog validation approval is missing.\n\n## Source Lineage\n\n- `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)\n\n## Scope\n\n- Block a reward from becoming published when catalog validation approval is missing.\n\n## Acceptance Criteria\n\n- A reward does not become Published without catalog validation approval.\n\n## Verification Shape\n\n- Intent: Confirm the guard enforcement is applied for block publish without approval.\n- Observable: A reward does not become Published without catalog validation approval.\n- Setup requirement: A request reaches the boundary where the guard condition must be checked.\n- Expected outcome: The guard enforcement is applied correctly: A reward does not become Published without catalog validation approval.\n- Failure condition: The guard condition is not enforced as required: A reward does not become Published without catalog validation approval.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2.require-validation-approval`: Guard enforcement depends on recognizing the guard prerequisite first.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element guard-condition-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
@@ -7569,24 +8226,44 @@
       "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)\n\n## Scope\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Acceptance Criteria\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.\n- Observable: The system must provide reporting on redemptions and campaign performance.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must provide reporting on redemptions and campaign performance.\n- Failure condition: The delivered behavior violates the stated constraint: The system must provide reporting on redemptions and campaign performance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change",
-      "issue_title": "Implement Invalid Catalog Change",
-      "issue_body": "## Summary\n\nImplement the behavior described by invalid catalog change.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- Publication is rejected because the new reward configuration would break an active offer.\n\n## Acceptance Criteria\n\n- Publication is rejected because the new reward configuration would break an active offer.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies invalid catalog change.\n- Observable: Publication is rejected because the new reward configuration would break an active offer.\n- Expected outcome: Publication is rejected because the new reward configuration would break an active offer.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "issue_title": "Implement scenario handling: Detect active offer conflict",
+      "issue_body": "## Summary\n\nDetect that the new reward configuration would break an active offer.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- Detect that the new reward configuration would break an active offer.\n\n## Acceptance Criteria\n\n- The system detects when a new reward configuration would break an active offer.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for detect active offer conflict.\n- Observable: The system detects when a new reward configuration would break an active offer.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: The system detects when a new reward configuration would break an active offer.\n- Failure condition: The scenario handling is missing or incorrect: The system detects when a new reward configuration would break an active offer.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation",
-      "issue_title": "Implement Missing Payment Confirmation",
-      "issue_body": "## Summary\n\nImplement the behavior described by missing payment confirmation.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- Redemption pauses until dependent payment confirmation arrives.\n\n## Acceptance Criteria\n\n- Redemption pauses until dependent payment confirmation arrives.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies missing payment confirmation.\n- Observable: Redemption pauses until dependent payment confirmation arrives.\n- Expected outcome: Redemption pauses until dependent payment confirmation arrives.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+      "issue_title": "Implement scenario handling: Reject invalid publication",
+      "issue_body": "## Summary\n\nReject publication when the reward configuration would break an active offer.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- Reject publication when the reward configuration would break an active offer.\n\n## Acceptance Criteria\n\n- Publication is rejected when the new reward configuration would break an active offer.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reject invalid publication.\n- Observable: Publication is rejected when the new reward configuration would break an active offer.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Publication is rejected when the new reward configuration would break an active offer.\n- Failure condition: The scenario handling is missing or incorrect: Publication is rejected when the new reward configuration would break an active offer.\n\n## Dependencies\n\n- `iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict`: Scenario resolution depends on first identifying the triggering condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-reporting-delay",
-      "issue_title": "Implement Reporting Delay",
-      "issue_body": "## Summary\n\nImplement the behavior described by reporting delay.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- Analytics view is partial because a reporting source is delayed.\n\n## Acceptance Criteria\n\n- Analytics view is partial because a reporting source is delayed.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies reporting delay.\n- Observable: Analytics view is partial because a reporting source is delayed.\n- Expected outcome: Analytics view is partial because a reporting source is delayed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "issue_title": "Implement scenario handling: Await payment confirmation",
+      "issue_body": "## Summary\n\nDetect that dependent payment confirmation has not yet arrived.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- Detect that dependent payment confirmation has not yet arrived.\n\n## Acceptance Criteria\n\n- The system recognizes when dependent payment confirmation is still missing.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for await payment confirmation.\n- Observable: The system recognizes when dependent payment confirmation is still missing.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: The system recognizes when dependent payment confirmation is still missing.\n- Failure condition: The scenario handling is missing or incorrect: The system recognizes when dependent payment confirmation is still missing.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted",
-      "issue_title": "Implement Reward Inventory Exhausted",
-      "issue_body": "## Summary\n\nImplement the behavior described by reward inventory exhausted.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- Redemption fails because no reward inventory remains.\n\n## Acceptance Criteria\n\n- Redemption fails because no reward inventory remains.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies reward inventory exhausted.\n- Observable: Redemption fails because no reward inventory remains.\n- Expected outcome: Redemption fails because no reward inventory remains.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "issue_title": "Implement scenario handling: Pause redemption",
+      "issue_body": "## Summary\n\nPause redemption until the dependent payment confirmation arrives.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- Pause redemption until the dependent payment confirmation arrives.\n\n## Acceptance Criteria\n\n- Redemption remains paused until dependent payment confirmation arrives.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for pause redemption.\n- Observable: Redemption remains paused until dependent payment confirmation arrives.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Redemption remains paused until dependent payment confirmation arrives.\n- Failure condition: The scenario handling is missing or incorrect: Redemption remains paused until dependent payment confirmation arrives.\n\n## Dependencies\n\n- `iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation`: Scenario resolution depends on first identifying the triggering condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "issue_title": "Implement scenario handling: Detect reporting source delay",
+      "issue_body": "## Summary\n\nDetect that a reporting source is delayed for the analytics view.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- Detect that a reporting source is delayed for the analytics view.\n\n## Acceptance Criteria\n\n- The system detects when a reporting source is delayed.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for detect reporting source delay.\n- Observable: The system detects when a reporting source is delayed.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: The system detects when a reporting source is delayed.\n- Failure condition: The scenario handling is missing or incorrect: The system detects when a reporting source is delayed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.show-partial-analytics",
+      "issue_title": "Implement scenario handling: Show partial analytics view",
+      "issue_body": "## Summary\n\nShow a partial analytics view when a reporting source is delayed.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- Show a partial analytics view when a reporting source is delayed.\n\n## Acceptance Criteria\n\n- The analytics view remains partial while a reporting source is delayed.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for show partial analytics view.\n- Observable: The analytics view remains partial while a reporting source is delayed.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: The analytics view remains partial while a reporting source is delayed.\n- Failure condition: The scenario handling is missing or incorrect: The analytics view remains partial while a reporting source is delayed.\n\n## Dependencies\n\n- `iu.rupify.scenario-reporting-delay.detect-reporting-delay`: Scenario resolution depends on first identifying the triggering condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "issue_title": "Implement scenario handling: Detect exhausted reward inventory",
+      "issue_body": "## Summary\n\nDetect that no reward inventory remains for the redemption.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- Detect that no reward inventory remains for the redemption.\n\n## Acceptance Criteria\n\n- The system detects when no reward inventory remains for the requested redemption.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for detect exhausted reward inventory.\n- Observable: The system detects when no reward inventory remains for the requested redemption.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: The system detects when no reward inventory remains for the requested redemption.\n- Failure condition: The scenario handling is missing or incorrect: The system detects when no reward inventory remains for the requested redemption.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption",
+      "issue_title": "Implement scenario handling: Fail redemption without inventory",
+      "issue_body": "## Summary\n\nFail redemption when no reward inventory remains.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- Fail redemption when no reward inventory remains.\n\n## Acceptance Criteria\n\n- Redemption fails when no reward inventory remains.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for fail redemption without inventory.\n- Observable: Redemption fails when no reward inventory remains.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Redemption fails when no reward inventory remains.\n- Failure condition: The scenario handling is missing or incorrect: Redemption fails when no reward inventory remains.\n\n## Dependencies\n\n- `iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory`: Scenario resolution depends on first identifying the triggering condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-1",
@@ -7601,47 +8278,47 @@
     {
       "implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
       "issue_title": "Implement lifecycle transition: Requested to Validated",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Requested to Validated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Validated.\n\n## Acceptance Criteria\n\n- System can move from Requested to Validated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Validated is allowed and produces the expected target state.\n- Observable: System can move from Requested to Validated.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Validated state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Validated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Validated.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Requested to Validated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Validated.\n\n## Acceptance Criteria\n\n- System can move from Requested to Validated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Validated is allowed and produces the expected target state.\n- Observable: System can move from Requested to Validated.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Validated state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Validated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Validated.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
       "issue_title": "Implement lifecycle transition: Validated to Fulfilled",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Validated to Fulfilled.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Validated to Fulfilled.\n\n## Acceptance Criteria\n\n- System can move from Validated to Fulfilled.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Validated to Fulfilled is allowed and produces the expected target state.\n- Observable: System can move from Validated to Fulfilled.\n- Setup requirement: The system starts in the Validated state.\n- Expected outcome: The system reaches the Fulfilled state after the transition is applied.\n- Failure condition: The system cannot leave Validated for Fulfilled when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Fulfilled.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.requested-to-validated`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Validated to Fulfilled.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Validated to Fulfilled.\n\n## Acceptance Criteria\n\n- System can move from Validated to Fulfilled.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Validated to Fulfilled is allowed and produces the expected target state.\n- Observable: System can move from Validated to Fulfilled.\n- Setup requirement: The system starts in the Validated state.\n- Expected outcome: The system reaches the Fulfilled state after the transition is applied.\n- Failure condition: The system cannot leave Validated for Fulfilled when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Fulfilled.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.requested-to-validated`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
       "issue_title": "Implement lifecycle transition: Requested to Validated",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Requested to Validated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Validated.\n\n## Acceptance Criteria\n\n- System can move from Requested to Validated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Validated is allowed and produces the expected target state.\n- Observable: System can move from Requested to Validated.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Validated state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Validated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Validated.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Requested to Validated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Validated.\n\n## Acceptance Criteria\n\n- System can move from Requested to Validated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Validated is allowed and produces the expected target state.\n- Observable: System can move from Requested to Validated.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Validated state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Validated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Validated.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
       "issue_title": "Implement lifecycle transition: Validated to Fulfilled",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Validated to Fulfilled.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Validated to Fulfilled.\n\n## Acceptance Criteria\n\n- System can move from Validated to Fulfilled.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Validated to Fulfilled is allowed and produces the expected target state.\n- Observable: System can move from Validated to Fulfilled.\n- Setup requirement: The system starts in the Validated state.\n- Expected outcome: The system reaches the Fulfilled state after the transition is applied.\n- Failure condition: The system cannot leave Validated for Fulfilled when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Fulfilled.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.requested-to-validated`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Validated to Fulfilled.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Validated to Fulfilled.\n\n## Acceptance Criteria\n\n- System can move from Validated to Fulfilled.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Validated to Fulfilled is allowed and produces the expected target state.\n- Observable: System can move from Validated to Fulfilled.\n- Setup requirement: The system starts in the Validated state.\n- Expected outcome: The system reaches the Fulfilled state after the transition is applied.\n- Failure condition: The system cannot leave Validated for Fulfilled when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Fulfilled.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.requested-to-validated`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-3.requested-to-rejected",
       "issue_title": "Implement lifecycle transition: Requested to Rejected",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Requested to Rejected.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Rejected.\n\n## Acceptance Criteria\n\n- System can move from Requested to Rejected.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Rejected is allowed and produces the expected target state.\n- Observable: System can move from Requested to Rejected.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Rejected state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Rejected when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Rejected.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Requested to Rejected.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Rejected.\n\n## Acceptance Criteria\n\n- System can move from Requested to Rejected.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Rejected is allowed and produces the expected target state.\n- Observable: System can move from Requested to Rejected.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Rejected state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Rejected when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Rejected.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-4.draft-to-published",
       "issue_title": "Implement lifecycle transition: Draft to Published",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Draft to Published.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Draft to Published.\n\n## Acceptance Criteria\n\n- System can move from Draft to Published.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Draft to Published is allowed and produces the expected target state.\n- Observable: System can move from Draft to Published.\n- Setup requirement: The system starts in the Draft state.\n- Expected outcome: The system reaches the Published state after the transition is applied.\n- Failure condition: The system cannot leave Draft for Published when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Published.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Draft to Published.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Draft to Published.\n\n## Acceptance Criteria\n\n- System can move from Draft to Published.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Draft to Published is allowed and produces the expected target state.\n- Observable: System can move from Draft to Published.\n- Setup requirement: The system starts in the Draft state.\n- Expected outcome: The system reaches the Published state after the transition is applied.\n- Failure condition: The system cannot leave Draft for Published when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Published.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-4.published-to-retired",
       "issue_title": "Implement lifecycle transition: Published to Retired",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Published to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Published to Retired.\n\n## Acceptance Criteria\n\n- System can move from Published to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Published to Retired is allowed and produces the expected target state.\n- Observable: System can move from Published to Retired.\n- Setup requirement: The system starts in the Published state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Published for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-4.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Published to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Published to Retired.\n\n## Acceptance Criteria\n\n- System can move from Published to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Published to Retired is allowed and produces the expected target state.\n- Observable: System can move from Published to Retired.\n- Setup requirement: The system starts in the Published state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Published for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-4.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-5.draft-to-published",
       "issue_title": "Implement lifecycle transition: Draft to Published",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Draft to Published.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)\n\n## Scope\n\n- Transition the system lifecycle from Draft to Published.\n\n## Acceptance Criteria\n\n- System can move from Draft to Published.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Draft to Published is allowed and produces the expected target state.\n- Observable: System can move from Draft to Published.\n- Setup requirement: The system starts in the Draft state.\n- Expected outcome: The system reaches the Published state after the transition is applied.\n- Failure condition: The system cannot leave Draft for Published when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Published.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-5.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Draft to Published.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)\n\n## Scope\n\n- Transition the system lifecycle from Draft to Published.\n\n## Acceptance Criteria\n\n- System can move from Draft to Published.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Draft to Published is allowed and produces the expected target state.\n- Observable: System can move from Draft to Published.\n- Setup requirement: The system starts in the Draft state.\n- Expected outcome: The system reaches the Published state after the transition is applied.\n- Failure condition: The system cannot leave Draft for Published when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Published.\n\n## Dependencies\n\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-5.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-5.published-to-retired",
       "issue_title": "Implement lifecycle transition: Published to Retired",
-      "issue_body": "## Summary\n\nTransition the system lifecycle from Published to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)\n\n## Scope\n\n- Transition the system lifecycle from Published to Retired.\n\n## Acceptance Criteria\n\n- System can move from Published to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Published to Retired is allowed and produces the expected target state.\n- Observable: System can move from Published to Retired.\n- Setup requirement: The system starts in the Published state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Published for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-5.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-5.\n"
+      "issue_body": "## Summary\n\nTransition the system lifecycle from Published to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)\n\n## Scope\n\n- Transition the system lifecycle from Published to Retired.\n\n## Acceptance Criteria\n\n- System can move from Published to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Published to Retired is allowed and produces the expected target state.\n- Observable: System can move from Published to Retired.\n- Setup requirement: The system starts in the Published state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Published for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-5.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.\n- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.\n- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-5.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards-extension-1",

@@ -34,7 +34,7 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertEqual(bundle["bundle_metadata"]["bundle_id"], "bundle.speckify-planning-export")
         self.assertEqual(
             bundle["bundle_metadata"]["decomposition_profile"],
-            "rupify-split-dependencies-v1",
+            "rupify-split-dependencies-v2",
         )
         self.assertEqual(len(bundle["source_anchors"]), 29)
         self.assertEqual(len(bundle["spec_units"]), 39)
@@ -374,7 +374,81 @@ class BundleGenerationTests(unittest.TestCase):
             acceptance_constraint["dependencies"],
             ["iu.rupify.non-functional-requirement-6"],
         )
-        self.assertIn("iu.rupify.guard-condition-2", transition["dependencies"])
+        self.assertEqual(
+            transition["dependencies"],
+            [
+                "iu.rupify.guard-condition-2.block-publish-without-approval",
+                "iu.rupify.guard-condition-2.require-validation-approval",
+            ],
+        )
+
+    def test_generated_bundle_splits_loyalty_scenarios_and_guard(self) -> None:
+        """Scenario and guard families should decompose when the source semantics support it."""
+        export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        invalid_catalog_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+            ]
+        )
+        missing_payment_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+            ]
+        )
+        guard_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.guard-conditions.guard-condition-2"
+            ]
+        )
+
+        self.assertEqual(
+            invalid_catalog_units,
+            [
+                "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+                "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+            ],
+        )
+        self.assertEqual(
+            missing_payment_units,
+            [
+                "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+                "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+            ],
+        )
+        self.assertEqual(
+            guard_units,
+            [
+                "iu.rupify.guard-condition-2.block-publish-without-approval",
+                "iu.rupify.guard-condition-2.require-validation-approval",
+            ],
+        )
+
+        reject_publication = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.scenario-invalid-catalog-change.reject-publication"
+        )
+        block_publish = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.guard-condition-2.block-publish-without-approval"
+        )
+        self.assertEqual(
+            reject_publication["dependencies"],
+            ["iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"],
+        )
+        self.assertEqual(
+            block_publish["dependencies"],
+            ["iu.rupify.guard-condition-2.require-validation-approval"],
+        )
 
 
 if __name__ == "__main__":

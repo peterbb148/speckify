@@ -1,15 +1,15 @@
 {
   "bundle_id": "bundle.speckify-planning-export",
-  "decomposition_profile": "rupify-split-dependencies-v1",
+  "decomposition_profile": "rupify-split-dependencies-v2",
   "counts": {
     "source_anchors": 62,
-    "spec_units": 71,
-    "implementation_units": 71,
-    "verification_units": 71,
-    "trace_bundles": 71,
-    "dependency_edges": 4,
-    "assembly_rules": 5,
-    "rendered_issues": 71
+    "spec_units": 76,
+    "implementation_units": 76,
+    "verification_units": 76,
+    "trace_bundles": 76,
+    "dependency_edges": 54,
+    "assembly_rules": 10,
+    "rendered_issues": 76
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",
@@ -32,20 +32,32 @@
       "iu.rupify.redeem-reward-step-3.reserve-reward",
       "iu.rupify.redeem-reward-step-3.update-member-balance"
     ],
+    "scenario_guard_units": [
+      "iu.rupify.guard-condition-2.require-validation-approval",
+      "iu.rupify.guard-condition-2.block-publish-without-approval",
+      "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+      "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+      "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
+      "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
+      "iu.rupify.scenario-reporting-delay.detect-reporting-delay",
+      "iu.rupify.scenario-reporting-delay.show-partial-analytics",
+      "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
+      "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption"
+    ],
     "transition_dependencies": [
       {
-        "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.state-transition-1.requested-to-validated",
-        "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
-        "to_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
+        "id": "dep.rupify.guard-condition-2.require-validation-approval.requires-rupify.guard-condition-2.block-publish-without-approval",
+        "from_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
+        "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
         "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+        "reason": "Guard enforcement depends on recognizing the guard prerequisite first."
       },
       {
-        "id": "dep.rupify.state-transition-2.validated-to-fulfilled.requires-rupify.state-transition-2.requested-to-validated",
-        "from_implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
-        "to_implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
+        "id": "dep.rupify.scenario-invalid-catalog-change.reject-publication.requires-rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+        "from_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
+        "to_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
         "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+        "reason": "Scenario resolution depends on first identifying the triggering condition."
       }
     ]
   }

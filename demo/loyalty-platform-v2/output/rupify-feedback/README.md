@@ -1,9 +1,9 @@
 # Round-Trip Feedback Report
 
-- Change records: 67
-- Feedback proposals: 58
+- Change records: 62
+- Feedback proposals: 53
 - Planning-only findings: 9
-- Upstream-affecting findings: 58
+- Upstream-affecting findings: 53
 
 ## Feedback Proposals
 
@@ -21,7 +21,6 @@
 - `feedback.iu.rupify.acceptance-constraint-success-3.abstract-success-criterion` [split_element] Implement constraint: Success Criterion 3: Success-criterion output may still be too abstract for direct implementation planning.
 - `feedback.iu.rupify.acceptance-constraint-success-3.weak-verification-distinction` [clarify_element] Implement constraint: Success Criterion 3: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.forbidden-transition-1.weak-verification-distinction` [clarify_element] Implement Forbidden Transition 1: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.guard-condition-2.weak-verification-distinction` [clarify_element] Implement Guard Condition 2: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.non-functional-requirement-1.weak-verification-distinction` [clarify_element] Implement constraint: non_functional-requirement-1: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.non-functional-requirement-2.weak-verification-distinction` [clarify_element] Implement constraint: non_functional-requirement-2: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.non-functional-requirement-3.weak-verification-distinction` [clarify_element] Implement constraint: non_functional-requirement-3: Observable and expected outcome are effectively identical.
@@ -29,10 +28,6 @@
 - `feedback.iu.rupify.non-functional-requirement-5.weak-verification-distinction` [clarify_element] Implement constraint: non_functional-requirement-5: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.non-functional-requirement-6.weak-verification-distinction` [clarify_element] Implement constraint: non_functional-requirement-6: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.non-functional-requirement-7.weak-verification-distinction` [clarify_element] Implement constraint: non_functional-requirement-7: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.scenario-invalid-catalog-change.weak-verification-distinction` [clarify_element] Implement Invalid Catalog Change: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.scenario-missing-payment-confirmation.weak-verification-distinction` [clarify_element] Implement Missing Payment Confirmation: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.scenario-reporting-delay.weak-verification-distinction` [clarify_element] Implement Reporting Delay: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.scenario-reward-inventory-exhausted.weak-verification-distinction` [clarify_element] Implement Reward Inventory Exhausted: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards-extension-1.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards-step-1.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards-step-2.display-rewards.weak-verification-distinction` [clarify_element] Implement Display available rewards: Observable and expected outcome are effectively identical.

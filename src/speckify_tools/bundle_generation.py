@@ -257,6 +257,100 @@ def _split_use_case_step_text(element: RupifyElement) -> list[dict[str, str]]:
     return []
 
 
+def _split_scenario_text(element: RupifyElement) -> list[dict[str, str]]:
+    """Split selected scenarios into detection and outcome handling units."""
+    text = element.text.strip()
+
+    if text == "Publication is rejected because the new reward configuration would break an active offer.":
+        return [
+            {
+                "suffix": "detect-active-offer-conflict",
+                "title": "Detect active offer conflict",
+                "summary": "Detect that the new reward configuration would break an active offer.",
+                "acceptance": "The system detects when a new reward configuration would break an active offer.",
+            },
+            {
+                "suffix": "reject-publication",
+                "title": "Reject invalid publication",
+                "summary": "Reject publication when the reward configuration would break an active offer.",
+                "acceptance": "Publication is rejected when the new reward configuration would break an active offer.",
+            },
+        ]
+
+    if text == "Redemption pauses until dependent payment confirmation arrives.":
+        return [
+            {
+                "suffix": "await-payment-confirmation",
+                "title": "Await payment confirmation",
+                "summary": "Detect that dependent payment confirmation has not yet arrived.",
+                "acceptance": "The system recognizes when dependent payment confirmation is still missing.",
+            },
+            {
+                "suffix": "pause-redemption",
+                "title": "Pause redemption",
+                "summary": "Pause redemption until the dependent payment confirmation arrives.",
+                "acceptance": "Redemption remains paused until dependent payment confirmation arrives.",
+            },
+        ]
+
+    if text == "Analytics view is partial because a reporting source is delayed.":
+        return [
+            {
+                "suffix": "detect-reporting-delay",
+                "title": "Detect reporting source delay",
+                "summary": "Detect that a reporting source is delayed for the analytics view.",
+                "acceptance": "The system detects when a reporting source is delayed.",
+            },
+            {
+                "suffix": "show-partial-analytics",
+                "title": "Show partial analytics view",
+                "summary": "Show a partial analytics view when a reporting source is delayed.",
+                "acceptance": "The analytics view remains partial while a reporting source is delayed.",
+            },
+        ]
+
+    if text == "Redemption fails because no reward inventory remains.":
+        return [
+            {
+                "suffix": "detect-exhausted-inventory",
+                "title": "Detect exhausted reward inventory",
+                "summary": "Detect that no reward inventory remains for the redemption.",
+                "acceptance": "The system detects when no reward inventory remains for the requested redemption.",
+            },
+            {
+                "suffix": "fail-redemption",
+                "title": "Fail redemption without inventory",
+                "summary": "Fail redemption when no reward inventory remains.",
+                "acceptance": "Redemption fails when no reward inventory remains.",
+            },
+        ]
+
+    return []
+
+
+def _split_guard_condition_text(element: RupifyElement) -> list[dict[str, str]]:
+    """Split selected guard conditions into prerequisite and enforcement units."""
+    text = element.text.strip()
+
+    if text == "Catalog validation approval is required before a reward becomes Published":
+        return [
+            {
+                "suffix": "require-validation-approval",
+                "title": "Require catalog validation approval",
+                "summary": "Require catalog validation approval before a reward can be published.",
+                "acceptance": "Catalog validation approval is required before a reward becomes Published.",
+            },
+            {
+                "suffix": "block-publish-without-approval",
+                "title": "Block publish without approval",
+                "summary": "Block a reward from becoming published when catalog validation approval is missing.",
+                "acceptance": "A reward does not become Published without catalog validation approval.",
+            },
+        ]
+
+    return []
+
+
 def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     """Decompose one source element into one or more planning slices."""
     if element.family == "state_transitions":
@@ -273,6 +367,14 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
             return slices
     if element.family == "use_case_steps":
         slices = _split_use_case_step_text(element)
+        if slices:
+            return slices
+    if element.family == "scenarios":
+        slices = _split_scenario_text(element)
+        if slices:
+            return slices
+    if element.family == "guard_conditions":
+        slices = _split_guard_condition_text(element)
         if slices:
             return slices
 
@@ -296,6 +398,10 @@ def _implementation_title(element: RupifyElement, title: str) -> str:
         return f"Implement lifecycle transition: {title}"
     if element.family == "functional_requirements":
         return f"Implement workflow support: {title}"
+    if element.family == "scenarios":
+        return f"Implement scenario handling: {title}"
+    if element.family == "guard_conditions":
+        return f"Implement guard enforcement: {title}"
     return f"Implement {title}"
 
 
@@ -308,6 +414,8 @@ def _implementation_summary(element: RupifyElement, title: str, summary: str, ac
     if element.family == "state_transitions":
         return summary
     if element.family == "functional_requirements":
+        return summary
+    if element.family in {"scenarios", "guard_conditions"}:
         return summary
     return f"Implement the behavior described by {title.lower()}."
 
@@ -358,6 +466,18 @@ def _verification_contract(
             ]
         else:
             failure_conditions = [f"The lifecycle transition does not behave as specified: {acceptance}"]
+
+    elif element.family == "scenarios":
+        verification_intent = f"Confirm the scenario handling behaves correctly for {title.lower()}."
+        setup_requirements = ["The system is placed in the exceptional or degraded condition described by the scenario."]
+        expected_outcomes = [f"The scenario outcome is handled correctly: {acceptance}"]
+        failure_conditions = [f"The scenario handling is missing or incorrect: {acceptance}"]
+
+    elif element.family == "guard_conditions":
+        verification_intent = f"Confirm the guard enforcement is applied for {title.lower()}."
+        setup_requirements = ["A request reaches the boundary where the guard condition must be checked."]
+        expected_outcomes = [f"The guard enforcement is applied correctly: {acceptance}"]
+        failure_conditions = [f"The guard condition is not enforced as required: {acceptance}"]
 
     return {
         "implementation_unit_id": implementation_unit_id,
@@ -480,6 +600,74 @@ def _derive_relationships(
                     "rule_type": "constraint_overlay",
                     "notes": [
                         "Recombine split invariant details back into the original invariant statement.",
+                    ],
+                }
+            )
+            continue
+
+        if source_anchor_id.startswith("anchor.rupify.scenarios.") and len(members) > 1:
+            ordered_units = sorted(members, key=lambda item: item["id"])
+            for previous, current in zip(ordered_units, ordered_units[1:]):
+                current["dependencies"].append(previous["id"])
+                dependency_edges.append(
+                    {
+                        "id": f"dep.{current['id'].replace('iu.', '')}.requires-{previous['id'].replace('iu.', '')}",
+                        "from_implementation_unit_id": current["id"],
+                        "to_implementation_unit_id": previous["id"],
+                        "dependency_type": "requires",
+                        "reason": "Scenario resolution depends on first identifying the triggering condition.",
+                    }
+                )
+
+            assembly_rules.append(
+                {
+                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        spec_id
+                        for item in ordered_units
+                        for spec_id in item["derived_from_spec_unit_ids"]
+                    ],
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine scenario trigger detection and outcome handling into the original scenario statement.",
+                    ],
+                }
+            )
+            continue
+
+        if source_anchor_id.startswith("anchor.rupify.guard-conditions.") and len(members) > 1:
+            ordered_units = sorted(
+                members,
+                key=lambda item: (
+                    0 if item["id"].endswith("require-validation-approval") else 1,
+                    item["id"],
+                ),
+            )
+            for previous, current in zip(ordered_units, ordered_units[1:]):
+                current["dependencies"].append(previous["id"])
+                dependency_edges.append(
+                    {
+                        "id": f"dep.{current['id'].replace('iu.', '')}.requires-{previous['id'].replace('iu.', '')}",
+                        "from_implementation_unit_id": current["id"],
+                        "to_implementation_unit_id": previous["id"],
+                        "dependency_type": "requires",
+                        "reason": "Guard enforcement depends on recognizing the guard prerequisite first.",
+                    }
+                )
+
+            assembly_rules.append(
+                {
+                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        spec_id
+                        for item in ordered_units
+                        for spec_id in item["derived_from_spec_unit_ids"]
+                    ],
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine guard prerequisite and enforcement behavior into the original guard condition.",
                     ],
                 }
             )
@@ -783,7 +971,7 @@ def generate_planning_bundle(
             "generated_at": generated_at,
             "source_model_id": source_model_id or project_id,
             "source_model_version": source_model_version,
-            "decomposition_profile": "rupify-split-dependencies-v1",
+            "decomposition_profile": "rupify-split-dependencies-v2",
         },
         "source_summary": {
             "source_system": "rupify",
@@ -792,8 +980,8 @@ def generate_planning_bundle(
             "export_version": export.raw.get("export_metadata", {}).get("schema_version", 1),
             "notes": [
                 "Generated directly from imported Rupify planning export records.",
-                "First-pass decomposition splits selected ready normative source elements into smaller planning units.",
-                "Deterministic dependency edges and assembly rules are derived for split workflow and transition chains.",
+                "Deterministic decomposition splits selected ready normative source elements into smaller planning units.",
+                "Dependency edges and assembly rules are derived for split workflow, scenario, guard, and transition structures.",
             ],
         },
         "source_anchors": source_anchors,
