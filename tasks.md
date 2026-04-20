@@ -14,3 +14,4 @@
 - [DONE] 2026-04-20 Create example Rupify export fixtures and expected Speckify bundles
 - [DONE] 2026-04-20 Implement schema validation helpers for planning bundles
 - [DONE] 2026-04-20 Define machine-readable decomposition rule catalog
+- [DONE] 2026-04-20 Create rendered issue template fixtures from structured output
