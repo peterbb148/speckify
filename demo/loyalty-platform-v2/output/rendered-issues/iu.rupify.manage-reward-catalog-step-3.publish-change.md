@@ -1,0 +1,29 @@
+## Summary
+
+Implement the behavior described by publish catalog change.
+
+## Source Lineage
+
+- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)
+
+## Scope
+
+- Publish the catalog configuration change after validation.
+
+## Acceptance Criteria
+
+- The system publishes the catalog configuration change.
+
+## Verification Shape
+
+- Intent: Confirm the implementation satisfies publish catalog change.
+- Observable: The system publishes the catalog configuration change.
+- Expected outcome: The system publishes the catalog configuration change.
+
+## Dependencies
+
+- None
+
+## Drift Checks
+
+- Preserve lineage to Rupify element manage-reward-catalog-step-3.

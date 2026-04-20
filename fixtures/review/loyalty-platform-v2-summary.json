@@ -3,13 +3,13 @@
   "decomposition_profile": "rupify-split-dependencies-v1",
   "counts": {
     "source_anchors": 62,
-    "spec_units": 66,
-    "implementation_units": 66,
-    "verification_units": 66,
-    "trace_bundles": 66,
+    "spec_units": 71,
+    "implementation_units": 71,
+    "verification_units": 71,
+    "trace_bundles": 71,
     "dependency_edges": 4,
     "assembly_rules": 5,
-    "rendered_issues": 66
+    "rendered_issues": 71
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",
@@ -27,8 +27,10 @@
       "iu.rupify.redeem-reward-extension-2",
       "iu.rupify.redeem-reward-extension-3",
       "iu.rupify.redeem-reward-step-1",
-      "iu.rupify.redeem-reward-step-2",
-      "iu.rupify.redeem-reward-step-3"
+      "iu.rupify.redeem-reward-step-2.validate-eligibility",
+      "iu.rupify.redeem-reward-step-2.validate-available-points",
+      "iu.rupify.redeem-reward-step-3.reserve-reward",
+      "iu.rupify.redeem-reward-step-3.update-member-balance"
     ],
     "transition_dependencies": [
       {

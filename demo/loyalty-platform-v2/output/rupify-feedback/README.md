@@ -1,9 +1,9 @@
 # Round-Trip Feedback Report
 
-- Change records: 62
-- Feedback proposals: 53
+- Change records: 67
+- Feedback proposals: 58
 - Planning-only findings: 9
-- Upstream-affecting findings: 53
+- Upstream-affecting findings: 58
 
 ## Feedback Proposals
 
@@ -35,7 +35,8 @@
 - `feedback.iu.rupify.scenario-reward-inventory-exhausted.weak-verification-distinction` [clarify_element] Implement Reward Inventory Exhausted: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards-extension-1.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards-step-1.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.browse-rewards-step-2.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.browse-rewards-step-2.display-rewards.weak-verification-distinction` [clarify_element] Implement Display available rewards: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.browse-rewards-step-2.display-points-balance.weak-verification-distinction` [clarify_element] Implement Display points balance: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards-step-3.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.enroll-member-extension-1.weak-verification-distinction` [clarify_element] Implement Enroll Member: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.enroll-member-step-1.weak-verification-distinction` [clarify_element] Implement Enroll Member: Observable and expected outcome are effectively identical.
@@ -44,17 +45,21 @@
 - `feedback.iu.rupify.manage-reward-catalog-extension-1.weak-verification-distinction` [clarify_element] Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.manage-reward-catalog-step-1.weak-verification-distinction` [clarify_element] Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.manage-reward-catalog-step-2.weak-verification-distinction` [clarify_element] Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.manage-reward-catalog-step-3.weak-verification-distinction` [clarify_element] Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.manage-reward-catalog-step-3.validate-change.weak-verification-distinction` [clarify_element] Implement Validate catalog change: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.manage-reward-catalog-step-3.publish-change.weak-verification-distinction` [clarify_element] Implement Publish catalog change: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.redeem-reward-extension-1.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.redeem-reward-extension-2.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.redeem-reward-extension-3.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.redeem-reward-step-1.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.redeem-reward-step-2.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.redeem-reward-step-3.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.redeem-reward-step-2.validate-eligibility.weak-verification-distinction` [clarify_element] Implement Validate reward eligibility: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.redeem-reward-step-2.validate-available-points.weak-verification-distinction` [clarify_element] Implement Validate available points: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.redeem-reward-step-3.reserve-reward.weak-verification-distinction` [clarify_element] Implement Reserve reward: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.redeem-reward-step-3.update-member-balance.weak-verification-distinction` [clarify_element] Implement Update member balance: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.redeem-reward-step-4.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.review-redemption-analytics-extension-1.weak-verification-distinction` [clarify_element] Implement Review Redemption Analytics: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.review-redemption-analytics-step-1.weak-verification-distinction` [clarify_element] Implement Review Redemption Analytics: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.review-redemption-analytics-step-2.weak-verification-distinction` [clarify_element] Implement Review Redemption Analytics: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics.weak-verification-distinction` [clarify_element] Implement Show redemption metrics: Observable and expected outcome are effectively identical.
+- `feedback.iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics.weak-verification-distinction` [clarify_element] Implement Show campaign metrics: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.browse-rewards.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.enroll-member.weak-verification-distinction` [clarify_element] Implement Enroll Member: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.manage-reward-catalog.weak-verification-distinction` [clarify_element] Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.

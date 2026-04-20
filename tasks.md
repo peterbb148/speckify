@@ -32,3 +32,4 @@
 - [DONE] 2026-04-20 Export generated planning artifacts into GitHub delivery outputs
 - [DONE] 2026-04-20 Generate round-trip feedback artifacts for upstream Rupify updates
 - [DONE] 2026-04-20 Add a second real-world end-to-end fixture beyond IT systems inventory V2
+- [DONE] 2026-04-20 Deepen semantic decomposition across use cases, steps, scenarios, and guards

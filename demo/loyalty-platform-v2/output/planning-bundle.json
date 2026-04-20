@@ -1403,9 +1403,23 @@
       ]
     },
     {
-      "id": "su.rupify.browse-rewards-step-2",
-      "title": "Browse Rewards",
-      "summary": "System displays available rewards and points balance.",
+      "id": "su.rupify.browse-rewards-step-2.display-rewards",
+      "title": "Display available rewards",
+      "summary": "Display the rewards that are available to the member.",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify use_case_steps element browse-rewards-step-2."
+      ]
+    },
+    {
+      "id": "su.rupify.browse-rewards-step-2.display-points-balance",
+      "title": "Display points balance",
+      "summary": "Display the member's current points balance.",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.browse-rewards-step-2"
       ],
@@ -1529,9 +1543,23 @@
       ]
     },
     {
-      "id": "su.rupify.manage-reward-catalog-step-3",
-      "title": "Manage Reward Catalog",
-      "summary": "System validates and publishes the change.",
+      "id": "su.rupify.manage-reward-catalog-step-3.validate-change",
+      "title": "Validate catalog change",
+      "summary": "Validate the proposed catalog configuration change.",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify use_case_steps element manage-reward-catalog-step-3."
+      ]
+    },
+    {
+      "id": "su.rupify.manage-reward-catalog-step-3.publish-change",
+      "title": "Publish catalog change",
+      "summary": "Publish the catalog configuration change after validation.",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
       ],
@@ -1599,9 +1627,9 @@
       ]
     },
     {
-      "id": "su.rupify.redeem-reward-step-2",
-      "title": "Redeem Reward",
-      "summary": "System validates reward eligibility and available points.",
+      "id": "su.rupify.redeem-reward-step-2.validate-eligibility",
+      "title": "Validate reward eligibility",
+      "summary": "Validate that the selected reward is eligible for redemption.",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-2"
       ],
@@ -1613,9 +1641,37 @@
       ]
     },
     {
-      "id": "su.rupify.redeem-reward-step-3",
-      "title": "Redeem Reward",
-      "summary": "System reserves the reward and updates the member balance.",
+      "id": "su.rupify.redeem-reward-step-2.validate-available-points",
+      "title": "Validate available points",
+      "summary": "Validate that the member has enough points for the redemption.",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify use_case_steps element redeem-reward-step-2."
+      ]
+    },
+    {
+      "id": "su.rupify.redeem-reward-step-3.reserve-reward",
+      "title": "Reserve reward",
+      "summary": "Reserve the selected reward for the member.",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify use_case_steps element redeem-reward-step-3."
+      ]
+    },
+    {
+      "id": "su.rupify.redeem-reward-step-3.update-member-balance",
+      "title": "Update member balance",
+      "summary": "Update the member balance after the reward reservation.",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-3"
       ],
@@ -1669,9 +1725,23 @@
       ]
     },
     {
-      "id": "su.rupify.review-redemption-analytics-step-2",
-      "title": "Review Redemption Analytics",
-      "summary": "System shows redemption and campaign metrics.",
+      "id": "su.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "title": "Show redemption metrics",
+      "summary": "Show redemption metrics in the analytics dashboard.",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify use_case_steps element review-redemption-analytics-step-2."
+      ]
+    },
+    {
+      "id": "su.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "title": "Show campaign metrics",
+      "summary": "Show campaign metrics in the analytics dashboard.",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
       ],
@@ -3034,26 +3104,57 @@
       ]
     },
     {
-      "id": "iu.rupify.browse-rewards-step-2",
-      "title": "Implement Browse Rewards",
-      "summary": "Implement the behavior described by browse rewards.",
+      "id": "iu.rupify.browse-rewards-step-2.display-rewards",
+      "title": "Implement Display available rewards",
+      "summary": "Implement the behavior described by display available rewards.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.browse-rewards-step-2"
+        "su.rupify.browse-rewards-step-2.display-rewards"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.browse-rewards-step-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System displays available rewards and points balance."
+        "Display the rewards that are available to the member."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System displays available rewards and points balance."
+        "The system displays available rewards to the member."
       ],
       "verification_unit_ids": [
-        "vu.rupify.browse-rewards-step-2"
+        "vu.rupify.browse-rewards-step-2.display-rewards"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element browse-rewards-step-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-2.",
+      "labels": [
+        "planning",
+        "use-case-steps"
+      ]
+    },
+    {
+      "id": "iu.rupify.browse-rewards-step-2.display-points-balance",
+      "title": "Implement Display points balance",
+      "summary": "Implement the behavior described by display points balance.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.browse-rewards-step-2.display-points-balance"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Display the member's current points balance."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system displays the member's points balance."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-2.display-points-balance"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element browse-rewards-step-2."
@@ -3313,26 +3414,57 @@
       ]
     },
     {
-      "id": "iu.rupify.manage-reward-catalog-step-3",
-      "title": "Implement Manage Reward Catalog",
-      "summary": "Implement the behavior described by manage reward catalog.",
+      "id": "iu.rupify.manage-reward-catalog-step-3.validate-change",
+      "title": "Implement Validate catalog change",
+      "summary": "Implement the behavior described by validate catalog change.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.manage-reward-catalog-step-3"
+        "su.rupify.manage-reward-catalog-step-3.validate-change"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System validates and publishes the change."
+        "Validate the proposed catalog configuration change."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System validates and publishes the change."
+        "The system validates the catalog configuration change."
       ],
       "verification_unit_ids": [
-        "vu.rupify.manage-reward-catalog-step-3"
+        "vu.rupify.manage-reward-catalog-step-3.validate-change"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element manage-reward-catalog-step-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-3.",
+      "labels": [
+        "planning",
+        "use-case-steps"
+      ]
+    },
+    {
+      "id": "iu.rupify.manage-reward-catalog-step-3.publish-change",
+      "title": "Implement Publish catalog change",
+      "summary": "Implement the behavior described by publish catalog change.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.manage-reward-catalog-step-3.publish-change"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Publish the catalog configuration change after validation."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system publishes the catalog configuration change."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-3.publish-change"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element manage-reward-catalog-step-3."
@@ -3468,26 +3600,26 @@
       ]
     },
     {
-      "id": "iu.rupify.redeem-reward-step-2",
-      "title": "Implement Redeem Reward",
-      "summary": "Implement the behavior described by redeem reward.",
+      "id": "iu.rupify.redeem-reward-step-2.validate-eligibility",
+      "title": "Implement Validate reward eligibility",
+      "summary": "Implement the behavior described by validate reward eligibility.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.redeem-reward-step-2"
+        "su.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System validates reward eligibility and available points."
+        "Validate that the selected reward is eligible for redemption."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System validates reward eligibility and available points."
+        "The system validates reward eligibility."
       ],
       "verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-2"
+        "vu.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element redeem-reward-step-2."
@@ -3499,26 +3631,88 @@
       ]
     },
     {
-      "id": "iu.rupify.redeem-reward-step-3",
-      "title": "Implement Redeem Reward",
-      "summary": "Implement the behavior described by redeem reward.",
+      "id": "iu.rupify.redeem-reward-step-2.validate-available-points",
+      "title": "Implement Validate available points",
+      "summary": "Implement the behavior described by validate available points.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.redeem-reward-step-3"
+        "su.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Validate that the member has enough points for the redemption."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system validates available points for the redemption."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element redeem-reward-step-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-2.",
+      "labels": [
+        "planning",
+        "use-case-steps"
+      ]
+    },
+    {
+      "id": "iu.rupify.redeem-reward-step-3.reserve-reward",
+      "title": "Implement Reserve reward",
+      "summary": "Implement the behavior described by reserve reward.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.redeem-reward-step-3.reserve-reward"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-3"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System reserves the reward and updates the member balance."
+        "Reserve the selected reward for the member."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System reserves the reward and updates the member balance."
+        "The system reserves the selected reward."
       ],
       "verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-3"
+        "vu.rupify.redeem-reward-step-3.reserve-reward"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element redeem-reward-step-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-3.",
+      "labels": [
+        "planning",
+        "use-case-steps"
+      ]
+    },
+    {
+      "id": "iu.rupify.redeem-reward-step-3.update-member-balance",
+      "title": "Implement Update member balance",
+      "summary": "Implement the behavior described by update member balance.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.redeem-reward-step-3.update-member-balance"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Update the member balance after the reward reservation."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system updates the member balance after reservation."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-3.update-member-balance"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element redeem-reward-step-3."
@@ -3623,26 +3817,57 @@
       ]
     },
     {
-      "id": "iu.rupify.review-redemption-analytics-step-2",
-      "title": "Implement Review Redemption Analytics",
-      "summary": "Implement the behavior described by review redemption analytics.",
+      "id": "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "title": "Implement Show redemption metrics",
+      "summary": "Implement the behavior described by show redemption metrics.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.review-redemption-analytics-step-2"
+        "su.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System shows redemption and campaign metrics."
+        "Show redemption metrics in the analytics dashboard."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System shows redemption and campaign metrics."
+        "The system shows redemption metrics in the analytics dashboard."
       ],
       "verification_unit_ids": [
-        "vu.rupify.review-redemption-analytics-step-2"
+        "vu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element review-redemption-analytics-step-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-step-2.",
+      "labels": [
+        "planning",
+        "use-case-steps"
+      ]
+    },
+    {
+      "id": "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "title": "Implement Show campaign metrics",
+      "summary": "Implement the behavior described by show campaign metrics.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Show campaign metrics in the analytics dashboard."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The system shows campaign metrics in the analytics dashboard."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element review-redemption-analytics-step-2."
@@ -4823,19 +5048,40 @@
       ]
     },
     {
-      "id": "vu.rupify.browse-rewards-step-2",
-      "title": "Verify Browse Rewards",
+      "id": "vu.rupify.browse-rewards-step-2.display-rewards",
+      "title": "Verify Display available rewards",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.browse-rewards-step-2"
       ],
-      "implementation_unit_id": "iu.rupify.browse-rewards-step-2",
-      "verification_intent": "Confirm the implementation satisfies browse rewards.",
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-rewards",
+      "verification_intent": "Confirm the implementation satisfies display available rewards.",
       "observables": [
-        "System displays available rewards and points balance."
+        "The system displays available rewards to the member."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System displays available rewards and points balance."
+        "The system displays available rewards to the member."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of browse-rewards-step-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.browse-rewards-step-2.display-points-balance",
+      "title": "Verify Display points balance",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-2"
+      ],
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-points-balance",
+      "verification_intent": "Confirm the implementation satisfies display points balance.",
+      "observables": [
+        "The system displays the member's points balance."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "The system displays the member's points balance."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
@@ -5012,19 +5258,40 @@
       ]
     },
     {
-      "id": "vu.rupify.manage-reward-catalog-step-3",
-      "title": "Verify Manage Reward Catalog",
+      "id": "vu.rupify.manage-reward-catalog-step-3.validate-change",
+      "title": "Verify Validate catalog change",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
       ],
-      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3",
-      "verification_intent": "Confirm the implementation satisfies manage reward catalog.",
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.validate-change",
+      "verification_intent": "Confirm the implementation satisfies validate catalog change.",
       "observables": [
-        "System validates and publishes the change."
+        "The system validates the catalog configuration change."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System validates and publishes the change."
+        "The system validates the catalog configuration change."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of manage-reward-catalog-step-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.manage-reward-catalog-step-3.publish-change",
+      "title": "Verify Publish catalog change",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+      ],
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.publish-change",
+      "verification_intent": "Confirm the implementation satisfies publish catalog change.",
+      "observables": [
+        "The system publishes the catalog configuration change."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "The system publishes the catalog configuration change."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
@@ -5117,19 +5384,19 @@
       ]
     },
     {
-      "id": "vu.rupify.redeem-reward-step-2",
-      "title": "Verify Redeem Reward",
+      "id": "vu.rupify.redeem-reward-step-2.validate-eligibility",
+      "title": "Verify Validate reward eligibility",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-2"
       ],
-      "implementation_unit_id": "iu.rupify.redeem-reward-step-2",
-      "verification_intent": "Confirm the implementation satisfies redeem reward.",
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-eligibility",
+      "verification_intent": "Confirm the implementation satisfies validate reward eligibility.",
       "observables": [
-        "System validates reward eligibility and available points."
+        "The system validates reward eligibility."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System validates reward eligibility and available points."
+        "The system validates reward eligibility."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
@@ -5138,19 +5405,61 @@
       ]
     },
     {
-      "id": "vu.rupify.redeem-reward-step-3",
-      "title": "Verify Redeem Reward",
+      "id": "vu.rupify.redeem-reward-step-2.validate-available-points",
+      "title": "Verify Validate available points",
       "source_anchor_ids": [
-        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+        "anchor.rupify.use-case-steps.redeem-reward-step-2"
       ],
-      "implementation_unit_id": "iu.rupify.redeem-reward-step-3",
-      "verification_intent": "Confirm the implementation satisfies redeem reward.",
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-available-points",
+      "verification_intent": "Confirm the implementation satisfies validate available points.",
       "observables": [
-        "System reserves the reward and updates the member balance."
+        "The system validates available points for the redemption."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System reserves the reward and updates the member balance."
+        "The system validates available points for the redemption."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of redeem-reward-step-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.redeem-reward-step-3.reserve-reward",
+      "title": "Verify Reserve reward",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3.reserve-reward",
+      "verification_intent": "Confirm the implementation satisfies reserve reward.",
+      "observables": [
+        "The system reserves the selected reward."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "The system reserves the selected reward."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of redeem-reward-step-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.redeem-reward-step-3.update-member-balance",
+      "title": "Verify Update member balance",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3.update-member-balance",
+      "verification_intent": "Confirm the implementation satisfies update member balance.",
+      "observables": [
+        "The system updates the member balance after reservation."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "The system updates the member balance after reservation."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
@@ -5222,19 +5531,40 @@
       ]
     },
     {
-      "id": "vu.rupify.review-redemption-analytics-step-2",
-      "title": "Verify Review Redemption Analytics",
+      "id": "vu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "title": "Verify Show redemption metrics",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
       ],
-      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2",
-      "verification_intent": "Confirm the implementation satisfies review redemption analytics.",
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "verification_intent": "Confirm the implementation satisfies show redemption metrics.",
       "observables": [
-        "System shows redemption and campaign metrics."
+        "The system shows redemption metrics in the analytics dashboard."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System shows redemption and campaign metrics."
+        "The system shows redemption metrics in the analytics dashboard."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of review-redemption-analytics-step-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "title": "Verify Show campaign metrics",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+      ],
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "verification_intent": "Confirm the implementation satisfies show campaign metrics.",
+      "observables": [
+        "The system shows campaign metrics in the analytics dashboard."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "The system shows campaign metrics in the analytics dashboard."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
@@ -6129,18 +6459,37 @@
       ]
     },
     {
-      "id": "tb.rupify.browse-rewards-step-2",
+      "id": "tb.rupify.browse-rewards-step-2.display-rewards",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.browse-rewards-step-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.browse-rewards-step-2"
+        "su.rupify.browse-rewards-step-2.display-rewards"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.browse-rewards-step-2"
+        "iu.rupify.browse-rewards-step-2.display-rewards"
       ],
       "verification_unit_ids": [
-        "vu.rupify.browse-rewards-step-2"
+        "vu.rupify.browse-rewards-step-2.display-rewards"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of browse-rewards-step-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.browse-rewards-step-2.display-points-balance",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.browse-rewards-step-2.display-points-balance"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.browse-rewards-step-2.display-points-balance"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-2.display-points-balance"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6300,18 +6649,37 @@
       ]
     },
     {
-      "id": "tb.rupify.manage-reward-catalog-step-3",
+      "id": "tb.rupify.manage-reward-catalog-step-3.validate-change",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
       ],
       "spec_unit_ids": [
-        "su.rupify.manage-reward-catalog-step-3"
+        "su.rupify.manage-reward-catalog-step-3.validate-change"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.manage-reward-catalog-step-3"
+        "iu.rupify.manage-reward-catalog-step-3.validate-change"
       ],
       "verification_unit_ids": [
-        "vu.rupify.manage-reward-catalog-step-3"
+        "vu.rupify.manage-reward-catalog-step-3.validate-change"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of manage-reward-catalog-step-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.manage-reward-catalog-step-3.publish-change",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.manage-reward-catalog-step-3.publish-change"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.manage-reward-catalog-step-3.publish-change"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-3.publish-change"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6395,18 +6763,18 @@
       ]
     },
     {
-      "id": "tb.rupify.redeem-reward-step-2",
+      "id": "tb.rupify.redeem-reward-step-2.validate-eligibility",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.redeem-reward-step-2"
+        "su.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.redeem-reward-step-2"
+        "iu.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-2"
+        "vu.rupify.redeem-reward-step-2.validate-eligibility"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6414,18 +6782,56 @@
       ]
     },
     {
-      "id": "tb.rupify.redeem-reward-step-3",
+      "id": "tb.rupify.redeem-reward-step-2.validate-available-points",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-2.validate-available-points"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of redeem-reward-step-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.redeem-reward-step-3.reserve-reward",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.redeem-reward-step-3"
       ],
       "spec_unit_ids": [
-        "su.rupify.redeem-reward-step-3"
+        "su.rupify.redeem-reward-step-3.reserve-reward"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.redeem-reward-step-3"
+        "iu.rupify.redeem-reward-step-3.reserve-reward"
       ],
       "verification_unit_ids": [
-        "vu.rupify.redeem-reward-step-3"
+        "vu.rupify.redeem-reward-step-3.reserve-reward"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of redeem-reward-step-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.redeem-reward-step-3.update-member-balance",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.redeem-reward-step-3.update-member-balance"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.redeem-reward-step-3.update-member-balance"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-3.update-member-balance"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6490,18 +6896,37 @@
       ]
     },
     {
-      "id": "tb.rupify.review-redemption-analytics-step-2",
+      "id": "tb.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
       "source_anchor_ids": [
         "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.review-redemption-analytics-step-2"
+        "su.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.review-redemption-analytics-step-2"
+        "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
       ],
       "verification_unit_ids": [
-        "vu.rupify.review-redemption-analytics-step-2"
+        "vu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of review-redemption-analytics-step-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-step-2.show-campaign-metrics"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6913,9 +7338,14 @@
       "issue_body": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-1` (requirement: `browse-rewards-step-1`)\n\n## Scope\n\n- Customer opens the rewards catalog.\n\n## Acceptance Criteria\n\n- Customer opens the rewards catalog.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: Customer opens the rewards catalog.\n- Expected outcome: Customer opens the rewards catalog.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.browse-rewards-step-2",
-      "issue_title": "Implement Browse Rewards",
-      "issue_body": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- System displays available rewards and points balance.\n\n## Acceptance Criteria\n\n- System displays available rewards and points balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: System displays available rewards and points balance.\n- Expected outcome: System displays available rewards and points balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n"
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-rewards",
+      "issue_title": "Implement Display available rewards",
+      "issue_body": "## Summary\n\nImplement the behavior described by display available rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- Display the rewards that are available to the member.\n\n## Acceptance Criteria\n\n- The system displays available rewards to the member.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies display available rewards.\n- Observable: The system displays available rewards to the member.\n- Expected outcome: The system displays available rewards to the member.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-points-balance",
+      "issue_title": "Implement Display points balance",
+      "issue_body": "## Summary\n\nImplement the behavior described by display points balance.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- Display the member's current points balance.\n\n## Acceptance Criteria\n\n- The system displays the member's points balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies display points balance.\n- Observable: The system displays the member's points balance.\n- Expected outcome: The system displays the member's points balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards-step-3",
@@ -6958,9 +7388,14 @@
       "issue_body": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-2` (requirement: `manage-reward-catalog-step-2`)\n\n## Scope\n\n- Operations Manager updates reward configuration.\n\n## Acceptance Criteria\n\n- Operations Manager updates reward configuration.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: Operations Manager updates reward configuration.\n- Expected outcome: Operations Manager updates reward configuration.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-2.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3",
-      "issue_title": "Implement Manage Reward Catalog",
-      "issue_body": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- System validates and publishes the change.\n\n## Acceptance Criteria\n\n- System validates and publishes the change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: System validates and publishes the change.\n- Expected outcome: System validates and publishes the change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n"
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.validate-change",
+      "issue_title": "Implement Validate catalog change",
+      "issue_body": "## Summary\n\nImplement the behavior described by validate catalog change.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- Validate the proposed catalog configuration change.\n\n## Acceptance Criteria\n\n- The system validates the catalog configuration change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies validate catalog change.\n- Observable: The system validates the catalog configuration change.\n- Expected outcome: The system validates the catalog configuration change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.publish-change",
+      "issue_title": "Implement Publish catalog change",
+      "issue_body": "## Summary\n\nImplement the behavior described by publish catalog change.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- Publish the catalog configuration change after validation.\n\n## Acceptance Criteria\n\n- The system publishes the catalog configuration change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies publish catalog change.\n- Observable: The system publishes the catalog configuration change.\n- Expected outcome: The system publishes the catalog configuration change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-extension-1",
@@ -6983,14 +7418,24 @@
       "issue_body": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-1` (requirement: `redeem-reward-step-1`)\n\n## Scope\n\n- Customer selects a reward.\n\n## Acceptance Criteria\n\n- Customer selects a reward.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Customer selects a reward.\n- Expected outcome: Customer selects a reward.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.redeem-reward-step-2",
-      "issue_title": "Implement Redeem Reward",
-      "issue_body": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- System validates reward eligibility and available points.\n\n## Acceptance Criteria\n\n- System validates reward eligibility and available points.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System validates reward eligibility and available points.\n- Expected outcome: System validates reward eligibility and available points.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n"
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-eligibility",
+      "issue_title": "Implement Validate reward eligibility",
+      "issue_body": "## Summary\n\nImplement the behavior described by validate reward eligibility.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- Validate that the selected reward is eligible for redemption.\n\n## Acceptance Criteria\n\n- The system validates reward eligibility.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies validate reward eligibility.\n- Observable: The system validates reward eligibility.\n- Expected outcome: The system validates reward eligibility.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.redeem-reward-step-3",
-      "issue_title": "Implement Redeem Reward",
-      "issue_body": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- System reserves the reward and updates the member balance.\n\n## Acceptance Criteria\n\n- System reserves the reward and updates the member balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System reserves the reward and updates the member balance.\n- Expected outcome: System reserves the reward and updates the member balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n"
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-available-points",
+      "issue_title": "Implement Validate available points",
+      "issue_body": "## Summary\n\nImplement the behavior described by validate available points.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- Validate that the member has enough points for the redemption.\n\n## Acceptance Criteria\n\n- The system validates available points for the redemption.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies validate available points.\n- Observable: The system validates available points for the redemption.\n- Expected outcome: The system validates available points for the redemption.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3.reserve-reward",
+      "issue_title": "Implement Reserve reward",
+      "issue_body": "## Summary\n\nImplement the behavior described by reserve reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- Reserve the selected reward for the member.\n\n## Acceptance Criteria\n\n- The system reserves the selected reward.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies reserve reward.\n- Observable: The system reserves the selected reward.\n- Expected outcome: The system reserves the selected reward.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3.update-member-balance",
+      "issue_title": "Implement Update member balance",
+      "issue_body": "## Summary\n\nImplement the behavior described by update member balance.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- Update the member balance after the reward reservation.\n\n## Acceptance Criteria\n\n- The system updates the member balance after reservation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies update member balance.\n- Observable: The system updates the member balance after reservation.\n- Expected outcome: The system updates the member balance after reservation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-step-4",
@@ -7008,9 +7453,14 @@
       "issue_body": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-1` (requirement: `review-redemption-analytics-step-1`)\n\n## Scope\n\n- Operations Manager opens the analytics dashboard.\n\n## Acceptance Criteria\n\n- Operations Manager opens the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: Operations Manager opens the analytics dashboard.\n- Expected outcome: Operations Manager opens the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2",
-      "issue_title": "Implement Review Redemption Analytics",
-      "issue_body": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- System shows redemption and campaign metrics.\n\n## Acceptance Criteria\n\n- System shows redemption and campaign metrics.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: System shows redemption and campaign metrics.\n- Expected outcome: System shows redemption and campaign metrics.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n"
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "issue_title": "Implement Show redemption metrics",
+      "issue_body": "## Summary\n\nImplement the behavior described by show redemption metrics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- Show redemption metrics in the analytics dashboard.\n\n## Acceptance Criteria\n\n- The system shows redemption metrics in the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies show redemption metrics.\n- Observable: The system shows redemption metrics in the analytics dashboard.\n- Expected outcome: The system shows redemption metrics in the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "issue_title": "Implement Show campaign metrics",
+      "issue_body": "## Summary\n\nImplement the behavior described by show campaign metrics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- Show campaign metrics in the analytics dashboard.\n\n## Acceptance Criteria\n\n- The system shows campaign metrics in the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies show campaign metrics.\n- Observable: The system shows campaign metrics in the analytics dashboard.\n- Expected outcome: The system shows campaign metrics in the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards",

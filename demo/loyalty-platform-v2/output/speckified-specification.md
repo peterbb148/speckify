@@ -5,9 +5,9 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 66
-- Generated verification units: 66
-- Trace bundles: 66
+- Generated implementation units: 71
+- Generated verification units: 71
+- Trace bundles: 71
 - Dependency edges: 4
 - Assembly rules: 5
 
@@ -410,14 +410,23 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Customer opens the rewards catalog.
 
-#### Implement Browse Rewards
+#### Implement Display available rewards
 
-- ID: `iu.rupify.browse-rewards-step-2`
-- Summary: Implement the behavior described by browse rewards.
+- ID: `iu.rupify.browse-rewards-step-2.display-rewards`
+- Summary: Implement the behavior described by display available rewards.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)
 - Acceptance criteria:
-  - System displays available rewards and points balance.
+  - The system displays available rewards to the member.
+
+#### Implement Display points balance
+
+- ID: `iu.rupify.browse-rewards-step-2.display-points-balance`
+- Summary: Implement the behavior described by display points balance.
+- Source lineage:
+  - `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)
+- Acceptance criteria:
+  - The system displays the member's points balance.
 
 #### Implement Browse Rewards
 
@@ -491,14 +500,23 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Operations Manager updates reward configuration.
 
-#### Implement Manage Reward Catalog
+#### Implement Validate catalog change
 
-- ID: `iu.rupify.manage-reward-catalog-step-3`
-- Summary: Implement the behavior described by manage reward catalog.
+- ID: `iu.rupify.manage-reward-catalog-step-3.validate-change`
+- Summary: Implement the behavior described by validate catalog change.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)
 - Acceptance criteria:
-  - System validates and publishes the change.
+  - The system validates the catalog configuration change.
+
+#### Implement Publish catalog change
+
+- ID: `iu.rupify.manage-reward-catalog-step-3.publish-change`
+- Summary: Implement the behavior described by publish catalog change.
+- Source lineage:
+  - `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)
+- Acceptance criteria:
+  - The system publishes the catalog configuration change.
 
 #### Implement Redeem Reward
 
@@ -536,23 +554,41 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Customer selects a reward.
 
-#### Implement Redeem Reward
+#### Implement Validate reward eligibility
 
-- ID: `iu.rupify.redeem-reward-step-2`
-- Summary: Implement the behavior described by redeem reward.
+- ID: `iu.rupify.redeem-reward-step-2.validate-eligibility`
+- Summary: Implement the behavior described by validate reward eligibility.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)
 - Acceptance criteria:
-  - System validates reward eligibility and available points.
+  - The system validates reward eligibility.
 
-#### Implement Redeem Reward
+#### Implement Validate available points
 
-- ID: `iu.rupify.redeem-reward-step-3`
-- Summary: Implement the behavior described by redeem reward.
+- ID: `iu.rupify.redeem-reward-step-2.validate-available-points`
+- Summary: Implement the behavior described by validate available points.
+- Source lineage:
+  - `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)
+- Acceptance criteria:
+  - The system validates available points for the redemption.
+
+#### Implement Reserve reward
+
+- ID: `iu.rupify.redeem-reward-step-3.reserve-reward`
+- Summary: Implement the behavior described by reserve reward.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)
 - Acceptance criteria:
-  - System reserves the reward and updates the member balance.
+  - The system reserves the selected reward.
+
+#### Implement Update member balance
+
+- ID: `iu.rupify.redeem-reward-step-3.update-member-balance`
+- Summary: Implement the behavior described by update member balance.
+- Source lineage:
+  - `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)
+- Acceptance criteria:
+  - The system updates the member balance after reservation.
 
 #### Implement Redeem Reward
 
@@ -581,14 +617,23 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Operations Manager opens the analytics dashboard.
 
-#### Implement Review Redemption Analytics
+#### Implement Show redemption metrics
 
-- ID: `iu.rupify.review-redemption-analytics-step-2`
-- Summary: Implement the behavior described by review redemption analytics.
+- ID: `iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics`
+- Summary: Implement the behavior described by show redemption metrics.
 - Source lineage:
   - `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)
 - Acceptance criteria:
-  - System shows redemption and campaign metrics.
+  - The system shows redemption metrics in the analytics dashboard.
+
+#### Implement Show campaign metrics
+
+- ID: `iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics`
+- Summary: Implement the behavior described by show campaign metrics.
+- Source lineage:
+  - `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)
+- Acceptance criteria:
+  - The system shows campaign metrics in the analytics dashboard.
 
 ### Use Cases
 

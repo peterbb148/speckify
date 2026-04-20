@@ -13,6 +13,9 @@ from speckify_tools.validation import validate_bundle
 RUPIFY_EXPORT = Path(
     "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
 )
+LOYALTY_RUPIFY_EXPORT = Path(
+    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json"
+)
 SCHEMA_DIR = Path("/Volumes/Data/GitHub/Peterbb148/speckify/schemas")
 
 
@@ -246,6 +249,90 @@ class BundleGenerationTests(unittest.TestCase):
             [
                 "iu.rupify.domain-invariant-3.record-contract-dates",
                 "iu.rupify.domain-invariant-3.record-vendor",
+            ],
+        )
+
+    def test_generated_bundle_splits_loyalty_use_case_steps(self) -> None:
+        """Selected loyalty V2 use-case steps should decompose into narrower execution units."""
+        export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        rewards_display_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.use-case-steps.browse-rewards-step-2"
+            ]
+        )
+        redemption_validation_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.use-case-steps.redeem-reward-step-2"
+            ]
+        )
+        redemption_reservation_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.use-case-steps.redeem-reward-step-3"
+            ]
+        )
+
+        self.assertEqual(
+            rewards_display_units,
+            [
+                "iu.rupify.browse-rewards-step-2.display-points-balance",
+                "iu.rupify.browse-rewards-step-2.display-rewards",
+            ],
+        )
+        self.assertEqual(
+            redemption_validation_units,
+            [
+                "iu.rupify.redeem-reward-step-2.validate-available-points",
+                "iu.rupify.redeem-reward-step-2.validate-eligibility",
+            ],
+        )
+        self.assertEqual(
+            redemption_reservation_units,
+            [
+                "iu.rupify.redeem-reward-step-3.reserve-reward",
+                "iu.rupify.redeem-reward-step-3.update-member-balance",
+            ],
+        )
+
+    def test_generated_bundle_splits_loyalty_catalog_and_analytics_steps(self) -> None:
+        """Catalog publication and analytics steps should decompose when they express two actions."""
+        export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        catalog_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+            ]
+        )
+        analytics_units = sorted(
+            item["id"]
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+            ]
+        )
+
+        self.assertEqual(
+            catalog_units,
+            [
+                "iu.rupify.manage-reward-catalog-step-3.publish-change",
+                "iu.rupify.manage-reward-catalog-step-3.validate-change",
+            ],
+        )
+        self.assertEqual(
+            analytics_units,
+            [
+                "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+                "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
             ],
         )
 
