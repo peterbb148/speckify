@@ -9,3 +9,4 @@
 - [DONE] 2026-04-20 Specify the Rupify downstream planning contract
 - [DONE] 2026-04-20 Define Speckify decomposition and validation rules
 - [DONE] 2026-04-20 Define Speckify output artifacts and issue rendering model
+- [DONE] 2026-04-20 Define reversibility, change classification, and upstream feedback flow
