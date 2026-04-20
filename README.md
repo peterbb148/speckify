@@ -67,4 +67,5 @@ definitions.
 ## Design Notes
 
 - [Speckify design note](docs/speckify-design-note.md)
+- [Input contract and initial schemas](docs/input-contract-and-schemas.md)
 - [Rupify upstream note](docs/rupify-upstream-note.md)
