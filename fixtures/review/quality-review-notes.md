@@ -55,3 +55,13 @@ What to check:
 - verification sections that simply repeat the acceptance sentence
 - missing dependencies for obviously sequenced slices
 - flat specifications that are hard to scan or group by concern
+
+## Current Warning Surface
+
+The generated warning artifacts (`quality-review.json` and `quality-review.md`) should
+currently call out:
+
+- generic titles that still expose raw requirement identifiers
+- very short acceptance criteria such as `SSO`, `search`, or `filtering`
+- success-criterion outputs that remain too abstract for direct implementation work
+- verification units where observables and expected outcomes collapse into the same text

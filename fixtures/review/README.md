@@ -22,3 +22,5 @@ Current review set:
 - `rendered-issues/state-transition-active-to-retiring.md`: representative lifecycle
   transition issue with sequencing and verification details
 - `quality-review-notes.md`: current review checklist and expected qualities
+- `quality-review.json`: machine-readable warning report for current planning-quality gaps
+- `quality-review.md`: Markdown projection of the current warning report

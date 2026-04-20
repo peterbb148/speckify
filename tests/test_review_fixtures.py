@@ -6,6 +6,8 @@ import json
 import unittest
 from pathlib import Path
 
+from speckify_tools.quality_review import analyze_bundle_quality, render_quality_report_markdown
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEMO_OUTPUT = ROOT / "demo" / "it-systems-inventory-v2" / "output"
@@ -47,6 +49,51 @@ class ReviewFixtureTests(unittest.TestCase):
                 (REVIEW_ROOT / "rendered-issues" / review_name).read_text(),
                 (DEMO_OUTPUT / "rendered-issues" / demo_name).read_text(),
             )
+
+    def test_quality_review_artifacts_match_current_golden_bundle(self) -> None:
+        """The checked-in quality review artifacts should reflect the current golden bundle."""
+        bundle = json.loads((DEMO_OUTPUT / "planning-bundle.json").read_text())
+        report = analyze_bundle_quality(bundle)
+
+        self.assertEqual(
+            report,
+            json.loads((REVIEW_ROOT / "quality-review.json").read_text()),
+        )
+        self.assertEqual(
+            render_quality_report_markdown(report),
+            (REVIEW_ROOT / "quality-review.md").read_text(),
+        )
+
+    def test_quality_review_flags_known_current_weaknesses(self) -> None:
+        """The quality review should warn on the current broad and generic output cases."""
+        bundle = json.loads((DEMO_OUTPUT / "planning-bundle.json").read_text())
+        report = analyze_bundle_quality(bundle)
+
+        self.assertEqual(report["warning_count"], 34)
+
+        warning_pairs = {
+            (warning["implementation_unit_id"], warning["kind"])
+            for warning in report["warnings"]
+        }
+        self.assertIn(
+            ("iu.rupify.acceptance-constraint-success-1", "abstract_success_criterion"),
+            warning_pairs,
+        )
+        self.assertIn(
+            ("iu.rupify.non-functional-requirement-2", "generic_title"),
+            warning_pairs,
+        )
+        self.assertIn(
+            ("iu.rupify.non-functional-requirement-2", "very_short_acceptance"),
+            warning_pairs,
+        )
+        self.assertIn(
+            (
+                "iu.rupify.acceptance-constraint-requirement-1",
+                "weak_verification_distinction",
+            ),
+            warning_pairs,
+        )
 
 
 if __name__ == "__main__":
