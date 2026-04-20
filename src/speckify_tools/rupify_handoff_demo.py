@@ -7,6 +7,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+from .rupify_import import RupifyPlanningExport, import_rupify_export, import_rupify_export_file
+
 
 def load_json(path: str | Path) -> dict[str, Any]:
     """Load a JSON document from disk.
@@ -49,13 +51,26 @@ def analyze_rupify_export(export: dict[str, Any]) -> dict[str, Any]:
         Structured import analysis report.
     """
     errors = _required_top_level_issues(export)
+    typed_export = import_rupify_export(export)
+    report = analyze_imported_rupify_export(typed_export)
+    report["errors"] = errors + report["errors"]
+    report["clean_import"] = not report["errors"]
+    return report
+
+
+def analyze_imported_rupify_export(export: RupifyPlanningExport) -> dict[str, Any]:
+    """Analyze a typed Rupify hand-off export for Speckify import readiness.
+
+    Args:
+        export: Typed Rupify planning export.
+
+    Returns:
+        Structured import analysis report.
+    """
+    errors: list[str] = []
     warnings: list[str] = []
 
-    elements = export.get("elements", [])
-    trace_links = export.get("trace_links", [])
-    summary = export.get("summary", {})
-
-    element_ids = [element.get("id", "") for element in elements]
+    element_ids = [element.id for element in export.elements]
     id_counts = Counter(element_ids)
     duplicate_ids = sorted([item for item, count in id_counts.items() if item and count > 1])
     for duplicate_id in duplicate_ids:
@@ -63,69 +78,65 @@ def analyze_rupify_export(export: dict[str, Any]) -> dict[str, Any]:
 
     known_ids = {element_id for element_id in element_ids if element_id}
     unresolved_trace_refs: list[dict[str, str]] = []
-    for link in trace_links:
-        for key in ("from_id", "to_id"):
-            ref_id = link.get(key, "")
+    for link in export.trace_links:
+        for key, ref_id in (("from_id", link.from_id), ("to_id", link.to_id)):
             if not ref_id or ref_id in known_ids:
                 continue
-            if key == "to_id" and link.get("to_artifact", ""):
+            if key == "to_id" and link.to_artifact:
                 continue
-            if ref_id and ref_id not in known_ids:
-                unresolved_trace_refs.append(
-                    {
-                        "trace_id": link.get("id", ""),
-                        "field": key,
-                        "ref_id": ref_id,
-                    }
-                )
+            unresolved_trace_refs.append(
+                {
+                    "trace_id": link.id,
+                    "field": key,
+                    "ref_id": ref_id,
+                }
+            )
     if unresolved_trace_refs:
-        errors.append(
-            f"Unresolved trace references detected: {len(unresolved_trace_refs)}"
-        )
+        errors.append(f"Unresolved trace references detected: {len(unresolved_trace_refs)}")
 
-    family_counts = Counter(element.get("family", "") for element in elements)
-    readiness_counts = Counter(element.get("readiness_status", "") for element in elements)
-    semantic_counts = Counter(element.get("content_semantics", "") for element in elements)
+    family_counts = Counter(element.family for element in export.elements)
+    readiness_counts = Counter(element.readiness_status for element in export.elements)
+    semantic_counts = Counter(element.content_semantics for element in export.elements)
 
     ready_normative_elements = [
         element
-        for element in elements
-        if element.get("content_semantics") == "normative" and element.get("normative_ready")
+        for element in export.elements
+        if element.content_semantics == "normative" and element.normative_ready
     ]
     blocked_or_partial_normative_elements = [
         element
-        for element in elements
-        if element.get("content_semantics") == "normative" and not element.get("normative_ready")
+        for element in export.elements
+        if element.content_semantics == "normative" and not element.normative_ready
     ]
 
-    summary_ready_ids = summary.get("ready_normative_ids", [])
+    summary_ready_ids = export.summary.ready_normative_ids
     duplicate_summary_ready_ids = sorted(
         [item for item, count in Counter(summary_ready_ids).items() if item and count > 1]
     )
     for duplicate_id in duplicate_summary_ready_ids:
         warnings.append(f"Duplicate ready_normative_id in summary: {duplicate_id}")
 
-    if summary.get("ready_normative_count") != len(summary_ready_ids):
+    if export.summary.ready_normative_count != len(summary_ready_ids):
         warnings.append(
             "summary.ready_normative_count does not match len(summary.ready_normative_ids)"
         )
 
     importable_ready_normative_elements = [
-        element for element in ready_normative_elements if element.get("id", "") not in duplicate_ids
+        element for element in ready_normative_elements if element.id not in duplicate_ids
     ]
 
     grouped_importable = defaultdict(list)
     for element in importable_ready_normative_elements:
-        grouped_importable[element.get("family", "unknown")].append(element)
+        grouped_importable[element.family].append(element)
 
     return {
-        "source_export_kind": export.get("export_metadata", {}).get("export_kind", ""),
+        "source_export_kind": export.export_metadata.export_kind,
         "clean_import": not errors,
         "errors": errors,
         "warnings": warnings,
         "counts": {
-            "element_count": len(elements),
-            "trace_link_count": len(trace_links),
+            "element_count": len(export.elements),
+            "trace_link_count": len(export.trace_links),
             "ready_normative_count": len(ready_normative_elements),
             "importable_ready_normative_count": len(importable_ready_normative_elements),
             "blocked_or_partial_normative_count": len(blocked_or_partial_normative_elements),
@@ -136,16 +147,16 @@ def analyze_rupify_export(export: dict[str, Any]) -> dict[str, Any]:
         "duplicate_element_ids": duplicate_ids,
         "unresolved_trace_references": unresolved_trace_refs,
         "summary": {
-            "blocking_ambiguity_count": summary.get("blocking_ambiguity_count", 0),
-            "ready_normative_count": summary.get("ready_normative_count", 0),
-            "trace_link_count": summary.get("trace_link_count", 0),
+            "blocking_ambiguity_count": export.summary.blocking_ambiguity_count,
+            "ready_normative_count": export.summary.ready_normative_count,
+            "trace_link_count": export.summary.trace_link_count,
         },
         "importable_ready_normative_by_family": {
             family: [
                 {
-                    "id": element.get("id", ""),
-                    "name": element.get("name", ""),
-                    "text": element.get("text", ""),
+                    "id": element.id,
+                    "name": element.name,
+                    "text": element.text,
                 }
                 for element in family_elements
             ]
@@ -303,8 +314,7 @@ def write_demo_outputs(source_export: str | Path, demo_dir: str | Path) -> dict[
     raw_text = source_path.read_text()
     (input_dir / source_path.name).write_text(raw_text)
 
-    export = json.loads(raw_text)
-    report = analyze_rupify_export(export)
+    report = analyze_imported_rupify_export(import_rupify_export_file(source_path))
 
     (output_dir / "import-report.json").write_text(json.dumps(report, indent=2))
     (output_dir / "import-report.md").write_text(
