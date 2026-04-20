@@ -35,3 +35,4 @@
 - [DONE] 2026-04-20 Deepen semantic decomposition across use cases, steps, scenarios, and guards
 - [DONE] 2026-04-20 Derive dependencies from trace links, scenario order, and state structure
 - [DONE] 2026-04-20 Improve GitHub delivery exports for direct issue creation
+- [DONE] 2026-04-20 Deepen scenario- and guard-driven decomposition

@@ -6,7 +6,8 @@
 - Source anchors: `anchor.rupify.state-transitions.state-transition-1`
 - Verification units: `vu.rupify.state-transition-1.requested-to-validated`
 - Depends on:
-  - `iu.rupify.guard-condition-2` (Implement Guard Condition 2)
+  - `iu.rupify.guard-condition-2.block-publish-without-approval` (Implement guard enforcement: Block publish without approval)
+  - `iu.rupify.guard-condition-2.require-validation-approval` (Implement guard enforcement: Require catalog validation approval)
 - Reverse impact hint: Changes here may require upstream review of state-transition-1.
 
 ## Summary
@@ -36,7 +37,8 @@ Transition the system lifecycle from Requested to Validated.
 
 ## Dependencies
 
-- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.
 
 ## Drift Checks
 

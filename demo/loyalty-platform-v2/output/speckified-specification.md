@@ -5,11 +5,11 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 71
-- Generated verification units: 71
-- Trace bundles: 71
-- Dependency edges: 40
-- Assembly rules: 5
+- Generated implementation units: 76
+- Generated verification units: 76
+- Trace bundles: 76
+- Dependency edges: 54
+- Assembly rules: 10
 
 ## Implementation Units
 
@@ -181,14 +181,25 @@ Project: `speckify-planning-export`
 
 ### Guard Conditions
 
-#### Implement Guard Condition 2
+#### Implement guard enforcement: Require catalog validation approval
 
-- ID: `iu.rupify.guard-condition-2`
-- Summary: Implement the behavior described by guard condition 2.
+- ID: `iu.rupify.guard-condition-2.require-validation-approval`
+- Summary: Require catalog validation approval before a reward can be published.
 - Source lineage:
   - `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)
 - Acceptance criteria:
-  - Catalog validation approval is required before a reward becomes Published
+  - Catalog validation approval is required before a reward becomes Published.
+
+#### Implement guard enforcement: Block publish without approval
+
+- ID: `iu.rupify.guard-condition-2.block-publish-without-approval`
+- Summary: Block a reward from becoming published when catalog validation approval is missing.
+- Source lineage:
+  - `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)
+- Dependencies:
+  - `iu.rupify.guard-condition-2.require-validation-approval`
+- Acceptance criteria:
+  - A reward does not become Published without catalog validation approval.
 
 ### Non Functional Requirements
 
@@ -257,41 +268,85 @@ Project: `speckify-planning-export`
 
 ### Scenarios
 
-#### Implement Invalid Catalog Change
+#### Implement scenario handling: Detect active offer conflict
 
-- ID: `iu.rupify.scenario-invalid-catalog-change`
-- Summary: Implement the behavior described by invalid catalog change.
+- ID: `iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict`
+- Summary: Detect that the new reward configuration would break an active offer.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
 - Acceptance criteria:
-  - Publication is rejected because the new reward configuration would break an active offer.
+  - The system detects when a new reward configuration would break an active offer.
 
-#### Implement Missing Payment Confirmation
+#### Implement scenario handling: Reject invalid publication
 
-- ID: `iu.rupify.scenario-missing-payment-confirmation`
-- Summary: Implement the behavior described by missing payment confirmation.
+- ID: `iu.rupify.scenario-invalid-catalog-change.reject-publication`
+- Summary: Reject publication when the reward configuration would break an active offer.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
+- Dependencies:
+  - `iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict`
+- Acceptance criteria:
+  - Publication is rejected when the new reward configuration would break an active offer.
+
+#### Implement scenario handling: Await payment confirmation
+
+- ID: `iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation`
+- Summary: Detect that dependent payment confirmation has not yet arrived.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
 - Acceptance criteria:
-  - Redemption pauses until dependent payment confirmation arrives.
+  - The system recognizes when dependent payment confirmation is still missing.
 
-#### Implement Reporting Delay
+#### Implement scenario handling: Pause redemption
 
-- ID: `iu.rupify.scenario-reporting-delay`
-- Summary: Implement the behavior described by reporting delay.
+- ID: `iu.rupify.scenario-missing-payment-confirmation.pause-redemption`
+- Summary: Pause redemption until the dependent payment confirmation arrives.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
+- Dependencies:
+  - `iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation`
+- Acceptance criteria:
+  - Redemption remains paused until dependent payment confirmation arrives.
+
+#### Implement scenario handling: Detect reporting source delay
+
+- ID: `iu.rupify.scenario-reporting-delay.detect-reporting-delay`
+- Summary: Detect that a reporting source is delayed for the analytics view.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
 - Acceptance criteria:
-  - Analytics view is partial because a reporting source is delayed.
+  - The system detects when a reporting source is delayed.
 
-#### Implement Reward Inventory Exhausted
+#### Implement scenario handling: Show partial analytics view
 
-- ID: `iu.rupify.scenario-reward-inventory-exhausted`
-- Summary: Implement the behavior described by reward inventory exhausted.
+- ID: `iu.rupify.scenario-reporting-delay.show-partial-analytics`
+- Summary: Show a partial analytics view when a reporting source is delayed.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
+- Dependencies:
+  - `iu.rupify.scenario-reporting-delay.detect-reporting-delay`
+- Acceptance criteria:
+  - The analytics view remains partial while a reporting source is delayed.
+
+#### Implement scenario handling: Detect exhausted reward inventory
+
+- ID: `iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory`
+- Summary: Detect that no reward inventory remains for the redemption.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
 - Acceptance criteria:
-  - Redemption fails because no reward inventory remains.
+  - The system detects when no reward inventory remains for the requested redemption.
+
+#### Implement scenario handling: Fail redemption without inventory
+
+- ID: `iu.rupify.scenario-reward-inventory-exhausted.fail-redemption`
+- Summary: Fail redemption when no reward inventory remains.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
+- Dependencies:
+  - `iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory`
+- Acceptance criteria:
+  - Redemption fails when no reward inventory remains.
 
 ### State Invariants
 
@@ -322,7 +377,8 @@ Project: `speckify-planning-export`
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)
 - Dependencies:
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Requested to Validated.
 
@@ -334,7 +390,8 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)
 - Dependencies:
   - `iu.rupify.state-transition-1.requested-to-validated`
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Validated to Fulfilled.
 
@@ -345,7 +402,8 @@ Project: `speckify-planning-export`
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)
 - Dependencies:
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Requested to Validated.
 
@@ -357,7 +415,8 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)
 - Dependencies:
   - `iu.rupify.state-transition-2.requested-to-validated`
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Validated to Fulfilled.
 
@@ -368,7 +427,8 @@ Project: `speckify-planning-export`
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)
 - Dependencies:
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Requested to Rejected.
 
@@ -379,7 +439,8 @@ Project: `speckify-planning-export`
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)
 - Dependencies:
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Draft to Published.
 
@@ -391,7 +452,8 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)
 - Dependencies:
   - `iu.rupify.state-transition-4.draft-to-published`
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Published to Retired.
 
@@ -402,7 +464,8 @@ Project: `speckify-planning-export`
 - Source lineage:
   - `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)
 - Dependencies:
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Draft to Published.
 
@@ -414,7 +477,8 @@ Project: `speckify-planning-export`
   - `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)
 - Dependencies:
   - `iu.rupify.state-transition-5.draft-to-published`
-  - `iu.rupify.guard-condition-2`
+  - `iu.rupify.guard-condition-2.block-publish-without-approval`
+  - `iu.rupify.guard-condition-2.require-validation-approval`
 - Acceptance criteria:
   - System can move from Published to Retired.
 

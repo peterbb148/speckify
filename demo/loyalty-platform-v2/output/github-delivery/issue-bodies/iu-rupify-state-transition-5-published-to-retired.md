@@ -7,7 +7,8 @@
 - Verification units: `vu.rupify.state-transition-5.published-to-retired`
 - Depends on:
   - `iu.rupify.state-transition-5.draft-to-published` (Implement lifecycle transition: Draft to Published)
-  - `iu.rupify.guard-condition-2` (Implement Guard Condition 2)
+  - `iu.rupify.guard-condition-2.block-publish-without-approval` (Implement guard enforcement: Block publish without approval)
+  - `iu.rupify.guard-condition-2.require-validation-approval` (Implement guard enforcement: Require catalog validation approval)
 - Reverse impact hint: Changes here may require upstream review of state-transition-5.
 
 ## Summary
@@ -38,7 +39,8 @@ Transition the system lifecycle from Published to Retired.
 ## Dependencies
 
 - `iu.rupify.state-transition-5.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.
-- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.
 
 ## Drift Checks
 

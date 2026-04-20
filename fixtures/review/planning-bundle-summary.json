@@ -1,6 +1,6 @@
 {
   "bundle_id": "bundle.speckify-planning-export",
-  "decomposition_profile": "rupify-split-dependencies-v1",
+  "decomposition_profile": "rupify-split-dependencies-v2",
   "counts": {
     "source_anchors": 29,
     "spec_units": 39,
@@ -28,18 +28,18 @@
     ],
     "transition_dependencies": [
       {
-        "id": "dep.rupify.state-transition-1.active-to-retiring.requires-rupify.state-transition-1.proposed-to-active",
-        "from_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
-        "to_implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
-        "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+        "id": "dep.functional-requirement-1.approval-states-soft-sequence",
+        "from_implementation_unit_id": "iu.rupify.functional-requirement-1.approval-states",
+        "to_implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
+        "dependency_type": "soft_sequence",
+        "reason": "Approval states are coordinated workflow behavior that should follow stage-gate support."
       },
       {
-        "id": "dep.rupify.state-transition-1.retiring-to-retired.requires-rupify.state-transition-1.active-to-retiring",
-        "from_implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
-        "to_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
-        "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+        "id": "dep.functional-requirement-2.export-reporting-data-soft-sequence",
+        "from_implementation_unit_id": "iu.rupify.functional-requirement-2.export-reporting-data",
+        "to_implementation_unit_id": "iu.rupify.functional-requirement-2.maintain-system-inventory",
+        "dependency_type": "soft_sequence",
+        "reason": "Reporting exports depend on a maintained system inventory record."
       }
     ]
   }

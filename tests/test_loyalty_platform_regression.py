@@ -59,10 +59,10 @@ class LoyaltyPlatformRegressionTests(unittest.TestCase):
 
         self.assertTrue(import_report["clean_import"])
         self.assertEqual(import_report["counts"]["ready_normative_count"], 62)
-        self.assertEqual(len(bundle["implementation_units"]), 71)
-        self.assertEqual(len(bundle["rendered_issues"]), 71)
-        self.assertEqual(review_summary["counts"]["implementation_units"], 71)
-        self.assertEqual(review_summary["counts"]["dependency_edges"], 4)
+        self.assertEqual(len(bundle["implementation_units"]), 76)
+        self.assertEqual(len(bundle["rendered_issues"]), 76)
+        self.assertEqual(review_summary["counts"]["implementation_units"], 76)
+        self.assertEqual(review_summary["counts"]["dependency_edges"], 54)
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@
     "generated_at": "2026-04-20T14:00:00Z",
     "source_model_id": "rupify-model",
     "source_model_version": 1,
-    "decomposition_profile": "rupify-split-dependencies-v1"
+    "decomposition_profile": "rupify-split-dependencies-v2"
   },
   "source_summary": {
     "source_system": "rupify",
@@ -15,8 +15,8 @@
     "export_version": 1,
     "notes": [
       "Generated directly from imported Rupify planning export records.",
-      "First-pass decomposition splits selected ready normative source elements into smaller planning units.",
-      "Deterministic dependency edges and assembly rules are derived for split workflow and transition chains."
+      "Deterministic decomposition splits selected ready normative source elements into smaller planning units.",
+      "Dependency edges and assembly rules are derived for split workflow, scenario, guard, and transition structures."
     ]
   },
   "source_anchors": [
