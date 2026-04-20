@@ -26,3 +26,4 @@
 - [DONE] 2026-04-20 Derive dependency edges and assembly rules from source relationships
 - [DONE] 2026-04-20 Strengthen verification unit generation from source constraints and invariants
 - [DONE] 2026-04-20 Improve rendered issue and specification quality for human implementation use
+- [DONE] 2026-04-20 Add quality review fixtures for generated planning artifacts
