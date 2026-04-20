@@ -6,6 +6,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from .rendering import render_issue_projections
 from .rupify_import import RupifyElement, RupifyPlanningExport, import_rupify_export_file
 
 
@@ -204,7 +205,7 @@ def generate_planning_bundle(
         for ambiguity_id in export.summary.raw.get("blocking_ambiguity_ids", [])
     ]
 
-    return {
+    bundle = {
         "bundle_metadata": {
             "bundle_id": f"bundle.{project_id}",
             "schema_version": 1,
@@ -234,6 +235,8 @@ def generate_planning_bundle(
         "unresolved_ambiguities": unresolved_ambiguities,
         "rendered_issues": [],
     }
+    bundle["rendered_issues"] = render_issue_projections(bundle)
+    return bundle
 
 
 def generate_planning_bundle_file(
