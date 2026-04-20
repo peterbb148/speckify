@@ -21,3 +21,4 @@
 - [DONE] 2026-04-20 Generate Speckify planning bundles from Rupify exports
 - [DONE] 2026-04-20 Validate generated planning bundles end to end
 - [DONE] 2026-04-20 Render generated issue and specification artifacts from planning bundles
+- [DONE] 2026-04-20 Add end-to-end regression for IT systems inventory V2 hand-off
