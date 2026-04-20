@@ -22,7 +22,7 @@ Implement the behavior described by enroll member.
 
 ## Dependencies
 
-- None
+- `iu.rupify.enroll-member-step-2`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

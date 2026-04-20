@@ -22,7 +22,8 @@ Implement the behavior described by browse rewards.
 
 ## Dependencies
 
-- None
+- `iu.rupify.browse-rewards-step-2.display-points-balance`: Later use-case steps depend on the earlier step in the same ordered flow.
+- `iu.rupify.browse-rewards-step-2.display-rewards`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

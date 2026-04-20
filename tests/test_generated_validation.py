@@ -14,6 +14,9 @@ SCHEMA_DIR = ROOT / "schemas"
 RUPIFY_EXPORT = Path(
     "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
 )
+LOYALTY_RUPIFY_EXPORT = Path(
+    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json"
+)
 
 
 class GeneratedValidationTests(unittest.TestCase):
@@ -28,8 +31,16 @@ class GeneratedValidationTests(unittest.TestCase):
             "rupify-split-dependencies-v1",
         )
         self.assertEqual(len(bundle["trace_bundles"]), 39)
-        self.assertEqual(len(bundle["dependency_edges"]), 8)
+        self.assertEqual(len(bundle["dependency_edges"]), 16)
         self.assertEqual(len(bundle["assembly_rules"]), 7)
+
+    def test_generated_bundle_from_loyalty_export_passes(self) -> None:
+        """The loyalty-platform V2 export should generate a valid bundle end to end."""
+        bundle = validate_generated_bundle_file(LOYALTY_RUPIFY_EXPORT, SCHEMA_DIR)
+
+        self.assertEqual(len(bundle["trace_bundles"]), 71)
+        self.assertEqual(len(bundle["dependency_edges"]), 40)
+        self.assertEqual(len(bundle["assembly_rules"]), 5)
 
     def test_broken_generated_bundle_fails_reference_validation(self) -> None:
         """Reference drift in a generated bundle should fail explicitly."""

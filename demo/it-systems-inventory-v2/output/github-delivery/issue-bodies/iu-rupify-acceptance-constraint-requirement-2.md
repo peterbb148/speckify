@@ -24,7 +24,7 @@ Deliver behavior that satisfies the constraint 'SSO'.
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-2`: Acceptance-constraint work should follow the linked underlying requirement.
 
 ## Drift Checks
 

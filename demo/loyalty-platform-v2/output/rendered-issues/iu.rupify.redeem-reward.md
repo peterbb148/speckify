@@ -22,7 +22,7 @@ Implement the behavior described by redeem reward.
 
 ## Dependencies
 
-- None
+- `iu.rupify.non-functional-requirement-6`: Use-case implementation should follow the linked requirement intent.
 
 ## Drift Checks
 

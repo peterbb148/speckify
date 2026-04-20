@@ -7,7 +7,7 @@
     "implementation_units": 39,
     "verification_units": 39,
     "trace_bundles": 39,
-    "dependency_edges": 8,
+    "dependency_edges": 16,
     "assembly_rules": 7,
     "rendered_issues": 39
   },

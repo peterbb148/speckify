@@ -8,7 +8,7 @@ Project: `speckify-planning-export`
 - Generated implementation units: 39
 - Generated verification units: 39
 - Trace bundles: 39
-- Dependency edges: 8
+- Dependency edges: 16
 - Assembly rules: 7
 
 ## Implementation Units
@@ -21,6 +21,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'UI must be web based'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-1`
 - Acceptance criteria:
   - UI must be web based
 
@@ -30,6 +32,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'SSO'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-2`
 - Acceptance criteria:
   - SSO
 
@@ -39,6 +43,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'role-based access'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-3`
 - Acceptance criteria:
   - role-based access
 
@@ -48,6 +54,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'audit trail'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-4`
 - Acceptance criteria:
   - audit trail
 
@@ -57,6 +65,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'search'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-5`
 - Acceptance criteria:
   - search
 
@@ -66,6 +76,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'filtering'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-6`
 - Acceptance criteria:
   - filtering
 
@@ -75,6 +87,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-7`
 - Acceptance criteria:
   - performance (regular >1s for web page rendering)
 
@@ -84,6 +98,8 @@ Project: `speckify-planning-export`
 - Summary: Deliver behavior that satisfies the constraint 'availability >=99%'.
 - Source lineage:
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)
+- Dependencies:
+  - `iu.rupify.non-functional-requirement-8`
 - Acceptance criteria:
   - availability >=99%
 
