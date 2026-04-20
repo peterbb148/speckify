@@ -1,0 +1,389 @@
+{
+  "source_export_kind": "speckify_planning_export",
+  "clean_import": true,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "element_count": 108,
+    "trace_link_count": 144,
+    "ready_normative_count": 62,
+    "importable_ready_normative_count": 62,
+    "blocked_or_partial_normative_count": 20
+  },
+  "family_counts": {
+    "acceptance_constraints": 10,
+    "actors": 3,
+    "business_rules": 3,
+    "components": 5,
+    "domain_entities": 7,
+    "domain_invariants": 3,
+    "forbidden_transitions": 1,
+    "functional_requirements": 2,
+    "guard_conditions": 2,
+    "interaction_messages": 4,
+    "interaction_realizations": 5,
+    "interfaces": 4,
+    "non_functional_requirements": 7,
+    "relationships": 5,
+    "risks": 3,
+    "runtime_boundaries": 2,
+    "scenarios": 4,
+    "state_entities": 2,
+    "state_invariants": 2,
+    "state_transitions": 5,
+    "triggers": 2,
+    "use_case_steps": 22,
+    "use_cases": 5
+  },
+  "readiness_counts": {
+    "": 45,
+    "blocked": 1,
+    "ready": 62
+  },
+  "semantic_counts": {
+    "": 9,
+    "informative": 17,
+    "normative": 82
+  },
+  "duplicate_element_ids": [],
+  "unresolved_trace_references": [],
+  "summary": {
+    "blocking_ambiguity_count": 0,
+    "ready_normative_count": 62,
+    "trace_link_count": 144
+  },
+  "importable_ready_normative_by_family": {
+    "acceptance_constraints": [
+      {
+        "id": "acceptance-constraint-requirement-1",
+        "name": "Acceptance Constraint 1",
+        "text": "The system must protect member and reward transactions with appropriate security controls."
+      },
+      {
+        "id": "acceptance-constraint-requirement-2",
+        "name": "Acceptance Constraint 2",
+        "text": "The member-facing experience must remain usable on common digital channels."
+      },
+      {
+        "id": "acceptance-constraint-requirement-3",
+        "name": "Acceptance Constraint 3",
+        "text": "The platform must support integrations with external systems such as payment confirmation and reporting sources."
+      },
+      {
+        "id": "acceptance-constraint-requirement-4",
+        "name": "Acceptance Constraint 4",
+        "text": "The system must allow customers to enroll in the loyalty program digitally."
+      },
+      {
+        "id": "acceptance-constraint-requirement-5",
+        "name": "Acceptance Constraint 5",
+        "text": "The system must show point balance and available rewards to eligible members."
+      },
+      {
+        "id": "acceptance-constraint-requirement-6",
+        "name": "Acceptance Constraint 6",
+        "text": "The system must allow members to redeem rewards when eligibility conditions are satisfied."
+      },
+      {
+        "id": "acceptance-constraint-requirement-7",
+        "name": "Acceptance Constraint 7",
+        "text": "The system must provide reporting on redemptions and campaign performance."
+      },
+      {
+        "id": "acceptance-constraint-success-1",
+        "name": "Success Criterion 1",
+        "text": "Members can enroll and redeem rewards through one coherent digital journey."
+      },
+      {
+        "id": "acceptance-constraint-success-2",
+        "name": "Success Criterion 2",
+        "text": "Operations managers can update the reward catalog without engineering support for routine changes."
+      },
+      {
+        "id": "acceptance-constraint-success-3",
+        "name": "Success Criterion 3",
+        "text": "The business can review redemption and campaign performance in one reporting workflow."
+      }
+    ],
+    "domain_invariants": [
+      {
+        "id": "domain-invariant-1",
+        "name": "Rule 1",
+        "text": "A Redemption must not be fulfilled unless reward eligibility and available points are confirmed."
+      },
+      {
+        "id": "domain-invariant-2",
+        "name": "Rule 2",
+        "text": "A Reward Catalog Entry must be validated before it becomes Published."
+      },
+      {
+        "id": "domain-invariant-3",
+        "name": "Rule 3",
+        "text": "A Member must provide the required details and consents before enrollment completes."
+      }
+    ],
+    "forbidden_transitions": [
+      {
+        "id": "forbidden-transition-1",
+        "name": "Forbidden Transition 1",
+        "text": "A Redemption must not be fulfilled unless reward eligibility and available points are confirmed."
+      }
+    ],
+    "functional_requirements": [
+      {
+        "id": "functional-requirement-1",
+        "name": "",
+        "text": "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+      },
+      {
+        "id": "functional-requirement-2",
+        "name": "",
+        "text": "The platform must integrate with payment confirmation and downstream reporting sources."
+      }
+    ],
+    "guard_conditions": [
+      {
+        "id": "guard-condition-2",
+        "name": "Guard Condition 2",
+        "text": "Catalog validation approval is required before a reward becomes Published"
+      }
+    ],
+    "non_functional_requirements": [
+      {
+        "id": "non_functional-requirement-1",
+        "name": "",
+        "text": "The system must protect member and reward transactions with appropriate security controls."
+      },
+      {
+        "id": "non_functional-requirement-2",
+        "name": "",
+        "text": "The member-facing experience must remain usable on common digital channels."
+      },
+      {
+        "id": "non_functional-requirement-3",
+        "name": "",
+        "text": "The platform must support integrations with external systems such as payment confirmation and reporting sources."
+      },
+      {
+        "id": "non_functional-requirement-4",
+        "name": "",
+        "text": "The system must allow customers to enroll in the loyalty program digitally."
+      },
+      {
+        "id": "non_functional-requirement-5",
+        "name": "",
+        "text": "The system must show point balance and available rewards to eligible members."
+      },
+      {
+        "id": "non_functional-requirement-6",
+        "name": "",
+        "text": "The system must allow members to redeem rewards when eligibility conditions are satisfied."
+      },
+      {
+        "id": "non_functional-requirement-7",
+        "name": "",
+        "text": "The system must provide reporting on redemptions and campaign performance."
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "scenario-invalid-catalog-change",
+        "name": "Invalid Catalog Change",
+        "text": "Publication is rejected because the new reward configuration would break an active offer."
+      },
+      {
+        "id": "scenario-missing-payment-confirmation",
+        "name": "Missing Payment Confirmation",
+        "text": "Redemption pauses until dependent payment confirmation arrives."
+      },
+      {
+        "id": "scenario-reporting-delay",
+        "name": "Reporting Delay",
+        "text": "Analytics view is partial because a reporting source is delayed."
+      },
+      {
+        "id": "scenario-reward-inventory-exhausted",
+        "name": "Reward Inventory Exhausted",
+        "text": "Redemption fails because no reward inventory remains."
+      }
+    ],
+    "state_invariants": [
+      {
+        "id": "state-invariant-1",
+        "name": "Rule 1",
+        "text": "A Redemption must not be fulfilled unless reward eligibility and available points are confirmed."
+      },
+      {
+        "id": "state-invariant-2",
+        "name": "Rule 2",
+        "text": "A Reward Catalog Entry must be validated before it becomes Published."
+      }
+    ],
+    "state_transitions": [
+      {
+        "id": "state-transition-1",
+        "name": "",
+        "text": "Redemption: Requested -> Validated -> Fulfilled"
+      },
+      {
+        "id": "state-transition-2",
+        "name": "",
+        "text": "Redemption: Requested -> Validated -> Fulfilled"
+      },
+      {
+        "id": "state-transition-3",
+        "name": "",
+        "text": "Redemption: Requested -> Rejected"
+      },
+      {
+        "id": "state-transition-4",
+        "name": "",
+        "text": "Reward Catalog Entry: Draft -> Published -> Retired"
+      },
+      {
+        "id": "state-transition-5",
+        "name": "",
+        "text": "Reward Catalog Entry: Draft -> Published -> Retired"
+      }
+    ],
+    "use_case_steps": [
+      {
+        "id": "browse-rewards-extension-1",
+        "name": "Browse Rewards",
+        "text": "Catalog view degrades if an integration is temporarily unavailable."
+      },
+      {
+        "id": "browse-rewards-step-1",
+        "name": "Browse Rewards",
+        "text": "Customer opens the rewards catalog."
+      },
+      {
+        "id": "browse-rewards-step-2",
+        "name": "Browse Rewards",
+        "text": "System displays available rewards and points balance."
+      },
+      {
+        "id": "browse-rewards-step-3",
+        "name": "Browse Rewards",
+        "text": "Customer filters or sorts the catalog."
+      },
+      {
+        "id": "enroll-member-extension-1",
+        "name": "Enroll Member",
+        "text": "Enrollment is blocked when required consent is missing."
+      },
+      {
+        "id": "enroll-member-step-1",
+        "name": "Enroll Member",
+        "text": "Customer opens the loyalty enrollment flow."
+      },
+      {
+        "id": "enroll-member-step-2",
+        "name": "Enroll Member",
+        "text": "Customer provides the required details and consents."
+      },
+      {
+        "id": "enroll-member-step-3",
+        "name": "Enroll Member",
+        "text": "System validates the submission and creates the member account."
+      },
+      {
+        "id": "manage-reward-catalog-extension-1",
+        "name": "Manage Reward Catalog",
+        "text": "A change is rejected because it would make an active reward invalid."
+      },
+      {
+        "id": "manage-reward-catalog-step-1",
+        "name": "Manage Reward Catalog",
+        "text": "Operations Manager opens catalog administration."
+      },
+      {
+        "id": "manage-reward-catalog-step-2",
+        "name": "Manage Reward Catalog",
+        "text": "Operations Manager updates reward configuration."
+      },
+      {
+        "id": "manage-reward-catalog-step-3",
+        "name": "Manage Reward Catalog",
+        "text": "System validates and publishes the change."
+      },
+      {
+        "id": "redeem-reward-extension-1",
+        "name": "Redeem Reward",
+        "text": "Reward inventory is exhausted before completion."
+      },
+      {
+        "id": "redeem-reward-extension-2",
+        "name": "Redeem Reward",
+        "text": "Customer does not have enough points."
+      },
+      {
+        "id": "redeem-reward-extension-3",
+        "name": "Redeem Reward",
+        "text": "Payment confirmation is missing for a reward that depends on purchase completion."
+      },
+      {
+        "id": "redeem-reward-step-1",
+        "name": "Redeem Reward",
+        "text": "Customer selects a reward."
+      },
+      {
+        "id": "redeem-reward-step-2",
+        "name": "Redeem Reward",
+        "text": "System validates reward eligibility and available points."
+      },
+      {
+        "id": "redeem-reward-step-3",
+        "name": "Redeem Reward",
+        "text": "System reserves the reward and updates the member balance."
+      },
+      {
+        "id": "redeem-reward-step-4",
+        "name": "Redeem Reward",
+        "text": "System confirms redemption to the customer."
+      },
+      {
+        "id": "review-redemption-analytics-extension-1",
+        "name": "Review Redemption Analytics",
+        "text": "A reporting data source is delayed."
+      },
+      {
+        "id": "review-redemption-analytics-step-1",
+        "name": "Review Redemption Analytics",
+        "text": "Operations Manager opens the analytics dashboard."
+      },
+      {
+        "id": "review-redemption-analytics-step-2",
+        "name": "Review Redemption Analytics",
+        "text": "System shows redemption and campaign metrics."
+      }
+    ],
+    "use_cases": [
+      {
+        "id": "browse-rewards",
+        "name": "Browse Rewards",
+        "text": "Browse Rewards"
+      },
+      {
+        "id": "enroll-member",
+        "name": "Enroll Member",
+        "text": "Enroll Member"
+      },
+      {
+        "id": "manage-reward-catalog",
+        "name": "Manage Reward Catalog",
+        "text": "Manage Reward Catalog"
+      },
+      {
+        "id": "redeem-reward",
+        "name": "Redeem Reward",
+        "text": "Redeem Reward"
+      },
+      {
+        "id": "review-redemption-analytics",
+        "name": "Review Redemption Analytics",
+        "text": "Review Redemption Analytics"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "bundle_id": "bundle.speckify-planning-export",
+  "decomposition_profile": "rupify-split-dependencies-v1",
+  "counts": {
+    "source_anchors": 0,
+    "spec_units": 0,
+    "implementation_units": 0,
+    "verification_units": 0,
+    "trace_bundles": 0,
+    "dependency_edges": 0,
+    "assembly_rules": 0,
+    "rendered_issues": 0
+  },
+  "quality_signals": {
+    "clean_import": true,
+    "ready_normative_count": 0,
+    "notes": [
+      "The loyalty-platform planning export imports cleanly.",
+      "No ready normative elements are present, so the generated bundle is intentionally empty."
+    ]
+  }
+}

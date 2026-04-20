@@ -1,0 +1,1339 @@
+{
+  "export_metadata": {
+    "export_kind": "speckify_github_delivery_export",
+    "bundle_id": "bundle.speckify-planning-export",
+    "generated_at": "2026-04-20T14:00:00Z",
+    "source_system": "rupify",
+    "project_id": "speckify-planning-export"
+  },
+  "issues": [
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-1",
+      "title": "Implement constraint: Acceptance Constraint 1",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must protect member and reward transactions with appropriate security controls.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)\n\n## Scope\n\n- The system must protect member and reward transactions with appropriate security controls.\n\n## Acceptance Criteria\n\n- The system must protect member and reward transactions with appropriate security controls.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.\n- Observable: The system must protect member and reward transactions with appropriate security controls.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must protect member and reward transactions with appropriate security controls.\n- Failure condition: The delivered behavior violates the stated constraint: The system must protect member and reward transactions with appropriate security controls.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-2",
+      "title": "Implement constraint: Acceptance Constraint 2",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The member-facing experience must remain usable on common digital channels.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- The member-facing experience must remain usable on common digital channels.\n\n## Acceptance Criteria\n\n- The member-facing experience must remain usable on common digital channels.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: The member-facing experience must remain usable on common digital channels.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The member-facing experience must remain usable on common digital channels.\n- Failure condition: The delivered behavior violates the stated constraint: The member-facing experience must remain usable on common digital channels.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-3",
+      "title": "Implement constraint: Acceptance Constraint 3",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The platform must support integrations with external systems such as payment confirmation and reporting sources.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- The platform must support integrations with external systems such as payment confirmation and reporting sources.\n\n## Acceptance Criteria\n\n- The platform must support integrations with external systems such as payment confirmation and reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: The platform must support integrations with external systems such as payment confirmation and reporting sources.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The platform must support integrations with external systems such as payment confirmation and reporting sources.\n- Failure condition: The delivered behavior violates the stated constraint: The platform must support integrations with external systems such as payment confirmation and reporting sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-4",
+      "title": "Implement constraint: Acceptance Constraint 4",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must allow customers to enroll in the loyalty program digitally.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- The system must allow customers to enroll in the loyalty program digitally.\n\n## Acceptance Criteria\n\n- The system must allow customers to enroll in the loyalty program digitally.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: The system must allow customers to enroll in the loyalty program digitally.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must allow customers to enroll in the loyalty program digitally.\n- Failure condition: The delivered behavior violates the stated constraint: The system must allow customers to enroll in the loyalty program digitally.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-4"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-5",
+      "title": "Implement constraint: Acceptance Constraint 5",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must show point balance and available rewards to eligible members.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- The system must show point balance and available rewards to eligible members.\n\n## Acceptance Criteria\n\n- The system must show point balance and available rewards to eligible members.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: The system must show point balance and available rewards to eligible members.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must show point balance and available rewards to eligible members.\n- Failure condition: The delivered behavior violates the stated constraint: The system must show point balance and available rewards to eligible members.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-5"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-5."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-6",
+      "title": "Implement constraint: Acceptance Constraint 6",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must allow members to redeem rewards when eligibility conditions are satisfied.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- The system must allow members to redeem rewards when eligibility conditions are satisfied.\n\n## Acceptance Criteria\n\n- The system must allow members to redeem rewards when eligibility conditions are satisfied.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: The system must allow members to redeem rewards when eligibility conditions are satisfied.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must allow members to redeem rewards when eligibility conditions are satisfied.\n- Failure condition: The delivered behavior violates the stated constraint: The system must allow members to redeem rewards when eligibility conditions are satisfied.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-6"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-6."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-7",
+      "title": "Implement constraint: Acceptance Constraint 7",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Acceptance Criteria\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: The system must provide reporting on redemptions and campaign performance.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must provide reporting on redemptions and campaign performance.\n- Failure condition: The delivered behavior violates the stated constraint: The system must provide reporting on redemptions and campaign performance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-7"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-7."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
+      "issue_slug": "iu-rupify-acceptance-constraint-success-1",
+      "title": "Implement constraint: Success Criterion 1",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'Members can enroll and redeem rewards through one coherent digital journey.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)\n\n## Scope\n\n- Members can enroll and redeem rewards through one coherent digital journey.\n\n## Acceptance Criteria\n\n- Members can enroll and redeem rewards through one coherent digital journey.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.\n- Observable: Members can enroll and redeem rewards through one coherent digital journey.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: Members can enroll and redeem rewards through one coherent digital journey.\n- Failure condition: The delivered behavior violates the stated constraint: Members can enroll and redeem rewards through one coherent digital journey.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-success-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-2",
+      "issue_slug": "iu-rupify-acceptance-constraint-success-2",
+      "title": "Implement constraint: Success Criterion 2",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'Operations managers can update the reward catalog without engineering support for routine changes.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-2` (constraint: `acceptance-constraint-success-2`)\n\n## Scope\n\n- Operations managers can update the reward catalog without engineering support for routine changes.\n\n## Acceptance Criteria\n\n- Operations managers can update the reward catalog without engineering support for routine changes.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 2.\n- Observable: Operations managers can update the reward catalog without engineering support for routine changes.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: Operations managers can update the reward catalog without engineering support for routine changes.\n- Failure condition: The delivered behavior violates the stated constraint: Operations managers can update the reward catalog without engineering support for routine changes.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-success-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-3",
+      "issue_slug": "iu-rupify-acceptance-constraint-success-3",
+      "title": "Implement constraint: Success Criterion 3",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The business can review redemption and campaign performance in one reporting workflow.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-3` (constraint: `acceptance-constraint-success-3`)\n\n## Scope\n\n- The business can review redemption and campaign performance in one reporting workflow.\n\n## Acceptance Criteria\n\n- The business can review redemption and campaign performance in one reporting workflow.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 3.\n- Observable: The business can review redemption and campaign performance in one reporting workflow.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The business can review redemption and campaign performance in one reporting workflow.\n- Failure condition: The delivered behavior violates the stated constraint: The business can review redemption and campaign performance in one reporting workflow.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-success-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards",
+      "issue_slug": "iu-rupify-browse-rewards",
+      "title": "Implement Browse Rewards",
+      "body_markdown": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.browse-rewards` (requirement: `browse-rewards`)\n\n## Scope\n\n- Browse Rewards\n\n## Acceptance Criteria\n\n- Browse Rewards\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: Browse Rewards\n- Expected outcome: Browse Rewards\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-cases"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-cases.browse-rewards"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards-extension-1",
+      "issue_slug": "iu-rupify-browse-rewards-extension-1",
+      "title": "Implement Browse Rewards",
+      "body_markdown": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-extension-1` (requirement: `browse-rewards-extension-1`)\n\n## Scope\n\n- Catalog view degrades if an integration is temporarily unavailable.\n\n## Acceptance Criteria\n\n- Catalog view degrades if an integration is temporarily unavailable.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: Catalog view degrades if an integration is temporarily unavailable.\n- Expected outcome: Catalog view degrades if an integration is temporarily unavailable.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-extension-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-extension-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-extension-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-extension-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-1",
+      "issue_slug": "iu-rupify-browse-rewards-step-1",
+      "title": "Implement Browse Rewards",
+      "body_markdown": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-1` (requirement: `browse-rewards-step-1`)\n\n## Scope\n\n- Customer opens the rewards catalog.\n\n## Acceptance Criteria\n\n- Customer opens the rewards catalog.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: Customer opens the rewards catalog.\n- Expected outcome: Customer opens the rewards catalog.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-2",
+      "issue_slug": "iu-rupify-browse-rewards-step-2",
+      "title": "Implement Browse Rewards",
+      "body_markdown": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)\n\n## Scope\n\n- System displays available rewards and points balance.\n\n## Acceptance Criteria\n\n- System displays available rewards and points balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: System displays available rewards and points balance.\n- Expected outcome: System displays available rewards and points balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.browse-rewards-step-3",
+      "issue_slug": "iu-rupify-browse-rewards-step-3",
+      "title": "Implement Browse Rewards",
+      "body_markdown": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.browse-rewards-step-3` (requirement: `browse-rewards-step-3`)\n\n## Scope\n\n- Customer filters or sorts the catalog.\n\n## Acceptance Criteria\n\n- Customer filters or sorts the catalog.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: Customer filters or sorts the catalog.\n- Expected outcome: Customer filters or sorts the catalog.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards-step-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.browse-rewards-step-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.browse-rewards-step-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of browse-rewards-step-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-1",
+      "issue_slug": "iu-rupify-domain-invariant-1",
+      "title": "Enforce invariant: Rule 1",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-1` (domain_invariant: `domain-invariant-1`)\n\n## Scope\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Acceptance Criteria\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 1.\n- Observable: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Failure condition: The invariant is breached: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-2",
+      "issue_slug": "iu-rupify-domain-invariant-2",
+      "title": "Enforce invariant: Rule 2",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A Reward Catalog Entry must be validated before it becomes Published.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2` (domain_invariant: `domain-invariant-2`)\n\n## Scope\n\n- A Reward Catalog Entry must be validated before it becomes Published.\n\n## Acceptance Criteria\n\n- A Reward Catalog Entry must be validated before it becomes Published.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A Reward Catalog Entry must be validated before it becomes Published.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A Reward Catalog Entry must be validated before it becomes Published.\n- Failure condition: The invariant is breached: A Reward Catalog Entry must be validated before it becomes Published.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-3",
+      "issue_slug": "iu-rupify-domain-invariant-3",
+      "title": "Enforce invariant: Rule 3",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A Member must provide the required details and consents before enrollment completes.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- A Member must provide the required details and consents before enrollment completes.\n\n## Acceptance Criteria\n\n- A Member must provide the required details and consents before enrollment completes.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 3.\n- Observable: A Member must provide the required details and consents before enrollment completes.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A Member must provide the required details and consents before enrollment completes.\n- Failure condition: The invariant is breached: A Member must provide the required details and consents before enrollment completes.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.enroll-member",
+      "issue_slug": "iu-rupify-enroll-member",
+      "title": "Implement Enroll Member",
+      "body_markdown": "## Summary\n\nImplement the behavior described by enroll member.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.enroll-member` (requirement: `enroll-member`)\n\n## Scope\n\n- Enroll Member\n\n## Acceptance Criteria\n\n- Enroll Member\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies enroll member.\n- Observable: Enroll Member\n- Expected outcome: Enroll Member\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-cases"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-cases.enroll-member"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.enroll-member"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of enroll-member."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.enroll-member-extension-1",
+      "issue_slug": "iu-rupify-enroll-member-extension-1",
+      "title": "Implement Enroll Member",
+      "body_markdown": "## Summary\n\nImplement the behavior described by enroll member.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.enroll-member-extension-1` (requirement: `enroll-member-extension-1`)\n\n## Scope\n\n- Enrollment is blocked when required consent is missing.\n\n## Acceptance Criteria\n\n- Enrollment is blocked when required consent is missing.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies enroll member.\n- Observable: Enrollment is blocked when required consent is missing.\n- Expected outcome: Enrollment is blocked when required consent is missing.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member-extension-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.enroll-member-extension-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.enroll-member-extension-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of enroll-member-extension-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.enroll-member-step-1",
+      "issue_slug": "iu-rupify-enroll-member-step-1",
+      "title": "Implement Enroll Member",
+      "body_markdown": "## Summary\n\nImplement the behavior described by enroll member.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.enroll-member-step-1` (requirement: `enroll-member-step-1`)\n\n## Scope\n\n- Customer opens the loyalty enrollment flow.\n\n## Acceptance Criteria\n\n- Customer opens the loyalty enrollment flow.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies enroll member.\n- Observable: Customer opens the loyalty enrollment flow.\n- Expected outcome: Customer opens the loyalty enrollment flow.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member-step-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.enroll-member-step-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.enroll-member-step-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of enroll-member-step-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.enroll-member-step-2",
+      "issue_slug": "iu-rupify-enroll-member-step-2",
+      "title": "Implement Enroll Member",
+      "body_markdown": "## Summary\n\nImplement the behavior described by enroll member.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.enroll-member-step-2` (requirement: `enroll-member-step-2`)\n\n## Scope\n\n- Customer provides the required details and consents.\n\n## Acceptance Criteria\n\n- Customer provides the required details and consents.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies enroll member.\n- Observable: Customer provides the required details and consents.\n- Expected outcome: Customer provides the required details and consents.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.enroll-member-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.enroll-member-step-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of enroll-member-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.enroll-member-step-3",
+      "issue_slug": "iu-rupify-enroll-member-step-3",
+      "title": "Implement Enroll Member",
+      "body_markdown": "## Summary\n\nImplement the behavior described by enroll member.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.enroll-member-step-3` (requirement: `enroll-member-step-3`)\n\n## Scope\n\n- System validates the submission and creates the member account.\n\n## Acceptance Criteria\n\n- System validates the submission and creates the member account.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies enroll member.\n- Observable: System validates the submission and creates the member account.\n- Expected outcome: System validates the submission and creates the member account.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member-step-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.enroll-member-step-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.enroll-member-step-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of enroll-member-step-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.forbidden-transition-1",
+      "issue_slug": "iu-rupify-forbidden-transition-1",
+      "title": "Implement Forbidden Transition 1",
+      "body_markdown": "## Summary\n\nImplement the behavior described by forbidden transition 1.\n\n## Source Lineage\n\n- `anchor.rupify.forbidden-transitions.forbidden-transition-1` (requirement: `forbidden-transition-1`)\n\n## Scope\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Acceptance Criteria\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies forbidden transition 1.\n- Observable: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Expected outcome: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element forbidden-transition-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "forbidden-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.forbidden-transitions.forbidden-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.forbidden-transition-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of forbidden-transition-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-1",
+      "issue_slug": "iu-rupify-functional-requirement-1",
+      "title": "Implement workflow support: functional-requirement-1",
+      "body_markdown": "## Summary\n\nThe system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Acceptance Criteria\n\n- The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-1.\n- Observable: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n- Failure condition: The workflow behavior is missing or incomplete: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2",
+      "issue_slug": "iu-rupify-functional-requirement-2",
+      "title": "Implement workflow support: functional-requirement-2",
+      "body_markdown": "## Summary\n\nThe platform must integrate with payment confirmation and downstream reporting sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Acceptance Criteria\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: The platform must integrate with payment confirmation and downstream reporting sources.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The platform must integrate with payment confirmation and downstream reporting sources.\n- Failure condition: The workflow behavior is missing or incomplete: The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.guard-condition-2",
+      "issue_slug": "iu-rupify-guard-condition-2",
+      "title": "Implement Guard Condition 2",
+      "body_markdown": "## Summary\n\nImplement the behavior described by guard condition 2.\n\n## Source Lineage\n\n- `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)\n\n## Scope\n\n- Catalog validation approval is required before a reward becomes Published\n\n## Acceptance Criteria\n\n- Catalog validation approval is required before a reward becomes Published\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies guard condition 2.\n- Observable: Catalog validation approval is required before a reward becomes Published\n- Expected outcome: Catalog validation approval is required before a reward becomes Published\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element guard-condition-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "guard-conditions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.guard-conditions.guard-condition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.guard-condition-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of guard-condition-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog",
+      "issue_slug": "iu-rupify-manage-reward-catalog",
+      "title": "Implement Manage Reward Catalog",
+      "body_markdown": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.manage-reward-catalog` (requirement: `manage-reward-catalog`)\n\n## Scope\n\n- Manage Reward Catalog\n\n## Acceptance Criteria\n\n- Manage Reward Catalog\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: Manage Reward Catalog\n- Expected outcome: Manage Reward Catalog\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-cases"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-cases.manage-reward-catalog"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-extension-1",
+      "issue_slug": "iu-rupify-manage-reward-catalog-extension-1",
+      "title": "Implement Manage Reward Catalog",
+      "body_markdown": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-extension-1` (requirement: `manage-reward-catalog-extension-1`)\n\n## Scope\n\n- A change is rejected because it would make an active reward invalid.\n\n## Acceptance Criteria\n\n- A change is rejected because it would make an active reward invalid.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: A change is rejected because it would make an active reward invalid.\n- Expected outcome: A change is rejected because it would make an active reward invalid.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-extension-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-extension-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-extension-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-extension-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-1",
+      "issue_slug": "iu-rupify-manage-reward-catalog-step-1",
+      "title": "Implement Manage Reward Catalog",
+      "body_markdown": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-1` (requirement: `manage-reward-catalog-step-1`)\n\n## Scope\n\n- Operations Manager opens catalog administration.\n\n## Acceptance Criteria\n\n- Operations Manager opens catalog administration.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: Operations Manager opens catalog administration.\n- Expected outcome: Operations Manager opens catalog administration.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-2",
+      "issue_slug": "iu-rupify-manage-reward-catalog-step-2",
+      "title": "Implement Manage Reward Catalog",
+      "body_markdown": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-2` (requirement: `manage-reward-catalog-step-2`)\n\n## Scope\n\n- Operations Manager updates reward configuration.\n\n## Acceptance Criteria\n\n- Operations Manager updates reward configuration.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: Operations Manager updates reward configuration.\n- Expected outcome: Operations Manager updates reward configuration.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3",
+      "issue_slug": "iu-rupify-manage-reward-catalog-step-3",
+      "title": "Implement Manage Reward Catalog",
+      "body_markdown": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)\n\n## Scope\n\n- System validates and publishes the change.\n\n## Acceptance Criteria\n\n- System validates and publishes the change.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: System validates and publishes the change.\n- Expected outcome: System validates and publishes the change.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog-step-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.manage-reward-catalog-step-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.manage-reward-catalog-step-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of manage-reward-catalog-step-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
+      "issue_slug": "iu-rupify-non-functional-requirement-1",
+      "title": "Implement constraint: non_functional-requirement-1",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must protect member and reward transactions with appropriate security controls.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-1` (requirement: `non_functional-requirement-1`)\n\n## Scope\n\n- The system must protect member and reward transactions with appropriate security controls.\n\n## Acceptance Criteria\n\n- The system must protect member and reward transactions with appropriate security controls.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-1.\n- Observable: The system must protect member and reward transactions with appropriate security controls.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must protect member and reward transactions with appropriate security controls.\n- Failure condition: The delivered behavior violates the stated constraint: The system must protect member and reward transactions with appropriate security controls.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
+      "issue_slug": "iu-rupify-non-functional-requirement-2",
+      "title": "Implement constraint: non_functional-requirement-2",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The member-facing experience must remain usable on common digital channels.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-2` (requirement: `non_functional-requirement-2`)\n\n## Scope\n\n- The member-facing experience must remain usable on common digital channels.\n\n## Acceptance Criteria\n\n- The member-facing experience must remain usable on common digital channels.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-2.\n- Observable: The member-facing experience must remain usable on common digital channels.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The member-facing experience must remain usable on common digital channels.\n- Failure condition: The delivered behavior violates the stated constraint: The member-facing experience must remain usable on common digital channels.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
+      "issue_slug": "iu-rupify-non-functional-requirement-3",
+      "title": "Implement constraint: non_functional-requirement-3",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The platform must support integrations with external systems such as payment confirmation and reporting sources.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)\n\n## Scope\n\n- The platform must support integrations with external systems such as payment confirmation and reporting sources.\n\n## Acceptance Criteria\n\n- The platform must support integrations with external systems such as payment confirmation and reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.\n- Observable: The platform must support integrations with external systems such as payment confirmation and reporting sources.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The platform must support integrations with external systems such as payment confirmation and reporting sources.\n- Failure condition: The delivered behavior violates the stated constraint: The platform must support integrations with external systems such as payment confirmation and reporting sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
+      "issue_slug": "iu-rupify-non-functional-requirement-4",
+      "title": "Implement constraint: non_functional-requirement-4",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must allow customers to enroll in the loyalty program digitally.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)\n\n## Scope\n\n- The system must allow customers to enroll in the loyalty program digitally.\n\n## Acceptance Criteria\n\n- The system must allow customers to enroll in the loyalty program digitally.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-4.\n- Observable: The system must allow customers to enroll in the loyalty program digitally.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must allow customers to enroll in the loyalty program digitally.\n- Failure condition: The delivered behavior violates the stated constraint: The system must allow customers to enroll in the loyalty program digitally.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-4"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
+      "issue_slug": "iu-rupify-non-functional-requirement-5",
+      "title": "Implement constraint: non_functional-requirement-5",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must show point balance and available rewards to eligible members.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)\n\n## Scope\n\n- The system must show point balance and available rewards to eligible members.\n\n## Acceptance Criteria\n\n- The system must show point balance and available rewards to eligible members.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-5.\n- Observable: The system must show point balance and available rewards to eligible members.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must show point balance and available rewards to eligible members.\n- Failure condition: The delivered behavior violates the stated constraint: The system must show point balance and available rewards to eligible members.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-5.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-5"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-5."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
+      "issue_slug": "iu-rupify-non-functional-requirement-6",
+      "title": "Implement constraint: non_functional-requirement-6",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must allow members to redeem rewards when eligibility conditions are satisfied.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-6` (requirement: `non_functional-requirement-6`)\n\n## Scope\n\n- The system must allow members to redeem rewards when eligibility conditions are satisfied.\n\n## Acceptance Criteria\n\n- The system must allow members to redeem rewards when eligibility conditions are satisfied.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-6.\n- Observable: The system must allow members to redeem rewards when eligibility conditions are satisfied.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must allow members to redeem rewards when eligibility conditions are satisfied.\n- Failure condition: The delivered behavior violates the stated constraint: The system must allow members to redeem rewards when eligibility conditions are satisfied.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-6.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-6"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-6."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
+      "issue_slug": "iu-rupify-non-functional-requirement-7",
+      "title": "Implement constraint: non_functional-requirement-7",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)\n\n## Scope\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Acceptance Criteria\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.\n- Observable: The system must provide reporting on redemptions and campaign performance.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must provide reporting on redemptions and campaign performance.\n- Failure condition: The delivered behavior violates the stated constraint: The system must provide reporting on redemptions and campaign performance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-7"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-7."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward",
+      "issue_slug": "iu-rupify-redeem-reward",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.redeem-reward` (requirement: `redeem-reward`)\n\n## Scope\n\n- Redeem Reward\n\n## Acceptance Criteria\n\n- Redeem Reward\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Redeem Reward\n- Expected outcome: Redeem Reward\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-cases"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-cases.redeem-reward"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-extension-1",
+      "issue_slug": "iu-rupify-redeem-reward-extension-1",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-extension-1` (requirement: `redeem-reward-extension-1`)\n\n## Scope\n\n- Reward inventory is exhausted before completion.\n\n## Acceptance Criteria\n\n- Reward inventory is exhausted before completion.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Reward inventory is exhausted before completion.\n- Expected outcome: Reward inventory is exhausted before completion.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-extension-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-extension-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-extension-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-extension-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-extension-2",
+      "issue_slug": "iu-rupify-redeem-reward-extension-2",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-extension-2` (requirement: `redeem-reward-extension-2`)\n\n## Scope\n\n- Customer does not have enough points.\n\n## Acceptance Criteria\n\n- Customer does not have enough points.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Customer does not have enough points.\n- Expected outcome: Customer does not have enough points.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-extension-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-extension-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-extension-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-extension-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-extension-3",
+      "issue_slug": "iu-rupify-redeem-reward-extension-3",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-extension-3` (requirement: `redeem-reward-extension-3`)\n\n## Scope\n\n- Payment confirmation is missing for a reward that depends on purchase completion.\n\n## Acceptance Criteria\n\n- Payment confirmation is missing for a reward that depends on purchase completion.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Payment confirmation is missing for a reward that depends on purchase completion.\n- Expected outcome: Payment confirmation is missing for a reward that depends on purchase completion.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-extension-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-extension-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-extension-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-extension-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-1",
+      "issue_slug": "iu-rupify-redeem-reward-step-1",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-1` (requirement: `redeem-reward-step-1`)\n\n## Scope\n\n- Customer selects a reward.\n\n## Acceptance Criteria\n\n- Customer selects a reward.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Customer selects a reward.\n- Expected outcome: Customer selects a reward.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-2",
+      "issue_slug": "iu-rupify-redeem-reward-step-2",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)\n\n## Scope\n\n- System validates reward eligibility and available points.\n\n## Acceptance Criteria\n\n- System validates reward eligibility and available points.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System validates reward eligibility and available points.\n- Expected outcome: System validates reward eligibility and available points.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-3",
+      "issue_slug": "iu-rupify-redeem-reward-step-3",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)\n\n## Scope\n\n- System reserves the reward and updates the member balance.\n\n## Acceptance Criteria\n\n- System reserves the reward and updates the member balance.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System reserves the reward and updates the member balance.\n- Expected outcome: System reserves the reward and updates the member balance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.redeem-reward-step-4",
+      "issue_slug": "iu-rupify-redeem-reward-step-4",
+      "title": "Implement Redeem Reward",
+      "body_markdown": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.redeem-reward-step-4` (requirement: `redeem-reward-step-4`)\n\n## Scope\n\n- System confirms redemption to the customer.\n\n## Acceptance Criteria\n\n- System confirms redemption to the customer.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: System confirms redemption to the customer.\n- Expected outcome: System confirms redemption to the customer.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward-step-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.redeem-reward-step-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.redeem-reward-step-4"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of redeem-reward-step-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics",
+      "issue_slug": "iu-rupify-review-redemption-analytics",
+      "title": "Implement Review Redemption Analytics",
+      "body_markdown": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.review-redemption-analytics` (requirement: `review-redemption-analytics`)\n\n## Scope\n\n- Review Redemption Analytics\n\n## Acceptance Criteria\n\n- Review Redemption Analytics\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: Review Redemption Analytics\n- Expected outcome: Review Redemption Analytics\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-cases"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-cases.review-redemption-analytics"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-extension-1",
+      "issue_slug": "iu-rupify-review-redemption-analytics-extension-1",
+      "title": "Implement Review Redemption Analytics",
+      "body_markdown": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-extension-1` (requirement: `review-redemption-analytics-extension-1`)\n\n## Scope\n\n- A reporting data source is delayed.\n\n## Acceptance Criteria\n\n- A reporting data source is delayed.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: A reporting data source is delayed.\n- Expected outcome: A reporting data source is delayed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-extension-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-extension-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-extension-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-extension-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-1",
+      "issue_slug": "iu-rupify-review-redemption-analytics-step-1",
+      "title": "Implement Review Redemption Analytics",
+      "body_markdown": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-1` (requirement: `review-redemption-analytics-step-1`)\n\n## Scope\n\n- Operations Manager opens the analytics dashboard.\n\n## Acceptance Criteria\n\n- Operations Manager opens the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: Operations Manager opens the analytics dashboard.\n- Expected outcome: Operations Manager opens the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-step-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-step-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2",
+      "issue_slug": "iu-rupify-review-redemption-analytics-step-2",
+      "title": "Implement Review Redemption Analytics",
+      "body_markdown": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)\n\n## Scope\n\n- System shows redemption and campaign metrics.\n\n## Acceptance Criteria\n\n- System shows redemption and campaign metrics.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: System shows redemption and campaign metrics.\n- Expected outcome: System shows redemption and campaign metrics.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics-step-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "use-case-steps"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.use-case-steps.review-redemption-analytics-step-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.review-redemption-analytics-step-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of review-redemption-analytics-step-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change",
+      "issue_slug": "iu-rupify-scenario-invalid-catalog-change",
+      "title": "Implement Invalid Catalog Change",
+      "body_markdown": "## Summary\n\nImplement the behavior described by invalid catalog change.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- Publication is rejected because the new reward configuration would break an active offer.\n\n## Acceptance Criteria\n\n- Publication is rejected because the new reward configuration would break an active offer.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies invalid catalog change.\n- Observable: Publication is rejected because the new reward configuration would break an active offer.\n- Expected outcome: Publication is rejected because the new reward configuration would break an active offer.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "scenarios"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-invalid-catalog-change."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation",
+      "issue_slug": "iu-rupify-scenario-missing-payment-confirmation",
+      "title": "Implement Missing Payment Confirmation",
+      "body_markdown": "## Summary\n\nImplement the behavior described by missing payment confirmation.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- Redemption pauses until dependent payment confirmation arrives.\n\n## Acceptance Criteria\n\n- Redemption pauses until dependent payment confirmation arrives.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies missing payment confirmation.\n- Observable: Redemption pauses until dependent payment confirmation arrives.\n- Expected outcome: Redemption pauses until dependent payment confirmation arrives.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "scenarios"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-missing-payment-confirmation."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay",
+      "issue_slug": "iu-rupify-scenario-reporting-delay",
+      "title": "Implement Reporting Delay",
+      "body_markdown": "## Summary\n\nImplement the behavior described by reporting delay.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- Analytics view is partial because a reporting source is delayed.\n\n## Acceptance Criteria\n\n- Analytics view is partial because a reporting source is delayed.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies reporting delay.\n- Observable: Analytics view is partial because a reporting source is delayed.\n- Expected outcome: Analytics view is partial because a reporting source is delayed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "scenarios"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reporting-delay."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted",
+      "issue_slug": "iu-rupify-scenario-reward-inventory-exhausted",
+      "title": "Implement Reward Inventory Exhausted",
+      "body_markdown": "## Summary\n\nImplement the behavior described by reward inventory exhausted.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- Redemption fails because no reward inventory remains.\n\n## Acceptance Criteria\n\n- Redemption fails because no reward inventory remains.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies reward inventory exhausted.\n- Observable: Redemption fails because no reward inventory remains.\n- Expected outcome: Redemption fails because no reward inventory remains.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "scenarios"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reward-inventory-exhausted."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-1",
+      "issue_slug": "iu-rupify-state-invariant-1",
+      "title": "Enforce invariant: Rule 1",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-1` (state_invariant: `state-invariant-1`)\n\n## Scope\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Acceptance Criteria\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 1.\n- Observable: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Failure condition: The invariant is breached: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-2",
+      "issue_slug": "iu-rupify-state-invariant-2",
+      "title": "Enforce invariant: Rule 2",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A Reward Catalog Entry must be validated before it becomes Published.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2` (state_invariant: `state-invariant-2`)\n\n## Scope\n\n- A Reward Catalog Entry must be validated before it becomes Published.\n\n## Acceptance Criteria\n\n- A Reward Catalog Entry must be validated before it becomes Published.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A Reward Catalog Entry must be validated before it becomes Published.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A Reward Catalog Entry must be validated before it becomes Published.\n- Failure condition: The invariant is breached: A Reward Catalog Entry must be validated before it becomes Published.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
+      "issue_slug": "iu-rupify-state-transition-1-requested-to-validated",
+      "title": "Implement lifecycle transition: Requested to Validated",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Requested to Validated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Validated.\n\n## Acceptance Criteria\n\n- System can move from Requested to Validated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Validated is allowed and produces the expected target state.\n- Observable: System can move from Requested to Validated.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Validated state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Validated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Validated.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.requested-to-validated"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
+      "issue_slug": "iu-rupify-state-transition-1-validated-to-fulfilled",
+      "title": "Implement lifecycle transition: Validated to Fulfilled",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Validated to Fulfilled.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Validated to Fulfilled.\n\n## Acceptance Criteria\n\n- System can move from Validated to Fulfilled.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Validated to Fulfilled is allowed and produces the expected target state.\n- Observable: System can move from Validated to Fulfilled.\n- Setup requirement: The system starts in the Validated state.\n- Expected outcome: The system reaches the Fulfilled state after the transition is applied.\n- Failure condition: The system cannot leave Validated for Fulfilled when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Fulfilled.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.requested-to-validated`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-1.requested-to-validated"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.validated-to-fulfilled"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
+      "issue_slug": "iu-rupify-state-transition-2-requested-to-validated",
+      "title": "Implement lifecycle transition: Requested to Validated",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Requested to Validated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Validated.\n\n## Acceptance Criteria\n\n- System can move from Requested to Validated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Validated is allowed and produces the expected target state.\n- Observable: System can move from Requested to Validated.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Validated state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Validated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Validated.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.requested-to-validated"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
+      "issue_slug": "iu-rupify-state-transition-2-validated-to-fulfilled",
+      "title": "Implement lifecycle transition: Validated to Fulfilled",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Validated to Fulfilled.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Validated to Fulfilled.\n\n## Acceptance Criteria\n\n- System can move from Validated to Fulfilled.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Validated to Fulfilled is allowed and produces the expected target state.\n- Observable: System can move from Validated to Fulfilled.\n- Setup requirement: The system starts in the Validated state.\n- Expected outcome: The system reaches the Fulfilled state after the transition is applied.\n- Failure condition: The system cannot leave Validated for Fulfilled when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Fulfilled.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.requested-to-validated`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-2.requested-to-validated"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.validated-to-fulfilled"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.requested-to-rejected",
+      "issue_slug": "iu-rupify-state-transition-3-requested-to-rejected",
+      "title": "Implement lifecycle transition: Requested to Rejected",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Requested to Rejected.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)\n\n## Scope\n\n- Transition the system lifecycle from Requested to Rejected.\n\n## Acceptance Criteria\n\n- System can move from Requested to Rejected.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Requested to Rejected is allowed and produces the expected target state.\n- Observable: System can move from Requested to Rejected.\n- Setup requirement: The system starts in the Requested state.\n- Expected outcome: The system reaches the Rejected state after the transition is applied.\n- Failure condition: The system cannot leave Requested for Rejected when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Rejected.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.requested-to-rejected"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-4.draft-to-published",
+      "issue_slug": "iu-rupify-state-transition-4-draft-to-published",
+      "title": "Implement lifecycle transition: Draft to Published",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Draft to Published.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Draft to Published.\n\n## Acceptance Criteria\n\n- System can move from Draft to Published.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Draft to Published is allowed and produces the expected target state.\n- Observable: System can move from Draft to Published.\n- Setup requirement: The system starts in the Draft state.\n- Expected outcome: The system reaches the Published state after the transition is applied.\n- Failure condition: The system cannot leave Draft for Published when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Published.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-4.draft-to-published"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-4.published-to-retired",
+      "issue_slug": "iu-rupify-state-transition-4-published-to-retired",
+      "title": "Implement lifecycle transition: Published to Retired",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Published to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Published to Retired.\n\n## Acceptance Criteria\n\n- System can move from Published to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Published to Retired is allowed and produces the expected target state.\n- Observable: System can move from Published to Retired.\n- Setup requirement: The system starts in the Published state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Published for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-4.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-4.draft-to-published"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-4.published-to-retired"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-5.draft-to-published",
+      "issue_slug": "iu-rupify-state-transition-5-draft-to-published",
+      "title": "Implement lifecycle transition: Draft to Published",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Draft to Published.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)\n\n## Scope\n\n- Transition the system lifecycle from Draft to Published.\n\n## Acceptance Criteria\n\n- System can move from Draft to Published.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Draft to Published is allowed and produces the expected target state.\n- Observable: System can move from Draft to Published.\n- Setup requirement: The system starts in the Draft state.\n- Expected outcome: The system reaches the Published state after the transition is applied.\n- Failure condition: The system cannot leave Draft for Published when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Published.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-5.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-5.draft-to-published"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-5."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-5.published-to-retired",
+      "issue_slug": "iu-rupify-state-transition-5-published-to-retired",
+      "title": "Implement lifecycle transition: Published to Retired",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Published to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-5` (state_transition: `state-transition-5`)\n\n## Scope\n\n- Transition the system lifecycle from Published to Retired.\n\n## Acceptance Criteria\n\n- System can move from Published to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Published to Retired is allowed and produces the expected target state.\n- Observable: System can move from Published to Retired.\n- Setup requirement: The system starts in the Published state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Published for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-5.draft-to-published`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-5.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-5.draft-to-published"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-5.published-to-retired"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-5."
+    }
+  ]
+}
