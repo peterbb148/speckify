@@ -36,3 +36,4 @@
 - [DONE] 2026-04-20 Derive dependencies from trace links, scenario order, and state structure
 - [DONE] 2026-04-20 Improve GitHub delivery exports for direct issue creation
 - [DONE] 2026-04-20 Deepen scenario- and guard-driven decomposition
+- [DONE] 2026-04-20 Define GitHub SpecKit Constitution for formal Speckify decomposition
