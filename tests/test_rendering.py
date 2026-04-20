@@ -62,15 +62,15 @@ class RenderingTests(unittest.TestCase):
         rendered_issue = next(
             item
             for item in bundle["rendered_issues"]
-            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.approval-states"
+            if item["implementation_unit_id"] == "iu.rupify.state-transition-1.active-to-retiring"
         )
 
         self.assertIn("## Dependencies", rendered_issue["issue_body"])
         self.assertIn(
-            "`iu.rupify.functional-requirement-1.stage-gates`",
+            "`iu.rupify.state-transition-1.proposed-to-active`",
             rendered_issue["issue_body"],
         )
-        self.assertIn("should follow stage-gate support", rendered_issue["issue_body"])
+        self.assertIn("earlier transition in the same source chain", rendered_issue["issue_body"])
 
     def test_rendered_issue_projection_includes_richer_verification_shape(self) -> None:
         """Rendered issues should include setup and failure details when derived."""
@@ -97,7 +97,7 @@ class RenderingTests(unittest.TestCase):
         rendered_issue = next(
             item
             for item in bundle["rendered_issues"]
-            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.stage-gates"
+            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1"
         )
 
         self.assertIn(

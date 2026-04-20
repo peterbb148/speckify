@@ -6,8 +6,7 @@
 - Source anchors: `anchor.rupify.use-case-steps.redeem-reward-step-4`
 - Verification units: `vu.rupify.redeem-reward-step-4`
 - Depends on:
-  - `iu.rupify.redeem-reward-step-3.reserve-reward` (Implement Reserve reward)
-  - `iu.rupify.redeem-reward-step-3.update-member-balance` (Implement Update member balance)
+  - `iu.rupify.redeem-reward-step-3` (Implement Redeem Reward)
 - Reverse impact hint: Changes here may require upstream review of redeem-reward-step-4.
 
 ## Summary
@@ -34,8 +33,7 @@ Implement the behavior described by redeem reward.
 
 ## Dependencies
 
-- `iu.rupify.redeem-reward-step-3.reserve-reward`: Later use-case steps depend on the earlier step in the same ordered flow.
-- `iu.rupify.redeem-reward-step-3.update-member-balance`: Later use-case steps depend on the earlier step in the same ordered flow.
+- `iu.rupify.redeem-reward-step-3`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

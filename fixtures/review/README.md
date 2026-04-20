@@ -17,8 +17,8 @@ Current review set:
 
 - `planning-bundle-summary.json`: compact summary of the generated planning bundle
 - `rendered-issues/constraint-web-ui.md`: representative constraint issue
-- `rendered-issues/workflow-approval-states.md`: representative split workflow issue with
-  dependency information
+- `rendered-issues/workflow-requirement.md`: representative unsplit workflow issue under the
+  current structural-only baseline
 - `rendered-issues/state-transition-active-to-retiring.md`: representative lifecycle
   transition issue with sequencing and verification details
 - `quality-review-notes.md`: current review checklist and expected qualities
@@ -26,3 +26,8 @@ Current review set:
 - `quality-review.md`: Markdown projection of the current warning report
 - `loyalty-platform-v2-summary.json`: compact review summary for the second real-world demo,
   showing the richer non-CMDB V2 bundle case
+
+The review fixtures currently reflect the constitutionally valid baseline after removal of
+phrase-shaped decomposition rules. That means structural transition splitting remains, while
+broader requirement, scenario, guard, and step records stay intact until formal operators
+exist for them.

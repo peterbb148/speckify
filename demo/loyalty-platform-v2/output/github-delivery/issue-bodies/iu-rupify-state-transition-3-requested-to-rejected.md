@@ -6,8 +6,7 @@
 - Source anchors: `anchor.rupify.state-transitions.state-transition-3`
 - Verification units: `vu.rupify.state-transition-3.requested-to-rejected`
 - Depends on:
-  - `iu.rupify.guard-condition-2.block-publish-without-approval` (Implement guard enforcement: Block publish without approval)
-  - `iu.rupify.guard-condition-2.require-validation-approval` (Implement guard enforcement: Require catalog validation approval)
+  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Guard Condition 2)
 - Reverse impact hint: Changes here may require upstream review of state-transition-3.
 
 ## Summary
@@ -37,8 +36,7 @@ Transition the system lifecycle from Requested to Rejected.
 
 ## Dependencies
 
-- `iu.rupify.guard-condition-2.block-publish-without-approval`: Transition implementation depends on the linked guard condition.
-- `iu.rupify.guard-condition-2.require-validation-approval`: Transition implementation depends on the linked guard condition.
+- `iu.rupify.guard-condition-2`: Transition implementation depends on the linked guard condition.
 
 ## Drift Checks
 

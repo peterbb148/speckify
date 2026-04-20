@@ -110,244 +110,26 @@ def _split_state_transition_text(text: str) -> list[dict[str, str]]:
 
 def _split_functional_requirement_text(text: str) -> list[dict[str, str]]:
     """Split a simple conjunctive functional requirement into separate obligations."""
-    lowered = text.lower()
-    marker = "stage gates and approval states"
-    if marker in lowered:
-        return [
-            {
-                "suffix": "stage-gates",
-                "title": "Support stage gates",
-                "summary": "Support business process stage gates.",
-                "acceptance": "Business process stage gates are supported.",
-            },
-            {
-                "suffix": "approval-states",
-                "title": "Support approval states",
-                "summary": "Support business process approval states.",
-                "acceptance": "Business process approval states are supported.",
-            },
-        ]
-
-    marker = "cmdb for it applications/systems"
-    export_marker = "export data to various system for reporting"
-    if marker in lowered and export_marker in lowered:
-        return [
-            {
-                "suffix": "maintain-system-inventory",
-                "title": "Maintain system inventory record",
-                "summary": "Maintain the CMDB-style system inventory record for IT applications and systems.",
-                "acceptance": "The system inventory record can be maintained as the CMDB for IT applications and systems.",
-            },
-            {
-                "suffix": "export-reporting-data",
-                "title": "Export reporting data",
-                "summary": "Export system inventory data to downstream reporting systems.",
-                "acceptance": "System inventory data can be exported to downstream reporting systems.",
-            },
-        ]
-
     return []
 
 
 def _split_invariant_text(element: RupifyElement) -> list[dict[str, str]]:
     """Split a multi-obligation invariant into narrower planning slices."""
-    lowered = element.text.lower()
-    if "vendor and contract dates" not in lowered:
-        return []
-    return [
-        {
-            "suffix": "record-vendor",
-            "title": "Record vendor",
-            "summary": "Record vendor information for the system.",
-            "acceptance": "The system records vendor information.",
-        },
-        {
-            "suffix": "record-contract-dates",
-            "title": "Record contract dates",
-            "summary": "Record contract dates for the system.",
-            "acceptance": "The system records contract dates.",
-        },
-    ]
+    return []
 
 
 def _split_use_case_step_text(element: RupifyElement) -> list[dict[str, str]]:
     """Split selected conjunctive use-case steps into narrower execution units."""
-    text = element.text.strip()
-
-    if text == "System displays available rewards and points balance.":
-        return [
-            {
-                "suffix": "display-rewards",
-                "title": "Display available rewards",
-                "summary": "Display the rewards that are available to the member.",
-                "acceptance": "The system displays available rewards to the member.",
-            },
-            {
-                "suffix": "display-points-balance",
-                "title": "Display points balance",
-                "summary": "Display the member's current points balance.",
-                "acceptance": "The system displays the member's points balance.",
-            },
-        ]
-
-    if text == "System validates reward eligibility and available points.":
-        return [
-            {
-                "suffix": "validate-eligibility",
-                "title": "Validate reward eligibility",
-                "summary": "Validate that the selected reward is eligible for redemption.",
-                "acceptance": "The system validates reward eligibility.",
-            },
-            {
-                "suffix": "validate-available-points",
-                "title": "Validate available points",
-                "summary": "Validate that the member has enough points for the redemption.",
-                "acceptance": "The system validates available points for the redemption.",
-            },
-        ]
-
-    if text == "System reserves the reward and updates the member balance.":
-        return [
-            {
-                "suffix": "reserve-reward",
-                "title": "Reserve reward",
-                "summary": "Reserve the selected reward for the member.",
-                "acceptance": "The system reserves the selected reward.",
-            },
-            {
-                "suffix": "update-member-balance",
-                "title": "Update member balance",
-                "summary": "Update the member balance after the reward reservation.",
-                "acceptance": "The system updates the member balance after reservation.",
-            },
-        ]
-
-    if text == "System validates and publishes the change.":
-        return [
-            {
-                "suffix": "validate-change",
-                "title": "Validate catalog change",
-                "summary": "Validate the proposed catalog configuration change.",
-                "acceptance": "The system validates the catalog configuration change.",
-            },
-            {
-                "suffix": "publish-change",
-                "title": "Publish catalog change",
-                "summary": "Publish the catalog configuration change after validation.",
-                "acceptance": "The system publishes the catalog configuration change.",
-            },
-        ]
-
-    if text == "System shows redemption and campaign metrics.":
-        return [
-            {
-                "suffix": "show-redemption-metrics",
-                "title": "Show redemption metrics",
-                "summary": "Show redemption metrics in the analytics dashboard.",
-                "acceptance": "The system shows redemption metrics in the analytics dashboard.",
-            },
-            {
-                "suffix": "show-campaign-metrics",
-                "title": "Show campaign metrics",
-                "summary": "Show campaign metrics in the analytics dashboard.",
-                "acceptance": "The system shows campaign metrics in the analytics dashboard.",
-            },
-        ]
-
     return []
 
 
 def _split_scenario_text(element: RupifyElement) -> list[dict[str, str]]:
     """Split selected scenarios into detection and outcome handling units."""
-    text = element.text.strip()
-
-    if text == "Publication is rejected because the new reward configuration would break an active offer.":
-        return [
-            {
-                "suffix": "detect-active-offer-conflict",
-                "title": "Detect active offer conflict",
-                "summary": "Detect that the new reward configuration would break an active offer.",
-                "acceptance": "The system detects when a new reward configuration would break an active offer.",
-            },
-            {
-                "suffix": "reject-publication",
-                "title": "Reject invalid publication",
-                "summary": "Reject publication when the reward configuration would break an active offer.",
-                "acceptance": "Publication is rejected when the new reward configuration would break an active offer.",
-            },
-        ]
-
-    if text == "Redemption pauses until dependent payment confirmation arrives.":
-        return [
-            {
-                "suffix": "await-payment-confirmation",
-                "title": "Await payment confirmation",
-                "summary": "Detect that dependent payment confirmation has not yet arrived.",
-                "acceptance": "The system recognizes when dependent payment confirmation is still missing.",
-            },
-            {
-                "suffix": "pause-redemption",
-                "title": "Pause redemption",
-                "summary": "Pause redemption until the dependent payment confirmation arrives.",
-                "acceptance": "Redemption remains paused until dependent payment confirmation arrives.",
-            },
-        ]
-
-    if text == "Analytics view is partial because a reporting source is delayed.":
-        return [
-            {
-                "suffix": "detect-reporting-delay",
-                "title": "Detect reporting source delay",
-                "summary": "Detect that a reporting source is delayed for the analytics view.",
-                "acceptance": "The system detects when a reporting source is delayed.",
-            },
-            {
-                "suffix": "show-partial-analytics",
-                "title": "Show partial analytics view",
-                "summary": "Show a partial analytics view when a reporting source is delayed.",
-                "acceptance": "The analytics view remains partial while a reporting source is delayed.",
-            },
-        ]
-
-    if text == "Redemption fails because no reward inventory remains.":
-        return [
-            {
-                "suffix": "detect-exhausted-inventory",
-                "title": "Detect exhausted reward inventory",
-                "summary": "Detect that no reward inventory remains for the redemption.",
-                "acceptance": "The system detects when no reward inventory remains for the requested redemption.",
-            },
-            {
-                "suffix": "fail-redemption",
-                "title": "Fail redemption without inventory",
-                "summary": "Fail redemption when no reward inventory remains.",
-                "acceptance": "Redemption fails when no reward inventory remains.",
-            },
-        ]
-
     return []
 
 
 def _split_guard_condition_text(element: RupifyElement) -> list[dict[str, str]]:
     """Split selected guard conditions into prerequisite and enforcement units."""
-    text = element.text.strip()
-
-    if text == "Catalog validation approval is required before a reward becomes Published":
-        return [
-            {
-                "suffix": "require-validation-approval",
-                "title": "Require catalog validation approval",
-                "summary": "Require catalog validation approval before a reward can be published.",
-                "acceptance": "Catalog validation approval is required before a reward becomes Published.",
-            },
-            {
-                "suffix": "block-publish-without-approval",
-                "title": "Block publish without approval",
-                "summary": "Block a reward from becoming published when catalog validation approval is missing.",
-                "acceptance": "A reward does not become Published without catalog validation approval.",
-            },
-        ]
-
     return []
 
 
@@ -500,192 +282,14 @@ def _derive_relationships(
     dependency_edges: list[dict[str, Any]] = []
     assembly_rules: list[dict[str, Any]] = []
 
-    state_transition_sequences = [
-        [
-            "proposed-to-active",
-            "active-to-retiring",
-            "retiring-to-retired",
-        ]
-    ]
-
     source_groups: dict[str, list[dict[str, Any]]] = {}
     for item in implementation_units:
         source_anchor_id = item["source_anchor_ids"][0]
         source_groups.setdefault(source_anchor_id, []).append(item)
 
     for source_anchor_id, members in source_groups.items():
-        member_ids = sorted(item["id"] for item in members)
-        member_id_set = set(member_ids)
-        member_spec_ids = [
-            spec_id
-            for item in sorted(members, key=lambda item: item["id"])
-            for spec_id in item["derived_from_spec_unit_ids"]
-        ]
-
-        if {
-            "iu.rupify.functional-requirement-1.approval-states",
-            "iu.rupify.functional-requirement-1.stage-gates",
-        }.issubset(member_id_set):
-            from_id = "iu.rupify.functional-requirement-1.approval-states"
-            to_id = "iu.rupify.functional-requirement-1.stage-gates"
-            ordered_spec_ids = [
-                "su.rupify.functional-requirement-1.stage-gates",
-                "su.rupify.functional-requirement-1.approval-states",
-            ]
-            implementation_index[from_id]["dependencies"].append(to_id)
-            dependency_edges.append(
-                {
-                    "id": "dep.functional-requirement-1.approval-states-soft-sequence",
-                    "from_implementation_unit_id": from_id,
-                    "to_implementation_unit_id": to_id,
-                    "dependency_type": "soft_sequence",
-                    "reason": "Approval states are coordinated workflow behavior that should follow stage-gate support.",
-                }
-            )
-            assembly_rules.append(
-                {
-                    "id": "assembly.functional-requirement-1",
-                    "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": ordered_spec_ids,
-                    "rule_type": "ordered_sequence",
-                    "notes": [
-                        "Recombine split workflow concerns into the original conjunctive requirement.",
-                    ],
-                }
-            )
-            continue
-
-        if {
-            "iu.rupify.functional-requirement-2.export-reporting-data",
-            "iu.rupify.functional-requirement-2.maintain-system-inventory",
-        }.issubset(member_id_set):
-            from_id = "iu.rupify.functional-requirement-2.export-reporting-data"
-            to_id = "iu.rupify.functional-requirement-2.maintain-system-inventory"
-            ordered_spec_ids = [
-                "su.rupify.functional-requirement-2.maintain-system-inventory",
-                "su.rupify.functional-requirement-2.export-reporting-data",
-            ]
-            implementation_index[from_id]["dependencies"].append(to_id)
-            dependency_edges.append(
-                {
-                    "id": "dep.functional-requirement-2.export-reporting-data-soft-sequence",
-                    "from_implementation_unit_id": from_id,
-                    "to_implementation_unit_id": to_id,
-                    "dependency_type": "soft_sequence",
-                    "reason": "Reporting exports depend on a maintained system inventory record.",
-                }
-            )
-            assembly_rules.append(
-                {
-                    "id": "assembly.functional-requirement-2",
-                    "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": ordered_spec_ids,
-                    "rule_type": "ordered_sequence",
-                    "notes": [
-                        "Recombine system-of-record maintenance and reporting export into the original broad requirement.",
-                    ],
-                }
-            )
-            continue
-
-        if source_anchor_id in {
-            "anchor.rupify.domain-invariants.domain-invariant-3",
-            "anchor.rupify.state-invariants.state-invariant-3",
-        }:
-            assembly_rules.append(
-                {
-                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
-                    "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": member_spec_ids,
-                    "rule_type": "constraint_overlay",
-                    "notes": [
-                        "Recombine split invariant details back into the original invariant statement.",
-                    ],
-                }
-            )
-            continue
-
-        if source_anchor_id.startswith("anchor.rupify.scenarios.") and len(members) > 1:
-            ordered_units = sorted(members, key=lambda item: item["id"])
-            for previous, current in zip(ordered_units, ordered_units[1:]):
-                current["dependencies"].append(previous["id"])
-                dependency_edges.append(
-                    {
-                        "id": f"dep.{current['id'].replace('iu.', '')}.requires-{previous['id'].replace('iu.', '')}",
-                        "from_implementation_unit_id": current["id"],
-                        "to_implementation_unit_id": previous["id"],
-                        "dependency_type": "requires",
-                        "reason": "Scenario resolution depends on first identifying the triggering condition.",
-                    }
-                )
-
-            assembly_rules.append(
-                {
-                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
-                    "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": [
-                        spec_id
-                        for item in ordered_units
-                        for spec_id in item["derived_from_spec_unit_ids"]
-                    ],
-                    "rule_type": "ordered_sequence",
-                    "notes": [
-                        "Recombine scenario trigger detection and outcome handling into the original scenario statement.",
-                    ],
-                }
-            )
-            continue
-
-        if source_anchor_id.startswith("anchor.rupify.guard-conditions.") and len(members) > 1:
-            ordered_units = sorted(
-                members,
-                key=lambda item: (
-                    0 if item["id"].endswith("require-validation-approval") else 1,
-                    item["id"],
-                ),
-            )
-            for previous, current in zip(ordered_units, ordered_units[1:]):
-                current["dependencies"].append(previous["id"])
-                dependency_edges.append(
-                    {
-                        "id": f"dep.{current['id'].replace('iu.', '')}.requires-{previous['id'].replace('iu.', '')}",
-                        "from_implementation_unit_id": current["id"],
-                        "to_implementation_unit_id": previous["id"],
-                        "dependency_type": "requires",
-                        "reason": "Guard enforcement depends on recognizing the guard prerequisite first.",
-                    }
-                )
-
-            assembly_rules.append(
-                {
-                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
-                    "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": [
-                        spec_id
-                        for item in ordered_units
-                        for spec_id in item["derived_from_spec_unit_ids"]
-                    ],
-                    "rule_type": "ordered_sequence",
-                    "notes": [
-                        "Recombine guard prerequisite and enforcement behavior into the original guard condition.",
-                    ],
-                }
-            )
-            continue
-
         if source_anchor_id.startswith("anchor.rupify.state-transitions.") and len(members) > 1:
-            ordered_units: list[dict[str, Any]] = []
-            for sequence in state_transition_sequences:
-                ordered_units = [
-                    item
-                    for suffix in sequence
-                    for item in members
-                    if item["id"].endswith(suffix)
-                ]
-                if ordered_units:
-                    break
-            if not ordered_units:
-                ordered_units = sorted(members, key=lambda item: item["id"])
+            ordered_units = members
 
             for previous, current in zip(ordered_units, ordered_units[1:]):
                 current["dependencies"].append(previous["id"])
@@ -750,11 +354,11 @@ def _derive_relationships(
         anchor_id = anchor_by_element_id.get(element_id, "")
         if not anchor_id:
             return []
-        return sorted(
+        return [
             item["id"]
             for item in implementation_units
             if item["source_anchor_ids"] == [anchor_id]
-        )
+        ]
 
     def ordered_use_case_step_groups() -> list[list[list[str]]]:
         """Collect ordered step groups for each use case."""
@@ -971,7 +575,7 @@ def generate_planning_bundle(
             "generated_at": generated_at,
             "source_model_id": source_model_id or project_id,
             "source_model_version": source_model_version,
-            "decomposition_profile": "rupify-split-dependencies-v2",
+            "decomposition_profile": "rupify-structural-decomposition-v1",
         },
         "source_summary": {
             "source_system": "rupify",

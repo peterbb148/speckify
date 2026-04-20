@@ -1,8 +1,8 @@
 # Round-Trip Feedback Report
 
-- Change records: 34
+- Change records: 36
 - Feedback proposals: 26
-- Planning-only findings: 8
+- Planning-only findings: 10
 - Upstream-affecting findings: 26
 
 ## Feedback Proposals

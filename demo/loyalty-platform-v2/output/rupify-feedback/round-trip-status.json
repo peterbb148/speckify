@@ -1,8 +1,8 @@
 {
-  "change_record_count": 62,
-  "feedback_proposal_count": 53,
+  "change_record_count": 57,
+  "feedback_proposal_count": 48,
   "planning_only_findings": 9,
-  "upstream_affecting_findings": 53,
-  "open_spec_clarifications": 53,
+  "upstream_affecting_findings": 48,
+  "open_spec_clarifications": 48,
   "open_spec_conflicts": 0
 }

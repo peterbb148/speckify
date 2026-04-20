@@ -6,8 +6,7 @@
 - Source anchors: `anchor.rupify.use-case-steps.browse-rewards-step-3`
 - Verification units: `vu.rupify.browse-rewards-step-3`
 - Depends on:
-  - `iu.rupify.browse-rewards-step-2.display-points-balance` (Implement Display points balance)
-  - `iu.rupify.browse-rewards-step-2.display-rewards` (Implement Display available rewards)
+  - `iu.rupify.browse-rewards-step-2` (Implement Browse Rewards)
 - Reverse impact hint: Changes here may require upstream review of browse-rewards-step-3.
 
 ## Summary
@@ -34,8 +33,7 @@ Implement the behavior described by browse rewards.
 
 ## Dependencies
 
-- `iu.rupify.browse-rewards-step-2.display-points-balance`: Later use-case steps depend on the earlier step in the same ordered flow.
-- `iu.rupify.browse-rewards-step-2.display-rewards`: Later use-case steps depend on the earlier step in the same ordered flow.
+- `iu.rupify.browse-rewards-step-2`: Later use-case steps depend on the earlier step in the same ordered flow.
 
 ## Drift Checks
 

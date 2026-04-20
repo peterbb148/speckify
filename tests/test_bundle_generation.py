@@ -34,22 +34,22 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertEqual(bundle["bundle_metadata"]["bundle_id"], "bundle.speckify-planning-export")
         self.assertEqual(
             bundle["bundle_metadata"]["decomposition_profile"],
-            "rupify-split-dependencies-v2",
+            "rupify-structural-decomposition-v1",
         )
         self.assertEqual(len(bundle["source_anchors"]), 29)
-        self.assertEqual(len(bundle["spec_units"]), 39)
-        self.assertEqual(len(bundle["implementation_units"]), 39)
-        self.assertEqual(len(bundle["verification_units"]), 39)
-        self.assertEqual(len(bundle["trace_bundles"]), 39)
-        self.assertEqual(len(bundle["dependency_edges"]), 16)
-        self.assertEqual(len(bundle["assembly_rules"]), 7)
-        self.assertEqual(len(bundle["rendered_issues"]), 39)
+        self.assertEqual(len(bundle["spec_units"]), 35)
+        self.assertEqual(len(bundle["implementation_units"]), 35)
+        self.assertEqual(len(bundle["verification_units"]), 35)
+        self.assertEqual(len(bundle["trace_bundles"]), 35)
+        self.assertEqual(len(bundle["dependency_edges"]), 14)
+        self.assertEqual(len(bundle["assembly_rules"]), 3)
+        self.assertEqual(len(bundle["rendered_issues"]), 35)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
         validate_bundle(bundle, SCHEMA_DIR)
 
-    def test_generated_bundle_preserves_lineage_for_split_functional_requirement(self) -> None:
-        """Split units should still point back to the original Rupify source id."""
+    def test_generated_bundle_preserves_lineage_for_unsplit_functional_requirement(self) -> None:
+        """A non-decomposed requirement should still preserve clean lineage."""
         export = import_rupify_export_file(RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -76,33 +76,30 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(anchor["view"], "requirements")
         self.assertEqual(
-            sorted(item["id"] for item in spec_units),
-            [
-                "su.rupify.functional-requirement-1.approval-states",
-                "su.rupify.functional-requirement-1.stage-gates",
-            ],
+            [item["id"] for item in spec_units],
+            ["su.rupify.functional-requirement-1"],
         )
         self.assertEqual(
-            sorted(item["id"] for item in implementation_units),
-            [
-                "iu.rupify.functional-requirement-1.approval-states",
-                "iu.rupify.functional-requirement-1.stage-gates",
-            ],
+            [item["id"] for item in implementation_units],
+            ["iu.rupify.functional-requirement-1"],
         )
         self.assertEqual(
-            sorted(item["id"] for item in verification_units),
-            [
-                "vu.rupify.functional-requirement-1.approval-states",
-                "vu.rupify.functional-requirement-1.stage-gates",
-            ],
+            [item["id"] for item in verification_units],
+            ["vu.rupify.functional-requirement-1"],
         )
-        stage_gates = next(
+        requirement = next(
             item
             for item in implementation_units
-            if item["id"] == "iu.rupify.functional-requirement-1.stage-gates"
+            if item["id"] == "iu.rupify.functional-requirement-1"
         )
-        self.assertEqual(stage_gates["title"], "Implement workflow support: Support stage gates")
-        self.assertEqual(stage_gates["summary"], "Support business process stage gates.")
+        self.assertEqual(
+            requirement["title"],
+            "Implement workflow support: functional-requirement-1",
+        )
+        self.assertEqual(
+            requirement["summary"],
+            "Yes business processes like stage gates and approval states must be supported",
+        )
 
     def test_generated_bundle_splits_multi_step_state_transition_chain(self) -> None:
         """A chain transition should decompose into separate transition pairs."""
@@ -127,15 +124,10 @@ class BundleGenerationTests(unittest.TestCase):
         )
 
     def test_generated_bundle_derives_dependencies_and_assembly_rules(self) -> None:
-        """Split units should receive deterministic dependency and assembly metadata."""
+        """Structural state-transition splits should receive deterministic metadata."""
         export = import_rupify_export_file(RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
-        approval_states = next(
-            item
-            for item in bundle["implementation_units"]
-            if item["id"] == "iu.rupify.functional-requirement-1.approval-states"
-        )
         active_to_retiring = next(
             item
             for item in bundle["implementation_units"]
@@ -148,10 +140,6 @@ class BundleGenerationTests(unittest.TestCase):
         )
 
         self.assertEqual(
-            approval_states["dependencies"],
-            ["iu.rupify.functional-requirement-1.stage-gates"],
-        )
-        self.assertEqual(
             active_to_retiring["dependencies"],
             ["iu.rupify.state-transition-1.proposed-to-active"],
         )
@@ -161,28 +149,6 @@ class BundleGenerationTests(unittest.TestCase):
                 "su.rupify.state-transition-1.proposed-to-active",
                 "su.rupify.state-transition-1.active-to-retiring",
                 "su.rupify.state-transition-1.retiring-to-retired",
-            ],
-        )
-
-        export_reporting = next(
-            item
-            for item in bundle["implementation_units"]
-            if item["id"] == "iu.rupify.functional-requirement-2.export-reporting-data"
-        )
-        inventory_rule = next(
-            item
-            for item in bundle["assembly_rules"]
-            if item["id"] == "assembly.functional-requirement-2"
-        )
-        self.assertEqual(
-            export_reporting["dependencies"],
-            ["iu.rupify.functional-requirement-2.maintain-system-inventory"],
-        )
-        self.assertEqual(
-            inventory_rule["member_spec_unit_ids"],
-            [
-                "su.rupify.functional-requirement-2.maintain-system-inventory",
-                "su.rupify.functional-requirement-2.export-reporting-data",
             ],
         )
 
@@ -217,8 +183,8 @@ class BundleGenerationTests(unittest.TestCase):
         self.assertTrue(any("unexpected state" in item for item in transition["failure_conditions"]))
         self.assertTrue(any("violates the stated constraint" in item for item in constraint["failure_conditions"]))
 
-    def test_generated_bundle_expands_broad_requirement_and_invariant_slices(self) -> None:
-        """Broader requirement and invariant families should decompose into narrower units."""
+    def test_generated_bundle_keeps_broad_requirement_and_invariant_slices_intact(self) -> None:
+        """Broad records remain intact until a formal decomposition operator exists."""
         export = import_rupify_export_file(RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -239,21 +205,15 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(
             functional_requirement_2_units,
-            [
-                "iu.rupify.functional-requirement-2.export-reporting-data",
-                "iu.rupify.functional-requirement-2.maintain-system-inventory",
-            ],
+            ["iu.rupify.functional-requirement-2"],
         )
         self.assertEqual(
             domain_invariant_3_units,
-            [
-                "iu.rupify.domain-invariant-3.record-contract-dates",
-                "iu.rupify.domain-invariant-3.record-vendor",
-            ],
+            ["iu.rupify.domain-invariant-3"],
         )
 
-    def test_generated_bundle_splits_loyalty_use_case_steps(self) -> None:
-        """Selected loyalty V2 use-case steps should decompose into narrower execution units."""
+    def test_generated_bundle_keeps_loyalty_use_case_steps_intact_without_formal_operator(self) -> None:
+        """Loyalty step records should remain intact without a structural split operator."""
         export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -281,28 +241,19 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(
             rewards_display_units,
-            [
-                "iu.rupify.browse-rewards-step-2.display-points-balance",
-                "iu.rupify.browse-rewards-step-2.display-rewards",
-            ],
+            ["iu.rupify.browse-rewards-step-2"],
         )
         self.assertEqual(
             redemption_validation_units,
-            [
-                "iu.rupify.redeem-reward-step-2.validate-available-points",
-                "iu.rupify.redeem-reward-step-2.validate-eligibility",
-            ],
+            ["iu.rupify.redeem-reward-step-2"],
         )
         self.assertEqual(
             redemption_reservation_units,
-            [
-                "iu.rupify.redeem-reward-step-3.reserve-reward",
-                "iu.rupify.redeem-reward-step-3.update-member-balance",
-            ],
+            ["iu.rupify.redeem-reward-step-3"],
         )
 
-    def test_generated_bundle_splits_loyalty_catalog_and_analytics_steps(self) -> None:
-        """Catalog publication and analytics steps should decompose when they express two actions."""
+    def test_generated_bundle_keeps_loyalty_catalog_and_analytics_steps_intact(self) -> None:
+        """Catalog and analytics steps should remain intact without a formal split operator."""
         export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -323,17 +274,11 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(
             catalog_units,
-            [
-                "iu.rupify.manage-reward-catalog-step-3.publish-change",
-                "iu.rupify.manage-reward-catalog-step-3.validate-change",
-            ],
+            ["iu.rupify.manage-reward-catalog-step-3"],
         )
         self.assertEqual(
             analytics_units,
-            [
-                "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
-                "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
-            ],
+            ["iu.rupify.review-redemption-analytics-step-2"],
         )
 
     def test_generated_bundle_derives_loyalty_step_and_trace_dependencies(self) -> None:
@@ -341,10 +286,10 @@ class BundleGenerationTests(unittest.TestCase):
         export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
-        validate_available_points = next(
+        redeem_reward_step = next(
             item
             for item in bundle["implementation_units"]
-            if item["id"] == "iu.rupify.redeem-reward-step-2.validate-available-points"
+            if item["id"] == "iu.rupify.redeem-reward-step-2"
         )
         redeem_reward = next(
             item
@@ -363,7 +308,7 @@ class BundleGenerationTests(unittest.TestCase):
         )
 
         self.assertEqual(
-            validate_available_points["dependencies"],
+            redeem_reward_step["dependencies"],
             ["iu.rupify.redeem-reward-step-1"],
         )
         self.assertEqual(
@@ -376,14 +321,11 @@ class BundleGenerationTests(unittest.TestCase):
         )
         self.assertEqual(
             transition["dependencies"],
-            [
-                "iu.rupify.guard-condition-2.block-publish-without-approval",
-                "iu.rupify.guard-condition-2.require-validation-approval",
-            ],
+            ["iu.rupify.guard-condition-2"],
         )
 
-    def test_generated_bundle_splits_loyalty_scenarios_and_guard(self) -> None:
-        """Scenario and guard families should decompose when the source semantics support it."""
+    def test_generated_bundle_keeps_loyalty_scenarios_and_guards_intact(self) -> None:
+        """Scenario and guard families remain intact without structural decomposition."""
         export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -411,43 +353,15 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(
             invalid_catalog_units,
-            [
-                "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
-                "iu.rupify.scenario-invalid-catalog-change.reject-publication",
-            ],
+            ["iu.rupify.scenario-invalid-catalog-change"],
         )
         self.assertEqual(
             missing_payment_units,
-            [
-                "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
-                "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
-            ],
+            ["iu.rupify.scenario-missing-payment-confirmation"],
         )
         self.assertEqual(
             guard_units,
-            [
-                "iu.rupify.guard-condition-2.block-publish-without-approval",
-                "iu.rupify.guard-condition-2.require-validation-approval",
-            ],
-        )
-
-        reject_publication = next(
-            item
-            for item in bundle["implementation_units"]
-            if item["id"] == "iu.rupify.scenario-invalid-catalog-change.reject-publication"
-        )
-        block_publish = next(
-            item
-            for item in bundle["implementation_units"]
-            if item["id"] == "iu.rupify.guard-condition-2.block-publish-without-approval"
-        )
-        self.assertEqual(
-            reject_publication["dependencies"],
-            ["iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict"],
-        )
-        self.assertEqual(
-            block_publish["dependencies"],
-            ["iu.rupify.guard-condition-2.require-validation-approval"],
+            ["iu.rupify.guard-condition-2"],
         )
 
 

@@ -5,11 +5,11 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 39
-- Generated verification units: 39
-- Trace bundles: 39
-- Dependency edges: 16
-- Assembly rules: 7
+- Generated implementation units: 35
+- Generated verification units: 35
+- Trace bundles: 35
+- Dependency edges: 14
+- Assembly rules: 3
 
 ## Implementation Units
 
@@ -132,65 +132,34 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System lifecycle state change requires approval for deprecation.
 
-#### Enforce invariant: Record vendor
+#### Enforce invariant: Rule 3
 
-- ID: `iu.rupify.domain-invariant-3.record-vendor`
-- Summary: Ensure the invariant 'The system records vendor information.' is enforced in the implemented behavior.
+- ID: `iu.rupify.domain-invariant-3`
+- Summary: Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.
 - Source lineage:
   - `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)
 - Acceptance criteria:
-  - The system records vendor information.
-
-#### Enforce invariant: Record contract dates
-
-- ID: `iu.rupify.domain-invariant-3.record-contract-dates`
-- Summary: Ensure the invariant 'The system records contract dates.' is enforced in the implemented behavior.
-- Source lineage:
-  - `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)
-- Acceptance criteria:
-  - The system records contract dates.
+  - A System must record vendor and contract dates.
 
 ### Functional Requirements
 
-#### Implement workflow support: Support stage gates
+#### Implement workflow support: functional-requirement-1
 
-- ID: `iu.rupify.functional-requirement-1.stage-gates`
-- Summary: Support business process stage gates.
+- ID: `iu.rupify.functional-requirement-1`
+- Summary: Yes business processes like stage gates and approval states must be supported
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
-  - Business process stage gates are supported.
+  - Yes business processes like stage gates and approval states must be supported
 
-#### Implement workflow support: Support approval states
+#### Implement workflow support: functional-requirement-2
 
-- ID: `iu.rupify.functional-requirement-1.approval-states`
-- Summary: Support business process approval states.
-- Source lineage:
-  - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
-- Dependencies:
-  - `iu.rupify.functional-requirement-1.stage-gates`
-- Acceptance criteria:
-  - Business process approval states are supported.
-
-#### Implement workflow support: Maintain system inventory record
-
-- ID: `iu.rupify.functional-requirement-2.maintain-system-inventory`
-- Summary: Maintain the CMDB-style system inventory record for IT applications and systems.
+- ID: `iu.rupify.functional-requirement-2`
+- Summary: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
-  - The system inventory record can be maintained as the CMDB for IT applications and systems.
-
-#### Implement workflow support: Export reporting data
-
-- ID: `iu.rupify.functional-requirement-2.export-reporting-data`
-- Summary: Export system inventory data to downstream reporting systems.
-- Source lineage:
-  - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
-- Dependencies:
-  - `iu.rupify.functional-requirement-2.maintain-system-inventory`
-- Acceptance criteria:
-  - System inventory data can be exported to downstream reporting systems.
+  - I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
 
 ### Non Functional Requirements
 
@@ -286,23 +255,14 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System lifecycle state change requires approval for deprecation.
 
-#### Enforce invariant: Record vendor
+#### Enforce invariant: Rule 3
 
-- ID: `iu.rupify.state-invariant-3.record-vendor`
-- Summary: Ensure the invariant 'The system records vendor information.' is enforced in the implemented behavior.
+- ID: `iu.rupify.state-invariant-3`
+- Summary: Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.
 - Source lineage:
   - `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)
 - Acceptance criteria:
-  - The system records vendor information.
-
-#### Enforce invariant: Record contract dates
-
-- ID: `iu.rupify.state-invariant-3.record-contract-dates`
-- Summary: Ensure the invariant 'The system records contract dates.' is enforced in the implemented behavior.
-- Source lineage:
-  - `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)
-- Acceptance criteria:
-  - The system records contract dates.
+  - A System must record vendor and contract dates.
 
 ### State Transitions
 
