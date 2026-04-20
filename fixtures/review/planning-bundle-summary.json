@@ -1,6 +1,6 @@
 {
   "bundle_id": "bundle.speckify-planning-export",
-  "decomposition_profile": "rupify-split-dependencies-v2",
+  "decomposition_profile": "rupify-split-dependencies-v3",
   "counts": {
     "source_anchors": 29,
     "spec_units": 39,

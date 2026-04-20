@@ -1,9 +1,9 @@
 # Round-Trip Feedback Report
 
-- Change records: 62
-- Feedback proposals: 53
-- Planning-only findings: 9
-- Upstream-affecting findings: 53
+- Change records: 55
+- Feedback proposals: 48
+- Planning-only findings: 7
+- Upstream-affecting findings: 48
 
 ## Feedback Proposals
 
@@ -55,8 +55,3 @@
 - `feedback.iu.rupify.review-redemption-analytics-step-1.weak-verification-distinction` [clarify_element] Implement Review Redemption Analytics: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics.weak-verification-distinction` [clarify_element] Implement Show redemption metrics: Observable and expected outcome are effectively identical.
 - `feedback.iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics.weak-verification-distinction` [clarify_element] Implement Show campaign metrics: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.browse-rewards.weak-verification-distinction` [clarify_element] Implement Browse Rewards: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.enroll-member.weak-verification-distinction` [clarify_element] Implement Enroll Member: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.manage-reward-catalog.weak-verification-distinction` [clarify_element] Implement Manage Reward Catalog: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.redeem-reward.weak-verification-distinction` [clarify_element] Implement Redeem Reward: Observable and expected outcome are effectively identical.
-- `feedback.iu.rupify.review-redemption-analytics.weak-verification-distinction` [clarify_element] Implement Review Redemption Analytics: Observable and expected outcome are effectively identical.

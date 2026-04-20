@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by manage reward catalog.
+Coordinate the Manage Reward Catalog flow across its steps and extension handling.
 
 ## Source Lineage
 
@@ -8,21 +8,27 @@ Implement the behavior described by manage reward catalog.
 
 ## Scope
 
-- Manage Reward Catalog
+- Coordinate the Manage Reward Catalog flow across its steps and extension handling.
 
 ## Acceptance Criteria
 
-- Manage Reward Catalog
+- The Manage Reward Catalog flow is supported end to end.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies manage reward catalog.
-- Observable: Manage Reward Catalog
-- Expected outcome: Manage Reward Catalog
+- Intent: Confirm the use-case flow is supported end to end for manage reward catalog.
+- Observable: The Manage Reward Catalog flow is supported end to end.
+- Setup requirement: The actor can start the use-case flow through its normal entry point.
+- Expected outcome: The use-case flow completes as intended: The Manage Reward Catalog flow is supported end to end.
+- Failure condition: The use-case flow is incomplete or broken: The Manage Reward Catalog flow is supported end to end.
 
 ## Dependencies
 
-- None
+- `iu.rupify.manage-reward-catalog-extension-1`: Use-case orchestration depends on the linked step and extension units.
+- `iu.rupify.manage-reward-catalog-step-1`: Use-case orchestration depends on the linked step and extension units.
+- `iu.rupify.manage-reward-catalog-step-2`: Use-case orchestration depends on the linked step and extension units.
+- `iu.rupify.manage-reward-catalog-step-3.publish-change`: Use-case orchestration depends on the linked step and extension units.
+- `iu.rupify.manage-reward-catalog-step-3.validate-change`: Use-case orchestration depends on the linked step and extension units.
 
 ## Drift Checks
 

@@ -6,7 +6,7 @@
     "generated_at": "2026-04-20T14:00:00Z",
     "source_model_id": "rupify-model",
     "source_model_version": 1,
-    "decomposition_profile": "rupify-split-dependencies-v2"
+    "decomposition_profile": "rupify-split-dependencies-v3"
   },
   "source_summary": {
     "source_system": "rupify",
@@ -16,7 +16,7 @@
     "notes": [
       "Generated directly from imported Rupify planning export records.",
       "Deterministic decomposition splits selected ready normative source elements into smaller planning units.",
-      "Dependency edges and assembly rules are derived for split workflow, scenario, guard, and transition structures."
+      "Dependency edges and assembly rules are derived for split workflow, scenario, guard, transition, and use-case orchestration structures."
     ]
   },
   "source_anchors": [
@@ -1025,9 +1025,9 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-1",
-      "title": "functional-requirement-1",
-      "summary": "The system must allow operations managers to maintain reward catalog entries and campaign rules.",
+      "id": "su.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "title": "Maintain reward catalog entries",
+      "summary": "Allow operations managers to maintain reward catalog entries.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
@@ -1039,9 +1039,37 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-2",
-      "title": "functional-requirement-2",
-      "summary": "The platform must integrate with payment confirmation and downstream reporting sources.",
+      "id": "su.rupify.functional-requirement-1.maintain-campaign-rules",
+      "title": "Maintain campaign rules",
+      "summary": "Allow operations managers to maintain campaign rules.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-2.integrate-payment-confirmation",
+      "title": "Integrate payment confirmation",
+      "summary": "Integrate the platform with payment confirmation sources.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-2."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-2.integrate-reporting-sources",
+      "title": "Integrate reporting sources",
+      "summary": "Integrate the platform with downstream reporting sources.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
@@ -1825,7 +1853,7 @@
     {
       "id": "su.rupify.browse-rewards",
       "title": "Browse Rewards",
-      "summary": "Browse Rewards",
+      "summary": "Coordinate the Browse Rewards flow across its steps and extension handling.",
       "source_anchor_ids": [
         "anchor.rupify.use-cases.browse-rewards"
       ],
@@ -1839,7 +1867,7 @@
     {
       "id": "su.rupify.enroll-member",
       "title": "Enroll Member",
-      "summary": "Enroll Member",
+      "summary": "Coordinate the Enroll Member flow across its steps and extension handling.",
       "source_anchor_ids": [
         "anchor.rupify.use-cases.enroll-member"
       ],
@@ -1853,7 +1881,7 @@
     {
       "id": "su.rupify.manage-reward-catalog",
       "title": "Manage Reward Catalog",
-      "summary": "Manage Reward Catalog",
+      "summary": "Coordinate the Manage Reward Catalog flow across its steps and extension handling.",
       "source_anchor_ids": [
         "anchor.rupify.use-cases.manage-reward-catalog"
       ],
@@ -1867,7 +1895,7 @@
     {
       "id": "su.rupify.redeem-reward",
       "title": "Redeem Reward",
-      "summary": "Redeem Reward",
+      "summary": "Coordinate the Redeem Reward flow across its steps and extension handling.",
       "source_anchor_ids": [
         "anchor.rupify.use-cases.redeem-reward"
       ],
@@ -1881,7 +1909,7 @@
     {
       "id": "su.rupify.review-redemption-analytics",
       "title": "Review Redemption Analytics",
-      "summary": "Review Redemption Analytics",
+      "summary": "Coordinate the Review Redemption Analytics flow across its steps and extension handling.",
       "source_anchor_ids": [
         "anchor.rupify.use-cases.review-redemption-analytics"
       ],
@@ -2343,26 +2371,26 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-1",
-      "title": "Implement workflow support: functional-requirement-1",
-      "summary": "The system must allow operations managers to maintain reward catalog entries and campaign rules.",
+      "id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "title": "Implement workflow support: Maintain reward catalog entries",
+      "summary": "Allow operations managers to maintain reward catalog entries.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "Allow operations managers to maintain reward catalog entries."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "Operations managers can maintain reward catalog entries."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-1."
@@ -2374,26 +2402,92 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-2",
-      "title": "Implement workflow support: functional-requirement-2",
-      "summary": "The platform must integrate with payment confirmation and downstream reporting sources.",
+      "id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "title": "Implement workflow support: Maintain campaign rules",
+      "summary": "Allow operations managers to maintain campaign rules.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-2"
+        "su.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "dependencies": [
+        "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
+      ],
+      "implementation_scope": [
+        "Allow operations managers to maintain campaign rules."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Operations managers can maintain campaign rules."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+      "title": "Implement workflow support: Integrate payment confirmation",
+      "summary": "Integrate the platform with payment confirmation sources.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-payment-confirmation"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "The platform must integrate with payment confirmation and downstream reporting sources."
+        "Integrate the platform with payment confirmation sources."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "The platform must integrate with payment confirmation and downstream reporting sources."
+        "The platform integrates with payment confirmation sources."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-2"
+        "vu.rupify.functional-requirement-2.integrate-payment-confirmation"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+      "title": "Implement workflow support: Integrate reporting sources",
+      "summary": "Integrate the platform with downstream reporting sources.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-reporting-sources"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "dependencies": [
+        "iu.rupify.functional-requirement-2.integrate-payment-confirmation"
+      ],
+      "implementation_scope": [
+        "Integrate the platform with downstream reporting sources."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "The platform integrates with downstream reporting sources."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.integrate-reporting-sources"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-2."
@@ -4186,22 +4280,28 @@
     },
     {
       "id": "iu.rupify.browse-rewards",
-      "title": "Implement Browse Rewards",
-      "summary": "Implement the behavior described by browse rewards.",
+      "title": "Implement use-case flow: Browse Rewards",
+      "summary": "Coordinate the Browse Rewards flow across its steps and extension handling.",
       "derived_from_spec_unit_ids": [
         "su.rupify.browse-rewards"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-cases.browse-rewards"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.browse-rewards-extension-1",
+        "iu.rupify.browse-rewards-step-1",
+        "iu.rupify.browse-rewards-step-2.display-points-balance",
+        "iu.rupify.browse-rewards-step-2.display-rewards",
+        "iu.rupify.browse-rewards-step-3"
+      ],
       "implementation_scope": [
-        "Browse Rewards"
+        "Coordinate the Browse Rewards flow across its steps and extension handling."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Browse Rewards"
+        "The Browse Rewards flow is supported end to end."
       ],
       "verification_unit_ids": [
         "vu.rupify.browse-rewards"
@@ -4217,22 +4317,27 @@
     },
     {
       "id": "iu.rupify.enroll-member",
-      "title": "Implement Enroll Member",
-      "summary": "Implement the behavior described by enroll member.",
+      "title": "Implement use-case flow: Enroll Member",
+      "summary": "Coordinate the Enroll Member flow across its steps and extension handling.",
       "derived_from_spec_unit_ids": [
         "su.rupify.enroll-member"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-cases.enroll-member"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.enroll-member-extension-1",
+        "iu.rupify.enroll-member-step-1",
+        "iu.rupify.enroll-member-step-2",
+        "iu.rupify.enroll-member-step-3"
+      ],
       "implementation_scope": [
-        "Enroll Member"
+        "Coordinate the Enroll Member flow across its steps and extension handling."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Enroll Member"
+        "The Enroll Member flow is supported end to end."
       ],
       "verification_unit_ids": [
         "vu.rupify.enroll-member"
@@ -4248,22 +4353,28 @@
     },
     {
       "id": "iu.rupify.manage-reward-catalog",
-      "title": "Implement Manage Reward Catalog",
-      "summary": "Implement the behavior described by manage reward catalog.",
+      "title": "Implement use-case flow: Manage Reward Catalog",
+      "summary": "Coordinate the Manage Reward Catalog flow across its steps and extension handling.",
       "derived_from_spec_unit_ids": [
         "su.rupify.manage-reward-catalog"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-cases.manage-reward-catalog"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.manage-reward-catalog-extension-1",
+        "iu.rupify.manage-reward-catalog-step-1",
+        "iu.rupify.manage-reward-catalog-step-2",
+        "iu.rupify.manage-reward-catalog-step-3.publish-change",
+        "iu.rupify.manage-reward-catalog-step-3.validate-change"
+      ],
       "implementation_scope": [
-        "Manage Reward Catalog"
+        "Coordinate the Manage Reward Catalog flow across its steps and extension handling."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Manage Reward Catalog"
+        "The Manage Reward Catalog flow is supported end to end."
       ],
       "verification_unit_ids": [
         "vu.rupify.manage-reward-catalog"
@@ -4279,8 +4390,8 @@
     },
     {
       "id": "iu.rupify.redeem-reward",
-      "title": "Implement Redeem Reward",
-      "summary": "Implement the behavior described by redeem reward.",
+      "title": "Implement use-case flow: Redeem Reward",
+      "summary": "Coordinate the Redeem Reward flow across its steps and extension handling.",
       "derived_from_spec_unit_ids": [
         "su.rupify.redeem-reward"
       ],
@@ -4288,15 +4399,24 @@
         "anchor.rupify.use-cases.redeem-reward"
       ],
       "dependencies": [
+        "iu.rupify.redeem-reward-extension-1",
+        "iu.rupify.redeem-reward-extension-2",
+        "iu.rupify.redeem-reward-extension-3",
+        "iu.rupify.redeem-reward-step-1",
+        "iu.rupify.redeem-reward-step-2.validate-available-points",
+        "iu.rupify.redeem-reward-step-2.validate-eligibility",
+        "iu.rupify.redeem-reward-step-3.reserve-reward",
+        "iu.rupify.redeem-reward-step-3.update-member-balance",
+        "iu.rupify.redeem-reward-step-4",
         "iu.rupify.non-functional-requirement-6"
       ],
       "implementation_scope": [
-        "Redeem Reward"
+        "Coordinate the Redeem Reward flow across its steps and extension handling."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Redeem Reward"
+        "The Redeem Reward flow is supported end to end."
       ],
       "verification_unit_ids": [
         "vu.rupify.redeem-reward"
@@ -4312,22 +4432,27 @@
     },
     {
       "id": "iu.rupify.review-redemption-analytics",
-      "title": "Implement Review Redemption Analytics",
-      "summary": "Implement the behavior described by review redemption analytics.",
+      "title": "Implement use-case flow: Review Redemption Analytics",
+      "summary": "Coordinate the Review Redemption Analytics flow across its steps and extension handling.",
       "derived_from_spec_unit_ids": [
         "su.rupify.review-redemption-analytics"
       ],
       "source_anchor_ids": [
         "anchor.rupify.use-cases.review-redemption-analytics"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.review-redemption-analytics-extension-1",
+        "iu.rupify.review-redemption-analytics-step-1",
+        "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+        "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics"
+      ],
       "implementation_scope": [
-        "Review Redemption Analytics"
+        "Coordinate the Review Redemption Analytics flow across its steps and extension handling."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Review Redemption Analytics"
+        "The Review Redemption Analytics flow is supported end to end."
       ],
       "verification_unit_ids": [
         "vu.rupify.review-redemption-analytics"
@@ -4696,24 +4821,24 @@
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-1",
-      "title": "Verify functional-requirement-1",
+      "id": "vu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "title": "Verify Maintain reward catalog entries",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "verification_intent": "Confirm workflow support is present for functional-requirement-1.",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "verification_intent": "Confirm workflow support is present for maintain reward catalog entries.",
       "observables": [
-        "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "Operations managers can maintain reward catalog entries."
       ],
       "setup_requirements": [
         "The relevant workflow capability is reachable in the system."
       ],
       "expected_outcomes": [
-        "The workflow behavior is supported: The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "The workflow behavior is supported: Operations managers can maintain reward catalog entries."
       ],
       "failure_conditions": [
-        "The workflow behavior is missing or incomplete: The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "The workflow behavior is missing or incomplete: Operations managers can maintain reward catalog entries."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -4721,24 +4846,74 @@
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-2",
-      "title": "Verify functional-requirement-2",
+      "id": "vu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "title": "Verify Maintain campaign rules",
       "source_anchor_ids": [
-        "anchor.rupify.functional-requirements.functional-requirement-2"
+        "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "verification_intent": "Confirm workflow support is present for functional-requirement-2.",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "verification_intent": "Confirm workflow support is present for maintain campaign rules.",
       "observables": [
-        "The platform must integrate with payment confirmation and downstream reporting sources."
+        "Operations managers can maintain campaign rules."
       ],
       "setup_requirements": [
         "The relevant workflow capability is reachable in the system."
       ],
       "expected_outcomes": [
-        "The workflow behavior is supported: The platform must integrate with payment confirmation and downstream reporting sources."
+        "The workflow behavior is supported: Operations managers can maintain campaign rules."
       ],
       "failure_conditions": [
-        "The workflow behavior is missing or incomplete: The platform must integrate with payment confirmation and downstream reporting sources."
+        "The workflow behavior is missing or incomplete: Operations managers can maintain campaign rules."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-2.integrate-payment-confirmation",
+      "title": "Verify Integrate payment confirmation",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+      "verification_intent": "Confirm workflow support is present for integrate payment confirmation.",
+      "observables": [
+        "The platform integrates with payment confirmation sources."
+      ],
+      "setup_requirements": [
+        "The relevant workflow capability is reachable in the system."
+      ],
+      "expected_outcomes": [
+        "The workflow behavior is supported: The platform integrates with payment confirmation sources."
+      ],
+      "failure_conditions": [
+        "The workflow behavior is missing or incomplete: The platform integrates with payment confirmation sources."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-2.integrate-reporting-sources",
+      "title": "Verify Integrate reporting sources",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+      "verification_intent": "Confirm workflow support is present for integrate reporting sources.",
+      "observables": [
+        "The platform integrates with downstream reporting sources."
+      ],
+      "setup_requirements": [
+        "The relevant workflow capability is reachable in the system."
+      ],
+      "expected_outcomes": [
+        "The workflow behavior is supported: The platform integrates with downstream reporting sources."
+      ],
+      "failure_conditions": [
+        "The workflow behavior is missing or incomplete: The platform integrates with downstream reporting sources."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -6032,15 +6207,19 @@
         "anchor.rupify.use-cases.browse-rewards"
       ],
       "implementation_unit_id": "iu.rupify.browse-rewards",
-      "verification_intent": "Confirm the implementation satisfies browse rewards.",
+      "verification_intent": "Confirm the use-case flow is supported end to end for browse rewards.",
       "observables": [
-        "Browse Rewards"
+        "The Browse Rewards flow is supported end to end."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The actor can start the use-case flow through its normal entry point."
+      ],
       "expected_outcomes": [
-        "Browse Rewards"
+        "The use-case flow completes as intended: The Browse Rewards flow is supported end to end."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The use-case flow is incomplete or broken: The Browse Rewards flow is supported end to end."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of browse-rewards."
@@ -6053,15 +6232,19 @@
         "anchor.rupify.use-cases.enroll-member"
       ],
       "implementation_unit_id": "iu.rupify.enroll-member",
-      "verification_intent": "Confirm the implementation satisfies enroll member.",
+      "verification_intent": "Confirm the use-case flow is supported end to end for enroll member.",
       "observables": [
-        "Enroll Member"
+        "The Enroll Member flow is supported end to end."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The actor can start the use-case flow through its normal entry point."
+      ],
       "expected_outcomes": [
-        "Enroll Member"
+        "The use-case flow completes as intended: The Enroll Member flow is supported end to end."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The use-case flow is incomplete or broken: The Enroll Member flow is supported end to end."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of enroll-member."
@@ -6074,15 +6257,19 @@
         "anchor.rupify.use-cases.manage-reward-catalog"
       ],
       "implementation_unit_id": "iu.rupify.manage-reward-catalog",
-      "verification_intent": "Confirm the implementation satisfies manage reward catalog.",
+      "verification_intent": "Confirm the use-case flow is supported end to end for manage reward catalog.",
       "observables": [
-        "Manage Reward Catalog"
+        "The Manage Reward Catalog flow is supported end to end."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The actor can start the use-case flow through its normal entry point."
+      ],
       "expected_outcomes": [
-        "Manage Reward Catalog"
+        "The use-case flow completes as intended: The Manage Reward Catalog flow is supported end to end."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The use-case flow is incomplete or broken: The Manage Reward Catalog flow is supported end to end."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of manage-reward-catalog."
@@ -6095,15 +6282,19 @@
         "anchor.rupify.use-cases.redeem-reward"
       ],
       "implementation_unit_id": "iu.rupify.redeem-reward",
-      "verification_intent": "Confirm the implementation satisfies redeem reward.",
+      "verification_intent": "Confirm the use-case flow is supported end to end for redeem reward.",
       "observables": [
-        "Redeem Reward"
+        "The Redeem Reward flow is supported end to end."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The actor can start the use-case flow through its normal entry point."
+      ],
       "expected_outcomes": [
-        "Redeem Reward"
+        "The use-case flow completes as intended: The Redeem Reward flow is supported end to end."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The use-case flow is incomplete or broken: The Redeem Reward flow is supported end to end."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of redeem-reward."
@@ -6116,15 +6307,19 @@
         "anchor.rupify.use-cases.review-redemption-analytics"
       ],
       "implementation_unit_id": "iu.rupify.review-redemption-analytics",
-      "verification_intent": "Confirm the implementation satisfies review redemption analytics.",
+      "verification_intent": "Confirm the use-case flow is supported end to end for review redemption analytics.",
       "observables": [
-        "Review Redemption Analytics"
+        "The Review Redemption Analytics flow is supported end to end."
       ],
-      "setup_requirements": [],
+      "setup_requirements": [
+        "The actor can start the use-case flow through its normal entry point."
+      ],
       "expected_outcomes": [
-        "Review Redemption Analytics"
+        "The use-case flow completes as intended: The Review Redemption Analytics flow is supported end to end."
       ],
-      "failure_conditions": [],
+      "failure_conditions": [
+        "The use-case flow is incomplete or broken: The Review Redemption Analytics flow is supported end to end."
+      ],
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of review-redemption-analytics."
@@ -6399,18 +6594,18 @@
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-1",
+      "id": "tb.rupify.functional-requirement-1.maintain-reward-catalog-entries",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-1"
+        "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6418,18 +6613,56 @@
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-2",
+      "id": "tb.rupify.functional-requirement-1.maintain-campaign-rules",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-2.integrate-payment-confirmation",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-2"
+        "su.rupify.functional-requirement-2.integrate-payment-confirmation"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-2"
+        "iu.rupify.functional-requirement-2.integrate-payment-confirmation"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-2"
+        "vu.rupify.functional-requirement-2.integrate-payment-confirmation"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-2.integrate-reporting-sources",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-reporting-sources"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-2.integrate-reporting-sources"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.integrate-reporting-sources"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -7579,6 +7812,20 @@
   ],
   "dependency_edges": [
     {
+      "id": "dep.functional-requirement-1.maintain-campaign-rules-soft-sequence",
+      "from_implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "to_implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "dependency_type": "soft_sequence",
+      "reason": "Campaign rule maintenance should build on maintained reward catalog entries."
+    },
+    {
+      "id": "dep.functional-requirement-2.integrate-reporting-sources-soft-sequence",
+      "from_implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+      "to_implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+      "dependency_type": "soft_sequence",
+      "reason": "Reporting-source integration should follow the upstream payment-confirmation integration surface."
+    },
+    {
       "id": "dep.rupify.guard-condition-2.block-publish-without-approval.requires-rupify.guard-condition-2.require-validation-approval",
       "from_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
       "to_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
@@ -7775,6 +8022,195 @@
       "reason": "Later use-case steps depend on the earlier step in the same ordered flow."
     },
     {
+      "id": "dep.rupify.browse-rewards.requires-rupify.browse-rewards-extension-1",
+      "from_implementation_unit_id": "iu.rupify.browse-rewards",
+      "to_implementation_unit_id": "iu.rupify.browse-rewards-extension-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.browse-rewards.requires-rupify.browse-rewards-step-1",
+      "from_implementation_unit_id": "iu.rupify.browse-rewards",
+      "to_implementation_unit_id": "iu.rupify.browse-rewards-step-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.browse-rewards.requires-rupify.browse-rewards-step-2.display-points-balance",
+      "from_implementation_unit_id": "iu.rupify.browse-rewards",
+      "to_implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-points-balance",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.browse-rewards.requires-rupify.browse-rewards-step-2.display-rewards",
+      "from_implementation_unit_id": "iu.rupify.browse-rewards",
+      "to_implementation_unit_id": "iu.rupify.browse-rewards-step-2.display-rewards",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.browse-rewards.requires-rupify.browse-rewards-step-3",
+      "from_implementation_unit_id": "iu.rupify.browse-rewards",
+      "to_implementation_unit_id": "iu.rupify.browse-rewards-step-3",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.enroll-member.requires-rupify.enroll-member-extension-1",
+      "from_implementation_unit_id": "iu.rupify.enroll-member",
+      "to_implementation_unit_id": "iu.rupify.enroll-member-extension-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.enroll-member.requires-rupify.enroll-member-step-1",
+      "from_implementation_unit_id": "iu.rupify.enroll-member",
+      "to_implementation_unit_id": "iu.rupify.enroll-member-step-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.enroll-member.requires-rupify.enroll-member-step-2",
+      "from_implementation_unit_id": "iu.rupify.enroll-member",
+      "to_implementation_unit_id": "iu.rupify.enroll-member-step-2",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.enroll-member.requires-rupify.enroll-member-step-3",
+      "from_implementation_unit_id": "iu.rupify.enroll-member",
+      "to_implementation_unit_id": "iu.rupify.enroll-member-step-3",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.manage-reward-catalog.requires-rupify.manage-reward-catalog-extension-1",
+      "from_implementation_unit_id": "iu.rupify.manage-reward-catalog",
+      "to_implementation_unit_id": "iu.rupify.manage-reward-catalog-extension-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.manage-reward-catalog.requires-rupify.manage-reward-catalog-step-1",
+      "from_implementation_unit_id": "iu.rupify.manage-reward-catalog",
+      "to_implementation_unit_id": "iu.rupify.manage-reward-catalog-step-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.manage-reward-catalog.requires-rupify.manage-reward-catalog-step-2",
+      "from_implementation_unit_id": "iu.rupify.manage-reward-catalog",
+      "to_implementation_unit_id": "iu.rupify.manage-reward-catalog-step-2",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.manage-reward-catalog.requires-rupify.manage-reward-catalog-step-3.publish-change",
+      "from_implementation_unit_id": "iu.rupify.manage-reward-catalog",
+      "to_implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.publish-change",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.manage-reward-catalog.requires-rupify.manage-reward-catalog-step-3.validate-change",
+      "from_implementation_unit_id": "iu.rupify.manage-reward-catalog",
+      "to_implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3.validate-change",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-extension-1",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-extension-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-extension-2",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-extension-2",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-extension-3",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-extension-3",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-step-1",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-step-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-step-2.validate-available-points",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-available-points",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-step-2.validate-eligibility",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-step-2.validate-eligibility",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-step-3.reserve-reward",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-step-3.reserve-reward",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-step-3.update-member-balance",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-step-3.update-member-balance",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.redeem-reward.requires-rupify.redeem-reward-step-4",
+      "from_implementation_unit_id": "iu.rupify.redeem-reward",
+      "to_implementation_unit_id": "iu.rupify.redeem-reward-step-4",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.review-redemption-analytics.requires-rupify.review-redemption-analytics-extension-1",
+      "from_implementation_unit_id": "iu.rupify.review-redemption-analytics",
+      "to_implementation_unit_id": "iu.rupify.review-redemption-analytics-extension-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.review-redemption-analytics.requires-rupify.review-redemption-analytics-step-1",
+      "from_implementation_unit_id": "iu.rupify.review-redemption-analytics",
+      "to_implementation_unit_id": "iu.rupify.review-redemption-analytics-step-1",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.review-redemption-analytics.requires-rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "from_implementation_unit_id": "iu.rupify.review-redemption-analytics",
+      "to_implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
+      "id": "dep.rupify.review-redemption-analytics.requires-rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "from_implementation_unit_id": "iu.rupify.review-redemption-analytics",
+      "to_implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics",
+      "dependency_type": "requires",
+      "reason": "Use-case orchestration depends on the linked step and extension units."
+    },
+    {
       "id": "dep.rupify.acceptance-constraint-requirement-1.soft_sequence-rupify.non-functional-requirement-1",
       "from_implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
       "to_implementation_unit_id": "iu.rupify.non-functional-requirement-1",
@@ -7969,6 +8405,34 @@
       "rule_type": "constraint_overlay",
       "notes": [
         "Recombine split invariant details back into the original invariant statement."
+      ]
+    },
+    {
+      "id": "assembly.functional-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+        "su.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine reward catalog entry maintenance and campaign rule maintenance into the original broad requirement."
+      ]
+    },
+    {
+      "id": "assembly.functional-requirement-2",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-payment-confirmation",
+        "su.rupify.functional-requirement-2.integrate-reporting-sources"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine payment-confirmation and reporting-source integration into the original broad requirement."
       ]
     },
     {
@@ -8171,14 +8635,24 @@
       "issue_body": "## Summary\n\nImplement the behavior described by forbidden transition 1.\n\n## Source Lineage\n\n- `anchor.rupify.forbidden-transitions.forbidden-transition-1` (requirement: `forbidden-transition-1`)\n\n## Scope\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Acceptance Criteria\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies forbidden transition 1.\n- Observable: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Expected outcome: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element forbidden-transition-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "issue_title": "Implement workflow support: functional-requirement-1",
-      "issue_body": "## Summary\n\nThe system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Acceptance Criteria\n\n- The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-1.\n- Observable: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n- Failure condition: The workflow behavior is missing or incomplete: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "issue_title": "Implement workflow support: Maintain reward catalog entries",
+      "issue_body": "## Summary\n\nAllow operations managers to maintain reward catalog entries.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Allow operations managers to maintain reward catalog entries.\n\n## Acceptance Criteria\n\n- Operations managers can maintain reward catalog entries.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for maintain reward catalog entries.\n- Observable: Operations managers can maintain reward catalog entries.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Operations managers can maintain reward catalog entries.\n- Failure condition: The workflow behavior is missing or incomplete: Operations managers can maintain reward catalog entries.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "issue_title": "Implement workflow support: functional-requirement-2",
-      "issue_body": "## Summary\n\nThe platform must integrate with payment confirmation and downstream reporting sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Acceptance Criteria\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: The platform must integrate with payment confirmation and downstream reporting sources.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The platform must integrate with payment confirmation and downstream reporting sources.\n- Failure condition: The workflow behavior is missing or incomplete: The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "issue_title": "Implement workflow support: Maintain campaign rules",
+      "issue_body": "## Summary\n\nAllow operations managers to maintain campaign rules.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Allow operations managers to maintain campaign rules.\n\n## Acceptance Criteria\n\n- Operations managers can maintain campaign rules.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for maintain campaign rules.\n- Observable: Operations managers can maintain campaign rules.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Operations managers can maintain campaign rules.\n- Failure condition: The workflow behavior is missing or incomplete: Operations managers can maintain campaign rules.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-1.maintain-reward-catalog-entries`: Campaign rule maintenance should build on maintained reward catalog entries.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-payment-confirmation",
+      "issue_title": "Implement workflow support: Integrate payment confirmation",
+      "issue_body": "## Summary\n\nIntegrate the platform with payment confirmation sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Integrate the platform with payment confirmation sources.\n\n## Acceptance Criteria\n\n- The platform integrates with payment confirmation sources.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for integrate payment confirmation.\n- Observable: The platform integrates with payment confirmation sources.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The platform integrates with payment confirmation sources.\n- Failure condition: The workflow behavior is missing or incomplete: The platform integrates with payment confirmation sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-reporting-sources",
+      "issue_title": "Implement workflow support: Integrate reporting sources",
+      "issue_body": "## Summary\n\nIntegrate the platform with downstream reporting sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Integrate the platform with downstream reporting sources.\n\n## Acceptance Criteria\n\n- The platform integrates with downstream reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for integrate reporting sources.\n- Observable: The platform integrates with downstream reporting sources.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The platform integrates with downstream reporting sources.\n- Failure condition: The workflow behavior is missing or incomplete: The platform integrates with downstream reporting sources.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-2.integrate-payment-confirmation`: Reporting-source integration should follow the upstream payment-confirmation integration surface.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
@@ -8457,28 +8931,28 @@
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards",
-      "issue_title": "Implement Browse Rewards",
-      "issue_body": "## Summary\n\nImplement the behavior described by browse rewards.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.browse-rewards` (requirement: `browse-rewards`)\n\n## Scope\n\n- Browse Rewards\n\n## Acceptance Criteria\n\n- Browse Rewards\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies browse rewards.\n- Observable: Browse Rewards\n- Expected outcome: Browse Rewards\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards.\n"
+      "issue_title": "Implement use-case flow: Browse Rewards",
+      "issue_body": "## Summary\n\nCoordinate the Browse Rewards flow across its steps and extension handling.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.browse-rewards` (requirement: `browse-rewards`)\n\n## Scope\n\n- Coordinate the Browse Rewards flow across its steps and extension handling.\n\n## Acceptance Criteria\n\n- The Browse Rewards flow is supported end to end.\n\n## Verification Shape\n\n- Intent: Confirm the use-case flow is supported end to end for browse rewards.\n- Observable: The Browse Rewards flow is supported end to end.\n- Setup requirement: The actor can start the use-case flow through its normal entry point.\n- Expected outcome: The use-case flow completes as intended: The Browse Rewards flow is supported end to end.\n- Failure condition: The use-case flow is incomplete or broken: The Browse Rewards flow is supported end to end.\n\n## Dependencies\n\n- `iu.rupify.browse-rewards-extension-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.browse-rewards-step-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.browse-rewards-step-2.display-points-balance`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.browse-rewards-step-2.display-rewards`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.browse-rewards-step-3`: Use-case orchestration depends on the linked step and extension units.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element browse-rewards.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.enroll-member",
-      "issue_title": "Implement Enroll Member",
-      "issue_body": "## Summary\n\nImplement the behavior described by enroll member.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.enroll-member` (requirement: `enroll-member`)\n\n## Scope\n\n- Enroll Member\n\n## Acceptance Criteria\n\n- Enroll Member\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies enroll member.\n- Observable: Enroll Member\n- Expected outcome: Enroll Member\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member.\n"
+      "issue_title": "Implement use-case flow: Enroll Member",
+      "issue_body": "## Summary\n\nCoordinate the Enroll Member flow across its steps and extension handling.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.enroll-member` (requirement: `enroll-member`)\n\n## Scope\n\n- Coordinate the Enroll Member flow across its steps and extension handling.\n\n## Acceptance Criteria\n\n- The Enroll Member flow is supported end to end.\n\n## Verification Shape\n\n- Intent: Confirm the use-case flow is supported end to end for enroll member.\n- Observable: The Enroll Member flow is supported end to end.\n- Setup requirement: The actor can start the use-case flow through its normal entry point.\n- Expected outcome: The use-case flow completes as intended: The Enroll Member flow is supported end to end.\n- Failure condition: The use-case flow is incomplete or broken: The Enroll Member flow is supported end to end.\n\n## Dependencies\n\n- `iu.rupify.enroll-member-extension-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.enroll-member-step-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.enroll-member-step-2`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.enroll-member-step-3`: Use-case orchestration depends on the linked step and extension units.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element enroll-member.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.manage-reward-catalog",
-      "issue_title": "Implement Manage Reward Catalog",
-      "issue_body": "## Summary\n\nImplement the behavior described by manage reward catalog.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.manage-reward-catalog` (requirement: `manage-reward-catalog`)\n\n## Scope\n\n- Manage Reward Catalog\n\n## Acceptance Criteria\n\n- Manage Reward Catalog\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies manage reward catalog.\n- Observable: Manage Reward Catalog\n- Expected outcome: Manage Reward Catalog\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog.\n"
+      "issue_title": "Implement use-case flow: Manage Reward Catalog",
+      "issue_body": "## Summary\n\nCoordinate the Manage Reward Catalog flow across its steps and extension handling.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.manage-reward-catalog` (requirement: `manage-reward-catalog`)\n\n## Scope\n\n- Coordinate the Manage Reward Catalog flow across its steps and extension handling.\n\n## Acceptance Criteria\n\n- The Manage Reward Catalog flow is supported end to end.\n\n## Verification Shape\n\n- Intent: Confirm the use-case flow is supported end to end for manage reward catalog.\n- Observable: The Manage Reward Catalog flow is supported end to end.\n- Setup requirement: The actor can start the use-case flow through its normal entry point.\n- Expected outcome: The use-case flow completes as intended: The Manage Reward Catalog flow is supported end to end.\n- Failure condition: The use-case flow is incomplete or broken: The Manage Reward Catalog flow is supported end to end.\n\n## Dependencies\n\n- `iu.rupify.manage-reward-catalog-extension-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.manage-reward-catalog-step-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.manage-reward-catalog-step-2`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.manage-reward-catalog-step-3.publish-change`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.manage-reward-catalog-step-3.validate-change`: Use-case orchestration depends on the linked step and extension units.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element manage-reward-catalog.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward",
-      "issue_title": "Implement Redeem Reward",
-      "issue_body": "## Summary\n\nImplement the behavior described by redeem reward.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.redeem-reward` (requirement: `redeem-reward`)\n\n## Scope\n\n- Redeem Reward\n\n## Acceptance Criteria\n\n- Redeem Reward\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies redeem reward.\n- Observable: Redeem Reward\n- Expected outcome: Redeem Reward\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-6`: Use-case implementation should follow the linked requirement intent.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward.\n"
+      "issue_title": "Implement use-case flow: Redeem Reward",
+      "issue_body": "## Summary\n\nCoordinate the Redeem Reward flow across its steps and extension handling.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.redeem-reward` (requirement: `redeem-reward`)\n\n## Scope\n\n- Coordinate the Redeem Reward flow across its steps and extension handling.\n\n## Acceptance Criteria\n\n- The Redeem Reward flow is supported end to end.\n\n## Verification Shape\n\n- Intent: Confirm the use-case flow is supported end to end for redeem reward.\n- Observable: The Redeem Reward flow is supported end to end.\n- Setup requirement: The actor can start the use-case flow through its normal entry point.\n- Expected outcome: The use-case flow completes as intended: The Redeem Reward flow is supported end to end.\n- Failure condition: The use-case flow is incomplete or broken: The Redeem Reward flow is supported end to end.\n\n## Dependencies\n\n- `iu.rupify.redeem-reward-extension-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-extension-2`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-extension-3`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-step-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-step-2.validate-available-points`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-step-2.validate-eligibility`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-step-3.reserve-reward`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-step-3.update-member-balance`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.redeem-reward-step-4`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.non-functional-requirement-6`: Use-case implementation should follow the linked requirement intent.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element redeem-reward.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.review-redemption-analytics",
-      "issue_title": "Implement Review Redemption Analytics",
-      "issue_body": "## Summary\n\nImplement the behavior described by review redemption analytics.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.review-redemption-analytics` (requirement: `review-redemption-analytics`)\n\n## Scope\n\n- Review Redemption Analytics\n\n## Acceptance Criteria\n\n- Review Redemption Analytics\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies review redemption analytics.\n- Observable: Review Redemption Analytics\n- Expected outcome: Review Redemption Analytics\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics.\n"
+      "issue_title": "Implement use-case flow: Review Redemption Analytics",
+      "issue_body": "## Summary\n\nCoordinate the Review Redemption Analytics flow across its steps and extension handling.\n\n## Source Lineage\n\n- `anchor.rupify.use-cases.review-redemption-analytics` (requirement: `review-redemption-analytics`)\n\n## Scope\n\n- Coordinate the Review Redemption Analytics flow across its steps and extension handling.\n\n## Acceptance Criteria\n\n- The Review Redemption Analytics flow is supported end to end.\n\n## Verification Shape\n\n- Intent: Confirm the use-case flow is supported end to end for review redemption analytics.\n- Observable: The Review Redemption Analytics flow is supported end to end.\n- Setup requirement: The actor can start the use-case flow through its normal entry point.\n- Expected outcome: The use-case flow completes as intended: The Review Redemption Analytics flow is supported end to end.\n- Failure condition: The use-case flow is incomplete or broken: The Review Redemption Analytics flow is supported end to end.\n\n## Dependencies\n\n- `iu.rupify.review-redemption-analytics-extension-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.review-redemption-analytics-step-1`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.review-redemption-analytics-step-2.show-campaign-metrics`: Use-case orchestration depends on the linked step and extension units.\n- `iu.rupify.review-redemption-analytics-step-2.show-redemption-metrics`: Use-case orchestration depends on the linked step and extension units.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element review-redemption-analytics.\n"
     }
   ]
 }
