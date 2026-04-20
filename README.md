@@ -78,3 +78,9 @@ definitions.
 
 - [Schema overview](schemas/README.md)
 - [Planning bundle schema](schemas/planning-bundle.schema.json)
+
+## Fixtures
+
+- [Fixture overview](fixtures/README.md)
+- [Example Rupify export](fixtures/rupify-export/authentication-basic.json)
+- [Expected Speckify bundle](fixtures/speckify-bundle/authentication-basic.bundle.json)

@@ -1,0 +1,114 @@
+{
+  "export_metadata": {
+    "export_version": 1,
+    "source_model_id": "project-auth-service",
+    "source_model_version": 1,
+    "generated_at": "2026-04-20T12:00:00Z"
+  },
+  "project": {
+    "id": "project-auth-service",
+    "name": "Authentication service",
+    "summary": "Authenticate registered users."
+  },
+  "elements": [
+    {
+      "id": "req-auth-001",
+      "element_type": "requirement",
+      "view": "requirements",
+      "text": "The system shall authenticate registered users.",
+      "normative": true,
+      "trace": {
+        "source_round": 3,
+        "source_key": "requirements"
+      }
+    },
+    {
+      "id": "uc-authenticate",
+      "element_type": "use_case",
+      "view": "use_case",
+      "display_name": "Authenticate user",
+      "trace": {
+        "source_round": 4,
+        "source_key": "use_cases"
+      }
+    },
+    {
+      "id": "uc-authenticate.step-capture-credentials",
+      "element_type": "use_case_step",
+      "view": "use_case",
+      "parent_id": "uc-authenticate",
+      "display_name": "Capture credentials",
+      "text": "User submits username and password.",
+      "normative": true,
+      "trace": {
+        "source_round": 4,
+        "source_key": "use_cases"
+      }
+    },
+    {
+      "id": "uc-authenticate.step-verify-credentials",
+      "element_type": "use_case_step",
+      "view": "use_case",
+      "parent_id": "uc-authenticate",
+      "display_name": "Verify credentials",
+      "text": "System verifies the submitted credentials.",
+      "normative": true,
+      "trace": {
+        "source_round": 4,
+        "source_key": "use_cases"
+      }
+    }
+  ],
+  "trace_links": [
+    {
+      "id": "trace-req-auth-use-case",
+      "from_id": "req-auth-001",
+      "to_id": "uc-authenticate",
+      "link_type": "realizes",
+      "basis": "requirement realized by use case"
+    },
+    {
+      "id": "trace-req-auth-capture-step",
+      "from_id": "req-auth-001",
+      "to_id": "uc-authenticate.step-capture-credentials",
+      "link_type": "realizes",
+      "basis": "requirement realized by credential capture step"
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "amb-auth-credential-format",
+      "description": "Accepted credential format is not specified.",
+      "applies_to_element_ids": [
+        "uc-authenticate.step-capture-credentials"
+      ],
+      "blocking_for_downstream": false,
+      "resolution_status": "open"
+    }
+  ],
+  "readiness": [
+    {
+      "target_id": "uc-authenticate",
+      "readiness_state": "ready"
+    },
+    {
+      "target_id": "uc-authenticate.step-capture-credentials",
+      "readiness_state": "ready"
+    },
+    {
+      "target_id": "uc-authenticate.step-verify-credentials",
+      "readiness_state": "ready"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "pre-auth-001",
+      "constraint_type": "precondition",
+      "text": "Credentials must be submitted before verification can begin.",
+      "applies_to_element_ids": [
+        "uc-authenticate.step-verify-credentials"
+      ],
+      "normative": true
+    }
+  ]
+}

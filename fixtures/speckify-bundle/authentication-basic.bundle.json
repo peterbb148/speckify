@@ -1,0 +1,306 @@
+{
+  "bundle_metadata": {
+    "bundle_id": "bundle.authentication-basic",
+    "schema_version": 1,
+    "bundle_version": 1,
+    "generated_at": "2026-04-20T12:10:00Z",
+    "source_model_id": "project-auth-service",
+    "source_model_version": 1,
+    "decomposition_profile": "manual-fixture-v1"
+  },
+  "source_summary": {
+    "source_system": "rupify",
+    "project_id": "project-auth-service",
+    "project_name": "Authentication service",
+    "export_version": 1,
+    "notes": [
+      "Fixture derived from authentication-basic upstream export."
+    ]
+  },
+  "source_anchors": [
+    {
+      "id": "anchor.requirement.req-auth-001",
+      "source_system": "rupify",
+      "source_type": "requirement",
+      "source_id": "req-auth-001",
+      "view": "requirements",
+      "normative": true,
+      "trace": {
+        "source_round": 3,
+        "source_key": "requirements"
+      }
+    },
+    {
+      "id": "anchor.use_case.uc-authenticate.step.capture-credentials",
+      "source_system": "rupify",
+      "source_type": "use_case_step",
+      "source_id": "uc-authenticate.step-capture-credentials",
+      "parent_source_id": "uc-authenticate",
+      "view": "use_case",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "use_cases"
+      }
+    },
+    {
+      "id": "anchor.use_case.uc-authenticate.step.verify-credentials",
+      "source_system": "rupify",
+      "source_type": "use_case_step",
+      "source_id": "uc-authenticate.step-verify-credentials",
+      "parent_source_id": "uc-authenticate",
+      "view": "use_case",
+      "normative": true,
+      "ready_state": "ready",
+      "trace": {
+        "source_round": 4,
+        "source_key": "use_cases"
+      }
+    }
+  ],
+  "spec_units": [
+    {
+      "id": "su.authentication.capture_credentials",
+      "title": "Capture credentials for authentication",
+      "summary": "The system must accept user credentials as part of the authentication flow.",
+      "source_anchor_ids": [
+        "anchor.requirement.req-auth-001",
+        "anchor.use_case.uc-authenticate.step.capture-credentials"
+      ],
+      "obligation_kind": "behavioral",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from requirement and use case step."
+      ]
+    },
+    {
+      "id": "su.authentication.verify_credentials",
+      "title": "Verify submitted credentials",
+      "summary": "The system must verify submitted credentials after they are captured.",
+      "source_anchor_ids": [
+        "anchor.use_case.uc-authenticate.step.verify-credentials"
+      ],
+      "obligation_kind": "behavioral",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Precondition constraint requires prior credential submission."
+      ]
+    }
+  ],
+  "implementation_units": [
+    {
+      "id": "iu.authentication.capture_credentials",
+      "title": "Add credential capture entrypoint",
+      "summary": "Implement the authentication boundary that accepts credentials.",
+      "derived_from_spec_unit_ids": [
+        "su.authentication.capture_credentials"
+      ],
+      "source_anchor_ids": [
+        "anchor.requirement.req-auth-001",
+        "anchor.use_case.uc-authenticate.step.capture-credentials"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Accept username and password input.",
+        "Expose a callable boundary for downstream authentication logic."
+      ],
+      "non_goals": [
+        "Verify credentials against a user store."
+      ],
+      "constraints": [
+        "Preserve lineage to the source authentication use case step."
+      ],
+      "acceptance_criteria": [
+        "Credential submission payload is accepted at the authentication boundary."
+      ],
+      "verification_unit_ids": [
+        "vu.authentication.capture_credentials"
+      ],
+      "drift_checks": [
+        "Do not bypass the source use case ordering."
+      ],
+      "reverse_impact_hint": "Changes here may affect authentication entry semantics upstream.",
+      "labels": [
+        "planning",
+        "authentication"
+      ]
+    },
+    {
+      "id": "iu.authentication.verify_credentials",
+      "title": "Add credential verification step",
+      "summary": "Implement the verification step after credentials have been captured.",
+      "derived_from_spec_unit_ids": [
+        "su.authentication.verify_credentials"
+      ],
+      "source_anchor_ids": [
+        "anchor.use_case.uc-authenticate.step.verify-credentials"
+      ],
+      "dependencies": [
+        "iu.authentication.capture_credentials"
+      ],
+      "implementation_scope": [
+        "Invoke verification logic after credential submission."
+      ],
+      "non_goals": [
+        "Define password reset or account recovery flows."
+      ],
+      "constraints": [
+        "Credentials must be submitted before verification can begin."
+      ],
+      "acceptance_criteria": [
+        "Credential verification occurs only after credential submission."
+      ],
+      "verification_unit_ids": [
+        "vu.authentication.verify_credentials"
+      ],
+      "drift_checks": [
+        "Preserve the precondition that capture precedes verification."
+      ],
+      "reverse_impact_hint": "Changes here may affect authentication sequencing upstream.",
+      "labels": [
+        "planning",
+        "authentication"
+      ]
+    }
+  ],
+  "verification_units": [
+    {
+      "id": "vu.authentication.capture_credentials",
+      "implementation_unit_id": "iu.authentication.capture_credentials",
+      "title": "Verify credential capture behavior",
+      "verification_intent": "Confirm that credentials can be submitted to the authentication boundary.",
+      "source_anchor_ids": [
+        "anchor.use_case.uc-authenticate.step.capture-credentials"
+      ],
+      "observables": [
+        "Credential payload is accepted by the authentication boundary."
+      ],
+      "setup_requirements": [
+        "Authentication entrypoint is available."
+      ],
+      "expected_outcomes": [
+        "Valid credential payload reaches the defined authentication boundary."
+      ],
+      "failure_conditions": [
+        "Payload is rejected before downstream verification logic begins."
+      ],
+      "invariants_preserved": []
+    },
+    {
+      "id": "vu.authentication.verify_credentials",
+      "implementation_unit_id": "iu.authentication.verify_credentials",
+      "title": "Verify credential verification sequencing",
+      "verification_intent": "Confirm that verification occurs only after credential submission.",
+      "source_anchor_ids": [
+        "anchor.use_case.uc-authenticate.step.verify-credentials"
+      ],
+      "observables": [
+        "Verification logic runs after credential capture."
+      ],
+      "setup_requirements": [
+        "Credential capture step is available."
+      ],
+      "expected_outcomes": [
+        "Verification cannot begin before credentials are submitted."
+      ],
+      "failure_conditions": [
+        "Verification runs without prior credential submission."
+      ],
+      "invariants_preserved": [
+        "Credential submission precedes verification."
+      ]
+    }
+  ],
+  "trace_bundles": [
+    {
+      "id": "tb.authentication.capture_credentials",
+      "source_anchor_ids": [
+        "anchor.requirement.req-auth-001",
+        "anchor.use_case.uc-authenticate.step.capture-credentials"
+      ],
+      "spec_unit_ids": [
+        "su.authentication.capture_credentials"
+      ],
+      "implementation_unit_ids": [
+        "iu.authentication.capture_credentials"
+      ],
+      "verification_unit_ids": [
+        "vu.authentication.capture_credentials"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "One-to-one planning derivation for credential capture."
+      ]
+    },
+    {
+      "id": "tb.authentication.verify_credentials",
+      "source_anchor_ids": [
+        "anchor.use_case.uc-authenticate.step.verify-credentials"
+      ],
+      "spec_unit_ids": [
+        "su.authentication.verify_credentials"
+      ],
+      "implementation_unit_ids": [
+        "iu.authentication.verify_credentials"
+      ],
+      "verification_unit_ids": [
+        "vu.authentication.verify_credentials"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Verification sequencing derived from use case step plus precondition constraint."
+      ]
+    }
+  ],
+  "dependency_edges": [
+    {
+      "id": "dep.authentication.capture-before-verify",
+      "from_implementation_unit_id": "iu.authentication.capture_credentials",
+      "to_implementation_unit_id": "iu.authentication.verify_credentials",
+      "dependency_type": "requires",
+      "reason": "Verification depends on prior credential submission."
+    }
+  ],
+  "assembly_rules": [
+    {
+      "id": "assembly.authentication.sequence",
+      "source_anchor_ids": [
+        "anchor.use_case.uc-authenticate.step.capture-credentials",
+        "anchor.use_case.uc-authenticate.step.verify-credentials"
+      ],
+      "member_spec_unit_ids": [
+        "su.authentication.capture_credentials",
+        "su.authentication.verify_credentials"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Credential capture must precede verification."
+      ]
+    }
+  ],
+  "unresolved_ambiguities": [
+    {
+      "ambiguity_id": "amb-auth-credential-format",
+      "affects_implementation_unit_ids": [
+        "iu.authentication.capture_credentials"
+      ],
+      "status": "open",
+      "blocking": false
+    }
+  ],
+  "rendered_issues": [
+    {
+      "implementation_unit_id": "iu.authentication.capture_credentials",
+      "issue_title": "Add credential capture entrypoint",
+      "issue_body": "## Summary\n\nImplement the authentication boundary that accepts credentials.\n\n## Source Lineage\n\n- `anchor.requirement.req-auth-001`\n- `anchor.use_case.uc-authenticate.step.capture-credentials`\n\n## Scope\n\n- Accept username and password input.\n- Expose a callable boundary for downstream authentication logic.\n\n## Non-goals\n\n- Verify credentials against a user store.\n\n## Constraints\n\n- Preserve lineage to the source authentication use case step.\n\n## Acceptance Criteria\n\n- Credential submission payload is accepted at the authentication boundary.\n\n## Verification Shape\n\n- Intent: Confirm that credentials can be submitted to the authentication boundary.\n- Observable: Credential payload is accepted by the authentication boundary.\n- Expected outcome: Valid credential payload reaches the defined authentication boundary.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Do not bypass the source use case ordering.\n"
+    },
+    {
+      "implementation_unit_id": "iu.authentication.verify_credentials",
+      "issue_title": "Add credential verification step",
+      "issue_body": "## Summary\n\nImplement the verification step after credentials have been captured.\n\n## Source Lineage\n\n- `anchor.use_case.uc-authenticate.step.verify-credentials`\n\n## Scope\n\n- Invoke verification logic after credential submission.\n\n## Non-goals\n\n- Define password reset or account recovery flows.\n\n## Constraints\n\n- Credentials must be submitted before verification can begin.\n\n## Acceptance Criteria\n\n- Credential verification occurs only after credential submission.\n\n## Verification Shape\n\n- Intent: Confirm that verification occurs only after credential submission.\n- Observable: Verification logic runs after credential capture.\n- Expected outcome: Verification cannot begin before credentials are submitted.\n\n## Dependencies\n\n- `iu.authentication.capture_credentials`\n\n## Drift Checks\n\n- Preserve the precondition that capture precedes verification.\n"
+    }
+  ]
+}
