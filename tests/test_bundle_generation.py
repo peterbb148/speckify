@@ -29,12 +29,17 @@ class BundleGenerationTests(unittest.TestCase):
         )
 
         self.assertEqual(bundle["bundle_metadata"]["bundle_id"], "bundle.speckify-planning-export")
-        self.assertEqual(bundle["bundle_metadata"]["decomposition_profile"], "rupify-split-v1")
+        self.assertEqual(
+            bundle["bundle_metadata"]["decomposition_profile"],
+            "rupify-split-dependencies-v1",
+        )
         self.assertEqual(len(bundle["source_anchors"]), 29)
         self.assertEqual(len(bundle["spec_units"]), 36)
         self.assertEqual(len(bundle["implementation_units"]), 36)
         self.assertEqual(len(bundle["verification_units"]), 36)
         self.assertEqual(len(bundle["trace_bundles"]), 36)
+        self.assertEqual(len(bundle["dependency_edges"]), 7)
+        self.assertEqual(len(bundle["assembly_rules"]), 4)
         self.assertEqual(len(bundle["rendered_issues"]), 36)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
@@ -108,6 +113,44 @@ class BundleGenerationTests(unittest.TestCase):
                 "iu.rupify.state-transition-1.active-to-retiring",
                 "iu.rupify.state-transition-1.proposed-to-active",
                 "iu.rupify.state-transition-1.retiring-to-retired",
+            ],
+        )
+
+    def test_generated_bundle_derives_dependencies_and_assembly_rules(self) -> None:
+        """Split units should receive deterministic dependency and assembly metadata."""
+        export = import_rupify_export_file(RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        approval_states = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.functional-requirement-1.approval-states"
+        )
+        active_to_retiring = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.state-transition-1.active-to-retiring"
+        )
+        transition_rule = next(
+            item
+            for item in bundle["assembly_rules"]
+            if item["id"] == "assembly.state-transition-1"
+        )
+
+        self.assertEqual(
+            approval_states["dependencies"],
+            ["iu.rupify.functional-requirement-1.stage-gates"],
+        )
+        self.assertEqual(
+            active_to_retiring["dependencies"],
+            ["iu.rupify.state-transition-1.proposed-to-active"],
+        )
+        self.assertEqual(
+            transition_rule["member_spec_unit_ids"],
+            [
+                "su.rupify.state-transition-1.proposed-to-active",
+                "su.rupify.state-transition-1.active-to-retiring",
+                "su.rupify.state-transition-1.retiring-to-retired",
             ],
         )
 

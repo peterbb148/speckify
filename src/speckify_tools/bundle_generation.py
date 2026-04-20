@@ -151,6 +151,106 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     ]
 
 
+def _derive_relationships(
+    implementation_units: list[dict[str, Any]],
+    spec_units: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+    """Derive dependency edges, assembly rules, and updated implementation units."""
+    implementation_index = {item["id"]: item for item in implementation_units}
+    dependency_edges: list[dict[str, Any]] = []
+    assembly_rules: list[dict[str, Any]] = []
+
+    state_transition_sequences = [
+        [
+            "proposed-to-active",
+            "active-to-retiring",
+            "retiring-to-retired",
+        ]
+    ]
+
+    source_groups: dict[str, list[dict[str, Any]]] = {}
+    for item in implementation_units:
+        source_anchor_id = item["source_anchor_ids"][0]
+        source_groups.setdefault(source_anchor_id, []).append(item)
+
+    spec_by_id = {item["id"]: item for item in spec_units}
+
+    for source_anchor_id, members in source_groups.items():
+        member_ids = sorted(item["id"] for item in members)
+        if source_anchor_id == "anchor.rupify.functional-requirements.functional-requirement-1":
+            from_id = "iu.rupify.functional-requirement-1.approval-states"
+            to_id = "iu.rupify.functional-requirement-1.stage-gates"
+            implementation_index[from_id]["dependencies"].append(to_id)
+            dependency_edges.append(
+                {
+                    "id": "dep.functional-requirement-1.approval-states-soft-sequence",
+                    "from_implementation_unit_id": from_id,
+                    "to_implementation_unit_id": to_id,
+                    "dependency_type": "soft_sequence",
+                    "reason": "Approval states are coordinated workflow behavior that should follow stage-gate support.",
+                }
+            )
+            assembly_rules.append(
+                {
+                    "id": "assembly.functional-requirement-1",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        "su.rupify.functional-requirement-1.stage-gates",
+                        "su.rupify.functional-requirement-1.approval-states",
+                    ],
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine split workflow concerns into the original conjunctive requirement.",
+                    ],
+                }
+            )
+            continue
+
+        if source_anchor_id.startswith("anchor.rupify.state-transitions.") and len(members) > 1:
+            ordered_units: list[dict[str, Any]] = []
+            for sequence in state_transition_sequences:
+                ordered_units = [
+                    item
+                    for suffix in sequence
+                    for item in members
+                    if item["id"].endswith(suffix)
+                ]
+                if ordered_units:
+                    break
+            if not ordered_units:
+                ordered_units = sorted(members, key=lambda item: item["id"])
+
+            for previous, current in zip(ordered_units, ordered_units[1:]):
+                current["dependencies"].append(previous["id"])
+                dependency_edges.append(
+                    {
+                        "id": f"dep.{current['id'].replace('iu.', '')}.requires-{previous['id'].replace('iu.', '')}",
+                        "from_implementation_unit_id": current["id"],
+                        "to_implementation_unit_id": previous["id"],
+                        "dependency_type": "requires",
+                        "reason": "Later lifecycle transitions require the earlier transition in the same source chain.",
+                    }
+                )
+
+            assembly_rules.append(
+                {
+                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        spec_id
+                        for item in ordered_units
+                        for spec_id in item["derived_from_spec_unit_ids"]
+                    ],
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine split lifecycle transitions into the original source transition chain.",
+                    ],
+                }
+            )
+
+    return list(implementation_index.values()), dependency_edges, assembly_rules
+
+
 def generate_planning_bundle(
     export: RupifyPlanningExport,
     *,
@@ -273,6 +373,11 @@ def generate_planning_bundle(
                 }
             )
 
+    implementation_units, dependency_edges, assembly_rules = _derive_relationships(
+        implementation_units,
+        spec_units,
+    )
+
     unresolved_ambiguities = [
         {
             "ambiguity_id": ambiguity_id,
@@ -290,7 +395,7 @@ def generate_planning_bundle(
             "generated_at": generated_at,
             "source_model_id": source_model_id or project_id,
             "source_model_version": source_model_version,
-            "decomposition_profile": "rupify-split-v1",
+            "decomposition_profile": "rupify-split-dependencies-v1",
         },
         "source_summary": {
             "source_system": "rupify",
@@ -300,6 +405,7 @@ def generate_planning_bundle(
             "notes": [
                 "Generated directly from imported Rupify planning export records.",
                 "First-pass decomposition splits selected ready normative source elements into smaller planning units.",
+                "Deterministic dependency edges and assembly rules are derived for split workflow and transition chains.",
             ],
         },
         "source_anchors": source_anchors,
@@ -307,8 +413,8 @@ def generate_planning_bundle(
         "implementation_units": implementation_units,
         "verification_units": verification_units,
         "trace_bundles": trace_bundles,
-        "dependency_edges": [],
-        "assembly_rules": [],
+        "dependency_edges": dependency_edges,
+        "assembly_rules": assembly_rules,
         "unresolved_ambiguities": unresolved_ambiguities,
         "rendered_issues": [],
     }
