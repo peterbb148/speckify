@@ -1,0 +1,912 @@
+[
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-1.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 1: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-1"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-1"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-1"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-2.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: Acceptance Constraint 2: Acceptance criteria may be too short to guide implementation: SSO",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-2"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-2"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: SSO"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-2.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 2: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-2"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-2"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-3.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 3: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-3"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-3"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-3"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-4.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: Acceptance Constraint 4: Acceptance criteria may be too short to guide implementation: audit trail",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-4"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-4"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-4"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: audit trail"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-4.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 4: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-4"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-4"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-4"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-5.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: Acceptance Constraint 5: Acceptance criteria may be too short to guide implementation: search",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-5"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-5"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-5"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: search"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-5.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 5: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-5"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-5"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-5"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-6.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: Acceptance Constraint 6: Acceptance criteria may be too short to guide implementation: filtering",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-6"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-6"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-6"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: filtering"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-6.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 6: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-6"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-6"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-6"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-7.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 7: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-7"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-7"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-7"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-requirement-8.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Acceptance Constraint 8: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-requirement-8"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-requirement-8"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-requirement-8"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-success-1.abstract-success-criterion",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "abstract_success_criterion",
+    "summary": "Implement constraint: Success Criterion 1: Success-criterion output may still be too abstract for direct implementation planning.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-success-1"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-success-1"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-success-1"
+    ],
+    "evidence": [
+      "Success-criterion output may still be too abstract for direct implementation planning."
+    ],
+    "recommended_action": [
+      "Refine the upstream success criterion into more concrete normative constraints.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-success-1."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.acceptance-constraint-success-1.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: Success Criterion 1: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.acceptance-constraint-success-1"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.acceptance-constraint-success-1"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.acceptance-constraint-success-1"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.acceptance-constraints.acceptance-constraint-success-1."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-1.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-1: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-1",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-1"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-1"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-1"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-1"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-1."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-1.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-1: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-1"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-1"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-1"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-1."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-2.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-2: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-2",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-2"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-2"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-2"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-2."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-2.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: non_functional-requirement-2: Acceptance criteria may be too short to guide implementation: SSO",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-2"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-2"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: SSO"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-2."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-2.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-2: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-2"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-2"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-2"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-2."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-3.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-3: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-3",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-3"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-3"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-3"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-3"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-3."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-3.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-3: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-3"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-3"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-3"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-3."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-4.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-4: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-4",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-4"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-4"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-4"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-4"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-4."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-4.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: non_functional-requirement-4: Acceptance criteria may be too short to guide implementation: audit trail",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-4"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-4"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-4"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: audit trail"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-4."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-4.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-4: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-4"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-4"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-4"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-4."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-5.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-5: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-5",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-5"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-5"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-5"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-5"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-5."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-5.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: non_functional-requirement-5: Acceptance criteria may be too short to guide implementation: search",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-5"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-5"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-5"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: search"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-5."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-5.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-5: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-5"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-5"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-5"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-5."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-6.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-6: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-6",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-6"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-6"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-6"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-6"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-6."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-6.very-short-acceptance",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "very_short_acceptance",
+    "summary": "Implement constraint: non_functional-requirement-6: Acceptance criteria may be too short to guide implementation: filtering",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-6"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-6"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-6"
+    ],
+    "evidence": [
+      "Acceptance criteria may be too short to guide implementation: filtering"
+    ],
+    "recommended_action": [
+      "Clarify the acceptance constraint upstream with concrete behavioral detail.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-6."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-6.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-6: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-6"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-6"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-6"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-6."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-7.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-7: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-7",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-7"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-7"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-7"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-7"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-7."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-7.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-7: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-7"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-7"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-7"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-7."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-8.generic-title",
+    "impact_scope": "planning_only",
+    "change_class": "verification_refinement",
+    "warning_kind": "generic_title",
+    "summary": "Implement constraint: non_functional-requirement-8: Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-8",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-8"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-8"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-8"
+    ],
+    "evidence": [
+      "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-8"
+    ],
+    "recommended_action": [
+      "Refine downstream rendering and naming for source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-8."
+    ],
+    "status": "proposed"
+  },
+  {
+    "id": "change.iu.rupify.non-functional-requirement-8.weak-verification-distinction",
+    "impact_scope": "upstream_affecting",
+    "change_class": "spec_clarification",
+    "warning_kind": "weak_verification_distinction",
+    "summary": "Implement constraint: non_functional-requirement-8: Observable and expected outcome are effectively identical.",
+    "affected_implementation_unit_ids": [
+      "iu.rupify.non-functional-requirement-8"
+    ],
+    "affected_verification_unit_ids": [
+      "vu.rupify.non-functional-requirement-8"
+    ],
+    "source_anchor_ids": [
+      "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+    ],
+    "trace_bundle_ids": [
+      "tb.rupify.non-functional-requirement-8"
+    ],
+    "evidence": [
+      "Observable and expected outcome are effectively identical."
+    ],
+    "recommended_action": [
+      "Clarify the upstream constraint or invariant so verification intent is independently testable.",
+      "Preserve the trace link to source anchors: anchor.rupify.non-functional-requirements.non-functional-requirement-8."
+    ],
+    "status": "proposed"
+  }
+]

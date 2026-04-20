@@ -9,6 +9,7 @@ from typing import Any
 
 from .bundle_generation import generate_planning_bundle_file
 from .delivery_export import write_github_delivery_artifacts
+from .round_trip_feedback import write_round_trip_feedback_artifacts
 from .rendering import render_specification_markdown
 from .rupify_import import RupifyPlanningExport, import_rupify_export, import_rupify_export_file
 
@@ -242,10 +243,12 @@ def write_demo_outputs(source_export: str | Path, demo_dir: str | Path) -> dict[
     input_dir = demo_root / "input"
     output_dir = demo_root / "output"
     github_delivery_dir = output_dir / "github-delivery"
+    rupify_feedback_dir = output_dir / "rupify-feedback"
     rendered_issues_dir = output_dir / "rendered-issues"
     input_dir.mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True, exist_ok=True)
     github_delivery_dir.mkdir(parents=True, exist_ok=True)
+    rupify_feedback_dir.mkdir(parents=True, exist_ok=True)
     rendered_issues_dir.mkdir(parents=True, exist_ok=True)
     for existing_issue in rendered_issues_dir.glob("*.md"):
         existing_issue.unlink()
@@ -265,6 +268,7 @@ def write_demo_outputs(source_export: str | Path, demo_dir: str | Path) -> dict[
         render_specification_markdown(bundle)
     )
     write_github_delivery_artifacts(bundle, github_delivery_dir)
+    write_round_trip_feedback_artifacts(bundle, rupify_feedback_dir)
     for issue in bundle["rendered_issues"]:
         issue_path = rendered_issues_dir / f"{issue['implementation_unit_id']}.md"
         issue_path.write_text(issue["issue_body"])
