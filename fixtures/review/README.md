@@ -24,5 +24,5 @@ Current review set:
 - `quality-review-notes.md`: current review checklist and expected qualities
 - `quality-review.json`: machine-readable warning report for current planning-quality gaps
 - `quality-review.md`: Markdown projection of the current warning report
-- `loyalty-platform-summary.json`: compact review summary for the second real-world demo,
-  showing the clean-but-empty bundle case
+- `loyalty-platform-v2-summary.json`: compact review summary for the second real-world demo,
+  showing the richer non-CMDB V2 bundle case

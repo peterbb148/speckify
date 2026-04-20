@@ -108,7 +108,7 @@ uv run python -m unittest discover
 ## Demos
 
 - [IT systems inventory V2 demo](demo/it-systems-inventory-v2/README.md)
-- [Loyalty platform demo](demo/loyalty-platform/README.md)
+- [Loyalty platform V2 demo](demo/loyalty-platform-v2/README.md)
 
 The demo output now includes a `github-delivery/` export surface for issue-ready batch
 delivery workflows in addition to the planning bundle, rendered issues, and consolidated

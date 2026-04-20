@@ -1,0 +1,50 @@
+{
+  "bundle_id": "bundle.speckify-planning-export",
+  "decomposition_profile": "rupify-split-dependencies-v1",
+  "counts": {
+    "source_anchors": 62,
+    "spec_units": 66,
+    "implementation_units": 66,
+    "verification_units": 66,
+    "trace_bundles": 66,
+    "dependency_edges": 4,
+    "assembly_rules": 5,
+    "rendered_issues": 66
+  },
+  "sample_titles": [
+    "Implement constraint: Acceptance Constraint 1",
+    "Implement constraint: Acceptance Constraint 2",
+    "Implement constraint: Acceptance Constraint 3",
+    "Implement constraint: Acceptance Constraint 4",
+    "Implement constraint: Acceptance Constraint 5",
+    "Implement constraint: Acceptance Constraint 6",
+    "Implement constraint: Acceptance Constraint 7",
+    "Implement constraint: Success Criterion 1"
+  ],
+  "quality_signals": {
+    "use_case_units": [
+      "iu.rupify.redeem-reward-extension-1",
+      "iu.rupify.redeem-reward-extension-2",
+      "iu.rupify.redeem-reward-extension-3",
+      "iu.rupify.redeem-reward-step-1",
+      "iu.rupify.redeem-reward-step-2",
+      "iu.rupify.redeem-reward-step-3"
+    ],
+    "transition_dependencies": [
+      {
+        "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.state-transition-1.requested-to-validated",
+        "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
+        "to_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
+        "dependency_type": "requires",
+        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+      },
+      {
+        "id": "dep.rupify.state-transition-2.validated-to-fulfilled.requires-rupify.state-transition-2.requested-to-validated",
+        "from_implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
+        "to_implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
+        "dependency_type": "requires",
+        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+      }
+    ]
+  }
+}

@@ -305,9 +305,23 @@ def _derive_relationships(
 
     for source_anchor_id, members in source_groups.items():
         member_ids = sorted(item["id"] for item in members)
-        if source_anchor_id == "anchor.rupify.functional-requirements.functional-requirement-1":
+        member_id_set = set(member_ids)
+        member_spec_ids = [
+            spec_id
+            for item in sorted(members, key=lambda item: item["id"])
+            for spec_id in item["derived_from_spec_unit_ids"]
+        ]
+
+        if {
+            "iu.rupify.functional-requirement-1.approval-states",
+            "iu.rupify.functional-requirement-1.stage-gates",
+        }.issubset(member_id_set):
             from_id = "iu.rupify.functional-requirement-1.approval-states"
             to_id = "iu.rupify.functional-requirement-1.stage-gates"
+            ordered_spec_ids = [
+                "su.rupify.functional-requirement-1.stage-gates",
+                "su.rupify.functional-requirement-1.approval-states",
+            ]
             implementation_index[from_id]["dependencies"].append(to_id)
             dependency_edges.append(
                 {
@@ -322,10 +336,7 @@ def _derive_relationships(
                 {
                     "id": "assembly.functional-requirement-1",
                     "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": [
-                        "su.rupify.functional-requirement-1.stage-gates",
-                        "su.rupify.functional-requirement-1.approval-states",
-                    ],
+                    "member_spec_unit_ids": ordered_spec_ids,
                     "rule_type": "ordered_sequence",
                     "notes": [
                         "Recombine split workflow concerns into the original conjunctive requirement.",
@@ -334,9 +345,16 @@ def _derive_relationships(
             )
             continue
 
-        if source_anchor_id == "anchor.rupify.functional-requirements.functional-requirement-2":
+        if {
+            "iu.rupify.functional-requirement-2.export-reporting-data",
+            "iu.rupify.functional-requirement-2.maintain-system-inventory",
+        }.issubset(member_id_set):
             from_id = "iu.rupify.functional-requirement-2.export-reporting-data"
             to_id = "iu.rupify.functional-requirement-2.maintain-system-inventory"
+            ordered_spec_ids = [
+                "su.rupify.functional-requirement-2.maintain-system-inventory",
+                "su.rupify.functional-requirement-2.export-reporting-data",
+            ]
             implementation_index[from_id]["dependencies"].append(to_id)
             dependency_edges.append(
                 {
@@ -351,10 +369,7 @@ def _derive_relationships(
                 {
                     "id": "assembly.functional-requirement-2",
                     "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": [
-                        "su.rupify.functional-requirement-2.maintain-system-inventory",
-                        "su.rupify.functional-requirement-2.export-reporting-data",
-                    ],
+                    "member_spec_unit_ids": ordered_spec_ids,
                     "rule_type": "ordered_sequence",
                     "notes": [
                         "Recombine system-of-record maintenance and reporting export into the original broad requirement.",
@@ -371,11 +386,7 @@ def _derive_relationships(
                 {
                     "id": f"assembly.{source_anchor_id.split('.')[-1]}",
                     "source_anchor_ids": [source_anchor_id],
-                    "member_spec_unit_ids": [
-                        spec_id
-                        for item in sorted(members, key=lambda item: item["id"])
-                        for spec_id in item["derived_from_spec_unit_ids"]
-                    ],
+                    "member_spec_unit_ids": member_spec_ids,
                     "rule_type": "constraint_overlay",
                     "notes": [
                         "Recombine split invariant details back into the original invariant statement.",
