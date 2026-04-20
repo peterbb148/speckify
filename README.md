@@ -85,6 +85,11 @@ definitions.
 - [Example Rupify export](fixtures/rupify-export/authentication-basic.json)
 - [Expected Speckify bundle](fixtures/speckify-bundle/authentication-basic.bundle.json)
 
+## Rules
+
+- [Rule catalog overview](rules/README.md)
+- [Machine-readable decomposition rules](rules/decomposition-rules.json)
+
 ## Validation
 
 Install dependencies with `uv sync`, then validate the example bundle with:
