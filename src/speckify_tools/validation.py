@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .bundle_generation import generate_planning_bundle_file
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
@@ -326,3 +327,24 @@ def validate_bundle_file(bundle_path: str | Path, schema_dir: str | Path) -> Non
         BundleValidationError: If validation fails.
     """
     validate_bundle(load_json(bundle_path), schema_dir)
+
+
+def validate_generated_bundle_file(
+    source_export_path: str | Path,
+    schema_dir: str | Path,
+) -> dict[str, Any]:
+    """Generate and validate a planning bundle from a Rupify export.
+
+    Args:
+        source_export_path: Path to the Rupify planning export JSON file.
+        schema_dir: Directory containing JSON Schema files.
+
+    Returns:
+        The generated and validated planning bundle.
+
+    Raises:
+        BundleValidationError: If the generated bundle fails validation.
+    """
+    bundle = generate_planning_bundle_file(source_export_path)
+    validate_bundle(bundle, schema_dir)
+    return bundle
