@@ -30,3 +30,4 @@
 - [DONE] 2026-04-20 Expand semantic decomposition across broader requirement and domain families
 - [DONE] 2026-04-20 Add semantic quality heuristics and review gates for broad requirements
 - [DONE] 2026-04-20 Export generated planning artifacts into GitHub delivery outputs
+- [DONE] 2026-04-20 Generate round-trip feedback artifacts for upstream Rupify updates

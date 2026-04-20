@@ -112,3 +112,6 @@ uv run python -m unittest discover
 The demo output now includes a `github-delivery/` export surface for issue-ready batch
 delivery workflows in addition to the planning bundle, rendered issues, and consolidated
 specification.
+
+It also includes a `rupify-feedback/` surface for structured round-trip change records
+and upstream feedback proposals when planning reveals source-spec clarification needs.
