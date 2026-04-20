@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for acceptance constraint 8.
+Deliver behavior that satisfies the constraint 'availability >=99%'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)
 
 ## Scope
 

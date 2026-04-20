@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for acceptance constraint 3.
+Deliver behavior that satisfies the constraint 'role-based access'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)
 
 ## Scope
 

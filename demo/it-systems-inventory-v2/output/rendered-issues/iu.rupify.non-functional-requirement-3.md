@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for non_functional-requirement-3.
+Deliver behavior that satisfies the constraint 'role-based access'.
 
 ## Source Lineage
 
-- `anchor.rupify.non-functional-requirements.non-functional-requirement-3`
+- `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)
 
 ## Scope
 

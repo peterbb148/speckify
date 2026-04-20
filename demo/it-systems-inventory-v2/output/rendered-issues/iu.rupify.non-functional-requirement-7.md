@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for non_functional-requirement-7.
+Deliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.
 
 ## Source Lineage
 
-- `anchor.rupify.non-functional-requirements.non-functional-requirement-7`
+- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)
 
 ## Scope
 

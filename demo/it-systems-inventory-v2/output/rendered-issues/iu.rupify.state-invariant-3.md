@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for rule 3.
+Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.
 
 ## Source Lineage
 
-- `anchor.rupify.state-invariants.state-invariant-3`
+- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)
 
 ## Scope
 

@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for functional-requirement-2.
+I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
 
 ## Source Lineage
 
-- `anchor.rupify.functional-requirements.functional-requirement-2`
+- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 
 ## Scope
 

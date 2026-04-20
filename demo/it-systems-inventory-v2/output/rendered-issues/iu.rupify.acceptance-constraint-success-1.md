@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for success criterion 1.
+Deliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)
 
 ## Scope
 

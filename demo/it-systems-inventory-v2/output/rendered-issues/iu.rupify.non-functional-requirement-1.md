@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for non_functional-requirement-1.
+Deliver behavior that satisfies the constraint 'UI must be web based'.
 
 ## Source Lineage
 
-- `anchor.rupify.non-functional-requirements.non-functional-requirement-1`
+- `anchor.rupify.non-functional-requirements.non-functional-requirement-1` (requirement: `non_functional-requirement-1`)
 
 ## Scope
 

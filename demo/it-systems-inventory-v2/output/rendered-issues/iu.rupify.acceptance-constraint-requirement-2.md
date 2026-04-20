@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for acceptance constraint 2.
+Deliver behavior that satisfies the constraint 'SSO'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)
 
 ## Scope
 

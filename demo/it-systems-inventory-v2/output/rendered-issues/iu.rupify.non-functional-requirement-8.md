@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for non_functional-requirement-8.
+Deliver behavior that satisfies the constraint 'availability >=99%'.
 
 ## Source Lineage
 
-- `anchor.rupify.non-functional-requirements.non-functional-requirement-8`
+- `anchor.rupify.non-functional-requirements.non-functional-requirement-8` (requirement: `non_functional-requirement-8`)
 
 ## Scope
 

@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for acceptance constraint 1.
+Deliver behavior that satisfies the constraint 'UI must be web based'.
 
 ## Source Lineage
 
-- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1`
+- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)
 
 ## Scope
 

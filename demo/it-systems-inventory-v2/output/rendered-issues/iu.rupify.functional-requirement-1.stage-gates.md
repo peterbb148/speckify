@@ -1,10 +1,10 @@
 ## Summary
 
-Implement the planned behavior for support stage gates.
+Support business process stage gates.
 
 ## Source Lineage
 
-- `anchor.rupify.functional-requirements.functional-requirement-1`
+- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 
 ## Scope
 
