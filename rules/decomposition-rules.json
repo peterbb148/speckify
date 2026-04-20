@@ -1,0 +1,193 @@
+{
+  "catalog_version": 1,
+  "title": "Speckify decomposition rule catalog",
+  "mapping_patterns": [
+    {
+      "id": "pattern.one_source_to_one_planning_unit",
+      "name": "One source to one planning unit",
+      "description": "Use when one source element is already atomic and implementation-sized.",
+      "source_cardinality": "one",
+      "target_cardinality": "one"
+    },
+    {
+      "id": "pattern.one_source_to_many_planning_units",
+      "name": "One source to many planning units",
+      "description": "Use when one source element contains several independently implementable obligations.",
+      "source_cardinality": "one",
+      "target_cardinality": "many"
+    },
+    {
+      "id": "pattern.many_sources_to_one_planning_unit",
+      "name": "Many sources to one planning unit",
+      "description": "Use when several source elements together describe one inseparable obligation.",
+      "source_cardinality": "many",
+      "target_cardinality": "one"
+    }
+  ],
+  "blocking_conditions": [
+    {
+      "id": "blocking.missing_stable_identifier",
+      "description": "The source element has no stable identifier."
+    },
+    {
+      "id": "blocking.no_concrete_obligation",
+      "description": "The source fragment cannot be restated as a concrete obligation."
+    },
+    {
+      "id": "blocking.blocking_ambiguity",
+      "description": "An ambiguity affecting the source material is marked as blocking for downstream work."
+    },
+    {
+      "id": "blocking.explicit_readiness_block",
+      "description": "The source element readiness is explicitly blocked."
+    }
+  ],
+  "partial_conditions": [
+    {
+      "id": "partial.missing_supporting_view",
+      "description": "Primary source material is usable, but a supporting view is incomplete."
+    },
+    {
+      "id": "partial.incomplete_constraints",
+      "description": "Core behavior is clear, but constraints are underspecified."
+    },
+    {
+      "id": "partial.incomplete_trace_links",
+      "description": "Some desired cross-view trace links are missing even though decomposition can still proceed."
+    }
+  ],
+  "implementation_slicing": {
+    "split_when": [
+      "The source obligation crosses different technical boundaries.",
+      "The work cannot be completed credibly in one focused pull request.",
+      "Different parts of the obligation can be verified independently.",
+      "The obligation mixes behavior and infrastructure concerns that should be reviewed separately."
+    ],
+    "keep_together_when": [
+      "Splitting would destroy semantic coherence.",
+      "The same acceptance proof applies to the whole obligation.",
+      "The same invariant or guard governs the full behavior.",
+      "Separate implementation would create artificial sequencing or trace drift."
+    ],
+    "merge_when": [
+      "Multiple spec units are inseparable for implementation.",
+      "Several source elements describe one tightly coupled behavior.",
+      "Separate issues would create noise without adding verification value."
+    ]
+  },
+  "views": [
+    {
+      "id": "view.requirements",
+      "source_view": "requirements",
+      "spec_unit_strategy": [
+        "Split composite requirements into separate spec units when they contain multiple independent obligations.",
+        "Keep cross-cutting non-functional constraints as standalone spec units unless inseparable from one specific behavior.",
+        "Do not derive implementation slices from vague or aspirational language."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.one_source_to_many_planning_units"
+    },
+    {
+      "id": "view.use_case",
+      "source_view": "use_case",
+      "spec_unit_strategy": [
+        "Derive a candidate spec unit from each main-flow step when the step expresses a concrete system obligation.",
+        "Derive separate candidate spec units for alternate and exception flows when they create independently meaningful behavior.",
+        "Treat preconditions and postconditions as constraints unless they themselves define an implementation slice.",
+        "Split by actor-to-system responsibility boundary when a step mixes user action and system action."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.one_source_to_one_planning_unit"
+    },
+    {
+      "id": "view.scenario",
+      "source_view": "scenario",
+      "spec_unit_strategy": [
+        "Derive spec units from scenario steps only when the scenario adds operational specificity beyond the use case.",
+        "Do not duplicate a use case step and a scenario step into separate units when the scenario restates the same obligation.",
+        "Use scenarios to enrich or refine, not to create parallel drift."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.one_source_to_one_planning_unit"
+    },
+    {
+      "id": "view.domain",
+      "source_view": "domain",
+      "spec_unit_strategy": [
+        "Derive spec units from entity lifecycle obligations.",
+        "Derive separate spec units for domain invariants when they constrain behavior independently.",
+        "Derive relationship-maintenance obligations only when they imply implementation behavior."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.many_sources_to_one_planning_unit"
+    },
+    {
+      "id": "view.interaction",
+      "source_view": "interaction",
+      "spec_unit_strategy": [
+        "Derive spec units from observable message obligations.",
+        "Group tightly coupled request-response exchanges into one spec unit when splitting would destroy the interaction contract.",
+        "Split at integration boundary crossings when separate implementation slices are likely."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.one_source_to_many_planning_units"
+    },
+    {
+      "id": "view.state",
+      "source_view": "state",
+      "spec_unit_strategy": [
+        "Derive spec units from transitions that represent distinct business behavior.",
+        "Derive separate spec units for guard conditions when they impose independent acceptance constraints.",
+        "Treat invalid and terminal transitions as explicit obligations when they affect observable behavior."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.many_sources_to_one_planning_unit"
+    },
+    {
+      "id": "view.constraint",
+      "source_view": "constraint",
+      "spec_unit_strategy": [
+        "Derive standalone spec units for constraints that apply across many behaviors.",
+        "Embed a constraint into an implementation unit only when it is local to that unit.",
+        "Preserve source linkage to the originating invariant, precondition, postcondition, or non-functional constraint."
+      ],
+      "blocking_condition_ids": [
+        "blocking.missing_stable_identifier",
+        "blocking.no_concrete_obligation",
+        "blocking.blocking_ambiguity",
+        "blocking.explicit_readiness_block"
+      ],
+      "default_mapping_pattern_id": "pattern.many_sources_to_one_planning_unit"
+    }
+  ]
+}
