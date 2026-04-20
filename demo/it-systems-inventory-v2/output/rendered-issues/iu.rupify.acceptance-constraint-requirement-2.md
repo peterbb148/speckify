@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-2.
+Implement the planned behavior for acceptance constraint 2.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-2.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-2.
+- Intent: Confirm the implementation satisfies acceptance constraint 2.
 - Observable: SSO
 - Expected outcome: SSO
 

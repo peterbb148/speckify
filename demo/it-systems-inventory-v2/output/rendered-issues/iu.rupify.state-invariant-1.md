@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for state-invariant-1.
+Implement the planned behavior for rule 1.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for state-invariant-1.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies state-invariant-1.
+- Intent: Confirm the implementation satisfies rule 1.
 - Observable: A System must have a business owner before it becomes Active.
 - Expected outcome: A System must have a business owner before it becomes Active.
 

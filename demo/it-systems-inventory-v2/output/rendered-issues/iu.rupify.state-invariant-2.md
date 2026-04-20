@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for state-invariant-2.
+Implement the planned behavior for rule 2.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for state-invariant-2.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies state-invariant-2.
+- Intent: Confirm the implementation satisfies rule 2.
 - Observable: A System lifecycle state change requires approval for deprecation.
 - Expected outcome: A System lifecycle state change requires approval for deprecation.
 

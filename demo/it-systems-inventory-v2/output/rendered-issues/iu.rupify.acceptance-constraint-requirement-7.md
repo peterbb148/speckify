@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-7.
+Implement the planned behavior for acceptance constraint 7.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-7.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-7.
+- Intent: Confirm the implementation satisfies acceptance constraint 7.
 - Observable: performance (regular >1s for web page rendering)
 - Expected outcome: performance (regular >1s for web page rendering)
 

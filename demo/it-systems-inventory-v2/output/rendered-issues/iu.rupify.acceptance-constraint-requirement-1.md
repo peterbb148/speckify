@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-1.
+Implement the planned behavior for acceptance constraint 1.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-1.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-1.
+- Intent: Confirm the implementation satisfies acceptance constraint 1.
 - Observable: UI must be web based
 - Expected outcome: UI must be web based
 

@@ -6,7 +6,7 @@
     "generated_at": "2026-04-20T14:00:00Z",
     "source_model_id": "rupify-model",
     "source_model_version": 1,
-    "decomposition_profile": "rupify-one-to-one-v1"
+    "decomposition_profile": "rupify-split-v1"
   },
   "source_summary": {
     "source_system": "rupify",
@@ -15,7 +15,7 @@
     "export_version": 1,
     "notes": [
       "Generated directly from imported Rupify planning export records.",
-      "First-pass mapping uses one ready normative source element to one planning unit."
+      "First-pass decomposition splits selected ready normative source elements into smaller planning units."
     ]
   },
   "source_anchors": [
@@ -567,9 +567,23 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-1",
-      "title": "functional-requirement-1",
-      "summary": "Yes business processes like stage gates and approval states must be supported",
+      "id": "su.rupify.functional-requirement-1.stage-gates",
+      "title": "Support stage gates",
+      "summary": "Support business process stage gates.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-1.approval-states",
+      "title": "Support approval states",
+      "summary": "Support business process approval states.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
@@ -749,9 +763,9 @@
       ]
     },
     {
-      "id": "su.rupify.state-transition-1",
-      "title": "state-transition-1",
-      "summary": "System: Proposed -> Active -> Retiring -> Retired",
+      "id": "su.rupify.state-transition-1.proposed-to-active",
+      "title": "Proposed to Active",
+      "summary": "Transition the system lifecycle from Proposed to Active.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
       ],
@@ -763,9 +777,37 @@
       ]
     },
     {
-      "id": "su.rupify.state-transition-2",
-      "title": "state-transition-2",
-      "summary": "System: Proposed -> Active -> Retiring -> Retired",
+      "id": "su.rupify.state-transition-1.active-to-retiring",
+      "title": "Active to Retiring",
+      "summary": "Transition the system lifecycle from Active to Retiring.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-1."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-1.retiring-to-retired",
+      "title": "Retiring to Retired",
+      "summary": "Transition the system lifecycle from Retiring to Retired.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-1."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-2.proposed-to-active",
+      "title": "Proposed to Active",
+      "summary": "Transition the system lifecycle from Proposed to Active.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-2"
       ],
@@ -777,9 +819,37 @@
       ]
     },
     {
-      "id": "su.rupify.state-transition-3",
-      "title": "state-transition-3",
-      "summary": "System: Proposed -> Active -> Retiring -> Retired",
+      "id": "su.rupify.state-transition-2.active-to-retiring",
+      "title": "Active to Retiring",
+      "summary": "Transition the system lifecycle from Active to Retiring.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-2."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-2.retiring-to-retired",
+      "title": "Retiring to Retired",
+      "summary": "Transition the system lifecycle from Retiring to Retired.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-2."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-3.proposed-to-active",
+      "title": "Proposed to Active",
+      "summary": "Transition the system lifecycle from Proposed to Active.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-3"
       ],
@@ -791,9 +861,37 @@
       ]
     },
     {
-      "id": "su.rupify.state-transition-4",
-      "title": "state-transition-4",
-      "summary": "System: Active -> Deprecated",
+      "id": "su.rupify.state-transition-3.active-to-retiring",
+      "title": "Active to Retiring",
+      "summary": "Transition the system lifecycle from Active to Retiring.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-3."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-3.retiring-to-retired",
+      "title": "Retiring to Retired",
+      "summary": "Transition the system lifecycle from Retiring to Retired.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "obligation_kind": "state_transition",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify state_transitions element state-transition-3."
+      ]
+    },
+    {
+      "id": "su.rupify.state-transition-4.active-to-deprecated",
+      "title": "Active to Deprecated",
+      "summary": "Transition the system lifecycle from Active to Deprecated.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-4"
       ],
@@ -809,7 +907,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-1",
       "title": "Implement Acceptance Constraint 1",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-1.",
+      "summary": "Implement the planned behavior for acceptance constraint 1.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-1"
       ],
@@ -840,7 +938,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-2",
       "title": "Implement Acceptance Constraint 2",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-2.",
+      "summary": "Implement the planned behavior for acceptance constraint 2.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-2"
       ],
@@ -871,7 +969,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-3",
       "title": "Implement Acceptance Constraint 3",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-3.",
+      "summary": "Implement the planned behavior for acceptance constraint 3.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-3"
       ],
@@ -902,7 +1000,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-4",
       "title": "Implement Acceptance Constraint 4",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-4.",
+      "summary": "Implement the planned behavior for acceptance constraint 4.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-4"
       ],
@@ -933,7 +1031,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-5",
       "title": "Implement Acceptance Constraint 5",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-5.",
+      "summary": "Implement the planned behavior for acceptance constraint 5.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-5"
       ],
@@ -964,7 +1062,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-6",
       "title": "Implement Acceptance Constraint 6",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-6.",
+      "summary": "Implement the planned behavior for acceptance constraint 6.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-6"
       ],
@@ -995,7 +1093,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-7",
       "title": "Implement Acceptance Constraint 7",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-7.",
+      "summary": "Implement the planned behavior for acceptance constraint 7.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-7"
       ],
@@ -1026,7 +1124,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-requirement-8",
       "title": "Implement Acceptance Constraint 8",
-      "summary": "Implement the planned behavior for acceptance-constraint-requirement-8.",
+      "summary": "Implement the planned behavior for acceptance constraint 8.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-8"
       ],
@@ -1057,7 +1155,7 @@
     {
       "id": "iu.rupify.acceptance-constraint-success-1",
       "title": "Implement Success Criterion 1",
-      "summary": "Implement the planned behavior for acceptance-constraint-success-1.",
+      "summary": "Implement the planned behavior for success criterion 1.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-success-1"
       ],
@@ -1088,7 +1186,7 @@
     {
       "id": "iu.rupify.domain-invariant-1",
       "title": "Implement Rule 1",
-      "summary": "Implement the planned behavior for domain-invariant-1.",
+      "summary": "Implement the planned behavior for rule 1.",
       "derived_from_spec_unit_ids": [
         "su.rupify.domain-invariant-1"
       ],
@@ -1119,7 +1217,7 @@
     {
       "id": "iu.rupify.domain-invariant-2",
       "title": "Implement Rule 2",
-      "summary": "Implement the planned behavior for domain-invariant-2.",
+      "summary": "Implement the planned behavior for rule 2.",
       "derived_from_spec_unit_ids": [
         "su.rupify.domain-invariant-2"
       ],
@@ -1150,7 +1248,7 @@
     {
       "id": "iu.rupify.domain-invariant-3",
       "title": "Implement Rule 3",
-      "summary": "Implement the planned behavior for domain-invariant-3.",
+      "summary": "Implement the planned behavior for rule 3.",
       "derived_from_spec_unit_ids": [
         "su.rupify.domain-invariant-3"
       ],
@@ -1179,26 +1277,57 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-1",
-      "title": "Implement functional-requirement-1",
-      "summary": "Implement the planned behavior for functional-requirement-1.",
+      "id": "iu.rupify.functional-requirement-1.stage-gates",
+      "title": "Implement Support stage gates",
+      "summary": "Implement the planned behavior for support stage gates.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.stage-gates"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Support business process stage gates."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Business process stage gates are supported."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.stage-gates"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-1.approval-states",
+      "title": "Implement Support approval states",
+      "summary": "Implement the planned behavior for support approval states.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-1.approval-states"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Support business process approval states."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Business process approval states are supported."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.approval-states"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-1."
@@ -1491,7 +1620,7 @@
     {
       "id": "iu.rupify.state-invariant-1",
       "title": "Implement Rule 1",
-      "summary": "Implement the planned behavior for state-invariant-1.",
+      "summary": "Implement the planned behavior for rule 1.",
       "derived_from_spec_unit_ids": [
         "su.rupify.state-invariant-1"
       ],
@@ -1522,7 +1651,7 @@
     {
       "id": "iu.rupify.state-invariant-2",
       "title": "Implement Rule 2",
-      "summary": "Implement the planned behavior for state-invariant-2.",
+      "summary": "Implement the planned behavior for rule 2.",
       "derived_from_spec_unit_ids": [
         "su.rupify.state-invariant-2"
       ],
@@ -1553,7 +1682,7 @@
     {
       "id": "iu.rupify.state-invariant-3",
       "title": "Implement Rule 3",
-      "summary": "Implement the planned behavior for state-invariant-3.",
+      "summary": "Implement the planned behavior for rule 3.",
       "derived_from_spec_unit_ids": [
         "su.rupify.state-invariant-3"
       ],
@@ -1582,26 +1711,26 @@
       ]
     },
     {
-      "id": "iu.rupify.state-transition-1",
-      "title": "Implement state-transition-1",
-      "summary": "Implement the planned behavior for state-transition-1.",
+      "id": "iu.rupify.state-transition-1.proposed-to-active",
+      "title": "Implement Proposed to Active",
+      "summary": "Implement the planned behavior for proposed to active.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.state-transition-1"
+        "su.rupify.state-transition-1.proposed-to-active"
       ],
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "Transition the system lifecycle from Proposed to Active."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-1"
+        "vu.rupify.state-transition-1.proposed-to-active"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element state-transition-1."
@@ -1613,26 +1742,88 @@
       ]
     },
     {
-      "id": "iu.rupify.state-transition-2",
-      "title": "Implement state-transition-2",
-      "summary": "Implement the planned behavior for state-transition-2.",
+      "id": "iu.rupify.state-transition-1.active-to-retiring",
+      "title": "Implement Active to Retiring",
+      "summary": "Implement the planned behavior for active to retiring.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.state-transition-2"
+        "su.rupify.state-transition-1.active-to-retiring"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Transition the system lifecycle from Active to Retiring."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System can move from Active to Retiring."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.active-to-retiring"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-1.retiring-to-retired",
+      "title": "Implement Retiring to Retired",
+      "summary": "Implement the planned behavior for retiring to retired.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Transition the system lifecycle from Retiring to Retired."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System can move from Retiring to Retired."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-2.proposed-to-active",
+      "title": "Implement Proposed to Active",
+      "summary": "Implement the planned behavior for proposed to active.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-2.proposed-to-active"
       ],
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "Transition the system lifecycle from Proposed to Active."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-2"
+        "vu.rupify.state-transition-2.proposed-to-active"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element state-transition-2."
@@ -1644,26 +1835,88 @@
       ]
     },
     {
-      "id": "iu.rupify.state-transition-3",
-      "title": "Implement state-transition-3",
-      "summary": "Implement the planned behavior for state-transition-3.",
+      "id": "iu.rupify.state-transition-2.active-to-retiring",
+      "title": "Implement Active to Retiring",
+      "summary": "Implement the planned behavior for active to retiring.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.state-transition-3"
+        "su.rupify.state-transition-2.active-to-retiring"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Transition the system lifecycle from Active to Retiring."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System can move from Active to Retiring."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.active-to-retiring"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-2.retiring-to-retired",
+      "title": "Implement Retiring to Retired",
+      "summary": "Implement the planned behavior for retiring to retired.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Transition the system lifecycle from Retiring to Retired."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System can move from Retiring to Retired."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-3.proposed-to-active",
+      "title": "Implement Proposed to Active",
+      "summary": "Implement the planned behavior for proposed to active.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-3.proposed-to-active"
       ],
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-3"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "Transition the system lifecycle from Proposed to Active."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-3"
+        "vu.rupify.state-transition-3.proposed-to-active"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element state-transition-3."
@@ -1675,26 +1928,88 @@
       ]
     },
     {
-      "id": "iu.rupify.state-transition-4",
-      "title": "Implement state-transition-4",
-      "summary": "Implement the planned behavior for state-transition-4.",
+      "id": "iu.rupify.state-transition-3.active-to-retiring",
+      "title": "Implement Active to Retiring",
+      "summary": "Implement the planned behavior for active to retiring.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.state-transition-4"
+        "su.rupify.state-transition-3.active-to-retiring"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Transition the system lifecycle from Active to Retiring."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System can move from Active to Retiring."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.active-to-retiring"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-3.retiring-to-retired",
+      "title": "Implement Retiring to Retired",
+      "summary": "Implement the planned behavior for retiring to retired.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Transition the system lifecycle from Retiring to Retired."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System can move from Retiring to Retired."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element state-transition-3."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3.",
+      "labels": [
+        "planning",
+        "state-transitions"
+      ]
+    },
+    {
+      "id": "iu.rupify.state-transition-4.active-to-deprecated",
+      "title": "Implement Active to Deprecated",
+      "summary": "Implement the planned behavior for active to deprecated.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.state-transition-4.active-to-deprecated"
       ],
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-4"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "System: Active -> Deprecated"
+        "Transition the system lifecycle from Active to Deprecated."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "System: Active -> Deprecated"
+        "System can move from Active to Deprecated."
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-4"
+        "vu.rupify.state-transition-4.active-to-deprecated"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element state-transition-4."
@@ -1711,7 +2026,7 @@
       "id": "vu.rupify.acceptance-constraint-requirement-1",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
       "title": "Verify Acceptance Constraint 1",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-1.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 1.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
       ],
@@ -1725,14 +2040,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-1."
+        "Derived from decomposition slice of acceptance-constraint-requirement-1."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-2",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
       "title": "Verify Acceptance Constraint 2",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-2.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 2.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
       ],
@@ -1746,14 +2061,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-2."
+        "Derived from decomposition slice of acceptance-constraint-requirement-2."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-3",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
       "title": "Verify Acceptance Constraint 3",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-3.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 3.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
       ],
@@ -1767,14 +2082,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-3."
+        "Derived from decomposition slice of acceptance-constraint-requirement-3."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-4",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
       "title": "Verify Acceptance Constraint 4",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-4.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 4.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
       ],
@@ -1788,14 +2103,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-4."
+        "Derived from decomposition slice of acceptance-constraint-requirement-4."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-5",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
       "title": "Verify Acceptance Constraint 5",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-5.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 5.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
       ],
@@ -1809,14 +2124,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-5."
+        "Derived from decomposition slice of acceptance-constraint-requirement-5."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-6",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
       "title": "Verify Acceptance Constraint 6",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-6.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 6.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
       ],
@@ -1830,14 +2145,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-6."
+        "Derived from decomposition slice of acceptance-constraint-requirement-6."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-7",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
       "title": "Verify Acceptance Constraint 7",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-7.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 7.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
       ],
@@ -1851,14 +2166,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-7."
+        "Derived from decomposition slice of acceptance-constraint-requirement-7."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-requirement-8",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
       "title": "Verify Acceptance Constraint 8",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-requirement-8.",
+      "verification_intent": "Confirm the implementation satisfies acceptance constraint 8.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
       ],
@@ -1872,14 +2187,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-requirement-8."
+        "Derived from decomposition slice of acceptance-constraint-requirement-8."
       ]
     },
     {
       "id": "vu.rupify.acceptance-constraint-success-1",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
       "title": "Verify Success Criterion 1",
-      "verification_intent": "Confirm the implementation satisfies acceptance-constraint-success-1.",
+      "verification_intent": "Confirm the implementation satisfies success criterion 1.",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
       ],
@@ -1893,14 +2208,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from acceptance-constraint-success-1."
+        "Derived from decomposition slice of acceptance-constraint-success-1."
       ]
     },
     {
       "id": "vu.rupify.domain-invariant-1",
       "implementation_unit_id": "iu.rupify.domain-invariant-1",
       "title": "Verify Rule 1",
-      "verification_intent": "Confirm the implementation satisfies domain-invariant-1.",
+      "verification_intent": "Confirm the implementation satisfies rule 1.",
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-1"
       ],
@@ -1914,14 +2229,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from domain-invariant-1."
+        "Derived from decomposition slice of domain-invariant-1."
       ]
     },
     {
       "id": "vu.rupify.domain-invariant-2",
       "implementation_unit_id": "iu.rupify.domain-invariant-2",
       "title": "Verify Rule 2",
-      "verification_intent": "Confirm the implementation satisfies domain-invariant-2.",
+      "verification_intent": "Confirm the implementation satisfies rule 2.",
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-2"
       ],
@@ -1935,14 +2250,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from domain-invariant-2."
+        "Derived from decomposition slice of domain-invariant-2."
       ]
     },
     {
       "id": "vu.rupify.domain-invariant-3",
       "implementation_unit_id": "iu.rupify.domain-invariant-3",
       "title": "Verify Rule 3",
-      "verification_intent": "Confirm the implementation satisfies domain-invariant-3.",
+      "verification_intent": "Confirm the implementation satisfies rule 3.",
       "source_anchor_ids": [
         "anchor.rupify.domain-invariants.domain-invariant-3"
       ],
@@ -1956,28 +2271,49 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from domain-invariant-3."
+        "Derived from decomposition slice of domain-invariant-3."
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-1",
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "title": "Verify functional-requirement-1",
-      "verification_intent": "Confirm the implementation satisfies functional-requirement-1.",
+      "id": "vu.rupify.functional-requirement-1.stage-gates",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
+      "title": "Verify Support stage gates",
+      "verification_intent": "Confirm the implementation satisfies support stage gates.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "observables": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Business process stage gates are supported."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Business process stage gates are supported."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from functional-requirement-1."
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-1.approval-states",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.approval-states",
+      "title": "Verify Support approval states",
+      "verification_intent": "Confirm the implementation satisfies support approval states.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "observables": [
+        "Business process approval states are supported."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "Business process approval states are supported."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
       ]
     },
     {
@@ -1998,7 +2334,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from functional-requirement-2."
+        "Derived from decomposition slice of functional-requirement-2."
       ]
     },
     {
@@ -2019,7 +2355,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-1."
+        "Derived from decomposition slice of non_functional-requirement-1."
       ]
     },
     {
@@ -2040,7 +2376,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-2."
+        "Derived from decomposition slice of non_functional-requirement-2."
       ]
     },
     {
@@ -2061,7 +2397,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-3."
+        "Derived from decomposition slice of non_functional-requirement-3."
       ]
     },
     {
@@ -2082,7 +2418,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-4."
+        "Derived from decomposition slice of non_functional-requirement-4."
       ]
     },
     {
@@ -2103,7 +2439,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-5."
+        "Derived from decomposition slice of non_functional-requirement-5."
       ]
     },
     {
@@ -2124,7 +2460,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-6."
+        "Derived from decomposition slice of non_functional-requirement-6."
       ]
     },
     {
@@ -2145,7 +2481,7 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-7."
+        "Derived from decomposition slice of non_functional-requirement-7."
       ]
     },
     {
@@ -2166,14 +2502,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from non_functional-requirement-8."
+        "Derived from decomposition slice of non_functional-requirement-8."
       ]
     },
     {
       "id": "vu.rupify.state-invariant-1",
       "implementation_unit_id": "iu.rupify.state-invariant-1",
       "title": "Verify Rule 1",
-      "verification_intent": "Confirm the implementation satisfies state-invariant-1.",
+      "verification_intent": "Confirm the implementation satisfies rule 1.",
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-1"
       ],
@@ -2187,14 +2523,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-invariant-1."
+        "Derived from decomposition slice of state-invariant-1."
       ]
     },
     {
       "id": "vu.rupify.state-invariant-2",
       "implementation_unit_id": "iu.rupify.state-invariant-2",
       "title": "Verify Rule 2",
-      "verification_intent": "Confirm the implementation satisfies state-invariant-2.",
+      "verification_intent": "Confirm the implementation satisfies rule 2.",
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-2"
       ],
@@ -2208,14 +2544,14 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-invariant-2."
+        "Derived from decomposition slice of state-invariant-2."
       ]
     },
     {
       "id": "vu.rupify.state-invariant-3",
       "implementation_unit_id": "iu.rupify.state-invariant-3",
       "title": "Verify Rule 3",
-      "verification_intent": "Confirm the implementation satisfies state-invariant-3.",
+      "verification_intent": "Confirm the implementation satisfies rule 3.",
       "source_anchor_ids": [
         "anchor.rupify.state-invariants.state-invariant-3"
       ],
@@ -2229,91 +2565,217 @@
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-invariant-3."
+        "Derived from decomposition slice of state-invariant-3."
       ]
     },
     {
-      "id": "vu.rupify.state-transition-1",
-      "implementation_unit_id": "iu.rupify.state-transition-1",
-      "title": "Verify state-transition-1",
-      "verification_intent": "Confirm the implementation satisfies state-transition-1.",
+      "id": "vu.rupify.state-transition-1.proposed-to-active",
+      "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
+      "title": "Verify Proposed to Active",
+      "verification_intent": "Confirm the implementation satisfies proposed to active.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
       ],
       "observables": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-transition-1."
+        "Derived from decomposition slice of state-transition-1."
       ]
     },
     {
-      "id": "vu.rupify.state-transition-2",
-      "implementation_unit_id": "iu.rupify.state-transition-2",
-      "title": "Verify state-transition-2",
-      "verification_intent": "Confirm the implementation satisfies state-transition-2.",
+      "id": "vu.rupify.state-transition-1.active-to-retiring",
+      "implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
+      "title": "Verify Active to Retiring",
+      "verification_intent": "Confirm the implementation satisfies active to retiring.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "observables": [
+        "System can move from Active to Retiring."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System can move from Active to Retiring."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-1.retiring-to-retired",
+      "implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
+      "title": "Verify Retiring to Retired",
+      "verification_intent": "Confirm the implementation satisfies retiring to retired.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "observables": [
+        "System can move from Retiring to Retired."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System can move from Retiring to Retired."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-2.proposed-to-active",
+      "implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
+      "title": "Verify Proposed to Active",
+      "verification_intent": "Confirm the implementation satisfies proposed to active.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-2"
       ],
       "observables": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-transition-2."
+        "Derived from decomposition slice of state-transition-2."
       ]
     },
     {
-      "id": "vu.rupify.state-transition-3",
-      "implementation_unit_id": "iu.rupify.state-transition-3",
-      "title": "Verify state-transition-3",
-      "verification_intent": "Confirm the implementation satisfies state-transition-3.",
+      "id": "vu.rupify.state-transition-2.active-to-retiring",
+      "implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
+      "title": "Verify Active to Retiring",
+      "verification_intent": "Confirm the implementation satisfies active to retiring.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "observables": [
+        "System can move from Active to Retiring."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System can move from Active to Retiring."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-2.retiring-to-retired",
+      "implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
+      "title": "Verify Retiring to Retired",
+      "verification_intent": "Confirm the implementation satisfies retiring to retired.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "observables": [
+        "System can move from Retiring to Retired."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System can move from Retiring to Retired."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-3.proposed-to-active",
+      "implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
+      "title": "Verify Proposed to Active",
+      "verification_intent": "Confirm the implementation satisfies proposed to active.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-3"
       ],
       "observables": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System: Proposed -> Active -> Retiring -> Retired"
+        "System can move from Proposed to Active."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-transition-3."
+        "Derived from decomposition slice of state-transition-3."
       ]
     },
     {
-      "id": "vu.rupify.state-transition-4",
-      "implementation_unit_id": "iu.rupify.state-transition-4",
-      "title": "Verify state-transition-4",
-      "verification_intent": "Confirm the implementation satisfies state-transition-4.",
+      "id": "vu.rupify.state-transition-3.active-to-retiring",
+      "implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
+      "title": "Verify Active to Retiring",
+      "verification_intent": "Confirm the implementation satisfies active to retiring.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "observables": [
+        "System can move from Active to Retiring."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System can move from Active to Retiring."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-3.retiring-to-retired",
+      "implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
+      "title": "Verify Retiring to Retired",
+      "verification_intent": "Confirm the implementation satisfies retiring to retired.",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "observables": [
+        "System can move from Retiring to Retired."
+      ],
+      "setup_requirements": [],
+      "expected_outcomes": [
+        "System can move from Retiring to Retired."
+      ],
+      "failure_conditions": [],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-3."
+      ]
+    },
+    {
+      "id": "vu.rupify.state-transition-4.active-to-deprecated",
+      "implementation_unit_id": "iu.rupify.state-transition-4.active-to-deprecated",
+      "title": "Verify Active to Deprecated",
+      "verification_intent": "Confirm the implementation satisfies active to deprecated.",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-4"
       ],
       "observables": [
-        "System: Active -> Deprecated"
+        "System can move from Active to Deprecated."
       ],
       "setup_requirements": [],
       "expected_outcomes": [
-        "System: Active -> Deprecated"
+        "System can move from Active to Deprecated."
       ],
       "failure_conditions": [],
       "invariants_preserved": [],
       "notes": [
-        "First-pass verification contract derived directly from state-transition-4."
+        "Derived from decomposition slice of state-transition-4."
       ]
     }
   ],
@@ -2334,7 +2796,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-1."
+        "Derived from decomposition slice of acceptance-constraint-requirement-1."
       ]
     },
     {
@@ -2353,7 +2815,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-2."
+        "Derived from decomposition slice of acceptance-constraint-requirement-2."
       ]
     },
     {
@@ -2372,7 +2834,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-3."
+        "Derived from decomposition slice of acceptance-constraint-requirement-3."
       ]
     },
     {
@@ -2391,7 +2853,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-4."
+        "Derived from decomposition slice of acceptance-constraint-requirement-4."
       ]
     },
     {
@@ -2410,7 +2872,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-5."
+        "Derived from decomposition slice of acceptance-constraint-requirement-5."
       ]
     },
     {
@@ -2429,7 +2891,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-6."
+        "Derived from decomposition slice of acceptance-constraint-requirement-6."
       ]
     },
     {
@@ -2448,7 +2910,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-7."
+        "Derived from decomposition slice of acceptance-constraint-requirement-7."
       ]
     },
     {
@@ -2467,7 +2929,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-requirement-8."
+        "Derived from decomposition slice of acceptance-constraint-requirement-8."
       ]
     },
     {
@@ -2486,7 +2948,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for acceptance-constraint-success-1."
+        "Derived from decomposition slice of acceptance-constraint-success-1."
       ]
     },
     {
@@ -2505,7 +2967,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for domain-invariant-1."
+        "Derived from decomposition slice of domain-invariant-1."
       ]
     },
     {
@@ -2524,7 +2986,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for domain-invariant-2."
+        "Derived from decomposition slice of domain-invariant-2."
       ]
     },
     {
@@ -2543,26 +3005,45 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for domain-invariant-3."
+        "Derived from decomposition slice of domain-invariant-3."
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-1",
+      "id": "tb.rupify.functional-requirement-1.stage-gates",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.stage-gates"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-1"
+        "iu.rupify.functional-requirement-1.stage-gates"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.stage-gates"
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for functional-requirement-1."
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-1.approval-states",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-1.approval-states"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-1.approval-states"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.approval-states"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
       ]
     },
     {
@@ -2581,7 +3062,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for functional-requirement-2."
+        "Derived from decomposition slice of functional-requirement-2."
       ]
     },
     {
@@ -2600,7 +3081,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-1."
+        "Derived from decomposition slice of non_functional-requirement-1."
       ]
     },
     {
@@ -2619,7 +3100,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-2."
+        "Derived from decomposition slice of non_functional-requirement-2."
       ]
     },
     {
@@ -2638,7 +3119,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-3."
+        "Derived from decomposition slice of non_functional-requirement-3."
       ]
     },
     {
@@ -2657,7 +3138,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-4."
+        "Derived from decomposition slice of non_functional-requirement-4."
       ]
     },
     {
@@ -2676,7 +3157,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-5."
+        "Derived from decomposition slice of non_functional-requirement-5."
       ]
     },
     {
@@ -2695,7 +3176,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-6."
+        "Derived from decomposition slice of non_functional-requirement-6."
       ]
     },
     {
@@ -2714,7 +3195,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-7."
+        "Derived from decomposition slice of non_functional-requirement-7."
       ]
     },
     {
@@ -2733,7 +3214,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for non_functional-requirement-8."
+        "Derived from decomposition slice of non_functional-requirement-8."
       ]
     },
     {
@@ -2752,7 +3233,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-invariant-1."
+        "Derived from decomposition slice of state-invariant-1."
       ]
     },
     {
@@ -2771,7 +3252,7 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-invariant-2."
+        "Derived from decomposition slice of state-invariant-2."
       ]
     },
     {
@@ -2790,83 +3271,197 @@
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-invariant-3."
+        "Derived from decomposition slice of state-invariant-3."
       ]
     },
     {
-      "id": "tb.rupify.state-transition-1",
+      "id": "tb.rupify.state-transition-1.proposed-to-active",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
       ],
       "spec_unit_ids": [
-        "su.rupify.state-transition-1"
+        "su.rupify.state-transition-1.proposed-to-active"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.state-transition-1"
+        "iu.rupify.state-transition-1.proposed-to-active"
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-1"
+        "vu.rupify.state-transition-1.proposed-to-active"
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-transition-1."
+        "Derived from decomposition slice of state-transition-1."
       ]
     },
     {
-      "id": "tb.rupify.state-transition-2",
+      "id": "tb.rupify.state-transition-1.active-to-retiring",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-1.active-to-retiring"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-1.active-to-retiring"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.active-to-retiring"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-1.retiring-to-retired",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-2.proposed-to-active",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.state-transition-2"
+        "su.rupify.state-transition-2.proposed-to-active"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.state-transition-2"
+        "iu.rupify.state-transition-2.proposed-to-active"
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-2"
+        "vu.rupify.state-transition-2.proposed-to-active"
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-transition-2."
+        "Derived from decomposition slice of state-transition-2."
       ]
     },
     {
-      "id": "tb.rupify.state-transition-3",
+      "id": "tb.rupify.state-transition-2.active-to-retiring",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-2.active-to-retiring"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-2.active-to-retiring"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.active-to-retiring"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-2.retiring-to-retired",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-3.proposed-to-active",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-3"
       ],
       "spec_unit_ids": [
-        "su.rupify.state-transition-3"
+        "su.rupify.state-transition-3.proposed-to-active"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.state-transition-3"
+        "iu.rupify.state-transition-3.proposed-to-active"
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-3"
+        "vu.rupify.state-transition-3.proposed-to-active"
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-transition-3."
+        "Derived from decomposition slice of state-transition-3."
       ]
     },
     {
-      "id": "tb.rupify.state-transition-4",
+      "id": "tb.rupify.state-transition-3.active-to-retiring",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-3.active-to-retiring"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-3.active-to-retiring"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.active-to-retiring"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-3.retiring-to-retired",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of state-transition-3."
+      ]
+    },
+    {
+      "id": "tb.rupify.state-transition-4.active-to-deprecated",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-4"
       ],
       "spec_unit_ids": [
-        "su.rupify.state-transition-4"
+        "su.rupify.state-transition-4.active-to-deprecated"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.state-transition-4"
+        "iu.rupify.state-transition-4.active-to-deprecated"
       ],
       "verification_unit_ids": [
-        "vu.rupify.state-transition-4"
+        "vu.rupify.state-transition-4.active-to-deprecated"
       ],
       "assembly_rule_ids": [],
       "notes": [
-        "One-source-to-one-planning-unit derivation for state-transition-4."
+        "Derived from decomposition slice of state-transition-4."
       ]
     }
   ],
@@ -2877,67 +3472,72 @@
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
       "issue_title": "Implement Acceptance Constraint 1",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-1.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1`\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-1.\n- Observable: UI must be web based\n- Expected outcome: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 1.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1`\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 1.\n- Observable: UI must be web based\n- Expected outcome: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
       "issue_title": "Implement Acceptance Constraint 2",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-2.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2`\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-2.\n- Observable: SSO\n- Expected outcome: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 2.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2`\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 2.\n- Observable: SSO\n- Expected outcome: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
       "issue_title": "Implement Acceptance Constraint 3",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-3.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3`\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-3.\n- Observable: role-based access\n- Expected outcome: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 3.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3`\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 3.\n- Observable: role-based access\n- Expected outcome: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
       "issue_title": "Implement Acceptance Constraint 4",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-4.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-4.\n- Observable: audit trail\n- Expected outcome: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 4.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 4.\n- Observable: audit trail\n- Expected outcome: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
       "issue_title": "Implement Acceptance Constraint 5",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-5.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5`\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-5.\n- Observable: search\n- Expected outcome: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 5.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5`\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 5.\n- Observable: search\n- Expected outcome: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
       "issue_title": "Implement Acceptance Constraint 6",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-6.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6`\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-6.\n- Observable: filtering\n- Expected outcome: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 6.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6`\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 6.\n- Observable: filtering\n- Expected outcome: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
       "issue_title": "Implement Acceptance Constraint 7",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-7.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7`\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-7.\n- Observable: performance (regular >1s for web page rendering)\n- Expected outcome: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 7.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7`\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 7.\n- Observable: performance (regular >1s for web page rendering)\n- Expected outcome: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
       "issue_title": "Implement Acceptance Constraint 8",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-requirement-8.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8`\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-8.\n- Observable: availability >=99%\n- Expected outcome: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance constraint 8.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8`\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance constraint 8.\n- Observable: availability >=99%\n- Expected outcome: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
       "issue_title": "Implement Success Criterion 1",
-      "issue_body": "## Summary\n\nImplement the planned behavior for acceptance-constraint-success-1.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1`\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies acceptance-constraint-success-1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Expected outcome: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for success criterion 1.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1`\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies success criterion 1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Expected outcome: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-1",
       "issue_title": "Implement Rule 1",
-      "issue_body": "## Summary\n\nImplement the planned behavior for domain-invariant-1.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-1`\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies domain-invariant-1.\n- Observable: A System must have a business owner before it becomes Active.\n- Expected outcome: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for rule 1.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-1`\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies rule 1.\n- Observable: A System must have a business owner before it becomes Active.\n- Expected outcome: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-2",
       "issue_title": "Implement Rule 2",
-      "issue_body": "## Summary\n\nImplement the planned behavior for domain-invariant-2.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2`\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies domain-invariant-2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Expected outcome: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for rule 2.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2`\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Expected outcome: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-3",
       "issue_title": "Implement Rule 3",
-      "issue_body": "## Summary\n\nImplement the planned behavior for domain-invariant-3.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3`\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies domain-invariant-3.\n- Observable: A System must record vendor and contract dates.\n- Expected outcome: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for rule 3.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3`\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies rule 3.\n- Observable: A System must record vendor and contract dates.\n- Expected outcome: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "issue_title": "Implement functional-requirement-1",
-      "issue_body": "## Summary\n\nImplement the planned behavior for functional-requirement-1.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1`\n\n## Scope\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Acceptance Criteria\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies functional-requirement-1.\n- Observable: Yes business processes like stage gates and approval states must be supported\n- Expected outcome: Yes business processes like stage gates and approval states must be supported\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
+      "issue_title": "Implement Support stage gates",
+      "issue_body": "## Summary\n\nImplement the planned behavior for support stage gates.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1`\n\n## Scope\n\n- Support business process stage gates.\n\n## Acceptance Criteria\n\n- Business process stage gates are supported.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies support stage gates.\n- Observable: Business process stage gates are supported.\n- Expected outcome: Business process stage gates are supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.approval-states",
+      "issue_title": "Implement Support approval states",
+      "issue_body": "## Summary\n\nImplement the planned behavior for support approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1`\n\n## Scope\n\n- Support business process approval states.\n\n## Acceptance Criteria\n\n- Business process approval states are supported.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies support approval states.\n- Observable: Business process approval states are supported.\n- Expected outcome: Business process approval states are supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2",
@@ -2987,37 +3587,67 @@
     {
       "implementation_unit_id": "iu.rupify.state-invariant-1",
       "issue_title": "Implement Rule 1",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-invariant-1.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-1`\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-invariant-1.\n- Observable: A System must have a business owner before it becomes Active.\n- Expected outcome: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for rule 1.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-1`\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies rule 1.\n- Observable: A System must have a business owner before it becomes Active.\n- Expected outcome: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-2",
       "issue_title": "Implement Rule 2",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-invariant-2.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2`\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-invariant-2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Expected outcome: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for rule 2.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2`\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Expected outcome: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-3",
       "issue_title": "Implement Rule 3",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-invariant-3.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3`\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-invariant-3.\n- Observable: A System must record vendor and contract dates.\n- Expected outcome: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for rule 3.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3`\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies rule 3.\n- Observable: A System must record vendor and contract dates.\n- Expected outcome: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.state-transition-1",
-      "issue_title": "Implement state-transition-1",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-1.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Acceptance Criteria\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-1.\n- Observable: System: Proposed -> Active -> Retiring -> Retired\n- Expected outcome: System: Proposed -> Active -> Retiring -> Retired\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
+      "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
+      "issue_title": "Implement Proposed to Active",
+      "issue_body": "## Summary\n\nImplement the planned behavior for proposed to active.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Proposed to Active.\n\n## Acceptance Criteria\n\n- System can move from Proposed to Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies proposed to active.\n- Observable: System can move from Proposed to Active.\n- Expected outcome: System can move from Proposed to Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.state-transition-2",
-      "issue_title": "Implement state-transition-2",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-2.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Acceptance Criteria\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-2.\n- Observable: System: Proposed -> Active -> Retiring -> Retired\n- Expected outcome: System: Proposed -> Active -> Retiring -> Retired\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+      "implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
+      "issue_title": "Implement Active to Retiring",
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.state-transition-3",
-      "issue_title": "Implement state-transition-3",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-3.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Acceptance Criteria\n\n- System: Proposed -> Active -> Retiring -> Retired\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-3.\n- Observable: System: Proposed -> Active -> Retiring -> Retired\n- Expected outcome: System: Proposed -> Active -> Retiring -> Retired\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+      "implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
+      "issue_title": "Implement Retiring to Retired",
+      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.state-transition-4",
-      "issue_title": "Implement state-transition-4",
-      "issue_body": "## Summary\n\nImplement the planned behavior for state-transition-4.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4`\n\n## Scope\n\n- System: Active -> Deprecated\n\n## Acceptance Criteria\n\n- System: Active -> Deprecated\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies state-transition-4.\n- Observable: System: Active -> Deprecated\n- Expected outcome: System: Active -> Deprecated\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
+      "implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
+      "issue_title": "Implement Proposed to Active",
+      "issue_body": "## Summary\n\nImplement the planned behavior for proposed to active.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Proposed to Active.\n\n## Acceptance Criteria\n\n- System can move from Proposed to Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies proposed to active.\n- Observable: System can move from Proposed to Active.\n- Expected outcome: System can move from Proposed to Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
+      "issue_title": "Implement Active to Retiring",
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
+      "issue_title": "Implement Retiring to Retired",
+      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
+      "issue_title": "Implement Proposed to Active",
+      "issue_body": "## Summary\n\nImplement the planned behavior for proposed to active.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Proposed to Active.\n\n## Acceptance Criteria\n\n- System can move from Proposed to Active.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies proposed to active.\n- Observable: System can move from Proposed to Active.\n- Expected outcome: System can move from Proposed to Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
+      "issue_title": "Implement Active to Retiring",
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
+      "issue_title": "Implement Retiring to Retired",
+      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-4.active-to-deprecated",
+      "issue_title": "Implement Active to Deprecated",
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to deprecated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4`\n\n## Scope\n\n- Transition the system lifecycle from Active to Deprecated.\n\n## Acceptance Criteria\n\n- System can move from Active to Deprecated.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to deprecated.\n- Observable: System can move from Active to Deprecated.\n- Expected outcome: System can move from Active to Deprecated.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n"
     }
   ]
 }

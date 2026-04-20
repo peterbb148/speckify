@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for state-invariant-3.
+Implement the planned behavior for rule 3.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for state-invariant-3.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies state-invariant-3.
+- Intent: Confirm the implementation satisfies rule 3.
 - Observable: A System must record vendor and contract dates.
 - Expected outcome: A System must record vendor and contract dates.
 
