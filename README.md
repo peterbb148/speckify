@@ -73,3 +73,8 @@ definitions.
 - [Reversibility and feedback flow](docs/reversibility-and-feedback-flow.md)
 - [Rupify downstream planning contract](docs/rupify-downstream-contract.md)
 - [Rupify upstream note](docs/rupify-upstream-note.md)
+
+## Schemas
+
+- [Schema overview](schemas/README.md)
+- [Planning bundle schema](schemas/planning-bundle.schema.json)
