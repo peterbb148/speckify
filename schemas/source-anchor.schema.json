@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/peterbb148/speckify/schemas/source-anchor.schema.json",
+  "title": "SourceAnchor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "source_system",
+    "source_type",
+    "source_id",
+    "view"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "view": {
+      "type": "string",
+      "minLength": 1
+    },
+    "normative": {
+      "type": "boolean"
+    },
+    "ready_state": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "partial",
+        "blocked"
+      ]
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_round": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_key": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
