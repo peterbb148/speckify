@@ -106,6 +106,13 @@ Run the current tests with:
 uv run python -m unittest discover
 ```
 
+Enable the committed pre-commit hook path and run the constitutional audit with:
+
+```bash
+git config core.hooksPath .githooks
+uv run speckify-check-constitution --all-files
+```
+
 ## Demos
 
 - [IT systems inventory V2 demo](demo/it-systems-inventory-v2/README.md)
