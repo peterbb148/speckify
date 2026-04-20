@@ -1,15 +1,15 @@
 {
   "bundle_id": "bundle.speckify-planning-export",
-  "decomposition_profile": "rupify-split-dependencies-v2",
+  "decomposition_profile": "rupify-structural-decomposition-v1",
   "counts": {
     "source_anchors": 62,
-    "spec_units": 76,
-    "implementation_units": 76,
-    "verification_units": 76,
-    "trace_bundles": 76,
-    "dependency_edges": 54,
-    "assembly_rules": 10,
-    "rendered_issues": 76
+    "spec_units": 66,
+    "implementation_units": 66,
+    "verification_units": 66,
+    "trace_bundles": 66,
+    "dependency_edges": 31,
+    "assembly_rules": 4,
+    "rendered_issues": 66
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",
@@ -22,42 +22,98 @@
     "Implement constraint: Success Criterion 1"
   ],
   "quality_signals": {
-    "use_case_units": [
-      "iu.rupify.redeem-reward-extension-1",
-      "iu.rupify.redeem-reward-extension-2",
-      "iu.rupify.redeem-reward-extension-3",
+    "ordered_step_units": [
       "iu.rupify.redeem-reward-step-1",
-      "iu.rupify.redeem-reward-step-2.validate-eligibility",
-      "iu.rupify.redeem-reward-step-2.validate-available-points",
-      "iu.rupify.redeem-reward-step-3.reserve-reward",
-      "iu.rupify.redeem-reward-step-3.update-member-balance"
+      "iu.rupify.redeem-reward-step-2",
+      "iu.rupify.redeem-reward-step-3",
+      "iu.rupify.redeem-reward-step-4"
     ],
-    "scenario_guard_units": [
-      "iu.rupify.guard-condition-2.require-validation-approval",
-      "iu.rupify.guard-condition-2.block-publish-without-approval",
-      "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
-      "iu.rupify.scenario-invalid-catalog-change.reject-publication",
-      "iu.rupify.scenario-missing-payment-confirmation.await-payment-confirmation",
-      "iu.rupify.scenario-missing-payment-confirmation.pause-redemption",
-      "iu.rupify.scenario-reporting-delay.detect-reporting-delay",
-      "iu.rupify.scenario-reporting-delay.show-partial-analytics",
-      "iu.rupify.scenario-reward-inventory-exhausted.detect-exhausted-inventory",
-      "iu.rupify.scenario-reward-inventory-exhausted.fail-redemption"
-    ],
-    "transition_dependencies": [
+    "guard_link_dependencies": [
       {
-        "id": "dep.rupify.guard-condition-2.require-validation-approval.requires-rupify.guard-condition-2.block-publish-without-approval",
-        "from_implementation_unit_id": "iu.rupify.guard-condition-2.require-validation-approval",
-        "to_implementation_unit_id": "iu.rupify.guard-condition-2.block-publish-without-approval",
+        "id": "dep.rupify.state-transition-1.requested-to-validated.requires-rupify.guard-condition-2",
+        "from_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
+        "to_implementation_unit_id": "iu.rupify.guard-condition-2",
         "dependency_type": "requires",
-        "reason": "Guard enforcement depends on recognizing the guard prerequisite first."
+        "reason": "Transition implementation depends on the linked guard condition."
       },
       {
-        "id": "dep.rupify.scenario-invalid-catalog-change.reject-publication.requires-rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
-        "from_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.reject-publication",
-        "to_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.detect-active-offer-conflict",
+        "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.guard-condition-2",
+        "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
+        "to_implementation_unit_id": "iu.rupify.guard-condition-2",
         "dependency_type": "requires",
-        "reason": "Scenario resolution depends on first identifying the triggering condition."
+        "reason": "Transition implementation depends on the linked guard condition."
+      },
+      {
+        "id": "dep.rupify.state-transition-2.requested-to-validated.requires-rupify.guard-condition-2",
+        "from_implementation_unit_id": "iu.rupify.state-transition-2.requested-to-validated",
+        "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+        "dependency_type": "requires",
+        "reason": "Transition implementation depends on the linked guard condition."
+      },
+      {
+        "id": "dep.rupify.state-transition-2.validated-to-fulfilled.requires-rupify.guard-condition-2",
+        "from_implementation_unit_id": "iu.rupify.state-transition-2.validated-to-fulfilled",
+        "to_implementation_unit_id": "iu.rupify.guard-condition-2",
+        "dependency_type": "requires",
+        "reason": "Transition implementation depends on the linked guard condition."
+      }
+    ],
+    "sample_assembly_rules": [
+      {
+        "id": "assembly.state-transition-1",
+        "source_anchor_ids": [
+          "anchor.rupify.state-transitions.state-transition-1"
+        ],
+        "member_spec_unit_ids": [
+          "su.rupify.state-transition-1.requested-to-validated",
+          "su.rupify.state-transition-1.validated-to-fulfilled"
+        ],
+        "rule_type": "ordered_sequence",
+        "notes": [
+          "Recombine split lifecycle transitions into the original source transition chain."
+        ]
+      },
+      {
+        "id": "assembly.state-transition-2",
+        "source_anchor_ids": [
+          "anchor.rupify.state-transitions.state-transition-2"
+        ],
+        "member_spec_unit_ids": [
+          "su.rupify.state-transition-2.requested-to-validated",
+          "su.rupify.state-transition-2.validated-to-fulfilled"
+        ],
+        "rule_type": "ordered_sequence",
+        "notes": [
+          "Recombine split lifecycle transitions into the original source transition chain."
+        ]
+      },
+      {
+        "id": "assembly.state-transition-4",
+        "source_anchor_ids": [
+          "anchor.rupify.state-transitions.state-transition-4"
+        ],
+        "member_spec_unit_ids": [
+          "su.rupify.state-transition-4.draft-to-published",
+          "su.rupify.state-transition-4.published-to-retired"
+        ],
+        "rule_type": "ordered_sequence",
+        "notes": [
+          "Recombine split lifecycle transitions into the original source transition chain."
+        ]
+      },
+      {
+        "id": "assembly.state-transition-5",
+        "source_anchor_ids": [
+          "anchor.rupify.state-transitions.state-transition-5"
+        ],
+        "member_spec_unit_ids": [
+          "su.rupify.state-transition-5.draft-to-published",
+          "su.rupify.state-transition-5.published-to-retired"
+        ],
+        "rule_type": "ordered_sequence",
+        "notes": [
+          "Recombine split lifecycle transitions into the original source transition chain."
+        ]
       }
     ]
   }

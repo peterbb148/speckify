@@ -28,9 +28,9 @@ class RoundTripFeedbackTests(unittest.TestCase):
         )
         feedback_export = build_round_trip_feedback(bundle)
 
-        self.assertEqual(feedback_export["round_trip_status"]["change_record_count"], 34)
+        self.assertEqual(feedback_export["round_trip_status"]["change_record_count"], 36)
         self.assertEqual(feedback_export["round_trip_status"]["feedback_proposal_count"], 26)
-        self.assertEqual(feedback_export["round_trip_status"]["planning_only_findings"], 8)
+        self.assertEqual(feedback_export["round_trip_status"]["planning_only_findings"], 10)
         self.assertEqual(feedback_export["round_trip_status"]["upstream_affecting_findings"], 26)
 
     def test_round_trip_feedback_emits_upstream_proposal_for_real_gap(self) -> None:

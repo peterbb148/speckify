@@ -5,10 +5,10 @@ pipeline is working well enough for human review.
 
 ## Bundle-Level Qualities
 
-- decomposition is no longer one-source-to-one-unit everywhere
+- decomposition is structure-derived rather than phrase-shaped
 - split units preserve lineage back to the original Rupify source anchor
-- dependency edges and assembly rules exist where split units imply sequencing or
-  recomposition
+- dependency edges and assembly rules exist where formal structural sequencing or
+  recomposition is available
 - verification units contain setup and failure information, not just paraphrased source text
 
 ## Representative Review Checks
@@ -29,13 +29,13 @@ What to check:
 
 Fixture:
 
-- `rendered-issues/workflow-approval-states.md`
+- `rendered-issues/workflow-requirement.md`
 
 What to check:
 
-- the workflow concern is split out as its own implementation unit
-- dependency information is visible in rendered output
-- the dependency reason is understandable to a human reviewer
+- the workflow concern remains traceable even when no formal split operator is available
+- the rendered issue still exposes lineage and acceptance structure clearly
+- generic titles or summaries are treated as review concerns rather than silently refined
 
 ### Transition Example
 
@@ -52,6 +52,7 @@ What to check:
 ## What Should Trigger Review Concern
 
 - implementation summaries that read like placeholders
+- broad requirement records that still need formal decomposition operators
 - verification sections that simply repeat the acceptance sentence
 - missing dependencies for obviously sequenced slices
 - flat specifications that are hard to scan or group by concern

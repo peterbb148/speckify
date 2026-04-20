@@ -50,7 +50,7 @@ class DeliveryExportTests(unittest.TestCase):
         delivery_issue = next(
             item
             for item in delivery_export["issues"]
-            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.approval-states"
+            if item["implementation_unit_id"] == "iu.rupify.state-transition-1.active-to-retiring"
         )
         rendered_issue = next(
             item
@@ -61,21 +61,21 @@ class DeliveryExportTests(unittest.TestCase):
         self.assertTrue(delivery_issue["body_markdown"].endswith(rendered_issue["issue_body"]))
         self.assertIn("## Delivery Metadata", delivery_issue["body_markdown"])
         self.assertIn("Implementation unit id", delivery_issue["body_markdown"])
-        self.assertIn("functional-requirements", delivery_issue["labels"])
+        self.assertIn("state-transitions", delivery_issue["labels"])
         self.assertIn(
-            "iu.rupify.functional-requirement-1.stage-gates",
+            "iu.rupify.state-transition-1.proposed-to-active",
             delivery_issue["dependency_ids"],
         )
         self.assertEqual(
             delivery_issue["create_payload"]["body_path"],
-            "issue-bodies/iu-rupify-functional-requirement-1-approval-states.md",
+            "issue-bodies/iu-rupify-state-transition-1-active-to-retiring.md",
         )
         self.assertEqual(
             delivery_issue["dependency_titles"],
             [
                 {
-                    "implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
-                    "title": "Implement workflow support: Support stage gates",
+                    "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
+                    "title": "Implement lifecycle transition: Proposed to Active",
                 }
             ],
         )
@@ -93,7 +93,7 @@ class DeliveryExportTests(unittest.TestCase):
         sample_issue = next(
             item
             for item in delivery_export["issues"]
-            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.approval-states"
+            if item["implementation_unit_id"] == "iu.rupify.state-transition-1.active-to-retiring"
         )
         self.assertEqual(
             sample_issue["body_markdown"],
