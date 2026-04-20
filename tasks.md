@@ -18,3 +18,4 @@
 - [DONE] 2026-04-20 Import Rupify IT systems inventory V2 hand-off and generate Speckified specification
 - [DONE] 2026-04-20 Refresh IT systems inventory V2 demo against fixed Rupify hand-off export
 - [DONE] 2026-04-20 Load Rupify planning exports into typed Speckify records
+- [DONE] 2026-04-20 Generate Speckify planning bundles from Rupify exports
