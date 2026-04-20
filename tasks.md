@@ -11,3 +11,4 @@
 - [DONE] 2026-04-20 Define Speckify output artifacts and issue rendering model
 - [DONE] 2026-04-20 Define reversibility, change classification, and upstream feedback flow
 - [DONE] 2026-04-20 Create formal schema files for Speckify core records
+- [DONE] 2026-04-20 Create example Rupify export fixtures and expected Speckify bundles
