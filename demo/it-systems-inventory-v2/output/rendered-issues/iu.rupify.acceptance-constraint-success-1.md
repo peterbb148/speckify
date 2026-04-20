@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-success-1.
+Implement the planned behavior for success criterion 1.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-success-1.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-success-1.
+- Intent: Confirm the implementation satisfies success criterion 1.
 - Observable: Better planning of IT systems purchasing and life cycle
 - Expected outcome: Better planning of IT systems purchasing and life cycle
 

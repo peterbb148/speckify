@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-6.
+Implement the planned behavior for acceptance constraint 6.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-6.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-6.
+- Intent: Confirm the implementation satisfies acceptance constraint 6.
 - Observable: filtering
 - Expected outcome: filtering
 

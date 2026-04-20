@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-4.
+Implement the planned behavior for acceptance constraint 4.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-4.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-4.
+- Intent: Confirm the implementation satisfies acceptance constraint 4.
 - Observable: audit trail
 - Expected outcome: audit trail
 

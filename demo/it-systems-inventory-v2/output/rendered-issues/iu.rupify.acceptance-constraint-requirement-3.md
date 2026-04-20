@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-3.
+Implement the planned behavior for acceptance constraint 3.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-3.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-3.
+- Intent: Confirm the implementation satisfies acceptance constraint 3.
 - Observable: role-based access
 - Expected outcome: role-based access
 

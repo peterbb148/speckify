@@ -22,3 +22,4 @@
 - [DONE] 2026-04-20 Validate generated planning bundles end to end
 - [DONE] 2026-04-20 Render generated issue and specification artifacts from planning bundles
 - [DONE] 2026-04-20 Add end-to-end regression for IT systems inventory V2 hand-off
+- [DONE] 2026-04-20 Improve decomposition beyond one-source-to-one planning units

@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-5.
+Implement the planned behavior for acceptance constraint 5.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-5.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-5.
+- Intent: Confirm the implementation satisfies acceptance constraint 5.
 - Observable: search
 - Expected outcome: search
 

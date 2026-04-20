@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the planned behavior for acceptance-constraint-requirement-8.
+Implement the planned behavior for acceptance constraint 8.
 
 ## Source Lineage
 
@@ -16,7 +16,7 @@ Implement the planned behavior for acceptance-constraint-requirement-8.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance-constraint-requirement-8.
+- Intent: Confirm the implementation satisfies acceptance constraint 8.
 - Observable: availability >=99%
 - Expected outcome: availability >=99%
 

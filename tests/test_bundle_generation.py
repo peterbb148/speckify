@@ -29,19 +29,19 @@ class BundleGenerationTests(unittest.TestCase):
         )
 
         self.assertEqual(bundle["bundle_metadata"]["bundle_id"], "bundle.speckify-planning-export")
-        self.assertEqual(bundle["bundle_metadata"]["decomposition_profile"], "rupify-one-to-one-v1")
+        self.assertEqual(bundle["bundle_metadata"]["decomposition_profile"], "rupify-split-v1")
         self.assertEqual(len(bundle["source_anchors"]), 29)
-        self.assertEqual(len(bundle["spec_units"]), 29)
-        self.assertEqual(len(bundle["implementation_units"]), 29)
-        self.assertEqual(len(bundle["verification_units"]), 29)
-        self.assertEqual(len(bundle["trace_bundles"]), 29)
-        self.assertEqual(len(bundle["rendered_issues"]), 29)
+        self.assertEqual(len(bundle["spec_units"]), 36)
+        self.assertEqual(len(bundle["implementation_units"]), 36)
+        self.assertEqual(len(bundle["verification_units"]), 36)
+        self.assertEqual(len(bundle["trace_bundles"]), 36)
+        self.assertEqual(len(bundle["rendered_issues"]), 36)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
         validate_bundle(bundle, SCHEMA_DIR)
 
-    def test_generated_bundle_preserves_lineage_for_ready_normative_element(self) -> None:
-        """A generated bundle record should point back to its Rupify source id."""
+    def test_generated_bundle_preserves_lineage_for_split_functional_requirement(self) -> None:
+        """Split units should still point back to the original Rupify source id."""
         export = import_rupify_export_file(RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -50,27 +50,65 @@ class BundleGenerationTests(unittest.TestCase):
             for item in bundle["source_anchors"]
             if item["source_id"] == "functional-requirement-1"
         )
-        spec_unit = next(
+        spec_units = [
             item
             for item in bundle["spec_units"]
             if item["source_anchor_ids"] == [anchor["id"]]
-        )
-        implementation_unit = next(
+        ]
+        implementation_units = [
             item
             for item in bundle["implementation_units"]
-            if item["derived_from_spec_unit_ids"] == [spec_unit["id"]]
-        )
-        verification_unit = next(
+            if item["source_anchor_ids"] == [anchor["id"]]
+        ]
+        verification_units = [
             item
             for item in bundle["verification_units"]
-            if item["implementation_unit_id"] == implementation_unit["id"]
-        )
+            if item["source_anchor_ids"] == [anchor["id"]]
+        ]
 
         self.assertEqual(anchor["view"], "requirements")
-        self.assertEqual(spec_unit["id"], "su.rupify.functional-requirement-1")
         self.assertEqual(
-            implementation_unit["verification_unit_ids"],
-            [verification_unit["id"]],
+            sorted(item["id"] for item in spec_units),
+            [
+                "su.rupify.functional-requirement-1.approval-states",
+                "su.rupify.functional-requirement-1.stage-gates",
+            ],
+        )
+        self.assertEqual(
+            sorted(item["id"] for item in implementation_units),
+            [
+                "iu.rupify.functional-requirement-1.approval-states",
+                "iu.rupify.functional-requirement-1.stage-gates",
+            ],
+        )
+        self.assertEqual(
+            sorted(item["id"] for item in verification_units),
+            [
+                "vu.rupify.functional-requirement-1.approval-states",
+                "vu.rupify.functional-requirement-1.stage-gates",
+            ],
+        )
+
+    def test_generated_bundle_splits_multi_step_state_transition_chain(self) -> None:
+        """A chain transition should decompose into separate transition pairs."""
+        export = import_rupify_export_file(RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        implementation_units = [
+            item
+            for item in bundle["implementation_units"]
+            if item["source_anchor_ids"] == [
+                "anchor.rupify.state-transitions.state-transition-1"
+            ]
+        ]
+
+        self.assertEqual(
+            sorted(item["id"] for item in implementation_units),
+            [
+                "iu.rupify.state-transition-1.active-to-retiring",
+                "iu.rupify.state-transition-1.proposed-to-active",
+                "iu.rupify.state-transition-1.retiring-to-retired",
+            ],
         )
 
 
