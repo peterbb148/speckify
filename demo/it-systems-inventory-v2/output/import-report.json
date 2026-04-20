@@ -1,0 +1,246 @@
+{
+  "source_export_kind": "speckify_planning_export",
+  "clean_import": false,
+  "errors": [
+    "Duplicate element id: functional-requirement-1",
+    "Duplicate element id: non_functional-requirement-1",
+    "Unresolved trace references detected: 10"
+  ],
+  "warnings": [
+    "Duplicate ready_normative_id in summary: functional-requirement-1",
+    "Duplicate ready_normative_id in summary: non_functional-requirement-1"
+  ],
+  "counts": {
+    "element_count": 72,
+    "trace_link_count": 127,
+    "ready_normative_count": 29,
+    "importable_ready_normative_count": 25,
+    "blocked_or_partial_normative_count": 29
+  },
+  "family_counts": {
+    "acceptance_constraints": 9,
+    "actors": 8,
+    "business_rules": 3,
+    "components": 3,
+    "domain_entities": 6,
+    "domain_invariants": 3,
+    "functional_requirements": 2,
+    "guard_conditions": 2,
+    "interfaces": 2,
+    "non_functional_requirements": 8,
+    "relationships": 7,
+    "runtime_boundaries": 1,
+    "state_entities": 1,
+    "state_invariants": 3,
+    "state_transitions": 4,
+    "triggers": 2,
+    "use_cases": 8
+  },
+  "readiness_counts": {
+    "": 33,
+    "blocked": 10,
+    "ready": 29
+  },
+  "semantic_counts": {
+    "informative": 14,
+    "normative": 58
+  },
+  "duplicate_element_ids": [
+    "functional-requirement-1",
+    "non_functional-requirement-1"
+  ],
+  "unresolved_trace_references": [
+    {
+      "trace_id": "trace-artifact-interaction-model-message-flows-interaction-message-1",
+      "field": "from_id",
+      "ref_id": "interaction-message-1"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-message-flows-interaction-message-2",
+      "field": "from_id",
+      "ref_id": "interaction-message-2"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-1",
+      "field": "from_id",
+      "ref_id": "interaction-realization-1"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-2",
+      "field": "from_id",
+      "ref_id": "interaction-realization-2"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-3",
+      "field": "from_id",
+      "ref_id": "interaction-realization-3"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-4",
+      "field": "from_id",
+      "ref_id": "interaction-realization-4"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-5",
+      "field": "from_id",
+      "ref_id": "interaction-realization-5"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-6",
+      "field": "from_id",
+      "ref_id": "interaction-realization-6"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-7",
+      "field": "from_id",
+      "ref_id": "interaction-realization-7"
+    },
+    {
+      "trace_id": "trace-artifact-interaction-model-use-case-realizations-interaction-realization-8",
+      "field": "from_id",
+      "ref_id": "interaction-realization-8"
+    }
+  ],
+  "summary": {
+    "blocking_ambiguity_count": 0,
+    "ready_normative_count": 29,
+    "trace_link_count": 127
+  },
+  "importable_ready_normative_by_family": {
+    "acceptance_constraints": [
+      {
+        "id": "acceptance-constraint-requirement-1",
+        "name": "Acceptance Constraint 1",
+        "text": "UI must be web based"
+      },
+      {
+        "id": "acceptance-constraint-requirement-2",
+        "name": "Acceptance Constraint 2",
+        "text": "SSO"
+      },
+      {
+        "id": "acceptance-constraint-requirement-3",
+        "name": "Acceptance Constraint 3",
+        "text": "role-based access"
+      },
+      {
+        "id": "acceptance-constraint-requirement-4",
+        "name": "Acceptance Constraint 4",
+        "text": "audit trail"
+      },
+      {
+        "id": "acceptance-constraint-requirement-5",
+        "name": "Acceptance Constraint 5",
+        "text": "search"
+      },
+      {
+        "id": "acceptance-constraint-requirement-6",
+        "name": "Acceptance Constraint 6",
+        "text": "filtering"
+      },
+      {
+        "id": "acceptance-constraint-requirement-7",
+        "name": "Acceptance Constraint 7",
+        "text": "performance (regular >1s for web page rendering)"
+      },
+      {
+        "id": "acceptance-constraint-requirement-8",
+        "name": "Acceptance Constraint 8",
+        "text": "availability >=99%"
+      },
+      {
+        "id": "acceptance-constraint-success-1",
+        "name": "Success Criterion 1",
+        "text": "Better planning of IT systems purchasing and life cycle"
+      }
+    ],
+    "domain_invariants": [
+      {
+        "id": "domain-invariant-1",
+        "name": "Rule 1",
+        "text": "A System must have a business owner before it becomes Active."
+      },
+      {
+        "id": "domain-invariant-2",
+        "name": "Rule 2",
+        "text": "A System lifecycle state change requires approval for deprecation."
+      },
+      {
+        "id": "domain-invariant-3",
+        "name": "Rule 3",
+        "text": "A System must record vendor and contract dates."
+      }
+    ],
+    "non_functional_requirements": [
+      {
+        "id": "non_functional-requirement-2",
+        "name": "",
+        "text": "role-based access"
+      },
+      {
+        "id": "non_functional-requirement-3",
+        "name": "",
+        "text": "audit trail"
+      },
+      {
+        "id": "non_functional-requirement-4",
+        "name": "",
+        "text": "search"
+      },
+      {
+        "id": "non_functional-requirement-5",
+        "name": "",
+        "text": "filtering"
+      },
+      {
+        "id": "non_functional-requirement-6",
+        "name": "",
+        "text": "performance (regular >1s for web page rendering)"
+      },
+      {
+        "id": "non_functional-requirement-7",
+        "name": "",
+        "text": "availability >=99%"
+      }
+    ],
+    "state_invariants": [
+      {
+        "id": "state-invariant-1",
+        "name": "Rule 1",
+        "text": "A System must have a business owner before it becomes Active."
+      },
+      {
+        "id": "state-invariant-2",
+        "name": "Rule 2",
+        "text": "A System lifecycle state change requires approval for deprecation."
+      },
+      {
+        "id": "state-invariant-3",
+        "name": "Rule 3",
+        "text": "A System must record vendor and contract dates."
+      }
+    ],
+    "state_transitions": [
+      {
+        "id": "state-transition-1",
+        "name": "",
+        "text": "System: Proposed -> Active -> Retiring -> Retired"
+      },
+      {
+        "id": "state-transition-2",
+        "name": "",
+        "text": "System: Proposed -> Active -> Retiring -> Retired"
+      },
+      {
+        "id": "state-transition-3",
+        "name": "",
+        "text": "System: Proposed -> Active -> Retiring -> Retired"
+      },
+      {
+        "id": "state-transition-4",
+        "name": "",
+        "text": "System: Active -> Deprecated"
+      }
+    ]
+  }
+}

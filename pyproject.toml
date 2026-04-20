@@ -9,6 +9,7 @@ dependencies = [
 
 [project.scripts]
 speckify-validate-bundle = "speckify_tools.validate_bundle_cli:main"
+speckify-demo-rupify-handoff = "speckify_tools.rupify_handoff_demo_cli:main"
 
 [build-system]
 requires = ["setuptools>=68"]
