@@ -1,0 +1,807 @@
+{
+  "export_metadata": {
+    "export_kind": "speckify_github_delivery_export",
+    "bundle_id": "bundle.speckify-planning-export",
+    "generated_at": "2026-04-20T14:00:00Z",
+    "source_system": "rupify",
+    "project_id": "speckify-planning-export"
+  },
+  "issues": [
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-1",
+      "title": "Implement constraint: Acceptance Constraint 1",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-2",
+      "title": "Implement constraint: Acceptance Constraint 2",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-3",
+      "title": "Implement constraint: Acceptance Constraint 3",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-4",
+      "title": "Implement constraint: Acceptance Constraint 4",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-4"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-5",
+      "title": "Implement constraint: Acceptance Constraint 5",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-5"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-5."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-6",
+      "title": "Implement constraint: Acceptance Constraint 6",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-6"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-6."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-7",
+      "title": "Implement constraint: Acceptance Constraint 7",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-7"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-7."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
+      "issue_slug": "iu-rupify-acceptance-constraint-requirement-8",
+      "title": "Implement constraint: Acceptance Constraint 8",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-requirement-8"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-8."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
+      "issue_slug": "iu-rupify-acceptance-constraint-success-1",
+      "title": "Implement constraint: Success Criterion 1",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: Better planning of IT systems purchasing and life cycle\n- Failure condition: The delivered behavior violates the stated constraint: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "acceptance-constraints"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.acceptance-constraint-success-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-1",
+      "issue_slug": "iu-rupify-domain-invariant-1",
+      "title": "Enforce invariant: Rule 1",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-1` (domain_invariant: `domain-invariant-1`)\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 1.\n- Observable: A System must have a business owner before it becomes Active.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must have a business owner before it becomes Active.\n- Failure condition: The invariant is breached: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-2",
+      "issue_slug": "iu-rupify-domain-invariant-2",
+      "title": "Enforce invariant: Rule 2",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2` (domain_invariant: `domain-invariant-2`)\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.\n- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-3.record-contract-dates",
+      "issue_slug": "iu-rupify-domain-invariant-3-record-contract-dates",
+      "title": "Enforce invariant: Record contract dates",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'The system records contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- Record contract dates for the system.\n\n## Acceptance Criteria\n\n- The system records contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record contract dates.\n- Observable: The system records contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records contract dates.\n- Failure condition: The invariant is breached: The system records contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3.record-contract-dates"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.domain-invariant-3.record-vendor",
+      "issue_slug": "iu-rupify-domain-invariant-3-record-vendor",
+      "title": "Enforce invariant: Record vendor",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'The system records vendor information.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- Record vendor information for the system.\n\n## Acceptance Criteria\n\n- The system records vendor information.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record vendor.\n- Observable: The system records vendor information.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records vendor information.\n- Failure condition: The invariant is breached: The system records vendor information.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "domain-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.domain-invariants.domain-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.domain-invariant-3.record-vendor"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of domain-invariant-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.approval-states",
+      "issue_slug": "iu-rupify-functional-requirement-1-approval-states",
+      "title": "Implement workflow support: Support approval states",
+      "body_markdown": "## Summary\n\nSupport business process approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support business process approval states.\n\n## Acceptance Criteria\n\n- Business process approval states are supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support approval states.\n- Observable: Business process approval states are supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Business process approval states are supported.\n- Failure condition: The workflow behavior is missing or incomplete: Business process approval states are supported.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-1.stage-gates`: Approval states are coordinated workflow behavior that should follow stage-gate support.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [
+        "iu.rupify.functional-requirement-1.stage-gates"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.approval-states"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
+      "issue_slug": "iu-rupify-functional-requirement-1-stage-gates",
+      "title": "Implement workflow support: Support stage gates",
+      "body_markdown": "## Summary\n\nSupport business process stage gates.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support business process stage gates.\n\n## Acceptance Criteria\n\n- Business process stage gates are supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support stage gates.\n- Observable: Business process stage gates are supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Business process stage gates are supported.\n- Failure condition: The workflow behavior is missing or incomplete: Business process stage gates are supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.stage-gates"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.export-reporting-data",
+      "issue_slug": "iu-rupify-functional-requirement-2-export-reporting-data",
+      "title": "Implement workflow support: Export reporting data",
+      "body_markdown": "## Summary\n\nExport system inventory data to downstream reporting systems.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Export system inventory data to downstream reporting systems.\n\n## Acceptance Criteria\n\n- System inventory data can be exported to downstream reporting systems.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for export reporting data.\n- Observable: System inventory data can be exported to downstream reporting systems.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: System inventory data can be exported to downstream reporting systems.\n- Failure condition: The workflow behavior is missing or incomplete: System inventory data can be exported to downstream reporting systems.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-2.maintain-system-inventory`: Reporting exports depend on a maintained system inventory record.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [
+        "iu.rupify.functional-requirement-2.maintain-system-inventory"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.export-reporting-data"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.maintain-system-inventory",
+      "issue_slug": "iu-rupify-functional-requirement-2-maintain-system-inventory",
+      "title": "Implement workflow support: Maintain system inventory record",
+      "body_markdown": "## Summary\n\nMaintain the CMDB-style system inventory record for IT applications and systems.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Maintain the CMDB-style system inventory record for IT applications and systems.\n\n## Acceptance Criteria\n\n- The system inventory record can be maintained as the CMDB for IT applications and systems.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for maintain system inventory record.\n- Observable: The system inventory record can be maintained as the CMDB for IT applications and systems.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The system inventory record can be maintained as the CMDB for IT applications and systems.\n- Failure condition: The workflow behavior is missing or incomplete: The system inventory record can be maintained as the CMDB for IT applications and systems.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.maintain-system-inventory"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
+      "issue_slug": "iu-rupify-non-functional-requirement-1",
+      "title": "Implement constraint: non_functional-requirement-1",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-1` (requirement: `non_functional-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
+      "issue_slug": "iu-rupify-non-functional-requirement-2",
+      "title": "Implement constraint: non_functional-requirement-2",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-2` (requirement: `non_functional-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
+      "issue_slug": "iu-rupify-non-functional-requirement-3",
+      "title": "Implement constraint: non_functional-requirement-3",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-3"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
+      "issue_slug": "iu-rupify-non-functional-requirement-4",
+      "title": "Implement constraint: non_functional-requirement-4",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-4"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-4."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
+      "issue_slug": "iu-rupify-non-functional-requirement-5",
+      "title": "Implement constraint: non_functional-requirement-5",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-5.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-5"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-5."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
+      "issue_slug": "iu-rupify-non-functional-requirement-6",
+      "title": "Implement constraint: non_functional-requirement-6",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-6` (requirement: `non_functional-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-6.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-6"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-6."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
+      "issue_slug": "iu-rupify-non-functional-requirement-7",
+      "title": "Implement constraint: non_functional-requirement-7",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-7"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-7"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-7."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
+      "issue_slug": "iu-rupify-non-functional-requirement-8",
+      "title": "Implement constraint: non_functional-requirement-8",
+      "body_markdown": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-8` (requirement: `non_functional-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-8.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "non-functional-requirements"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.non-functional-requirements.non-functional-requirement-8"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.non-functional-requirement-8"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-8."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-1",
+      "issue_slug": "iu-rupify-state-invariant-1",
+      "title": "Enforce invariant: Rule 1",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-1` (state_invariant: `state-invariant-1`)\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 1.\n- Observable: A System must have a business owner before it becomes Active.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must have a business owner before it becomes Active.\n- Failure condition: The invariant is breached: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-1"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-2",
+      "issue_slug": "iu-rupify-state-invariant-2",
+      "title": "Enforce invariant: Rule 2",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2` (state_invariant: `state-invariant-2`)\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.\n- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-2"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-3.record-contract-dates",
+      "issue_slug": "iu-rupify-state-invariant-3-record-contract-dates",
+      "title": "Enforce invariant: Record contract dates",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'The system records contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)\n\n## Scope\n\n- Record contract dates for the system.\n\n## Acceptance Criteria\n\n- The system records contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record contract dates.\n- Observable: The system records contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records contract dates.\n- Failure condition: The invariant is breached: The system records contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-3.record-contract-dates"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-invariant-3.record-vendor",
+      "issue_slug": "iu-rupify-state-invariant-3-record-vendor",
+      "title": "Enforce invariant: Record vendor",
+      "body_markdown": "## Summary\n\nEnsure the invariant 'The system records vendor information.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)\n\n## Scope\n\n- Record vendor information for the system.\n\n## Acceptance Criteria\n\n- The system records vendor information.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for record vendor.\n- Observable: The system records vendor information.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: The system records vendor information.\n- Failure condition: The invariant is breached: The system records vendor information.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-invariants"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-invariants.state-invariant-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-invariant-3.record-vendor"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-invariant-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
+      "issue_slug": "iu-rupify-state-transition-1-active-to-retiring",
+      "title": "Implement lifecycle transition: Active to Retiring",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Active to Retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Active to Retiring is allowed and produces the expected target state.\n- Observable: System can move from Active to Retiring.\n- Setup requirement: The system starts in the Active state.\n- Expected outcome: The system reaches the Retiring state after the transition is applied.\n- Failure condition: The system cannot leave Active for Retiring when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retiring.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-1.proposed-to-active"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.active-to-retiring"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
+      "issue_slug": "iu-rupify-state-transition-1-proposed-to-active",
+      "title": "Implement lifecycle transition: Proposed to Active",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Proposed to Active.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Proposed to Active.\n\n## Acceptance Criteria\n\n- System can move from Proposed to Active.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Proposed to Active is allowed and produces the expected target state.\n- Observable: System can move from Proposed to Active.\n- Setup requirement: The system starts in the Proposed state.\n- Expected outcome: The system reaches the Active state after the transition is applied.\n- Failure condition: The system cannot leave Proposed for Active when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.proposed-to-active"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
+      "issue_slug": "iu-rupify-state-transition-1-retiring-to-retired",
+      "title": "Implement lifecycle transition: Retiring to Retired",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Retiring to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1` (state_transition: `state-transition-1`)\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Retiring to Retired is allowed and produces the expected target state.\n- Observable: System can move from Retiring to Retired.\n- Setup requirement: The system starts in the Retiring state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Retiring for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.active-to-retiring`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-1.active-to-retiring"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-1."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
+      "issue_slug": "iu-rupify-state-transition-2-active-to-retiring",
+      "title": "Implement lifecycle transition: Active to Retiring",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Active to Retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Active to Retiring is allowed and produces the expected target state.\n- Observable: System can move from Active to Retiring.\n- Setup requirement: The system starts in the Active state.\n- Expected outcome: The system reaches the Retiring state after the transition is applied.\n- Failure condition: The system cannot leave Active for Retiring when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retiring.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-2.proposed-to-active"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.active-to-retiring"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
+      "issue_slug": "iu-rupify-state-transition-2-proposed-to-active",
+      "title": "Implement lifecycle transition: Proposed to Active",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Proposed to Active.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Proposed to Active.\n\n## Acceptance Criteria\n\n- System can move from Proposed to Active.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Proposed to Active is allowed and produces the expected target state.\n- Observable: System can move from Proposed to Active.\n- Setup requirement: The system starts in the Proposed state.\n- Expected outcome: The system reaches the Active state after the transition is applied.\n- Failure condition: The system cannot leave Proposed for Active when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.proposed-to-active"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
+      "issue_slug": "iu-rupify-state-transition-2-retiring-to-retired",
+      "title": "Implement lifecycle transition: Retiring to Retired",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Retiring to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2` (state_transition: `state-transition-2`)\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Retiring to Retired is allowed and produces the expected target state.\n- Observable: System can move from Retiring to Retired.\n- Setup requirement: The system starts in the Retiring state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Retiring for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.active-to-retiring`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-2.active-to-retiring"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-2."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
+      "issue_slug": "iu-rupify-state-transition-3-active-to-retiring",
+      "title": "Implement lifecycle transition: Active to Retiring",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Active to Retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Active to Retiring is allowed and produces the expected target state.\n- Observable: System can move from Active to Retiring.\n- Setup requirement: The system starts in the Active state.\n- Expected outcome: The system reaches the Retiring state after the transition is applied.\n- Failure condition: The system cannot leave Active for Retiring when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retiring.\n\n## Dependencies\n\n- `iu.rupify.state-transition-3.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-3.proposed-to-active"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.active-to-retiring"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
+      "issue_slug": "iu-rupify-state-transition-3-proposed-to-active",
+      "title": "Implement lifecycle transition: Proposed to Active",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Proposed to Active.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)\n\n## Scope\n\n- Transition the system lifecycle from Proposed to Active.\n\n## Acceptance Criteria\n\n- System can move from Proposed to Active.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Proposed to Active is allowed and produces the expected target state.\n- Observable: System can move from Proposed to Active.\n- Setup requirement: The system starts in the Proposed state.\n- Expected outcome: The system reaches the Active state after the transition is applied.\n- Failure condition: The system cannot leave Proposed for Active when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.proposed-to-active"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
+      "issue_slug": "iu-rupify-state-transition-3-retiring-to-retired",
+      "title": "Implement lifecycle transition: Retiring to Retired",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Retiring to Retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3` (state_transition: `state-transition-3`)\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Retiring to Retired is allowed and produces the expected target state.\n- Observable: System can move from Retiring to Retired.\n- Setup requirement: The system starts in the Retiring state.\n- Expected outcome: The system reaches the Retired state after the transition is applied.\n- Failure condition: The system cannot leave Retiring for Retired when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-3.active-to-retiring`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [
+        "iu.rupify.state-transition-3.active-to-retiring"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-3."
+    },
+    {
+      "implementation_unit_id": "iu.rupify.state-transition-4.active-to-deprecated",
+      "issue_slug": "iu-rupify-state-transition-4-active-to-deprecated",
+      "title": "Implement lifecycle transition: Active to Deprecated",
+      "body_markdown": "## Summary\n\nTransition the system lifecycle from Active to Deprecated.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-4` (state_transition: `state-transition-4`)\n\n## Scope\n\n- Transition the system lifecycle from Active to Deprecated.\n\n## Acceptance Criteria\n\n- System can move from Active to Deprecated.\n\n## Verification Shape\n\n- Intent: Confirm the lifecycle transition from Active to Deprecated is allowed and produces the expected target state.\n- Observable: System can move from Active to Deprecated.\n- Setup requirement: The system starts in the Active state.\n- Expected outcome: The system reaches the Deprecated state after the transition is applied.\n- Failure condition: The system cannot leave Active for Deprecated when the transition is requested.\n- Failure condition: The system enters an unexpected state instead of Deprecated.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-4.\n",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "state-transitions"
+      ],
+      "dependency_ids": [],
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-4"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.state-transition-4.active-to-deprecated"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of state-transition-4."
+    }
+  ]
+}

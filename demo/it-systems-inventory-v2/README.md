@@ -20,6 +20,7 @@ This demo verifies two things:
 - `output/import-report.json`: structured import analysis
 - `output/import-report.md`: human-readable import analysis
 - `output/planning-bundle.json`: generated Speckify planning bundle
+- `output/github-delivery/`: machine-readable GitHub issue export plus per-issue Markdown bodies
 - `output/rendered-issues/`: issue-ready Markdown projections generated from the bundle
 - `output/speckified-specification.md`: consolidated specification view generated from the
   bundle
