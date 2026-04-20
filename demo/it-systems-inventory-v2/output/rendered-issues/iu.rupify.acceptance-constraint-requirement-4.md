@@ -16,9 +16,11 @@ Implement the planned behavior for acceptance constraint 4.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance constraint 4.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.
 - Observable: audit trail
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: audit trail
+- Failure condition: The delivered behavior violates the stated constraint: audit trail
 
 ## Dependencies
 

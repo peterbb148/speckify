@@ -16,9 +16,11 @@ Implement the planned behavior for non_functional-requirement-3.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies non_functional-requirement-3.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.
 - Observable: role-based access
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: role-based access
+- Failure condition: The delivered behavior violates the stated constraint: role-based access
 
 ## Dependencies
 

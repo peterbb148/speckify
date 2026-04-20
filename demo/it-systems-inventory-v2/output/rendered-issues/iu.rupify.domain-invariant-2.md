@@ -16,9 +16,11 @@ Implement the planned behavior for rule 2.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies rule 2.
+- Intent: Confirm the invariant remains enforced for rule 2.
 - Observable: A System lifecycle state change requires approval for deprecation.
-- Expected outcome: A System lifecycle state change requires approval for deprecation.
+- Setup requirement: A representative system record exists in a state where the rule applies.
+- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.
+- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.
 
 ## Dependencies
 

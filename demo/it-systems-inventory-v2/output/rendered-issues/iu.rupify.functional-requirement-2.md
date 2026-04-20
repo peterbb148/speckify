@@ -16,9 +16,11 @@ Implement the planned behavior for functional-requirement-2.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies functional-requirement-2.
+- Intent: Confirm workflow support is present for functional-requirement-2.
 - Observable: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
-- Expected outcome: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+- Setup requirement: The relevant workflow capability is reachable in the system.
+- Expected outcome: The workflow behavior is supported: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+- Failure condition: The workflow behavior is missing or incomplete: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
 
 ## Dependencies
 

@@ -16,9 +16,11 @@ Implement the planned behavior for acceptance constraint 5.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance constraint 5.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.
 - Observable: search
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: search
+- Failure condition: The delivered behavior violates the stated constraint: search
 
 ## Dependencies
 

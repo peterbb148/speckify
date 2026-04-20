@@ -16,9 +16,11 @@ Implement the planned behavior for acceptance constraint 1.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance constraint 1.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.
 - Observable: UI must be web based
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: UI must be web based
+- Failure condition: The delivered behavior violates the stated constraint: UI must be web based
 
 ## Dependencies
 

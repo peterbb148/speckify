@@ -16,9 +16,11 @@ Implement the planned behavior for rule 1.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies rule 1.
+- Intent: Confirm the invariant remains enforced for rule 1.
 - Observable: A System must have a business owner before it becomes Active.
-- Expected outcome: A System must have a business owner before it becomes Active.
+- Setup requirement: A representative system record exists in a state where the rule applies.
+- Expected outcome: The invariant remains true: A System must have a business owner before it becomes Active.
+- Failure condition: The invariant is breached: A System must have a business owner before it becomes Active.
 
 ## Dependencies
 

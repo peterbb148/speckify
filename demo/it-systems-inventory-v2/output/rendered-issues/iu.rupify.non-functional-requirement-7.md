@@ -16,9 +16,11 @@ Implement the planned behavior for non_functional-requirement-7.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies non_functional-requirement-7.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.
 - Observable: performance (regular >1s for web page rendering)
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: performance (regular >1s for web page rendering)
+- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)
 
 ## Dependencies
 

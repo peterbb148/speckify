@@ -16,9 +16,11 @@ Implement the planned behavior for acceptance constraint 2.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance constraint 2.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.
 - Observable: SSO
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: SSO
+- Failure condition: The delivered behavior violates the stated constraint: SSO
 
 ## Dependencies
 

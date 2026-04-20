@@ -16,9 +16,11 @@ Implement the planned behavior for rule 3.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies rule 3.
+- Intent: Confirm the invariant remains enforced for rule 3.
 - Observable: A System must record vendor and contract dates.
-- Expected outcome: A System must record vendor and contract dates.
+- Setup requirement: A representative system record exists in a state where the rule applies.
+- Expected outcome: The invariant remains true: A System must record vendor and contract dates.
+- Failure condition: The invariant is breached: A System must record vendor and contract dates.
 
 ## Dependencies
 

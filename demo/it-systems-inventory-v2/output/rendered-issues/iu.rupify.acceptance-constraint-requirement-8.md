@@ -16,9 +16,11 @@ Implement the planned behavior for acceptance constraint 8.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance constraint 8.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.
 - Observable: availability >=99%
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: availability >=99%
+- Failure condition: The delivered behavior violates the stated constraint: availability >=99%
 
 ## Dependencies
 

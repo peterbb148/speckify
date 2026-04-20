@@ -16,9 +16,12 @@ Implement the planned behavior for proposed to active.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies proposed to active.
+- Intent: Confirm the lifecycle transition from Proposed to Active is allowed and produces the expected target state.
 - Observable: System can move from Proposed to Active.
-- Expected outcome: System can move from Proposed to Active.
+- Setup requirement: The system starts in the Proposed state.
+- Expected outcome: The system reaches the Active state after the transition is applied.
+- Failure condition: The system cannot leave Proposed for Active when the transition is requested.
+- Failure condition: The system enters an unexpected state instead of Active.
 
 ## Dependencies
 

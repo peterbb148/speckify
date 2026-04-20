@@ -16,9 +16,11 @@ Implement the planned behavior for support stage gates.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies support stage gates.
+- Intent: Confirm workflow support is present for support stage gates.
 - Observable: Business process stage gates are supported.
-- Expected outcome: Business process stage gates are supported.
+- Setup requirement: The relevant workflow capability is reachable in the system.
+- Expected outcome: The workflow behavior is supported: Business process stage gates are supported.
+- Failure condition: The workflow behavior is missing or incomplete: Business process stage gates are supported.
 
 ## Dependencies
 
