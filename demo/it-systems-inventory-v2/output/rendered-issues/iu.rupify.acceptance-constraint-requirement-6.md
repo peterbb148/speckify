@@ -16,9 +16,11 @@ Implement the planned behavior for acceptance constraint 6.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies acceptance constraint 6.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.
 - Observable: filtering
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: filtering
+- Failure condition: The delivered behavior violates the stated constraint: filtering
 
 ## Dependencies
 

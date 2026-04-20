@@ -16,9 +16,12 @@ Implement the planned behavior for retiring to retired.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies retiring to retired.
+- Intent: Confirm the lifecycle transition from Retiring to Retired is allowed and produces the expected target state.
 - Observable: System can move from Retiring to Retired.
-- Expected outcome: System can move from Retiring to Retired.
+- Setup requirement: The system starts in the Retiring state.
+- Expected outcome: The system reaches the Retired state after the transition is applied.
+- Failure condition: The system cannot leave Retiring for Retired when the transition is requested.
+- Failure condition: The system enters an unexpected state instead of Retired.
 
 ## Dependencies
 

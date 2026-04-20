@@ -16,9 +16,11 @@ Implement the planned behavior for non_functional-requirement-4.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies non_functional-requirement-4.
+- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-4.
 - Observable: audit trail
+- Setup requirement: The relevant system boundary or UI surface is available for inspection.
 - Expected outcome: audit trail
+- Failure condition: The delivered behavior violates the stated constraint: audit trail
 
 ## Dependencies
 

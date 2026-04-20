@@ -151,6 +151,64 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     ]
 
 
+def _verification_contract(
+    element: RupifyElement,
+    title: str,
+    acceptance: str,
+    summary: str,
+    implementation_unit_id: str,
+) -> dict[str, Any]:
+    """Derive a richer verification contract from source semantics."""
+    verification_intent = f"Confirm the implementation satisfies {title.lower()}."
+    observables = [acceptance]
+    setup_requirements: list[str] = []
+    expected_outcomes = [acceptance]
+    failure_conditions: list[str] = []
+    invariants_preserved: list[str] = []
+
+    if element.family in {"acceptance_constraints", "non_functional_requirements"}:
+        verification_intent = f"Confirm the delivered behavior satisfies the stated constraint for {title.lower()}."
+        setup_requirements = ["The relevant system boundary or UI surface is available for inspection."]
+        failure_conditions = [f"The delivered behavior violates the stated constraint: {acceptance}"]
+
+    elif element.family in {"domain_invariants", "state_invariants"}:
+        verification_intent = f"Confirm the invariant remains enforced for {title.lower()}."
+        setup_requirements = ["A representative system record exists in a state where the rule applies."]
+        expected_outcomes = [f"The invariant remains true: {acceptance}"]
+        failure_conditions = [f"The invariant is breached: {acceptance}"]
+        invariants_preserved = [acceptance]
+
+    elif element.family == "functional_requirements":
+        verification_intent = f"Confirm workflow support is present for {title.lower()}."
+        setup_requirements = ["The relevant workflow capability is reachable in the system."]
+        expected_outcomes = [f"The workflow behavior is supported: {acceptance}"]
+        failure_conditions = [f"The workflow behavior is missing or incomplete: {acceptance}"]
+
+    elif element.family == "state_transitions":
+        if " from " in summary and " to " in summary:
+            transition_text = summary.replace("Transition the system lifecycle from ", "").rstrip(".")
+            from_state, to_state = [part.strip() for part in transition_text.split(" to ", 1)]
+            verification_intent = f"Confirm the lifecycle transition from {from_state} to {to_state} is allowed and produces the expected target state."
+            setup_requirements = [f"The system starts in the {from_state} state."]
+            expected_outcomes = [f"The system reaches the {to_state} state after the transition is applied."]
+            failure_conditions = [
+                f"The system cannot leave {from_state} for {to_state} when the transition is requested.",
+                f"The system enters an unexpected state instead of {to_state}.",
+            ]
+        else:
+            failure_conditions = [f"The lifecycle transition does not behave as specified: {acceptance}"]
+
+    return {
+        "implementation_unit_id": implementation_unit_id,
+        "verification_intent": verification_intent,
+        "observables": observables,
+        "setup_requirements": setup_requirements,
+        "expected_outcomes": expected_outcomes,
+        "failure_conditions": failure_conditions,
+        "invariants_preserved": invariants_preserved,
+    }
+
+
 def _derive_relationships(
     implementation_units: list[dict[str, Any]],
     spec_units: list[dict[str, Any]],
@@ -348,15 +406,15 @@ def generate_planning_bundle(
             verification_units.append(
                 {
                     "id": verification_unit_id,
-                    "implementation_unit_id": implementation_unit_id,
                     "title": f"Verify {title}",
-                    "verification_intent": f"Confirm the implementation satisfies {title.lower()}.",
                     "source_anchor_ids": [anchor_id],
-                    "observables": [acceptance],
-                    "setup_requirements": [],
-                    "expected_outcomes": [acceptance],
-                    "failure_conditions": [],
-                    "invariants_preserved": [],
+                    **_verification_contract(
+                        element,
+                        title,
+                        acceptance,
+                        summary,
+                        implementation_unit_id,
+                    ),
                     "notes": [f"Derived from decomposition slice of {element.id}."],
                 }
             )

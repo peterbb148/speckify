@@ -16,9 +16,11 @@ Implement the planned behavior for support approval states.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies support approval states.
+- Intent: Confirm workflow support is present for support approval states.
 - Observable: Business process approval states are supported.
-- Expected outcome: Business process approval states are supported.
+- Setup requirement: The relevant workflow capability is reachable in the system.
+- Expected outcome: The workflow behavior is supported: Business process approval states are supported.
+- Failure condition: The workflow behavior is missing or incomplete: Business process approval states are supported.
 
 ## Dependencies
 

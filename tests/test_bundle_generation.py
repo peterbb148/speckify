@@ -154,6 +154,37 @@ class BundleGenerationTests(unittest.TestCase):
             ],
         )
 
+    def test_generated_bundle_strengthens_verification_contracts(self) -> None:
+        """Verification units should include family-specific setup and failure details."""
+        export = import_rupify_export_file(RUPIFY_EXPORT)
+        bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
+
+        domain_invariant = next(
+            item
+            for item in bundle["verification_units"]
+            if item["id"] == "vu.rupify.domain-invariant-1"
+        )
+        transition = next(
+            item
+            for item in bundle["verification_units"]
+            if item["id"] == "vu.rupify.state-transition-4.active-to-deprecated"
+        )
+        constraint = next(
+            item
+            for item in bundle["verification_units"]
+            if item["id"] == "vu.rupify.acceptance-constraint-requirement-1"
+        )
+
+        self.assertTrue(domain_invariant["setup_requirements"])
+        self.assertTrue(domain_invariant["failure_conditions"])
+        self.assertEqual(
+            domain_invariant["invariants_preserved"],
+            ["A System must have a business owner before it becomes Active."],
+        )
+        self.assertIn("starts in the Active state", transition["setup_requirements"][0])
+        self.assertTrue(any("unexpected state" in item for item in transition["failure_conditions"]))
+        self.assertTrue(any("violates the stated constraint" in item for item in constraint["failure_conditions"]))
+
 
 if __name__ == "__main__":
     unittest.main()
