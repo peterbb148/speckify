@@ -104,3 +104,7 @@ Run the current tests with:
 ```bash
 uv run python -m unittest discover
 ```
+
+## Demos
+
+- [IT systems inventory V2 demo](demo/it-systems-inventory-v2/README.md)

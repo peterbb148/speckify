@@ -15,3 +15,5 @@
 - [DONE] 2026-04-20 Implement schema validation helpers for planning bundles
 - [DONE] 2026-04-20 Define machine-readable decomposition rule catalog
 - [DONE] 2026-04-20 Create rendered issue template fixtures from structured output
+- [DONE] 2026-04-20 Import Rupify IT systems inventory V2 hand-off and generate Speckified specification
+- [DONE] 2026-04-20 Refresh IT systems inventory V2 demo against fixed Rupify hand-off export

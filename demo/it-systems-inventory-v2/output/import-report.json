@@ -1,0 +1,210 @@
+{
+  "source_export_kind": "speckify_planning_export",
+  "clean_import": true,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "element_count": 82,
+    "trace_link_count": 127,
+    "ready_normative_count": 29,
+    "importable_ready_normative_count": 29,
+    "blocked_or_partial_normative_count": 29
+  },
+  "family_counts": {
+    "acceptance_constraints": 9,
+    "actors": 8,
+    "business_rules": 3,
+    "components": 3,
+    "domain_entities": 6,
+    "domain_invariants": 3,
+    "functional_requirements": 2,
+    "guard_conditions": 2,
+    "interaction_messages": 2,
+    "interaction_realizations": 8,
+    "interfaces": 2,
+    "non_functional_requirements": 8,
+    "relationships": 7,
+    "runtime_boundaries": 1,
+    "state_entities": 1,
+    "state_invariants": 3,
+    "state_transitions": 4,
+    "triggers": 2,
+    "use_cases": 8
+  },
+  "readiness_counts": {
+    "": 43,
+    "blocked": 10,
+    "ready": 29
+  },
+  "semantic_counts": {
+    "": 10,
+    "informative": 14,
+    "normative": 58
+  },
+  "duplicate_element_ids": [],
+  "unresolved_trace_references": [],
+  "summary": {
+    "blocking_ambiguity_count": 0,
+    "ready_normative_count": 29,
+    "trace_link_count": 127
+  },
+  "importable_ready_normative_by_family": {
+    "acceptance_constraints": [
+      {
+        "id": "acceptance-constraint-requirement-1",
+        "name": "Acceptance Constraint 1",
+        "text": "UI must be web based"
+      },
+      {
+        "id": "acceptance-constraint-requirement-2",
+        "name": "Acceptance Constraint 2",
+        "text": "SSO"
+      },
+      {
+        "id": "acceptance-constraint-requirement-3",
+        "name": "Acceptance Constraint 3",
+        "text": "role-based access"
+      },
+      {
+        "id": "acceptance-constraint-requirement-4",
+        "name": "Acceptance Constraint 4",
+        "text": "audit trail"
+      },
+      {
+        "id": "acceptance-constraint-requirement-5",
+        "name": "Acceptance Constraint 5",
+        "text": "search"
+      },
+      {
+        "id": "acceptance-constraint-requirement-6",
+        "name": "Acceptance Constraint 6",
+        "text": "filtering"
+      },
+      {
+        "id": "acceptance-constraint-requirement-7",
+        "name": "Acceptance Constraint 7",
+        "text": "performance (regular >1s for web page rendering)"
+      },
+      {
+        "id": "acceptance-constraint-requirement-8",
+        "name": "Acceptance Constraint 8",
+        "text": "availability >=99%"
+      },
+      {
+        "id": "acceptance-constraint-success-1",
+        "name": "Success Criterion 1",
+        "text": "Better planning of IT systems purchasing and life cycle"
+      }
+    ],
+    "domain_invariants": [
+      {
+        "id": "domain-invariant-1",
+        "name": "Rule 1",
+        "text": "A System must have a business owner before it becomes Active."
+      },
+      {
+        "id": "domain-invariant-2",
+        "name": "Rule 2",
+        "text": "A System lifecycle state change requires approval for deprecation."
+      },
+      {
+        "id": "domain-invariant-3",
+        "name": "Rule 3",
+        "text": "A System must record vendor and contract dates."
+      }
+    ],
+    "functional_requirements": [
+      {
+        "id": "functional-requirement-1",
+        "name": "",
+        "text": "Yes business processes like stage gates and approval states must be supported"
+      },
+      {
+        "id": "functional-requirement-2",
+        "name": "",
+        "text": "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting."
+      }
+    ],
+    "non_functional_requirements": [
+      {
+        "id": "non_functional-requirement-1",
+        "name": "",
+        "text": "UI must be web based"
+      },
+      {
+        "id": "non_functional-requirement-2",
+        "name": "",
+        "text": "SSO"
+      },
+      {
+        "id": "non_functional-requirement-3",
+        "name": "",
+        "text": "role-based access"
+      },
+      {
+        "id": "non_functional-requirement-4",
+        "name": "",
+        "text": "audit trail"
+      },
+      {
+        "id": "non_functional-requirement-5",
+        "name": "",
+        "text": "search"
+      },
+      {
+        "id": "non_functional-requirement-6",
+        "name": "",
+        "text": "filtering"
+      },
+      {
+        "id": "non_functional-requirement-7",
+        "name": "",
+        "text": "performance (regular >1s for web page rendering)"
+      },
+      {
+        "id": "non_functional-requirement-8",
+        "name": "",
+        "text": "availability >=99%"
+      }
+    ],
+    "state_invariants": [
+      {
+        "id": "state-invariant-1",
+        "name": "Rule 1",
+        "text": "A System must have a business owner before it becomes Active."
+      },
+      {
+        "id": "state-invariant-2",
+        "name": "Rule 2",
+        "text": "A System lifecycle state change requires approval for deprecation."
+      },
+      {
+        "id": "state-invariant-3",
+        "name": "Rule 3",
+        "text": "A System must record vendor and contract dates."
+      }
+    ],
+    "state_transitions": [
+      {
+        "id": "state-transition-1",
+        "name": "",
+        "text": "System: Proposed -> Active -> Retiring -> Retired"
+      },
+      {
+        "id": "state-transition-2",
+        "name": "",
+        "text": "System: Proposed -> Active -> Retiring -> Retired"
+      },
+      {
+        "id": "state-transition-3",
+        "name": "",
+        "text": "System: Proposed -> Active -> Retiring -> Retired"
+      },
+      {
+        "id": "state-transition-4",
+        "name": "",
+        "text": "System: Active -> Deprecated"
+      }
+    ]
+  }
+}
