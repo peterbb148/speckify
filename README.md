@@ -84,6 +84,7 @@ definitions.
 - [Fixture overview](fixtures/README.md)
 - [Example Rupify export](fixtures/rupify-export/authentication-basic.json)
 - [Expected Speckify bundle](fixtures/speckify-bundle/authentication-basic.bundle.json)
+- [Rendered issue fixtures](fixtures/rendered-issues/README.md)
 
 ## Rules
 

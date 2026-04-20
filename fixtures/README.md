@@ -6,6 +6,7 @@ This directory contains example fixtures for the Speckify planning pipeline.
 
 - `rupify-export/`: example upstream planning exports shaped for Speckify consumption
 - `speckify-bundle/`: expected downstream planning bundles derived from the paired export
+- `rendered-issues/`: rendered Markdown issue fixtures derived from planning bundles
 
 ## Current Scenarios
 
@@ -18,3 +19,4 @@ Exercises:
 - a non-blocking ambiguity
 - a precondition constraint
 - one-to-one planning derivation from a simple authentication flow
+- rendered GitHub issue projections for both implementation units
