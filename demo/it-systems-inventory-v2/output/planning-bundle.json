@@ -6,7 +6,7 @@
     "generated_at": "2026-04-20T14:00:00Z",
     "source_model_id": "rupify-model",
     "source_model_version": 1,
-    "decomposition_profile": "rupify-split-v1"
+    "decomposition_profile": "rupify-split-dependencies-v1"
   },
   "source_summary": {
     "source_system": "rupify",
@@ -15,7 +15,8 @@
     "export_version": 1,
     "notes": [
       "Generated directly from imported Rupify planning export records.",
-      "First-pass decomposition splits selected ready normative source elements into smaller planning units."
+      "First-pass decomposition splits selected ready normative source elements into smaller planning units.",
+      "Deterministic dependency edges and assembly rules are derived for split workflow and transition chains."
     ]
   },
   "source_anchors": [
@@ -1317,7 +1318,9 @@
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.functional-requirement-1.stage-gates"
+      ],
       "implementation_scope": [
         "Support business process approval states."
       ],
@@ -1751,7 +1754,9 @@
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.state-transition-1.proposed-to-active"
+      ],
       "implementation_scope": [
         "Transition the system lifecycle from Active to Retiring."
       ],
@@ -1782,7 +1787,9 @@
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.state-transition-1.active-to-retiring"
+      ],
       "implementation_scope": [
         "Transition the system lifecycle from Retiring to Retired."
       ],
@@ -1844,7 +1851,9 @@
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-2"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.state-transition-2.proposed-to-active"
+      ],
       "implementation_scope": [
         "Transition the system lifecycle from Active to Retiring."
       ],
@@ -1875,7 +1884,9 @@
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-2"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.state-transition-2.active-to-retiring"
+      ],
       "implementation_scope": [
         "Transition the system lifecycle from Retiring to Retired."
       ],
@@ -1937,7 +1948,9 @@
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-3"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.state-transition-3.proposed-to-active"
+      ],
       "implementation_scope": [
         "Transition the system lifecycle from Active to Retiring."
       ],
@@ -1968,7 +1981,9 @@
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-3"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "iu.rupify.state-transition-3.active-to-retiring"
+      ],
       "implementation_scope": [
         "Transition the system lifecycle from Retiring to Retired."
       ],
@@ -3465,8 +3480,118 @@
       ]
     }
   ],
-  "dependency_edges": [],
-  "assembly_rules": [],
+  "dependency_edges": [
+    {
+      "id": "dep.functional-requirement-1.approval-states-soft-sequence",
+      "from_implementation_unit_id": "iu.rupify.functional-requirement-1.approval-states",
+      "to_implementation_unit_id": "iu.rupify.functional-requirement-1.stage-gates",
+      "dependency_type": "soft_sequence",
+      "reason": "Approval states are coordinated workflow behavior that should follow stage-gate support."
+    },
+    {
+      "id": "dep.rupify.state-transition-1.active-to-retiring.requires-rupify.state-transition-1.proposed-to-active",
+      "from_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
+      "to_implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
+      "dependency_type": "requires",
+      "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    },
+    {
+      "id": "dep.rupify.state-transition-1.retiring-to-retired.requires-rupify.state-transition-1.active-to-retiring",
+      "from_implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
+      "to_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
+      "dependency_type": "requires",
+      "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    },
+    {
+      "id": "dep.rupify.state-transition-2.active-to-retiring.requires-rupify.state-transition-2.proposed-to-active",
+      "from_implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
+      "to_implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
+      "dependency_type": "requires",
+      "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    },
+    {
+      "id": "dep.rupify.state-transition-2.retiring-to-retired.requires-rupify.state-transition-2.active-to-retiring",
+      "from_implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
+      "to_implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
+      "dependency_type": "requires",
+      "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    },
+    {
+      "id": "dep.rupify.state-transition-3.active-to-retiring.requires-rupify.state-transition-3.proposed-to-active",
+      "from_implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
+      "to_implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
+      "dependency_type": "requires",
+      "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    },
+    {
+      "id": "dep.rupify.state-transition-3.retiring-to-retired.requires-rupify.state-transition-3.active-to-retiring",
+      "from_implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
+      "to_implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
+      "dependency_type": "requires",
+      "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
+    }
+  ],
+  "assembly_rules": [
+    {
+      "id": "assembly.functional-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-1.stage-gates",
+        "su.rupify.functional-requirement-1.approval-states"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine split workflow concerns into the original conjunctive requirement."
+      ]
+    },
+    {
+      "id": "assembly.state-transition-1",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-1"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.state-transition-1.proposed-to-active",
+        "su.rupify.state-transition-1.active-to-retiring",
+        "su.rupify.state-transition-1.retiring-to-retired"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine split lifecycle transitions into the original source transition chain."
+      ]
+    },
+    {
+      "id": "assembly.state-transition-2",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-2"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.state-transition-2.proposed-to-active",
+        "su.rupify.state-transition-2.active-to-retiring",
+        "su.rupify.state-transition-2.retiring-to-retired"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine split lifecycle transitions into the original source transition chain."
+      ]
+    },
+    {
+      "id": "assembly.state-transition-3",
+      "source_anchor_ids": [
+        "anchor.rupify.state-transitions.state-transition-3"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.state-transition-3.proposed-to-active",
+        "su.rupify.state-transition-3.active-to-retiring",
+        "su.rupify.state-transition-3.retiring-to-retired"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine split lifecycle transitions into the original source transition chain."
+      ]
+    }
+  ],
   "unresolved_ambiguities": [],
   "rendered_issues": [
     {
@@ -3537,7 +3662,7 @@
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.approval-states",
       "issue_title": "Implement Support approval states",
-      "issue_body": "## Summary\n\nImplement the planned behavior for support approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1`\n\n## Scope\n\n- Support business process approval states.\n\n## Acceptance Criteria\n\n- Business process approval states are supported.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies support approval states.\n- Observable: Business process approval states are supported.\n- Expected outcome: Business process approval states are supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for support approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1`\n\n## Scope\n\n- Support business process approval states.\n\n## Acceptance Criteria\n\n- Business process approval states are supported.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies support approval states.\n- Observable: Business process approval states are supported.\n- Expected outcome: Business process approval states are supported.\n\n## Dependencies\n\n- `iu.rupify.functional-requirement-1.stage-gates`: Approval states are coordinated workflow behavior that should follow stage-gate support.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2",
@@ -3607,12 +3732,12 @@
     {
       "implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
       "issue_title": "Implement Active to Retiring",
-      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
       "issue_title": "Implement Retiring to Retired",
-      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-1`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-1.active-to-retiring`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
@@ -3622,12 +3747,12 @@
     {
       "implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
       "issue_title": "Implement Active to Retiring",
-      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
       "issue_title": "Implement Retiring to Retired",
-      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-2`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-2.active-to-retiring`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
@@ -3637,12 +3762,12 @@
     {
       "implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
       "issue_title": "Implement Active to Retiring",
-      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for active to retiring.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Active to Retiring.\n\n## Acceptance Criteria\n\n- System can move from Active to Retiring.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies active to retiring.\n- Observable: System can move from Active to Retiring.\n- Expected outcome: System can move from Active to Retiring.\n\n## Dependencies\n\n- `iu.rupify.state-transition-3.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
       "issue_title": "Implement Retiring to Retired",
-      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
+      "issue_body": "## Summary\n\nImplement the planned behavior for retiring to retired.\n\n## Source Lineage\n\n- `anchor.rupify.state-transitions.state-transition-3`\n\n## Scope\n\n- Transition the system lifecycle from Retiring to Retired.\n\n## Acceptance Criteria\n\n- System can move from Retiring to Retired.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies retiring to retired.\n- Observable: System can move from Retiring to Retired.\n- Expected outcome: System can move from Retiring to Retired.\n\n## Dependencies\n\n- `iu.rupify.state-transition-3.active-to-retiring`: Later lifecycle transitions require the earlier transition in the same source chain.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-transition-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-transition-4.active-to-deprecated",

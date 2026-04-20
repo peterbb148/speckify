@@ -51,6 +51,25 @@ class RenderingTests(unittest.TestCase):
         self.assertIn("## Implementation Units", specification)
         self.assertIn("Implement Acceptance Constraint 1", specification)
 
+    def test_rendered_issue_projection_includes_derived_dependency_reason(self) -> None:
+        """Rendered issues should surface derived dependency information."""
+        bundle = generate_planning_bundle_file(
+            RUPIFY_EXPORT,
+            generated_at="2026-04-20T13:30:00Z",
+        )
+        rendered_issue = next(
+            item
+            for item in bundle["rendered_issues"]
+            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.approval-states"
+        )
+
+        self.assertIn("## Dependencies", rendered_issue["issue_body"])
+        self.assertIn(
+            "`iu.rupify.functional-requirement-1.stage-gates`",
+            rendered_issue["issue_body"],
+        )
+        self.assertIn("should follow stage-gate support", rendered_issue["issue_body"])
+
 
 if __name__ == "__main__":
     unittest.main()

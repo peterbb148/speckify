@@ -22,7 +22,7 @@ Implement the planned behavior for support approval states.
 
 ## Dependencies
 
-- None
+- `iu.rupify.functional-requirement-1.stage-gates`: Approval states are coordinated workflow behavior that should follow stage-gate support.
 
 ## Drift Checks
 

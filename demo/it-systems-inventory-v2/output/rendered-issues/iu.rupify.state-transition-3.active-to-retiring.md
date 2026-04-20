@@ -22,7 +22,7 @@ Implement the planned behavior for active to retiring.
 
 ## Dependencies
 
-- None
+- `iu.rupify.state-transition-3.proposed-to-active`: Later lifecycle transitions require the earlier transition in the same source chain.
 
 ## Drift Checks
 
