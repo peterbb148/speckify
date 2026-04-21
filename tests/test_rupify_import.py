@@ -31,7 +31,7 @@ class RupifyImportTests(unittest.TestCase):
         element = next(item for item in export.elements if item.id == "functional-requirement-1")
         self.assertEqual(element.attributes, {"requirement_kind": "functional"})
         self.assertEqual(element.semantic_parts, [])
-        self.assertEqual(element.obligations, [])
+        self.assertEqual(len(element.obligations), 2)
 
     def test_real_handoff_export_analyzes_cleanly_after_import(self) -> None:
         """The current hand-off export should analyze as a clean import."""

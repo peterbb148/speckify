@@ -1025,9 +1025,9 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-1",
-      "title": "functional-requirement-1",
-      "summary": "The system must allow operations managers to maintain reward catalog entries and campaign rules.",
+      "id": "su.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "title": "Maintain reward catalog entries",
+      "summary": "Allow operations managers to maintain reward catalog entries.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
@@ -1039,9 +1039,37 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-2",
-      "title": "functional-requirement-2",
-      "summary": "The platform must integrate with payment confirmation and downstream reporting sources.",
+      "id": "su.rupify.functional-requirement-1.maintain-campaign-rules",
+      "title": "Maintain campaign rules",
+      "summary": "Allow operations managers to maintain campaign rules.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+      "title": "Integrate with payment confirmation",
+      "summary": "Integrate with payment confirmation.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-2."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
+      "title": "Integrate with downstream reporting sources",
+      "summary": "Integrate with downstream reporting sources.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
@@ -1165,9 +1193,9 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-invalid-catalog-change",
-      "title": "Invalid Catalog Change",
-      "summary": "Publication is rejected because the new reward configuration would break an active offer.",
+      "id": "su.rupify.scenario-invalid-catalog-change.segment-1",
+      "title": "Invalid Catalog Change segment 1",
+      "summary": "Operations Manager updates reward configuration.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
@@ -1179,9 +1207,37 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-missing-payment-confirmation",
-      "title": "Missing Payment Confirmation",
-      "summary": "Redemption pauses until dependent payment confirmation arrives.",
+      "id": "su.rupify.scenario-invalid-catalog-change.segment-2",
+      "title": "Invalid Catalog Change segment 2",
+      "summary": "System validates the change.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-invalid-catalog-change.segment-3",
+      "title": "Invalid Catalog Change segment 3",
+      "summary": "System rejects the invalid change.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-missing-payment-confirmation.segment-1",
+      "title": "Missing Payment Confirmation segment 1",
+      "summary": "Customer selects a reward.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
@@ -1193,9 +1249,37 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-reporting-delay",
-      "title": "Reporting Delay",
-      "summary": "Analytics view is partial because a reporting source is delayed.",
+      "id": "su.rupify.scenario-missing-payment-confirmation.segment-2",
+      "title": "Missing Payment Confirmation segment 2",
+      "summary": "System requests payment confirmation.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-missing-payment-confirmation.segment-3",
+      "title": "Missing Payment Confirmation segment 3",
+      "summary": "System blocks fulfillment until confirmation arrives.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reporting-delay.segment-1",
+      "title": "Reporting Delay segment 1",
+      "summary": "Operations Manager opens the analytics dashboard.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
@@ -1207,9 +1291,65 @@
       ]
     },
     {
-      "id": "su.rupify.scenario-reward-inventory-exhausted",
-      "title": "Reward Inventory Exhausted",
-      "summary": "Redemption fails because no reward inventory remains.",
+      "id": "su.rupify.scenario-reporting-delay.segment-2",
+      "title": "Reporting Delay segment 2",
+      "summary": "System detects delayed reporting data.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reporting-delay.segment-3",
+      "title": "Reporting Delay segment 3",
+      "summary": "System shows a partial-data warning.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reward-inventory-exhausted.segment-1",
+      "title": "Reward Inventory Exhausted segment 1",
+      "summary": "Customer selects a reward.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "title": "Reward Inventory Exhausted segment 2",
+      "summary": "System checks reward availability.",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify scenarios element scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "su.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "title": "Reward Inventory Exhausted segment 3",
+      "summary": "System reports that inventory is exhausted.",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
@@ -2203,26 +2343,26 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-1",
-      "title": "Implement workflow support: functional-requirement-1",
-      "summary": "The system must allow operations managers to maintain reward catalog entries and campaign rules.",
+      "id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "title": "Implement workflow support: Maintain reward catalog entries",
+      "summary": "Allow operations managers to maintain reward catalog entries.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "Allow operations managers to maintain reward catalog entries."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "Operations managers can maintain reward catalog entries."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-1."
@@ -2234,26 +2374,88 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-2",
-      "title": "Implement workflow support: functional-requirement-2",
-      "summary": "The platform must integrate with payment confirmation and downstream reporting sources.",
+      "id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "title": "Implement workflow support: Maintain campaign rules",
+      "summary": "Allow operations managers to maintain campaign rules.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-2"
+        "su.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Allow operations managers to maintain campaign rules."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Operations managers can maintain campaign rules."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+      "title": "Implement workflow support: Integrate with payment confirmation",
+      "summary": "Integrate with payment confirmation.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-with-payment-confirmation"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "The platform must integrate with payment confirmation and downstream reporting sources."
+        "Integrate with payment confirmation."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "The platform must integrate with payment confirmation and downstream reporting sources."
+        "Payment confirmation is supported."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-2"
+        "vu.rupify.functional-requirement-2.integrate-with-payment-confirmation"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-2."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-2.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
+      "title": "Implement workflow support: Integrate with downstream reporting sources",
+      "summary": "Integrate with downstream reporting sources.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Integrate with downstream reporting sources."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Downstream reporting sources is supported."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-2."
@@ -2513,26 +2715,26 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-invalid-catalog-change",
-      "title": "Implement scenario handling: Invalid Catalog Change",
-      "summary": "Publication is rejected because the new reward configuration would break an active offer.",
+      "id": "iu.rupify.scenario-invalid-catalog-change.segment-1",
+      "title": "Implement scenario handling: Invalid Catalog Change segment 1",
+      "summary": "Operations Manager updates reward configuration.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-invalid-catalog-change"
+        "su.rupify.scenario-invalid-catalog-change.segment-1"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "Operations Manager updates reward configuration."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "Operations Manager updates reward configuration."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-invalid-catalog-change"
+        "vu.rupify.scenario-invalid-catalog-change.segment-1"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-invalid-catalog-change."
@@ -2544,26 +2746,92 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-missing-payment-confirmation",
-      "title": "Implement scenario handling: Missing Payment Confirmation",
-      "summary": "Redemption pauses until dependent payment confirmation arrives.",
+      "id": "iu.rupify.scenario-invalid-catalog-change.segment-2",
+      "title": "Implement scenario handling: Invalid Catalog Change segment 2",
+      "summary": "System validates the change.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-missing-payment-confirmation"
+        "su.rupify.scenario-invalid-catalog-change.segment-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-invalid-catalog-change.segment-1"
+      ],
+      "implementation_scope": [
+        "System validates the change."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System validates the change."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change.segment-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-invalid-catalog-change."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-invalid-catalog-change.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-invalid-catalog-change.segment-3",
+      "title": "Implement scenario handling: Invalid Catalog Change segment 3",
+      "summary": "System rejects the invalid change.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-invalid-catalog-change.segment-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-invalid-catalog-change.segment-2"
+      ],
+      "implementation_scope": [
+        "System rejects the invalid change."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System rejects the invalid change."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change.segment-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-invalid-catalog-change."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-invalid-catalog-change.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-missing-payment-confirmation.segment-1",
+      "title": "Implement scenario handling: Missing Payment Confirmation segment 1",
+      "summary": "Customer selects a reward.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.segment-1"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "Customer selects a reward."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "Customer selects a reward."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-missing-payment-confirmation"
+        "vu.rupify.scenario-missing-payment-confirmation.segment-1"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-missing-payment-confirmation."
@@ -2575,26 +2843,92 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-reporting-delay",
-      "title": "Implement scenario handling: Reporting Delay",
-      "summary": "Analytics view is partial because a reporting source is delayed.",
+      "id": "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "title": "Implement scenario handling: Missing Payment Confirmation segment 2",
+      "summary": "System requests payment confirmation.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-reporting-delay"
+        "su.rupify.scenario-missing-payment-confirmation.segment-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-missing-payment-confirmation.segment-1"
+      ],
+      "implementation_scope": [
+        "System requests payment confirmation."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System requests payment confirmation."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation.segment-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-missing-payment-confirmation."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-missing-payment-confirmation.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-missing-payment-confirmation.segment-3",
+      "title": "Implement scenario handling: Missing Payment Confirmation segment 3",
+      "summary": "System blocks fulfillment until confirmation arrives.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.segment-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-missing-payment-confirmation.segment-2"
+      ],
+      "implementation_scope": [
+        "System blocks fulfillment until confirmation arrives."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System blocks fulfillment until confirmation arrives."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation.segment-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-missing-payment-confirmation."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-missing-payment-confirmation.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reporting-delay.segment-1",
+      "title": "Implement scenario handling: Reporting Delay segment 1",
+      "summary": "Operations Manager opens the analytics dashboard.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.segment-1"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Analytics view is partial because a reporting source is delayed."
+        "Operations Manager opens the analytics dashboard."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Analytics view is partial because a reporting source is delayed."
+        "Operations Manager opens the analytics dashboard."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reporting-delay"
+        "vu.rupify.scenario-reporting-delay.segment-1"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-reporting-delay."
@@ -2606,26 +2940,158 @@
       ]
     },
     {
-      "id": "iu.rupify.scenario-reward-inventory-exhausted",
-      "title": "Implement scenario handling: Reward Inventory Exhausted",
-      "summary": "Redemption fails because no reward inventory remains.",
+      "id": "iu.rupify.scenario-reporting-delay.segment-2",
+      "title": "Implement scenario handling: Reporting Delay segment 2",
+      "summary": "System detects delayed reporting data.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.scenario-reward-inventory-exhausted"
+        "su.rupify.scenario-reporting-delay.segment-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-reporting-delay.segment-1"
+      ],
+      "implementation_scope": [
+        "System detects delayed reporting data."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System detects delayed reporting data."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay.segment-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-reporting-delay."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reporting-delay.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reporting-delay.segment-3",
+      "title": "Implement scenario handling: Reporting Delay segment 3",
+      "summary": "System shows a partial-data warning.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.segment-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-reporting-delay.segment-2"
+      ],
+      "implementation_scope": [
+        "System shows a partial-data warning."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System shows a partial-data warning."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay.segment-3"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-reporting-delay."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reporting-delay.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reward-inventory-exhausted.segment-1",
+      "title": "Implement scenario handling: Reward Inventory Exhausted segment 1",
+      "summary": "Customer selects a reward.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.segment-1"
       ],
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Redemption fails because no reward inventory remains."
+        "Customer selects a reward."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Redemption fails because no reward inventory remains."
+        "Customer selects a reward."
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reward-inventory-exhausted"
+        "vu.rupify.scenario-reward-inventory-exhausted.segment-1"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-reward-inventory-exhausted."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reward-inventory-exhausted.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "title": "Implement scenario handling: Reward Inventory Exhausted segment 2",
+      "summary": "System checks reward availability.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.segment-2"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-reward-inventory-exhausted.segment-1"
+      ],
+      "implementation_scope": [
+        "System checks reward availability."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System checks reward availability."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted.segment-2"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element scenario-reward-inventory-exhausted."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of scenario-reward-inventory-exhausted.",
+      "labels": [
+        "planning",
+        "scenarios"
+      ]
+    },
+    {
+      "id": "iu.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "title": "Implement scenario handling: Reward Inventory Exhausted segment 3",
+      "summary": "System reports that inventory is exhausted.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.segment-3"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "dependencies": [
+        "iu.rupify.scenario-reward-inventory-exhausted.segment-2"
+      ],
+      "implementation_scope": [
+        "System reports that inventory is exhausted."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "System reports that inventory is exhausted."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted.segment-3"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element scenario-reward-inventory-exhausted."
@@ -4213,24 +4679,24 @@
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-1",
-      "title": "Verify functional-requirement-1",
+      "id": "vu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "title": "Verify Maintain reward catalog entries",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "verification_intent": "Confirm workflow support is present for functional-requirement-1.",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "verification_intent": "Confirm workflow support is present for maintain reward catalog entries.",
       "observables": [
-        "The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "Operations managers can maintain reward catalog entries."
       ],
       "setup_requirements": [
         "The relevant workflow capability is reachable in the system."
       ],
       "expected_outcomes": [
-        "The workflow behavior is supported: The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "The workflow behavior is supported: Operations managers can maintain reward catalog entries."
       ],
       "failure_conditions": [
-        "The workflow behavior is missing or incomplete: The system must allow operations managers to maintain reward catalog entries and campaign rules."
+        "The workflow behavior is missing or incomplete: Operations managers can maintain reward catalog entries."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -4238,24 +4704,74 @@
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-2",
-      "title": "Verify functional-requirement-2",
+      "id": "vu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "title": "Verify Maintain campaign rules",
       "source_anchor_ids": [
-        "anchor.rupify.functional-requirements.functional-requirement-2"
+        "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "verification_intent": "Confirm workflow support is present for functional-requirement-2.",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "verification_intent": "Confirm workflow support is present for maintain campaign rules.",
       "observables": [
-        "The platform must integrate with payment confirmation and downstream reporting sources."
+        "Operations managers can maintain campaign rules."
       ],
       "setup_requirements": [
         "The relevant workflow capability is reachable in the system."
       ],
       "expected_outcomes": [
-        "The workflow behavior is supported: The platform must integrate with payment confirmation and downstream reporting sources."
+        "The workflow behavior is supported: Operations managers can maintain campaign rules."
       ],
       "failure_conditions": [
-        "The workflow behavior is missing or incomplete: The platform must integrate with payment confirmation and downstream reporting sources."
+        "The workflow behavior is missing or incomplete: Operations managers can maintain campaign rules."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+      "title": "Verify Integrate with payment confirmation",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+      "verification_intent": "Confirm workflow support is present for integrate with payment confirmation.",
+      "observables": [
+        "Payment confirmation is supported."
+      ],
+      "setup_requirements": [
+        "The relevant workflow capability is reachable in the system."
+      ],
+      "expected_outcomes": [
+        "The workflow behavior is supported: Payment confirmation is supported."
+      ],
+      "failure_conditions": [
+        "The workflow behavior is missing or incomplete: Payment confirmation is supported."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-2."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
+      "title": "Verify Integrate with downstream reporting sources",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
+      "verification_intent": "Confirm workflow support is present for integrate with downstream reporting sources.",
+      "observables": [
+        "Downstream reporting sources is supported."
+      ],
+      "setup_requirements": [
+        "The relevant workflow capability is reachable in the system."
+      ],
+      "expected_outcomes": [
+        "The workflow behavior is supported: Downstream reporting sources is supported."
+      ],
+      "failure_conditions": [
+        "The workflow behavior is missing or incomplete: Downstream reporting sources is supported."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -4463,24 +4979,24 @@
       ]
     },
     {
-      "id": "vu.rupify.scenario-invalid-catalog-change",
-      "title": "Verify Invalid Catalog Change",
+      "id": "vu.rupify.scenario-invalid-catalog-change.segment-1",
+      "title": "Verify Invalid Catalog Change segment 1",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change",
-      "verification_intent": "Confirm the scenario handling behaves correctly for invalid catalog change.",
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-1",
+      "verification_intent": "Confirm the scenario handling behaves correctly for invalid catalog change segment 1.",
       "observables": [
-        "Publication is rejected because the new reward configuration would break an active offer."
+        "Operations Manager updates reward configuration."
       ],
       "setup_requirements": [
         "The system is placed in the exceptional or degraded condition described by the scenario."
       ],
       "expected_outcomes": [
-        "The scenario outcome is handled correctly: Publication is rejected because the new reward configuration would break an active offer."
+        "The scenario outcome is handled correctly: Operations Manager updates reward configuration."
       ],
       "failure_conditions": [
-        "The scenario handling is missing or incorrect: Publication is rejected because the new reward configuration would break an active offer."
+        "The scenario handling is missing or incorrect: Operations Manager updates reward configuration."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -4488,24 +5004,74 @@
       ]
     },
     {
-      "id": "vu.rupify.scenario-missing-payment-confirmation",
-      "title": "Verify Missing Payment Confirmation",
+      "id": "vu.rupify.scenario-invalid-catalog-change.segment-2",
+      "title": "Verify Invalid Catalog Change segment 2",
       "source_anchor_ids": [
-        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation",
-      "verification_intent": "Confirm the scenario handling behaves correctly for missing payment confirmation.",
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-2",
+      "verification_intent": "Confirm the scenario handling behaves correctly for invalid catalog change segment 2.",
       "observables": [
-        "Redemption pauses until dependent payment confirmation arrives."
+        "System validates the change."
       ],
       "setup_requirements": [
         "The system is placed in the exceptional or degraded condition described by the scenario."
       ],
       "expected_outcomes": [
-        "The scenario outcome is handled correctly: Redemption pauses until dependent payment confirmation arrives."
+        "The scenario outcome is handled correctly: System validates the change."
       ],
       "failure_conditions": [
-        "The scenario handling is missing or incorrect: Redemption pauses until dependent payment confirmation arrives."
+        "The scenario handling is missing or incorrect: System validates the change."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-invalid-catalog-change.segment-3",
+      "title": "Verify Invalid Catalog Change segment 3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-3",
+      "verification_intent": "Confirm the scenario handling behaves correctly for invalid catalog change segment 3.",
+      "observables": [
+        "System rejects the invalid change."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: System rejects the invalid change."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: System rejects the invalid change."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-missing-payment-confirmation.segment-1",
+      "title": "Verify Missing Payment Confirmation segment 1",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-1",
+      "verification_intent": "Confirm the scenario handling behaves correctly for missing payment confirmation segment 1.",
+      "observables": [
+        "Customer selects a reward."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: Customer selects a reward."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: Customer selects a reward."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -4513,24 +5079,74 @@
       ]
     },
     {
-      "id": "vu.rupify.scenario-reporting-delay",
-      "title": "Verify Reporting Delay",
+      "id": "vu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "title": "Verify Missing Payment Confirmation segment 2",
       "source_anchor_ids": [
-        "anchor.rupify.scenarios.scenario-reporting-delay"
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-reporting-delay",
-      "verification_intent": "Confirm the scenario handling behaves correctly for reporting delay.",
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "verification_intent": "Confirm the scenario handling behaves correctly for missing payment confirmation segment 2.",
       "observables": [
-        "Analytics view is partial because a reporting source is delayed."
+        "System requests payment confirmation."
       ],
       "setup_requirements": [
         "The system is placed in the exceptional or degraded condition described by the scenario."
       ],
       "expected_outcomes": [
-        "The scenario outcome is handled correctly: Analytics view is partial because a reporting source is delayed."
+        "The scenario outcome is handled correctly: System requests payment confirmation."
       ],
       "failure_conditions": [
-        "The scenario handling is missing or incorrect: Analytics view is partial because a reporting source is delayed."
+        "The scenario handling is missing or incorrect: System requests payment confirmation."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-missing-payment-confirmation.segment-3",
+      "title": "Verify Missing Payment Confirmation segment 3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-3",
+      "verification_intent": "Confirm the scenario handling behaves correctly for missing payment confirmation segment 3.",
+      "observables": [
+        "System blocks fulfillment until confirmation arrives."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: System blocks fulfillment until confirmation arrives."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: System blocks fulfillment until confirmation arrives."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reporting-delay.segment-1",
+      "title": "Verify Reporting Delay segment 1",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-1",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reporting delay segment 1.",
+      "observables": [
+        "Operations Manager opens the analytics dashboard."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: Operations Manager opens the analytics dashboard."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: Operations Manager opens the analytics dashboard."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -4538,24 +5154,124 @@
       ]
     },
     {
-      "id": "vu.rupify.scenario-reward-inventory-exhausted",
-      "title": "Verify Reward Inventory Exhausted",
+      "id": "vu.rupify.scenario-reporting-delay.segment-2",
+      "title": "Verify Reporting Delay segment 2",
       "source_anchor_ids": [
-        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+        "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
-      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted",
-      "verification_intent": "Confirm the scenario handling behaves correctly for reward inventory exhausted.",
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-2",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reporting delay segment 2.",
       "observables": [
-        "Redemption fails because no reward inventory remains."
+        "System detects delayed reporting data."
       ],
       "setup_requirements": [
         "The system is placed in the exceptional or degraded condition described by the scenario."
       ],
       "expected_outcomes": [
-        "The scenario outcome is handled correctly: Redemption fails because no reward inventory remains."
+        "The scenario outcome is handled correctly: System detects delayed reporting data."
       ],
       "failure_conditions": [
-        "The scenario handling is missing or incorrect: Redemption fails because no reward inventory remains."
+        "The scenario handling is missing or incorrect: System detects delayed reporting data."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reporting-delay.segment-3",
+      "title": "Verify Reporting Delay segment 3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-3",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reporting delay segment 3.",
+      "observables": [
+        "System shows a partial-data warning."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: System shows a partial-data warning."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: System shows a partial-data warning."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reward-inventory-exhausted.segment-1",
+      "title": "Verify Reward Inventory Exhausted segment 1",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-1",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reward inventory exhausted segment 1.",
+      "observables": [
+        "Customer selects a reward."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: Customer selects a reward."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: Customer selects a reward."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "title": "Verify Reward Inventory Exhausted segment 2",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reward inventory exhausted segment 2.",
+      "observables": [
+        "System checks reward availability."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: System checks reward availability."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: System checks reward availability."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "vu.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "title": "Verify Reward Inventory Exhausted segment 3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "verification_intent": "Confirm the scenario handling behaves correctly for reward inventory exhausted segment 3.",
+      "observables": [
+        "System reports that inventory is exhausted."
+      ],
+      "setup_requirements": [
+        "The system is placed in the exceptional or degraded condition described by the scenario."
+      ],
+      "expected_outcomes": [
+        "The scenario outcome is handled correctly: System reports that inventory is exhausted."
+      ],
+      "failure_conditions": [
+        "The scenario handling is missing or incorrect: System reports that inventory is exhausted."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -5686,18 +6402,18 @@
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-1",
+      "id": "tb.rupify.functional-requirement-1.maintain-reward-catalog-entries",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-1"
+        "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.maintain-reward-catalog-entries"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -5705,18 +6421,56 @@
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-2",
+      "id": "tb.rupify.functional-requirement-1.maintain-campaign-rules",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-2.integrate-with-payment-confirmation",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-2"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-2"
+        "su.rupify.functional-requirement-2.integrate-with-payment-confirmation"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-2"
+        "iu.rupify.functional-requirement-2.integrate-with-payment-confirmation"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-2"
+        "vu.rupify.functional-requirement-2.integrate-with-payment-confirmation"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-2."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -5876,18 +6630,18 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-invalid-catalog-change",
+      "id": "tb.rupify.scenario-invalid-catalog-change.segment-1",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-invalid-catalog-change"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-invalid-catalog-change"
+        "su.rupify.scenario-invalid-catalog-change.segment-1"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-invalid-catalog-change"
+        "iu.rupify.scenario-invalid-catalog-change.segment-1"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-invalid-catalog-change"
+        "vu.rupify.scenario-invalid-catalog-change.segment-1"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -5895,18 +6649,56 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-missing-payment-confirmation",
+      "id": "tb.rupify.scenario-invalid-catalog-change.segment-2",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-invalid-catalog-change.segment-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-invalid-catalog-change.segment-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change.segment-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-invalid-catalog-change.segment-3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-invalid-catalog-change.segment-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-invalid-catalog-change.segment-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-invalid-catalog-change.segment-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-invalid-catalog-change."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-missing-payment-confirmation.segment-1",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-missing-payment-confirmation"
+        "su.rupify.scenario-missing-payment-confirmation.segment-1"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-missing-payment-confirmation"
+        "iu.rupify.scenario-missing-payment-confirmation.segment-1"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-missing-payment-confirmation"
+        "vu.rupify.scenario-missing-payment-confirmation.segment-1"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -5914,18 +6706,56 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-reporting-delay",
+      "id": "tb.rupify.scenario-missing-payment-confirmation.segment-2",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.segment-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-missing-payment-confirmation.segment-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation.segment-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-missing-payment-confirmation.segment-3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.segment-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-missing-payment-confirmation.segment-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-missing-payment-confirmation.segment-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-missing-payment-confirmation."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reporting-delay.segment-1",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reporting-delay"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-reporting-delay"
+        "su.rupify.scenario-reporting-delay.segment-1"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-reporting-delay"
+        "iu.rupify.scenario-reporting-delay.segment-1"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reporting-delay"
+        "vu.rupify.scenario-reporting-delay.segment-1"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -5933,18 +6763,94 @@
       ]
     },
     {
-      "id": "tb.rupify.scenario-reward-inventory-exhausted",
+      "id": "tb.rupify.scenario-reporting-delay.segment-2",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.segment-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-reporting-delay.segment-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay.segment-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reporting-delay.segment-3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.segment-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-reporting-delay.segment-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reporting-delay.segment-3"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reporting-delay."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reward-inventory-exhausted.segment-1",
       "source_anchor_ids": [
         "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
       ],
       "spec_unit_ids": [
-        "su.rupify.scenario-reward-inventory-exhausted"
+        "su.rupify.scenario-reward-inventory-exhausted.segment-1"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.scenario-reward-inventory-exhausted"
+        "iu.rupify.scenario-reward-inventory-exhausted.segment-1"
       ],
       "verification_unit_ids": [
-        "vu.rupify.scenario-reward-inventory-exhausted"
+        "vu.rupify.scenario-reward-inventory-exhausted.segment-1"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.segment-2"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-reward-inventory-exhausted.segment-2"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted.segment-2"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of scenario-reward-inventory-exhausted."
+      ]
+    },
+    {
+      "id": "tb.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.segment-3"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.scenario-reward-inventory-exhausted.segment-3"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.scenario-reward-inventory-exhausted.segment-3"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -6676,6 +7582,62 @@
   ],
   "dependency_edges": [
     {
+      "id": "dep.rupify.scenario-invalid-catalog-change.segment-2.requires-rupify.scenario-invalid-catalog-change.segment-1",
+      "from_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-2",
+      "to_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-1",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-invalid-catalog-change.segment-3.requires-rupify.scenario-invalid-catalog-change.segment-2",
+      "from_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-3",
+      "to_implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-2",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-missing-payment-confirmation.segment-2.requires-rupify.scenario-missing-payment-confirmation.segment-1",
+      "from_implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "to_implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-1",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-missing-payment-confirmation.segment-3.requires-rupify.scenario-missing-payment-confirmation.segment-2",
+      "from_implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-3",
+      "to_implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-reporting-delay.segment-2.requires-rupify.scenario-reporting-delay.segment-1",
+      "from_implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-2",
+      "to_implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-1",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-reporting-delay.segment-3.requires-rupify.scenario-reporting-delay.segment-2",
+      "from_implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-3",
+      "to_implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-2",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-reward-inventory-exhausted.segment-2.requires-rupify.scenario-reward-inventory-exhausted.segment-1",
+      "from_implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "to_implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-1",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
+      "id": "dep.rupify.scenario-reward-inventory-exhausted.segment-3.requires-rupify.scenario-reward-inventory-exhausted.segment-2",
+      "from_implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "to_implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "dependency_type": "requires",
+      "reason": "Later scenario flow segments depend on earlier explicit flow segments."
+    },
+    {
       "id": "dep.rupify.state-transition-1.validated-to-fulfilled.requires-rupify.state-transition-1.requested-to-validated",
       "from_implementation_unit_id": "iu.rupify.state-transition-1.validated-to-fulfilled",
       "to_implementation_unit_id": "iu.rupify.state-transition-1.requested-to-validated",
@@ -6895,6 +7857,94 @@
   ],
   "assembly_rules": [
     {
+      "id": "assembly.functional-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+        "su.rupify.functional-requirement-1.maintain-campaign-rules"
+      ],
+      "rule_type": "conjunctive_set",
+      "notes": [
+        "Recombine explicitly structured sub-obligations into the original source element."
+      ]
+    },
+    {
+      "id": "assembly.functional-requirement-2",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-2"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+        "su.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
+      ],
+      "rule_type": "conjunctive_set",
+      "notes": [
+        "Recombine explicitly structured sub-obligations into the original source element."
+      ]
+    },
+    {
+      "id": "assembly.scenario-invalid-catalog-change",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-invalid-catalog-change"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-invalid-catalog-change.segment-1",
+        "su.rupify.scenario-invalid-catalog-change.segment-2",
+        "su.rupify.scenario-invalid-catalog-change.segment-3"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine explicit scenario flow segments into the original scenario."
+      ]
+    },
+    {
+      "id": "assembly.scenario-missing-payment-confirmation",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-missing-payment-confirmation.segment-1",
+        "su.rupify.scenario-missing-payment-confirmation.segment-2",
+        "su.rupify.scenario-missing-payment-confirmation.segment-3"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine explicit scenario flow segments into the original scenario."
+      ]
+    },
+    {
+      "id": "assembly.scenario-reporting-delay",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reporting-delay"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-reporting-delay.segment-1",
+        "su.rupify.scenario-reporting-delay.segment-2",
+        "su.rupify.scenario-reporting-delay.segment-3"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine explicit scenario flow segments into the original scenario."
+      ]
+    },
+    {
+      "id": "assembly.scenario-reward-inventory-exhausted",
+      "source_anchor_ids": [
+        "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.scenario-reward-inventory-exhausted.segment-1",
+        "su.rupify.scenario-reward-inventory-exhausted.segment-2",
+        "su.rupify.scenario-reward-inventory-exhausted.segment-3"
+      ],
+      "rule_type": "ordered_sequence",
+      "notes": [
+        "Recombine explicit scenario flow segments into the original scenario."
+      ]
+    },
+    {
       "id": "assembly.state-transition-1",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
@@ -7024,14 +8074,24 @@
       "issue_body": "## Summary\n\nImplement the behavior described by forbidden transition 1.\n\n## Source Lineage\n\n- `anchor.rupify.forbidden-transitions.forbidden-transition-1` (requirement: `forbidden-transition-1`)\n\n## Scope\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Acceptance Criteria\n\n- A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Verification Shape\n\n- Intent: Confirm the implementation satisfies forbidden transition 1.\n- Observable: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n- Expected outcome: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element forbidden-transition-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "issue_title": "Implement workflow support: functional-requirement-1",
-      "issue_body": "## Summary\n\nThe system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Acceptance Criteria\n\n- The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-1.\n- Observable: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n- Failure condition: The workflow behavior is missing or incomplete: The system must allow operations managers to maintain reward catalog entries and campaign rules.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+      "issue_title": "Implement workflow support: Maintain reward catalog entries",
+      "issue_body": "## Summary\n\nAllow operations managers to maintain reward catalog entries.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Allow operations managers to maintain reward catalog entries.\n\n## Acceptance Criteria\n\n- Operations managers can maintain reward catalog entries.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for maintain reward catalog entries.\n- Observable: Operations managers can maintain reward catalog entries.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Operations managers can maintain reward catalog entries.\n- Failure condition: The workflow behavior is missing or incomplete: Operations managers can maintain reward catalog entries.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "issue_title": "Implement workflow support: functional-requirement-2",
-      "issue_body": "## Summary\n\nThe platform must integrate with payment confirmation and downstream reporting sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Acceptance Criteria\n\n- The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: The platform must integrate with payment confirmation and downstream reporting sources.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: The platform must integrate with payment confirmation and downstream reporting sources.\n- Failure condition: The workflow behavior is missing or incomplete: The platform must integrate with payment confirmation and downstream reporting sources.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
+      "issue_title": "Implement workflow support: Maintain campaign rules",
+      "issue_body": "## Summary\n\nAllow operations managers to maintain campaign rules.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Allow operations managers to maintain campaign rules.\n\n## Acceptance Criteria\n\n- Operations managers can maintain campaign rules.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for maintain campaign rules.\n- Observable: Operations managers can maintain campaign rules.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Operations managers can maintain campaign rules.\n- Failure condition: The workflow behavior is missing or incomplete: Operations managers can maintain campaign rules.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+      "issue_title": "Implement workflow support: Integrate with payment confirmation",
+      "issue_body": "## Summary\n\nIntegrate with payment confirmation.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Integrate with payment confirmation.\n\n## Acceptance Criteria\n\n- Payment confirmation is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for integrate with payment confirmation.\n- Observable: Payment confirmation is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Payment confirmation is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Payment confirmation is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
+      "issue_title": "Implement workflow support: Integrate with downstream reporting sources",
+      "issue_body": "## Summary\n\nIntegrate with downstream reporting sources.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- Integrate with downstream reporting sources.\n\n## Acceptance Criteria\n\n- Downstream reporting sources is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for integrate with downstream reporting sources.\n- Observable: Downstream reporting sources is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Downstream reporting sources is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Downstream reporting sources is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.guard-condition-2",
@@ -7074,24 +8134,64 @@
       "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)\n\n## Scope\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Acceptance Criteria\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.\n- Observable: The system must provide reporting on redemptions and campaign performance.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The system must provide reporting on redemptions and campaign performance.\n- Failure condition: The delivered behavior violates the stated constraint: The system must provide reporting on redemptions and campaign performance.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change",
-      "issue_title": "Implement scenario handling: Invalid Catalog Change",
-      "issue_body": "## Summary\n\nPublication is rejected because the new reward configuration would break an active offer.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- Publication is rejected because the new reward configuration would break an active offer.\n\n## Acceptance Criteria\n\n- Publication is rejected because the new reward configuration would break an active offer.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for invalid catalog change.\n- Observable: Publication is rejected because the new reward configuration would break an active offer.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Publication is rejected because the new reward configuration would break an active offer.\n- Failure condition: The scenario handling is missing or incorrect: Publication is rejected because the new reward configuration would break an active offer.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-1",
+      "issue_title": "Implement scenario handling: Invalid Catalog Change segment 1",
+      "issue_body": "## Summary\n\nOperations Manager updates reward configuration.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- Operations Manager updates reward configuration.\n\n## Acceptance Criteria\n\n- Operations Manager updates reward configuration.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for invalid catalog change segment 1.\n- Observable: Operations Manager updates reward configuration.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Operations Manager updates reward configuration.\n- Failure condition: The scenario handling is missing or incorrect: Operations Manager updates reward configuration.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation",
-      "issue_title": "Implement scenario handling: Missing Payment Confirmation",
-      "issue_body": "## Summary\n\nRedemption pauses until dependent payment confirmation arrives.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- Redemption pauses until dependent payment confirmation arrives.\n\n## Acceptance Criteria\n\n- Redemption pauses until dependent payment confirmation arrives.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for missing payment confirmation.\n- Observable: Redemption pauses until dependent payment confirmation arrives.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Redemption pauses until dependent payment confirmation arrives.\n- Failure condition: The scenario handling is missing or incorrect: Redemption pauses until dependent payment confirmation arrives.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-2",
+      "issue_title": "Implement scenario handling: Invalid Catalog Change segment 2",
+      "issue_body": "## Summary\n\nSystem validates the change.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- System validates the change.\n\n## Acceptance Criteria\n\n- System validates the change.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for invalid catalog change segment 2.\n- Observable: System validates the change.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System validates the change.\n- Failure condition: The scenario handling is missing or incorrect: System validates the change.\n\n## Dependencies\n\n- `iu.rupify.scenario-invalid-catalog-change.segment-1`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-reporting-delay",
-      "issue_title": "Implement scenario handling: Reporting Delay",
-      "issue_body": "## Summary\n\nAnalytics view is partial because a reporting source is delayed.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- Analytics view is partial because a reporting source is delayed.\n\n## Acceptance Criteria\n\n- Analytics view is partial because a reporting source is delayed.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reporting delay.\n- Observable: Analytics view is partial because a reporting source is delayed.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Analytics view is partial because a reporting source is delayed.\n- Failure condition: The scenario handling is missing or incorrect: Analytics view is partial because a reporting source is delayed.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+      "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-3",
+      "issue_title": "Implement scenario handling: Invalid Catalog Change segment 3",
+      "issue_body": "## Summary\n\nSystem rejects the invalid change.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)\n\n## Scope\n\n- System rejects the invalid change.\n\n## Acceptance Criteria\n\n- System rejects the invalid change.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for invalid catalog change segment 3.\n- Observable: System rejects the invalid change.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System rejects the invalid change.\n- Failure condition: The scenario handling is missing or incorrect: System rejects the invalid change.\n\n## Dependencies\n\n- `iu.rupify.scenario-invalid-catalog-change.segment-2`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-invalid-catalog-change.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted",
-      "issue_title": "Implement scenario handling: Reward Inventory Exhausted",
-      "issue_body": "## Summary\n\nRedemption fails because no reward inventory remains.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- Redemption fails because no reward inventory remains.\n\n## Acceptance Criteria\n\n- Redemption fails because no reward inventory remains.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reward inventory exhausted.\n- Observable: Redemption fails because no reward inventory remains.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Redemption fails because no reward inventory remains.\n- Failure condition: The scenario handling is missing or incorrect: Redemption fails because no reward inventory remains.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-1",
+      "issue_title": "Implement scenario handling: Missing Payment Confirmation segment 1",
+      "issue_body": "## Summary\n\nCustomer selects a reward.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- Customer selects a reward.\n\n## Acceptance Criteria\n\n- Customer selects a reward.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for missing payment confirmation segment 1.\n- Observable: Customer selects a reward.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Customer selects a reward.\n- Failure condition: The scenario handling is missing or incorrect: Customer selects a reward.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "issue_title": "Implement scenario handling: Missing Payment Confirmation segment 2",
+      "issue_body": "## Summary\n\nSystem requests payment confirmation.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- System requests payment confirmation.\n\n## Acceptance Criteria\n\n- System requests payment confirmation.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for missing payment confirmation segment 2.\n- Observable: System requests payment confirmation.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System requests payment confirmation.\n- Failure condition: The scenario handling is missing or incorrect: System requests payment confirmation.\n\n## Dependencies\n\n- `iu.rupify.scenario-missing-payment-confirmation.segment-1`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-3",
+      "issue_title": "Implement scenario handling: Missing Payment Confirmation segment 3",
+      "issue_body": "## Summary\n\nSystem blocks fulfillment until confirmation arrives.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)\n\n## Scope\n\n- System blocks fulfillment until confirmation arrives.\n\n## Acceptance Criteria\n\n- System blocks fulfillment until confirmation arrives.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for missing payment confirmation segment 3.\n- Observable: System blocks fulfillment until confirmation arrives.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System blocks fulfillment until confirmation arrives.\n- Failure condition: The scenario handling is missing or incorrect: System blocks fulfillment until confirmation arrives.\n\n## Dependencies\n\n- `iu.rupify.scenario-missing-payment-confirmation.segment-2`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-missing-payment-confirmation.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-1",
+      "issue_title": "Implement scenario handling: Reporting Delay segment 1",
+      "issue_body": "## Summary\n\nOperations Manager opens the analytics dashboard.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- Operations Manager opens the analytics dashboard.\n\n## Acceptance Criteria\n\n- Operations Manager opens the analytics dashboard.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reporting delay segment 1.\n- Observable: Operations Manager opens the analytics dashboard.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Operations Manager opens the analytics dashboard.\n- Failure condition: The scenario handling is missing or incorrect: Operations Manager opens the analytics dashboard.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-2",
+      "issue_title": "Implement scenario handling: Reporting Delay segment 2",
+      "issue_body": "## Summary\n\nSystem detects delayed reporting data.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- System detects delayed reporting data.\n\n## Acceptance Criteria\n\n- System detects delayed reporting data.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reporting delay segment 2.\n- Observable: System detects delayed reporting data.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System detects delayed reporting data.\n- Failure condition: The scenario handling is missing or incorrect: System detects delayed reporting data.\n\n## Dependencies\n\n- `iu.rupify.scenario-reporting-delay.segment-1`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-3",
+      "issue_title": "Implement scenario handling: Reporting Delay segment 3",
+      "issue_body": "## Summary\n\nSystem shows a partial-data warning.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)\n\n## Scope\n\n- System shows a partial-data warning.\n\n## Acceptance Criteria\n\n- System shows a partial-data warning.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reporting delay segment 3.\n- Observable: System shows a partial-data warning.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System shows a partial-data warning.\n- Failure condition: The scenario handling is missing or incorrect: System shows a partial-data warning.\n\n## Dependencies\n\n- `iu.rupify.scenario-reporting-delay.segment-2`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reporting-delay.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-1",
+      "issue_title": "Implement scenario handling: Reward Inventory Exhausted segment 1",
+      "issue_body": "## Summary\n\nCustomer selects a reward.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- Customer selects a reward.\n\n## Acceptance Criteria\n\n- Customer selects a reward.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reward inventory exhausted segment 1.\n- Observable: Customer selects a reward.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: Customer selects a reward.\n- Failure condition: The scenario handling is missing or incorrect: Customer selects a reward.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-2",
+      "issue_title": "Implement scenario handling: Reward Inventory Exhausted segment 2",
+      "issue_body": "## Summary\n\nSystem checks reward availability.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- System checks reward availability.\n\n## Acceptance Criteria\n\n- System checks reward availability.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reward inventory exhausted segment 2.\n- Observable: System checks reward availability.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System checks reward availability.\n- Failure condition: The scenario handling is missing or incorrect: System checks reward availability.\n\n## Dependencies\n\n- `iu.rupify.scenario-reward-inventory-exhausted.segment-1`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-3",
+      "issue_title": "Implement scenario handling: Reward Inventory Exhausted segment 3",
+      "issue_body": "## Summary\n\nSystem reports that inventory is exhausted.\n\n## Source Lineage\n\n- `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)\n\n## Scope\n\n- System reports that inventory is exhausted.\n\n## Acceptance Criteria\n\n- System reports that inventory is exhausted.\n\n## Verification Shape\n\n- Intent: Confirm the scenario handling behaves correctly for reward inventory exhausted segment 3.\n- Observable: System reports that inventory is exhausted.\n- Setup requirement: The system is placed in the exceptional or degraded condition described by the scenario.\n- Expected outcome: The scenario outcome is handled correctly: System reports that inventory is exhausted.\n- Failure condition: The scenario handling is missing or incorrect: System reports that inventory is exhausted.\n\n## Dependencies\n\n- `iu.rupify.scenario-reward-inventory-exhausted.segment-2`: Later scenario flow segments depend on earlier explicit flow segments.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element scenario-reward-inventory-exhausted.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-1",

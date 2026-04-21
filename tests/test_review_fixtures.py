@@ -40,7 +40,7 @@ class ReviewFixtureTests(unittest.TestCase):
         """Sample review fixtures should match the current golden rendered issues."""
         mappings = {
             "constraint-web-ui.md": "iu.rupify.acceptance-constraint-requirement-1.md",
-            "workflow-requirement.md": "iu.rupify.functional-requirement-1.md",
+            "workflow-requirement.md": "iu.rupify.functional-requirement-1.support-stage-gates.md",
             "state-transition-active-to-retiring.md": "iu.rupify.state-transition-1.active-to-retiring.md",
         }
 
@@ -69,7 +69,7 @@ class ReviewFixtureTests(unittest.TestCase):
         bundle = json.loads((DEMO_OUTPUT / "planning-bundle.json").read_text())
         report = analyze_bundle_quality(bundle)
 
-        self.assertEqual(report["warning_count"], 36)
+        self.assertEqual(report["warning_count"], 35)
 
         warning_pairs = {
             (warning["implementation_unit_id"], warning["kind"])
@@ -106,7 +106,7 @@ class ReviewFixtureTests(unittest.TestCase):
             review_summary["decomposition_profile"],
             bundle["bundle_metadata"]["decomposition_profile"],
         )
-        self.assertEqual(review_summary["counts"]["implementation_units"], 66)
+        self.assertEqual(review_summary["counts"]["implementation_units"], 76)
         self.assertEqual(review_summary["counts"]["source_anchors"], 62)
 
 

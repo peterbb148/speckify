@@ -3,13 +3,13 @@
   "decomposition_profile": "rupify-structural-decomposition-v1",
   "counts": {
     "source_anchors": 62,
-    "spec_units": 66,
-    "implementation_units": 66,
-    "verification_units": 66,
-    "trace_bundles": 66,
-    "dependency_edges": 31,
-    "assembly_rules": 4,
-    "rendered_issues": 66
+    "spec_units": 76,
+    "implementation_units": 76,
+    "verification_units": 76,
+    "trace_bundles": 76,
+    "dependency_edges": 39,
+    "assembly_rules": 10,
+    "rendered_issues": 76
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",
@@ -27,6 +27,14 @@
       "iu.rupify.redeem-reward-step-2",
       "iu.rupify.redeem-reward-step-3",
       "iu.rupify.redeem-reward-step-4"
+    ],
+    "scenario_segments": [
+      "iu.rupify.scenario-invalid-catalog-change.segment-1",
+      "iu.rupify.scenario-invalid-catalog-change.segment-2",
+      "iu.rupify.scenario-invalid-catalog-change.segment-3",
+      "iu.rupify.scenario-missing-payment-confirmation.segment-1",
+      "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+      "iu.rupify.scenario-missing-payment-confirmation.segment-3"
     ],
     "guard_link_dependencies": [
       {
@@ -60,59 +68,91 @@
     ],
     "sample_assembly_rules": [
       {
-        "id": "assembly.state-transition-1",
+        "id": "assembly.functional-requirement-1",
         "source_anchor_ids": [
-          "anchor.rupify.state-transitions.state-transition-1"
+          "anchor.rupify.functional-requirements.functional-requirement-1"
         ],
         "member_spec_unit_ids": [
-          "su.rupify.state-transition-1.requested-to-validated",
-          "su.rupify.state-transition-1.validated-to-fulfilled"
+          "su.rupify.functional-requirement-1.maintain-reward-catalog-entries",
+          "su.rupify.functional-requirement-1.maintain-campaign-rules"
         ],
-        "rule_type": "ordered_sequence",
+        "rule_type": "conjunctive_set",
         "notes": [
-          "Recombine split lifecycle transitions into the original source transition chain."
+          "Recombine explicitly structured sub-obligations into the original source element."
         ]
       },
       {
-        "id": "assembly.state-transition-2",
+        "id": "assembly.functional-requirement-2",
         "source_anchor_ids": [
-          "anchor.rupify.state-transitions.state-transition-2"
+          "anchor.rupify.functional-requirements.functional-requirement-2"
         ],
         "member_spec_unit_ids": [
-          "su.rupify.state-transition-2.requested-to-validated",
-          "su.rupify.state-transition-2.validated-to-fulfilled"
+          "su.rupify.functional-requirement-2.integrate-with-payment-confirmation",
+          "su.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources"
         ],
-        "rule_type": "ordered_sequence",
+        "rule_type": "conjunctive_set",
         "notes": [
-          "Recombine split lifecycle transitions into the original source transition chain."
+          "Recombine explicitly structured sub-obligations into the original source element."
         ]
       },
       {
-        "id": "assembly.state-transition-4",
+        "id": "assembly.scenario-invalid-catalog-change",
         "source_anchor_ids": [
-          "anchor.rupify.state-transitions.state-transition-4"
+          "anchor.rupify.scenarios.scenario-invalid-catalog-change"
         ],
         "member_spec_unit_ids": [
-          "su.rupify.state-transition-4.draft-to-published",
-          "su.rupify.state-transition-4.published-to-retired"
+          "su.rupify.scenario-invalid-catalog-change.segment-1",
+          "su.rupify.scenario-invalid-catalog-change.segment-2",
+          "su.rupify.scenario-invalid-catalog-change.segment-3"
         ],
         "rule_type": "ordered_sequence",
         "notes": [
-          "Recombine split lifecycle transitions into the original source transition chain."
+          "Recombine explicit scenario flow segments into the original scenario."
         ]
       },
       {
-        "id": "assembly.state-transition-5",
+        "id": "assembly.scenario-missing-payment-confirmation",
         "source_anchor_ids": [
-          "anchor.rupify.state-transitions.state-transition-5"
+          "anchor.rupify.scenarios.scenario-missing-payment-confirmation"
         ],
         "member_spec_unit_ids": [
-          "su.rupify.state-transition-5.draft-to-published",
-          "su.rupify.state-transition-5.published-to-retired"
+          "su.rupify.scenario-missing-payment-confirmation.segment-1",
+          "su.rupify.scenario-missing-payment-confirmation.segment-2",
+          "su.rupify.scenario-missing-payment-confirmation.segment-3"
         ],
         "rule_type": "ordered_sequence",
         "notes": [
-          "Recombine split lifecycle transitions into the original source transition chain."
+          "Recombine explicit scenario flow segments into the original scenario."
+        ]
+      },
+      {
+        "id": "assembly.scenario-reporting-delay",
+        "source_anchor_ids": [
+          "anchor.rupify.scenarios.scenario-reporting-delay"
+        ],
+        "member_spec_unit_ids": [
+          "su.rupify.scenario-reporting-delay.segment-1",
+          "su.rupify.scenario-reporting-delay.segment-2",
+          "su.rupify.scenario-reporting-delay.segment-3"
+        ],
+        "rule_type": "ordered_sequence",
+        "notes": [
+          "Recombine explicit scenario flow segments into the original scenario."
+        ]
+      },
+      {
+        "id": "assembly.scenario-reward-inventory-exhausted",
+        "source_anchor_ids": [
+          "anchor.rupify.scenarios.scenario-reward-inventory-exhausted"
+        ],
+        "member_spec_unit_ids": [
+          "su.rupify.scenario-reward-inventory-exhausted.segment-1",
+          "su.rupify.scenario-reward-inventory-exhausted.segment-2",
+          "su.rupify.scenario-reward-inventory-exhausted.segment-3"
+        ],
+        "rule_type": "ordered_sequence",
+        "notes": [
+          "Recombine explicit scenario flow segments into the original scenario."
         ]
       }
     ]

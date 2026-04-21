@@ -5,11 +5,11 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 35
-- Generated verification units: 35
-- Trace bundles: 35
+- Generated implementation units: 36
+- Generated verification units: 36
+- Trace bundles: 36
 - Dependency edges: 14
-- Assembly rules: 3
+- Assembly rules: 4
 
 ## Implementation Units
 
@@ -143,14 +143,23 @@ Project: `speckify-planning-export`
 
 ### Functional Requirements
 
-#### Implement workflow support: functional-requirement-1
+#### Implement workflow support: Support stage gates
 
-- ID: `iu.rupify.functional-requirement-1`
-- Summary: Yes business processes like stage gates and approval states must be supported
+- ID: `iu.rupify.functional-requirement-1.support-stage-gates`
+- Summary: Support stage gates.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
-  - Yes business processes like stage gates and approval states must be supported
+  - Stage gates is supported.
+
+#### Implement workflow support: Support approval states
+
+- ID: `iu.rupify.functional-requirement-1.support-approval-states`
+- Summary: Support approval states.
+- Source lineage:
+  - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
+- Acceptance criteria:
+  - Approval states is supported.
 
 #### Implement workflow support: functional-requirement-2
 

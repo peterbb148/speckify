@@ -37,19 +37,19 @@ class BundleGenerationTests(unittest.TestCase):
             "rupify-structural-decomposition-v1",
         )
         self.assertEqual(len(bundle["source_anchors"]), 29)
-        self.assertEqual(len(bundle["spec_units"]), 35)
-        self.assertEqual(len(bundle["implementation_units"]), 35)
-        self.assertEqual(len(bundle["verification_units"]), 35)
-        self.assertEqual(len(bundle["trace_bundles"]), 35)
+        self.assertEqual(len(bundle["spec_units"]), 36)
+        self.assertEqual(len(bundle["implementation_units"]), 36)
+        self.assertEqual(len(bundle["verification_units"]), 36)
+        self.assertEqual(len(bundle["trace_bundles"]), 36)
         self.assertEqual(len(bundle["dependency_edges"]), 14)
-        self.assertEqual(len(bundle["assembly_rules"]), 3)
-        self.assertEqual(len(bundle["rendered_issues"]), 35)
+        self.assertEqual(len(bundle["assembly_rules"]), 4)
+        self.assertEqual(len(bundle["rendered_issues"]), 36)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
         validate_bundle(bundle, SCHEMA_DIR)
 
-    def test_generated_bundle_preserves_lineage_for_unsplit_functional_requirement(self) -> None:
-        """A non-decomposed requirement should still preserve clean lineage."""
+    def test_generated_bundle_preserves_lineage_for_split_functional_requirement(self) -> None:
+        """A requirement with explicit sub-obligations should preserve clean lineage."""
         export = import_rupify_export_file(RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -76,29 +76,38 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(anchor["view"], "requirements")
         self.assertEqual(
-            [item["id"] for item in spec_units],
-            ["su.rupify.functional-requirement-1"],
+            sorted(item["id"] for item in spec_units),
+            [
+                "su.rupify.functional-requirement-1.support-approval-states",
+                "su.rupify.functional-requirement-1.support-stage-gates",
+            ],
         )
         self.assertEqual(
-            [item["id"] for item in implementation_units],
-            ["iu.rupify.functional-requirement-1"],
+            sorted(item["id"] for item in implementation_units),
+            [
+                "iu.rupify.functional-requirement-1.support-approval-states",
+                "iu.rupify.functional-requirement-1.support-stage-gates",
+            ],
         )
         self.assertEqual(
-            [item["id"] for item in verification_units],
-            ["vu.rupify.functional-requirement-1"],
+            sorted(item["id"] for item in verification_units),
+            [
+                "vu.rupify.functional-requirement-1.support-approval-states",
+                "vu.rupify.functional-requirement-1.support-stage-gates",
+            ],
         )
         requirement = next(
             item
             for item in implementation_units
-            if item["id"] == "iu.rupify.functional-requirement-1"
+            if item["id"] == "iu.rupify.functional-requirement-1.support-stage-gates"
         )
         self.assertEqual(
             requirement["title"],
-            "Implement workflow support: functional-requirement-1",
+            "Implement workflow support: Support stage gates",
         )
         self.assertEqual(
             requirement["summary"],
-            "Yes business processes like stage gates and approval states must be supported",
+            "Support stage gates.",
         )
 
     def test_generated_bundle_splits_multi_step_state_transition_chain(self) -> None:
@@ -306,6 +315,60 @@ class BundleGenerationTests(unittest.TestCase):
         )
         self.assertEqual(bundle["assembly_rules"], [])
 
+    def test_generated_bundle_applies_explicit_scenario_flow_operator(self) -> None:
+        """Explicit ordered scenario flow should decompose into ordered scenario segments."""
+        export = import_rupify_export(
+            {
+                "export_metadata": {"export_kind": "speckify_planning_export"},
+                "elements": [
+                    {
+                        "id": "scenario-1",
+                        "family": "scenarios",
+                        "name": "Payment Delay",
+                        "text": "Scenario summary.",
+                        "content_semantics": "normative",
+                        "readiness_status": "ready",
+                        "normative_ready": True,
+                        "attributes": {
+                            "flow_of_events": [
+                                "Customer submits redemption.",
+                                "System waits for payment confirmation.",
+                                "System pauses fulfillment.",
+                            ]
+                        },
+                    }
+                ],
+                "trace_links": [],
+                "summary": {
+                    "ready_normative_ids": ["scenario-1"],
+                    "ready_normative_count": 1,
+                    "blocking_ambiguity_count": 0,
+                    "trace_link_count": 0,
+                },
+            }
+        )
+
+        bundle = generate_planning_bundle(export, generated_at="2026-04-21T10:00:00Z")
+
+        self.assertEqual(
+            [item["id"] for item in bundle["implementation_units"]],
+            [
+                "iu.rupify.scenario-1.segment-1",
+                "iu.rupify.scenario-1.segment-2",
+                "iu.rupify.scenario-1.segment-3",
+            ],
+        )
+        self.assertEqual(
+            bundle["implementation_units"][1]["dependencies"],
+            ["iu.rupify.scenario-1.segment-1"],
+        )
+        self.assertEqual(
+            bundle["implementation_units"][2]["dependencies"],
+            ["iu.rupify.scenario-1.segment-2"],
+        )
+        self.assertEqual(bundle["assembly_rules"][0]["rule_type"], "ordered_sequence")
+        validate_bundle(bundle, SCHEMA_DIR)
+
     def test_generated_bundle_keeps_loyalty_use_case_steps_intact_without_formal_operator(self) -> None:
         """Loyalty step records should remain intact without a structural split operator."""
         export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
@@ -418,8 +481,8 @@ class BundleGenerationTests(unittest.TestCase):
             ["iu.rupify.guard-condition-2"],
         )
 
-    def test_generated_bundle_keeps_loyalty_scenarios_and_guards_intact(self) -> None:
-        """Scenario and guard families remain intact without structural decomposition."""
+    def test_generated_bundle_splits_loyalty_scenarios_but_keeps_guards_intact(self) -> None:
+        """Scenario flow segments may split from explicit structure while guards stay intact."""
         export = import_rupify_export_file(LOYALTY_RUPIFY_EXPORT)
         bundle = generate_planning_bundle(export, generated_at="2026-04-20T12:30:00Z")
 
@@ -447,15 +510,42 @@ class BundleGenerationTests(unittest.TestCase):
 
         self.assertEqual(
             invalid_catalog_units,
-            ["iu.rupify.scenario-invalid-catalog-change"],
+            [
+                "iu.rupify.scenario-invalid-catalog-change.segment-1",
+                "iu.rupify.scenario-invalid-catalog-change.segment-2",
+                "iu.rupify.scenario-invalid-catalog-change.segment-3",
+            ],
         )
         self.assertEqual(
             missing_payment_units,
-            ["iu.rupify.scenario-missing-payment-confirmation"],
+            [
+                "iu.rupify.scenario-missing-payment-confirmation.segment-1",
+                "iu.rupify.scenario-missing-payment-confirmation.segment-2",
+                "iu.rupify.scenario-missing-payment-confirmation.segment-3",
+            ],
         )
         self.assertEqual(
             guard_units,
             ["iu.rupify.guard-condition-2"],
+        )
+
+        invalid_segment_2 = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.scenario-invalid-catalog-change.segment-2"
+        )
+        invalid_segment_3 = next(
+            item
+            for item in bundle["implementation_units"]
+            if item["id"] == "iu.rupify.scenario-invalid-catalog-change.segment-3"
+        )
+        self.assertEqual(
+            invalid_segment_2["dependencies"],
+            ["iu.rupify.scenario-invalid-catalog-change.segment-1"],
+        )
+        self.assertEqual(
+            invalid_segment_3["dependencies"],
+            ["iu.rupify.scenario-invalid-catalog-change.segment-2"],
         )
 
 

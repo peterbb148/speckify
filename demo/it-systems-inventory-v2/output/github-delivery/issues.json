@@ -449,9 +449,9 @@
     },
     {
       "sequence_number": 13,
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "issue_slug": "iu-rupify-functional-requirement-1",
-      "title": "Implement workflow support: functional-requirement-1",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.support-approval-states",
+      "issue_slug": "iu-rupify-functional-requirement-1-support-approval-states",
+      "title": "Implement workflow support: Support approval states",
       "labels": [
         "speckify",
         "planning",
@@ -464,13 +464,13 @@
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.support-approval-states"
       ],
       "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.functional-requirement-1`\n- Issue slug: `iu-rupify-functional-requirement-1`\n- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`\n- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-1`\n- Verification units: `vu.rupify.functional-requirement-1`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of functional-requirement-1.\n\n## Summary\n\nYes business processes like stage gates and approval states must be supported\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Acceptance Criteria\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-1.\n- Observable: Yes business processes like stage gates and approval states must be supported\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Yes business processes like stage gates and approval states must be supported\n- Failure condition: The workflow behavior is missing or incomplete: Yes business processes like stage gates and approval states must be supported\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n",
+      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.functional-requirement-1.support-approval-states`\n- Issue slug: `iu-rupify-functional-requirement-1-support-approval-states`\n- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`\n- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-1`\n- Verification units: `vu.rupify.functional-requirement-1.support-approval-states`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of functional-requirement-1.\n\n## Summary\n\nSupport approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support approval states.\n\n## Acceptance Criteria\n\n- Approval states is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support approval states.\n- Observable: Approval states is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Approval states is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Approval states is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n",
       "create_payload": {
-        "title": "Implement workflow support: functional-requirement-1",
-        "body_path": "issue-bodies/iu-rupify-functional-requirement-1.md",
+        "title": "Implement workflow support: Support approval states",
+        "body_path": "issue-bodies/iu-rupify-functional-requirement-1-support-approval-states.md",
         "labels": [
           "speckify",
           "planning",
@@ -481,6 +481,38 @@
     },
     {
       "sequence_number": 14,
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.support-stage-gates",
+      "issue_slug": "iu-rupify-functional-requirement-1-support-stage-gates",
+      "title": "Implement workflow support: Support stage gates",
+      "labels": [
+        "speckify",
+        "planning",
+        "source:rupify",
+        "functional-requirements"
+      ],
+      "dependency_ids": [],
+      "dependency_titles": [],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.support-stage-gates"
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
+      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.functional-requirement-1.support-stage-gates`\n- Issue slug: `iu-rupify-functional-requirement-1-support-stage-gates`\n- Labels: `speckify`, `planning`, `source:rupify`, `functional-requirements`\n- Source anchors: `anchor.rupify.functional-requirements.functional-requirement-1`\n- Verification units: `vu.rupify.functional-requirement-1.support-stage-gates`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of functional-requirement-1.\n\n## Summary\n\nSupport stage gates.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support stage gates.\n\n## Acceptance Criteria\n\n- Stage gates is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support stage gates.\n- Observable: Stage gates is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Stage gates is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Stage gates is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n",
+      "create_payload": {
+        "title": "Implement workflow support: Support stage gates",
+        "body_path": "issue-bodies/iu-rupify-functional-requirement-1-support-stage-gates.md",
+        "labels": [
+          "speckify",
+          "planning",
+          "source:rupify",
+          "functional-requirements"
+        ]
+      }
+    },
+    {
+      "sequence_number": 15,
       "implementation_unit_id": "iu.rupify.functional-requirement-2",
       "issue_slug": "iu-rupify-functional-requirement-2",
       "title": "Implement workflow support: functional-requirement-2",
@@ -512,7 +544,7 @@
       }
     },
     {
-      "sequence_number": 15,
+      "sequence_number": 16,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
       "issue_slug": "iu-rupify-non-functional-requirement-1",
       "title": "Implement constraint: non_functional-requirement-1",
@@ -544,7 +576,7 @@
       }
     },
     {
-      "sequence_number": 16,
+      "sequence_number": 17,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
       "issue_slug": "iu-rupify-non-functional-requirement-2",
       "title": "Implement constraint: non_functional-requirement-2",
@@ -576,7 +608,7 @@
       }
     },
     {
-      "sequence_number": 17,
+      "sequence_number": 18,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
       "issue_slug": "iu-rupify-non-functional-requirement-3",
       "title": "Implement constraint: non_functional-requirement-3",
@@ -608,7 +640,7 @@
       }
     },
     {
-      "sequence_number": 18,
+      "sequence_number": 19,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
       "issue_slug": "iu-rupify-non-functional-requirement-4",
       "title": "Implement constraint: non_functional-requirement-4",
@@ -640,7 +672,7 @@
       }
     },
     {
-      "sequence_number": 19,
+      "sequence_number": 20,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
       "issue_slug": "iu-rupify-non-functional-requirement-5",
       "title": "Implement constraint: non_functional-requirement-5",
@@ -672,7 +704,7 @@
       }
     },
     {
-      "sequence_number": 20,
+      "sequence_number": 21,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
       "issue_slug": "iu-rupify-non-functional-requirement-6",
       "title": "Implement constraint: non_functional-requirement-6",
@@ -704,7 +736,7 @@
       }
     },
     {
-      "sequence_number": 21,
+      "sequence_number": 22,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
       "issue_slug": "iu-rupify-non-functional-requirement-7",
       "title": "Implement constraint: non_functional-requirement-7",
@@ -736,7 +768,7 @@
       }
     },
     {
-      "sequence_number": 22,
+      "sequence_number": 23,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
       "issue_slug": "iu-rupify-non-functional-requirement-8",
       "title": "Implement constraint: non_functional-requirement-8",
@@ -768,7 +800,7 @@
       }
     },
     {
-      "sequence_number": 23,
+      "sequence_number": 24,
       "implementation_unit_id": "iu.rupify.state-invariant-1",
       "issue_slug": "iu-rupify-state-invariant-1",
       "title": "Enforce invariant: Rule 1",
@@ -800,7 +832,7 @@
       }
     },
     {
-      "sequence_number": 24,
+      "sequence_number": 25,
       "implementation_unit_id": "iu.rupify.state-invariant-2",
       "issue_slug": "iu-rupify-state-invariant-2",
       "title": "Enforce invariant: Rule 2",
@@ -832,7 +864,7 @@
       }
     },
     {
-      "sequence_number": 25,
+      "sequence_number": 26,
       "implementation_unit_id": "iu.rupify.state-invariant-3",
       "issue_slug": "iu-rupify-state-invariant-3",
       "title": "Enforce invariant: Rule 3",
@@ -864,7 +896,7 @@
       }
     },
     {
-      "sequence_number": 26,
+      "sequence_number": 27,
       "implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
       "issue_slug": "iu-rupify-state-transition-1-active-to-retiring",
       "title": "Implement lifecycle transition: Active to Retiring",
@@ -903,7 +935,7 @@
       }
     },
     {
-      "sequence_number": 27,
+      "sequence_number": 28,
       "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
       "issue_slug": "iu-rupify-state-transition-1-proposed-to-active",
       "title": "Implement lifecycle transition: Proposed to Active",
@@ -935,7 +967,7 @@
       }
     },
     {
-      "sequence_number": 28,
+      "sequence_number": 29,
       "implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
       "issue_slug": "iu-rupify-state-transition-1-retiring-to-retired",
       "title": "Implement lifecycle transition: Retiring to Retired",
@@ -974,7 +1006,7 @@
       }
     },
     {
-      "sequence_number": 29,
+      "sequence_number": 30,
       "implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
       "issue_slug": "iu-rupify-state-transition-2-active-to-retiring",
       "title": "Implement lifecycle transition: Active to Retiring",
@@ -1013,7 +1045,7 @@
       }
     },
     {
-      "sequence_number": 30,
+      "sequence_number": 31,
       "implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
       "issue_slug": "iu-rupify-state-transition-2-proposed-to-active",
       "title": "Implement lifecycle transition: Proposed to Active",
@@ -1045,7 +1077,7 @@
       }
     },
     {
-      "sequence_number": 31,
+      "sequence_number": 32,
       "implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
       "issue_slug": "iu-rupify-state-transition-2-retiring-to-retired",
       "title": "Implement lifecycle transition: Retiring to Retired",
@@ -1084,7 +1116,7 @@
       }
     },
     {
-      "sequence_number": 32,
+      "sequence_number": 33,
       "implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
       "issue_slug": "iu-rupify-state-transition-3-active-to-retiring",
       "title": "Implement lifecycle transition: Active to Retiring",
@@ -1123,7 +1155,7 @@
       }
     },
     {
-      "sequence_number": 33,
+      "sequence_number": 34,
       "implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
       "issue_slug": "iu-rupify-state-transition-3-proposed-to-active",
       "title": "Implement lifecycle transition: Proposed to Active",
@@ -1155,7 +1187,7 @@
       }
     },
     {
-      "sequence_number": 34,
+      "sequence_number": 35,
       "implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
       "issue_slug": "iu-rupify-state-transition-3-retiring-to-retired",
       "title": "Implement lifecycle transition: Retiring to Retired",
@@ -1194,7 +1226,7 @@
       }
     },
     {
-      "sequence_number": 35,
+      "sequence_number": 36,
       "implementation_unit_id": "iu.rupify.state-transition-4.active-to-deprecated",
       "issue_slug": "iu-rupify-state-transition-4-active-to-deprecated",
       "title": "Implement lifecycle transition: Active to Deprecated",

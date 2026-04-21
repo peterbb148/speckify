@@ -162,6 +162,27 @@ def _split_structured_conjunction(element: RupifyElement) -> list[dict[str, str]
     return slices if len(slices) > 1 else []
 
 
+def _split_structured_scenario(element: RupifyElement) -> list[dict[str, str]]:
+    """Split one scenario using explicit ordered flow segments only."""
+    flow_of_events = element.attributes.get("flow_of_events")
+    if not isinstance(flow_of_events, list):
+        return []
+    if not all(isinstance(item, str) and item for item in flow_of_events):
+        return []
+    if len(flow_of_events) < 2:
+        return []
+
+    return [
+        {
+            "suffix": f"segment-{index}",
+            "title": f"{_element_title(element)} segment {index}",
+            "summary": event,
+            "acceptance": event,
+        }
+        for index, event in enumerate(flow_of_events, start=1)
+    ]
+
+
 def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     """Decompose one source element into one or more planning slices."""
     if element.family == "state_transitions":
@@ -169,6 +190,14 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
         if slices:
             return slices
     if element.family in {"functional_requirements", "domain_invariants", "state_invariants", "use_case_steps"}:
+        slices = _split_structured_conjunction(element)
+        if slices:
+            return slices
+    if element.family == "scenarios":
+        slices = _split_structured_scenario(element)
+        if slices:
+            return slices
+    if element.family == "guard_conditions":
         slices = _split_structured_conjunction(element)
         if slices:
             return slices
@@ -301,6 +330,36 @@ def _derive_relationships(
         source_groups.setdefault(source_anchor_id, []).append(item)
 
     for source_anchor_id, members in source_groups.items():
+        if source_anchor_id.startswith("anchor.rupify.scenarios.") and len(members) > 1:
+            for previous, current in zip(members, members[1:]):
+                current["dependencies"].append(previous["id"])
+                dependency_edges.append(
+                    {
+                        "id": f"dep.{current['id'].replace('iu.', '')}.requires-{previous['id'].replace('iu.', '')}",
+                        "from_implementation_unit_id": current["id"],
+                        "to_implementation_unit_id": previous["id"],
+                        "dependency_type": "requires",
+                        "reason": "Later scenario flow segments depend on earlier explicit flow segments.",
+                    }
+                )
+
+            assembly_rules.append(
+                {
+                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        spec_id
+                        for item in members
+                        for spec_id in item["derived_from_spec_unit_ids"]
+                    ],
+                    "rule_type": "ordered_sequence",
+                    "notes": [
+                        "Recombine explicit scenario flow segments into the original scenario.",
+                    ],
+                }
+            )
+            continue
+
         if len(members) > 1 and not source_anchor_id.startswith("anchor.rupify.state-transitions."):
             assembly_rules.append(
                 {
