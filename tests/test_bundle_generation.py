@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from speckify_tools.bundle_generation import generate_planning_bundle
-from speckify_tools.rupify_import import import_rupify_export_file
+from speckify_tools.rupify_import import import_rupify_export, import_rupify_export_file
 from speckify_tools.validation import validate_bundle
 
 
@@ -211,6 +211,100 @@ class BundleGenerationTests(unittest.TestCase):
             domain_invariant_3_units,
             ["iu.rupify.domain-invariant-3"],
         )
+
+    def test_generated_bundle_applies_explicit_conjunction_operator(self) -> None:
+        """Explicit structured sub-obligations should decompose into formal conjunction slices."""
+        export = import_rupify_export(
+            {
+                "export_metadata": {"export_kind": "speckify_planning_export"},
+                "elements": [
+                    {
+                        "id": "requirement-1",
+                        "family": "functional_requirements",
+                        "name": "Requirement 1",
+                        "text": "Composite requirement.",
+                        "content_semantics": "normative",
+                        "readiness_status": "ready",
+                        "normative_ready": True,
+                        "obligations": [
+                            {
+                                "id": "capture-credentials",
+                                "title": "Capture credentials",
+                                "summary": "Capture submitted user credentials.",
+                                "acceptance": "System accepts credential input.",
+                            },
+                            {
+                                "id": "validate-credentials",
+                                "title": "Validate credentials",
+                                "summary": "Validate submitted user credentials.",
+                                "acceptance": "System validates credential input.",
+                            },
+                        ],
+                    }
+                ],
+                "trace_links": [],
+                "summary": {
+                    "ready_normative_ids": ["requirement-1"],
+                    "ready_normative_count": 1,
+                    "blocking_ambiguity_count": 0,
+                    "trace_link_count": 0,
+                },
+            }
+        )
+
+        bundle = generate_planning_bundle(export, generated_at="2026-04-21T08:00:00Z")
+
+        self.assertEqual(
+            sorted(item["id"] for item in bundle["implementation_units"]),
+            [
+                "iu.rupify.requirement-1.capture-credentials",
+                "iu.rupify.requirement-1.validate-credentials",
+            ],
+        )
+        assembly_rule = bundle["assembly_rules"][0]
+        self.assertEqual(assembly_rule["rule_type"], "conjunctive_set")
+        self.assertEqual(
+            assembly_rule["member_spec_unit_ids"],
+            [
+                "su.rupify.requirement-1.capture-credentials",
+                "su.rupify.requirement-1.validate-credentials",
+            ],
+        )
+        validate_bundle(bundle, SCHEMA_DIR)
+
+    def test_generated_bundle_fails_closed_without_explicit_structured_parts(self) -> None:
+        """Wording alone must not trigger conjunction decomposition."""
+        export = import_rupify_export(
+            {
+                "export_metadata": {"export_kind": "speckify_planning_export"},
+                "elements": [
+                    {
+                        "id": "requirement-1",
+                        "family": "functional_requirements",
+                        "name": "Requirement 1",
+                        "text": "The system validates reward eligibility and available points.",
+                        "content_semantics": "normative",
+                        "readiness_status": "ready",
+                        "normative_ready": True,
+                    }
+                ],
+                "trace_links": [],
+                "summary": {
+                    "ready_normative_ids": ["requirement-1"],
+                    "ready_normative_count": 1,
+                    "blocking_ambiguity_count": 0,
+                    "trace_link_count": 0,
+                },
+            }
+        )
+
+        bundle = generate_planning_bundle(export, generated_at="2026-04-21T08:00:00Z")
+
+        self.assertEqual(
+            [item["id"] for item in bundle["implementation_units"]],
+            ["iu.rupify.requirement-1"],
+        )
+        self.assertEqual(bundle["assembly_rules"], [])
 
     def test_generated_bundle_keeps_loyalty_use_case_steps_intact_without_formal_operator(self) -> None:
         """Loyalty step records should remain intact without a structural split operator."""

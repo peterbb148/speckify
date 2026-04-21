@@ -108,29 +108,58 @@ def _split_state_transition_text(text: str) -> list[dict[str, str]]:
     return slices
 
 
-def _split_functional_requirement_text(text: str) -> list[dict[str, str]]:
-    """Split a simple conjunctive functional requirement into separate obligations."""
+def _normalize_structured_part(part: dict[str, Any]) -> dict[str, str] | None:
+    """Normalize one explicit conjunction part into a planning slice."""
+    raw_suffix = part.get("suffix") or part.get("id")
+    raw_title = part.get("title") or part.get("name") or part.get("label")
+    raw_summary = part.get("summary") or part.get("text")
+    raw_acceptance = part.get("acceptance") or raw_summary
+
+    if not isinstance(raw_suffix, str) or not raw_suffix:
+        return None
+    if not isinstance(raw_title, str) or not raw_title:
+        return None
+    if not isinstance(raw_summary, str) or not raw_summary:
+        return None
+    if not isinstance(raw_acceptance, str) or not raw_acceptance:
+        return None
+
+    return {
+        "suffix": _slug(raw_suffix),
+        "title": raw_title,
+        "summary": raw_summary,
+        "acceptance": raw_acceptance,
+    }
+
+
+def _structured_conjunction_parts(element: RupifyElement) -> list[dict[str, Any]]:
+    """Return explicit structured conjunction parts from the imported element."""
+    candidate_lists = [
+        element.obligations,
+        element.semantic_parts,
+    ]
+
+    sub_obligations = element.attributes.get("sub_obligations")
+    if isinstance(sub_obligations, list) and all(isinstance(item, dict) for item in sub_obligations):
+        candidate_lists.append(sub_obligations)
+
+    for parts in candidate_lists:
+        if parts:
+            return parts
+
     return []
 
 
-def _split_invariant_text(element: RupifyElement) -> list[dict[str, str]]:
-    """Split a multi-obligation invariant into narrower planning slices."""
-    return []
+def _split_structured_conjunction(element: RupifyElement) -> list[dict[str, str]]:
+    """Split one element using explicit structured conjunction parts only."""
+    slices: list[dict[str, str]] = []
+    for part in _structured_conjunction_parts(element):
+        normalized = _normalize_structured_part(part)
+        if normalized is None:
+            return []
+        slices.append(normalized)
 
-
-def _split_use_case_step_text(element: RupifyElement) -> list[dict[str, str]]:
-    """Split selected conjunctive use-case steps into narrower execution units."""
-    return []
-
-
-def _split_scenario_text(element: RupifyElement) -> list[dict[str, str]]:
-    """Split selected scenarios into detection and outcome handling units."""
-    return []
-
-
-def _split_guard_condition_text(element: RupifyElement) -> list[dict[str, str]]:
-    """Split selected guard conditions into prerequisite and enforcement units."""
-    return []
+    return slices if len(slices) > 1 else []
 
 
 def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
@@ -139,24 +168,8 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
         slices = _split_state_transition_text(element.text)
         if slices:
             return slices
-    if element.family == "functional_requirements":
-        slices = _split_functional_requirement_text(element.text)
-        if slices:
-            return slices
-    if element.family in {"domain_invariants", "state_invariants"}:
-        slices = _split_invariant_text(element)
-        if slices:
-            return slices
-    if element.family == "use_case_steps":
-        slices = _split_use_case_step_text(element)
-        if slices:
-            return slices
-    if element.family == "scenarios":
-        slices = _split_scenario_text(element)
-        if slices:
-            return slices
-    if element.family == "guard_conditions":
-        slices = _split_guard_condition_text(element)
+    if element.family in {"functional_requirements", "domain_invariants", "state_invariants", "use_case_steps"}:
+        slices = _split_structured_conjunction(element)
         if slices:
             return slices
 
@@ -288,6 +301,24 @@ def _derive_relationships(
         source_groups.setdefault(source_anchor_id, []).append(item)
 
     for source_anchor_id, members in source_groups.items():
+        if len(members) > 1 and not source_anchor_id.startswith("anchor.rupify.state-transitions."):
+            assembly_rules.append(
+                {
+                    "id": f"assembly.{source_anchor_id.split('.')[-1]}",
+                    "source_anchor_ids": [source_anchor_id],
+                    "member_spec_unit_ids": [
+                        spec_id
+                        for item in members
+                        for spec_id in item["derived_from_spec_unit_ids"]
+                    ],
+                    "rule_type": "conjunctive_set",
+                    "notes": [
+                        "Recombine explicitly structured sub-obligations into the original source element.",
+                    ],
+                }
+            )
+            continue
+
         if source_anchor_id.startswith("anchor.rupify.state-transitions.") and len(members) > 1:
             ordered_units = members
 

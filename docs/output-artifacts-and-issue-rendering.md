@@ -276,6 +276,7 @@ Recommended optional fields:
 
 Allowed `rule_type` examples:
 
+- `conjunctive_set`
 - `ordered_sequence`
 - `constraint_overlay`
 - `state_guarded_behavior`

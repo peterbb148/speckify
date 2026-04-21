@@ -26,6 +26,9 @@ class RupifyElement:
     content_semantics: str
     readiness_status: str
     normative_ready: bool
+    attributes: dict[str, Any]
+    semantic_parts: list[dict[str, Any]]
+    obligations: list[dict[str, Any]]
     raw: dict[str, Any]
 
 
@@ -132,6 +135,38 @@ def _require_bool(value: Any, path: str, issues: list[ImportIssue]) -> bool:
     return False
 
 
+def _optional_dict(value: Any, path: str, issues: list[ImportIssue]) -> dict[str, Any]:
+    """Return an optional object value or collect an issue when malformed."""
+    if value is None:
+        return {}
+    if isinstance(value, dict):
+        return value
+    issues.append(ImportIssue(path=path, message="Expected an object when present"))
+    return {}
+
+
+def _optional_list_of_dicts(value: Any, path: str, issues: list[ImportIssue]) -> list[dict[str, Any]]:
+    """Return an optional list of objects or collect issues when malformed."""
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        issues.append(ImportIssue(path=path, message="Expected an array when present"))
+        return []
+
+    items: list[dict[str, Any]] = []
+    for index, item in enumerate(value):
+        if isinstance(item, dict):
+            items.append(item)
+            continue
+        issues.append(
+            ImportIssue(
+                path=f"{path}[{index}]",
+                message="Expected an object entry",
+            )
+        )
+    return items
+
+
 def _require_int(value: Any, path: str, issues: list[ImportIssue]) -> int:
     """Require an integer and collect an issue otherwise."""
     if isinstance(value, int) and not isinstance(value, bool):
@@ -193,6 +228,21 @@ def import_rupify_export(document: dict[str, Any]) -> RupifyPlanningExport:
                 normative_ready=_require_bool(
                     element.get("normative_ready"),
                     f"{path}.normative_ready",
+                    issues,
+                ),
+                attributes=_optional_dict(
+                    element.get("attributes"),
+                    f"{path}.attributes",
+                    issues,
+                ),
+                semantic_parts=_optional_list_of_dicts(
+                    element.get("semantic_parts"),
+                    f"{path}.semantic_parts",
+                    issues,
+                ),
+                obligations=_optional_list_of_dicts(
+                    element.get("obligations"),
+                    f"{path}.obligations",
                     issues,
                 ),
                 raw=element,
