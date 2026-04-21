@@ -70,6 +70,7 @@ definitions.
 - [Speckify design note](docs/speckify-design-note.md)
 - [Input contract and initial schemas](docs/input-contract-and-schemas.md)
 - [Decomposition and validation rules](docs/decomposition-and-validation-rules.md)
+- [Delivery issue-ready gates](docs/delivery-issue-ready-gates.md)
 - [Output artifacts and issue rendering](docs/output-artifacts-and-issue-rendering.md)
 - [Reversibility and feedback flow](docs/reversibility-and-feedback-flow.md)
 - [Rupify downstream planning contract](docs/rupify-downstream-contract.md)

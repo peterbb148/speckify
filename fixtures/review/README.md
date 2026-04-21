@@ -24,6 +24,14 @@ Current review set:
 - `quality-review-notes.md`: current review checklist and expected qualities
 - `quality-review.json`: machine-readable warning report for current planning-quality gaps
 - `quality-review.md`: Markdown projection of the current warning report
+- `it-systems-inventory-v2-delivery-readiness.json`: machine-readable issue-ready gate report
+  for the IT systems inventory V2 delivery export
+- `it-systems-inventory-v2-delivery-readiness.md`: Markdown projection of the IT systems
+  inventory V2 issue-ready gate report
+- `loyalty-platform-v2-delivery-readiness.json`: machine-readable issue-ready gate report
+  for the loyalty platform V2 delivery export
+- `loyalty-platform-v2-delivery-readiness.md`: Markdown projection of the loyalty platform
+  V2 issue-ready gate report
 - `loyalty-platform-v2-summary.json`: compact review summary for the second real-world demo,
   showing the richer non-CMDB V2 bundle case
 
