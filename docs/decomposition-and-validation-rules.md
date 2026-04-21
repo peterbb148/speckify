@@ -37,6 +37,23 @@ The decomposition rules should enforce five properties:
 Speckify should prefer not to decompose a source fragment rather than silently create a
 misleading planning unit from incomplete semantics.
 
+## Constitutional Constraint
+
+Decomposition operators must be defined over explicit source structure, not over source
+phrasing.
+
+Rules:
+
+- conjunction decomposition is only valid when the upstream export carries explicit
+  structured sub-obligations such as `obligations`, `semantic_parts`, or equivalent
+  normalized fields
+- wording alone, including conjunction words, punctuation, or sentence shape, is not
+  sufficient evidence for a split
+- if the source export does not provide explicit sub-obligation structure, Speckify must
+  fail closed and keep the source element intact
+- every formal split must emit an assembly rule that describes how the derived units
+  recompose into the original source element
+
 ## Decomposition Pipeline
 
 Speckify should apply decomposition in four ordered stages.

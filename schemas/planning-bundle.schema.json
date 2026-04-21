@@ -199,6 +199,7 @@
           "rule_type": {
             "type": "string",
             "enum": [
+              "conjunctive_set",
               "ordered_sequence",
               "constraint_overlay",
               "state_guarded_behavior"

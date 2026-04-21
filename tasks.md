@@ -40,3 +40,4 @@
 - [DONE] 2026-04-20 Bootstrap GitHub SpecKit in the repository and map the active SpecKit constitution
 - [DONE] 2026-04-20 Enforce the Constitution in committed pre-commit and repository checks
 - [DONE] 2026-04-20 Remove phrase-shaped decomposition and restore a constitutionally valid structural baseline
+- [DONE] 2026-04-21 Define a formal conjunction operator over explicit structured sub-obligations
