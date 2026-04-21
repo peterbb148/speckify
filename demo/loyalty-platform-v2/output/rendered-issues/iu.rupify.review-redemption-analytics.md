@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by review redemption analytics.
+Deliver the use-case behavior for review redemption analytics: Review Redemption Analytics.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by review redemption analytics.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies review redemption analytics.
+- Intent: Confirm the use-case behavior is delivered for review redemption analytics.
 - Observable: Review Redemption Analytics
-- Expected outcome: Review Redemption Analytics
+- Setup requirement: A representative invocation reaches the start of the use case.
+- Expected outcome: The end-to-end use-case behavior is completed as specified: Review Redemption Analytics
+- Failure condition: The use-case behavior is incomplete or incorrect: Review Redemption Analytics
 
 ## Dependencies
 

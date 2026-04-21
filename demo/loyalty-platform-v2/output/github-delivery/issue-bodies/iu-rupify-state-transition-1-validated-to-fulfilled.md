@@ -7,7 +7,7 @@
 - Verification units: `vu.rupify.state-transition-1.validated-to-fulfilled`
 - Depends on:
   - `iu.rupify.state-transition-1.requested-to-validated` (Implement lifecycle transition: Requested to Validated)
-  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Guard Condition 2)
+  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Catalog validation approval is required before a reward becomes Published)
 - Reverse impact hint: Changes here may require upstream review of state-transition-1.
 
 ## Summary

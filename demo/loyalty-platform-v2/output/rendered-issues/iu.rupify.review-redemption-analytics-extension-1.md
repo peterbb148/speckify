@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by review redemption analytics.
+Deliver the ordered step behavior for review redemption analytics: A reporting data source is delayed.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by review redemption analytics.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies review redemption analytics.
+- Intent: Confirm the use-case step is delivered for review redemption analytics.
 - Observable: A reporting data source is delayed.
-- Expected outcome: A reporting data source is delayed.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: A reporting data source is delayed.
+- Failure condition: The step behavior does not occur as required: A reporting data source is delayed.
 
 ## Dependencies
 

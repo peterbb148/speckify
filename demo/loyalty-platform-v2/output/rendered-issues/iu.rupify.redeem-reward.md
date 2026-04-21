@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by redeem reward.
+Deliver the use-case behavior for redeem reward: Redeem Reward.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by redeem reward.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies redeem reward.
+- Intent: Confirm the use-case behavior is delivered for redeem reward.
 - Observable: Redeem Reward
-- Expected outcome: Redeem Reward
+- Setup requirement: A representative invocation reaches the start of the use case.
+- Expected outcome: The end-to-end use-case behavior is completed as specified: Redeem Reward
+- Failure condition: The use-case behavior is incomplete or incorrect: Redeem Reward
 
 ## Dependencies
 

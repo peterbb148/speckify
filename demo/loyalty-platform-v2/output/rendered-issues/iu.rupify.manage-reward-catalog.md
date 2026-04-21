@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by manage reward catalog.
+Deliver the use-case behavior for manage reward catalog: Manage Reward Catalog.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by manage reward catalog.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies manage reward catalog.
+- Intent: Confirm the use-case behavior is delivered for manage reward catalog.
 - Observable: Manage Reward Catalog
-- Expected outcome: Manage Reward Catalog
+- Setup requirement: A representative invocation reaches the start of the use case.
+- Expected outcome: The end-to-end use-case behavior is completed as specified: Manage Reward Catalog
+- Failure condition: The use-case behavior is incomplete or incorrect: Manage Reward Catalog
 
 ## Dependencies
 

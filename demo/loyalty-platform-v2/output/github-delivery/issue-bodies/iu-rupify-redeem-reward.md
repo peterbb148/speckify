@@ -6,12 +6,12 @@
 - Source anchors: `anchor.rupify.use-cases.redeem-reward`
 - Verification units: `vu.rupify.redeem-reward`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-6` (Implement constraint: non_functional-requirement-6)
+  - `iu.rupify.non-functional-requirement-6` (Satisfy constraint: The system must allow members to redeem rewards when eligibility conditions are)
 - Reverse impact hint: Changes here may require upstream review of redeem-reward.
 
 ## Summary
 
-Implement the behavior described by redeem reward.
+Deliver the use-case behavior for redeem reward: Redeem Reward.
 
 ## Source Lineage
 
@@ -27,9 +27,11 @@ Implement the behavior described by redeem reward.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies redeem reward.
+- Intent: Confirm the use-case behavior is delivered for redeem reward.
 - Observable: Redeem Reward
-- Expected outcome: Redeem Reward
+- Setup requirement: A representative invocation reaches the start of the use case.
+- Expected outcome: The end-to-end use-case behavior is completed as specified: Redeem Reward
+- Failure condition: The use-case behavior is incomplete or incorrect: Redeem Reward
 
 ## Dependencies
 

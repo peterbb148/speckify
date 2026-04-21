@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7`
 - Verification units: `vu.rupify.acceptance-constraint-requirement-7`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-7` (Implement constraint: non_functional-requirement-7)
+  - `iu.rupify.non-functional-requirement-7` (Satisfy constraint: The system must provide reporting on redemptions and campaign performance)
 - Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-7.
 
 ## Summary
@@ -30,7 +30,7 @@ Deliver behavior that satisfies the constraint 'The system must provide reportin
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.
 - Observable: The system must provide reporting on redemptions and campaign performance.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The system must provide reporting on redemptions and campaign performance.
+- Expected outcome: The required behavior is delivered: The system must provide reporting on redemptions and campaign performance.
 - Failure condition: The delivered behavior violates the stated constraint: The system must provide reporting on redemptions and campaign performance.
 
 ## Dependencies

@@ -10,7 +10,7 @@
 
 ## Summary
 
-Allow operations managers to maintain reward catalog entries.
+Deliver workflow behavior for maintain reward catalog entries: Allow operations managers to maintain reward catalog entries.
 
 ## Source Lineage
 

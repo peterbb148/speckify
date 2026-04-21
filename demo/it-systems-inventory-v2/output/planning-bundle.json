@@ -907,7 +907,7 @@
   "implementation_units": [
     {
       "id": "iu.rupify.acceptance-constraint-requirement-1",
-      "title": "Implement constraint: Acceptance Constraint 1",
+      "title": "Satisfy constraint: UI must be web based",
       "summary": "Deliver behavior that satisfies the constraint 'UI must be web based'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-1"
@@ -940,7 +940,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-2",
-      "title": "Implement constraint: Acceptance Constraint 2",
+      "title": "Satisfy constraint: SSO",
       "summary": "Deliver behavior that satisfies the constraint 'SSO'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-2"
@@ -973,7 +973,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-3",
-      "title": "Implement constraint: Acceptance Constraint 3",
+      "title": "Satisfy constraint: role-based access",
       "summary": "Deliver behavior that satisfies the constraint 'role-based access'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-3"
@@ -1006,7 +1006,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-4",
-      "title": "Implement constraint: Acceptance Constraint 4",
+      "title": "Satisfy constraint: audit trail",
       "summary": "Deliver behavior that satisfies the constraint 'audit trail'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-4"
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-5",
-      "title": "Implement constraint: Acceptance Constraint 5",
+      "title": "Satisfy constraint: search",
       "summary": "Deliver behavior that satisfies the constraint 'search'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-5"
@@ -1072,7 +1072,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-6",
-      "title": "Implement constraint: Acceptance Constraint 6",
+      "title": "Satisfy constraint: filtering",
       "summary": "Deliver behavior that satisfies the constraint 'filtering'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-6"
@@ -1105,7 +1105,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-7",
-      "title": "Implement constraint: Acceptance Constraint 7",
+      "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
       "summary": "Deliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-7"
@@ -1138,7 +1138,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-requirement-8",
-      "title": "Implement constraint: Acceptance Constraint 8",
+      "title": "Satisfy constraint: availability >=99%",
       "summary": "Deliver behavior that satisfies the constraint 'availability >=99%'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-requirement-8"
@@ -1171,7 +1171,7 @@
     },
     {
       "id": "iu.rupify.acceptance-constraint-success-1",
-      "title": "Implement constraint: Success Criterion 1",
+      "title": "Satisfy constraint: Better planning of IT systems purchasing and life cycle",
       "summary": "Deliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.acceptance-constraint-success-1"
@@ -1202,7 +1202,7 @@
     },
     {
       "id": "iu.rupify.domain-invariant-1",
-      "title": "Enforce invariant: Rule 1",
+      "title": "Enforce invariant: A System must have a business owner before it becomes Active",
       "summary": "Ensure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
         "su.rupify.domain-invariant-1"
@@ -1233,7 +1233,7 @@
     },
     {
       "id": "iu.rupify.domain-invariant-2",
-      "title": "Enforce invariant: Rule 2",
+      "title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
       "summary": "Ensure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
         "su.rupify.domain-invariant-2"
@@ -1264,7 +1264,7 @@
     },
     {
       "id": "iu.rupify.domain-invariant-3",
-      "title": "Enforce invariant: Rule 3",
+      "title": "Enforce invariant: A System must record vendor and contract dates",
       "summary": "Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
         "su.rupify.domain-invariant-3"
@@ -1296,7 +1296,7 @@
     {
       "id": "iu.rupify.functional-requirement-1.support-stage-gates",
       "title": "Implement workflow support: Support stage gates",
-      "summary": "Support stage gates.",
+      "summary": "Deliver workflow behavior for support stage gates: Support stage gates.",
       "derived_from_spec_unit_ids": [
         "su.rupify.functional-requirement-1.support-stage-gates"
       ],
@@ -1327,7 +1327,7 @@
     {
       "id": "iu.rupify.functional-requirement-1.support-approval-states",
       "title": "Implement workflow support: Support approval states",
-      "summary": "Support approval states.",
+      "summary": "Deliver workflow behavior for support approval states: Support approval states.",
       "derived_from_spec_unit_ids": [
         "su.rupify.functional-requirement-1.support-approval-states"
       ],
@@ -1357,8 +1357,8 @@
     },
     {
       "id": "iu.rupify.functional-requirement-2",
-      "title": "Implement workflow support: functional-requirement-2",
-      "summary": "I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.",
+      "title": "Implement workflow support: I think this will be the CMDB for IT Applications/systems - we",
+      "summary": "Deliver workflow behavior for i think this will be the cmdb for it applications/systems - we: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.",
       "derived_from_spec_unit_ids": [
         "su.rupify.functional-requirement-2"
       ],
@@ -1388,7 +1388,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-1",
-      "title": "Implement constraint: non_functional-requirement-1",
+      "title": "Satisfy constraint: UI must be web based",
       "summary": "Deliver behavior that satisfies the constraint 'UI must be web based'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-1"
@@ -1419,7 +1419,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-2",
-      "title": "Implement constraint: non_functional-requirement-2",
+      "title": "Satisfy constraint: SSO",
       "summary": "Deliver behavior that satisfies the constraint 'SSO'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-2"
@@ -1450,7 +1450,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-3",
-      "title": "Implement constraint: non_functional-requirement-3",
+      "title": "Satisfy constraint: role-based access",
       "summary": "Deliver behavior that satisfies the constraint 'role-based access'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-3"
@@ -1481,7 +1481,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-4",
-      "title": "Implement constraint: non_functional-requirement-4",
+      "title": "Satisfy constraint: audit trail",
       "summary": "Deliver behavior that satisfies the constraint 'audit trail'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-4"
@@ -1512,7 +1512,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-5",
-      "title": "Implement constraint: non_functional-requirement-5",
+      "title": "Satisfy constraint: search",
       "summary": "Deliver behavior that satisfies the constraint 'search'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-5"
@@ -1543,7 +1543,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-6",
-      "title": "Implement constraint: non_functional-requirement-6",
+      "title": "Satisfy constraint: filtering",
       "summary": "Deliver behavior that satisfies the constraint 'filtering'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-6"
@@ -1574,7 +1574,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-7",
-      "title": "Implement constraint: non_functional-requirement-7",
+      "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
       "summary": "Deliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-7"
@@ -1605,7 +1605,7 @@
     },
     {
       "id": "iu.rupify.non-functional-requirement-8",
-      "title": "Implement constraint: non_functional-requirement-8",
+      "title": "Satisfy constraint: availability >=99%",
       "summary": "Deliver behavior that satisfies the constraint 'availability >=99%'.",
       "derived_from_spec_unit_ids": [
         "su.rupify.non-functional-requirement-8"
@@ -1636,7 +1636,7 @@
     },
     {
       "id": "iu.rupify.state-invariant-1",
-      "title": "Enforce invariant: Rule 1",
+      "title": "Enforce invariant: A System must have a business owner before it becomes Active",
       "summary": "Ensure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
         "su.rupify.state-invariant-1"
@@ -1667,7 +1667,7 @@
     },
     {
       "id": "iu.rupify.state-invariant-2",
-      "title": "Enforce invariant: Rule 2",
+      "title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
       "summary": "Ensure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
         "su.rupify.state-invariant-2"
@@ -1698,7 +1698,7 @@
     },
     {
       "id": "iu.rupify.state-invariant-3",
-      "title": "Enforce invariant: Rule 3",
+      "title": "Enforce invariant: A System must record vendor and contract dates",
       "summary": "Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.",
       "derived_from_spec_unit_ids": [
         "su.rupify.state-invariant-3"
@@ -2066,7 +2066,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "UI must be web based"
+        "The required behavior is delivered: UI must be web based"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: UI must be web based"
@@ -2091,7 +2091,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "SSO"
+        "The required behavior is delivered: SSO"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: SSO"
@@ -2116,7 +2116,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "role-based access"
+        "The required behavior is delivered: role-based access"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: role-based access"
@@ -2141,7 +2141,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "audit trail"
+        "The required behavior is delivered: audit trail"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: audit trail"
@@ -2166,7 +2166,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "search"
+        "The required behavior is delivered: search"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: search"
@@ -2191,7 +2191,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "filtering"
+        "The required behavior is delivered: filtering"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: filtering"
@@ -2216,7 +2216,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "performance (regular >1s for web page rendering)"
+        "The required behavior is delivered: performance (regular >1s for web page rendering)"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)"
@@ -2241,7 +2241,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "availability >=99%"
+        "The required behavior is delivered: availability >=99%"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: availability >=99%"
@@ -2266,7 +2266,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "Better planning of IT systems purchasing and life cycle"
+        "The required behavior is delivered: Better planning of IT systems purchasing and life cycle"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: Better planning of IT systems purchasing and life cycle"
@@ -2447,7 +2447,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "UI must be web based"
+        "The required behavior is delivered: UI must be web based"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: UI must be web based"
@@ -2472,7 +2472,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "SSO"
+        "The required behavior is delivered: SSO"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: SSO"
@@ -2497,7 +2497,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "role-based access"
+        "The required behavior is delivered: role-based access"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: role-based access"
@@ -2522,7 +2522,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "audit trail"
+        "The required behavior is delivered: audit trail"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: audit trail"
@@ -2547,7 +2547,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "search"
+        "The required behavior is delivered: search"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: search"
@@ -2572,7 +2572,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "filtering"
+        "The required behavior is delivered: filtering"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: filtering"
@@ -2597,7 +2597,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "performance (regular >1s for web page rendering)"
+        "The required behavior is delivered: performance (regular >1s for web page rendering)"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)"
@@ -2622,7 +2622,7 @@
         "The relevant system boundary or UI surface is available for inspection."
       ],
       "expected_outcomes": [
-        "availability >=99%"
+        "The required behavior is delivered: availability >=99%"
       ],
       "failure_conditions": [
         "The delivered behavior violates the stated constraint: availability >=99%"
@@ -3825,132 +3825,132 @@
   "rendered_issues": [
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
-      "issue_title": "Implement constraint: Acceptance Constraint 1",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-1`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
+      "issue_title": "Satisfy constraint: UI must be web based",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-1` (constraint: `acceptance-constraint-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-1`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
-      "issue_title": "Implement constraint: Acceptance Constraint 2",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-2`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
+      "issue_title": "Satisfy constraint: SSO",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-2`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
-      "issue_title": "Implement constraint: Acceptance Constraint 3",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-3`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
+      "issue_title": "Satisfy constraint: role-based access",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-3`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
-      "issue_title": "Implement constraint: Acceptance Constraint 4",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-4`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
+      "issue_title": "Satisfy constraint: audit trail",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-4`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
-      "issue_title": "Implement constraint: Acceptance Constraint 5",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-5`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
+      "issue_title": "Satisfy constraint: search",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-5`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
-      "issue_title": "Implement constraint: Acceptance Constraint 6",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-6`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
+      "issue_title": "Satisfy constraint: filtering",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-6`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
-      "issue_title": "Implement constraint: Acceptance Constraint 7",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-7`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
+      "issue_title": "Satisfy constraint: performance (regular >1s for web page rendering)",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-7`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
-      "issue_title": "Implement constraint: Acceptance Constraint 8",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-8`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
+      "issue_title": "Satisfy constraint: availability >=99%",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8` (constraint: `acceptance-constraint-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-8`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-8.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "issue_title": "Implement constraint: Success Criterion 1",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: Better planning of IT systems purchasing and life cycle\n- Failure condition: The delivered behavior violates the stated constraint: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n"
+      "issue_title": "Satisfy constraint: Better planning of IT systems purchasing and life cycle",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: Better planning of IT systems purchasing and life cycle\n- Failure condition: The delivered behavior violates the stated constraint: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-1",
-      "issue_title": "Enforce invariant: Rule 1",
+      "issue_title": "Enforce invariant: A System must have a business owner before it becomes Active",
       "issue_body": "## Summary\n\nEnsure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-1` (domain_invariant: `domain-invariant-1`)\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 1.\n- Observable: A System must have a business owner before it becomes Active.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must have a business owner before it becomes Active.\n- Failure condition: The invariant is breached: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-2",
-      "issue_title": "Enforce invariant: Rule 2",
+      "issue_title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
       "issue_body": "## Summary\n\nEnsure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-2` (domain_invariant: `domain-invariant-2`)\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.\n- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-3",
-      "issue_title": "Enforce invariant: Rule 3",
+      "issue_title": "Enforce invariant: A System must record vendor and contract dates",
       "issue_body": "## Summary\n\nEnsure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 3.\n- Observable: A System must record vendor and contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must record vendor and contract dates.\n- Failure condition: The invariant is breached: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.support-stage-gates",
       "issue_title": "Implement workflow support: Support stage gates",
-      "issue_body": "## Summary\n\nSupport stage gates.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support stage gates.\n\n## Acceptance Criteria\n\n- Stage gates is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support stage gates.\n- Observable: Stage gates is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Stage gates is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Stage gates is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "issue_body": "## Summary\n\nDeliver workflow behavior for support stage gates: Support stage gates.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support stage gates.\n\n## Acceptance Criteria\n\n- Stage gates is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support stage gates.\n- Observable: Stage gates is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Stage gates is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Stage gates is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.support-approval-states",
       "issue_title": "Implement workflow support: Support approval states",
-      "issue_body": "## Summary\n\nSupport approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support approval states.\n\n## Acceptance Criteria\n\n- Approval states is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support approval states.\n- Observable: Approval states is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Approval states is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Approval states is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "issue_body": "## Summary\n\nDeliver workflow behavior for support approval states: Support approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support approval states.\n\n## Acceptance Criteria\n\n- Approval states is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support approval states.\n- Observable: Approval states is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Approval states is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Approval states is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "issue_title": "Implement workflow support: functional-requirement-2",
-      "issue_body": "## Summary\n\nI think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Acceptance Criteria\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Failure condition: The workflow behavior is missing or incomplete: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
+      "issue_title": "Implement workflow support: I think this will be the CMDB for IT Applications/systems - we",
+      "issue_body": "## Summary\n\nDeliver workflow behavior for i think this will be the cmdb for it applications/systems - we: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)\n\n## Scope\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Acceptance Criteria\n\n- I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-2.\n- Observable: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n- Failure condition: The workflow behavior is missing or incomplete: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
-      "issue_title": "Implement constraint: non_functional-requirement-1",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-1` (requirement: `non_functional-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-1.\n"
+      "issue_title": "Satisfy constraint: UI must be web based",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'UI must be web based'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-1` (requirement: `non_functional-requirement-1`)\n\n## Scope\n\n- UI must be web based\n\n## Acceptance Criteria\n\n- UI must be web based\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-1.\n- Observable: UI must be web based\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: UI must be web based\n- Failure condition: The delivered behavior violates the stated constraint: UI must be web based\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "issue_title": "Implement constraint: non_functional-requirement-2",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-2` (requirement: `non_functional-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-2.\n"
+      "issue_title": "Satisfy constraint: SSO",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-2` (requirement: `non_functional-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "issue_title": "Implement constraint: non_functional-requirement-3",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-3.\n"
+      "issue_title": "Satisfy constraint: role-based access",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "issue_title": "Implement constraint: non_functional-requirement-4",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-4.\n"
+      "issue_title": "Satisfy constraint: audit trail",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-4.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "issue_title": "Implement constraint: non_functional-requirement-5",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-5.\n"
+      "issue_title": "Satisfy constraint: search",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-5.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "issue_title": "Implement constraint: non_functional-requirement-6",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-6` (requirement: `non_functional-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-6.\n"
+      "issue_title": "Satisfy constraint: filtering",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-6` (requirement: `non_functional-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-6.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
-      "issue_title": "Implement constraint: non_functional-requirement-7",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n"
+      "issue_title": "Satisfy constraint: performance (regular >1s for web page rendering)",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-7` (requirement: `non_functional-requirement-7`)\n\n## Scope\n\n- performance (regular >1s for web page rendering)\n\n## Acceptance Criteria\n\n- performance (regular >1s for web page rendering)\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-7.\n- Observable: performance (regular >1s for web page rendering)\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: performance (regular >1s for web page rendering)\n- Failure condition: The delivered behavior violates the stated constraint: performance (regular >1s for web page rendering)\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-7.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
-      "issue_title": "Implement constraint: non_functional-requirement-8",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-8` (requirement: `non_functional-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-8.\n"
+      "issue_title": "Satisfy constraint: availability >=99%",
+      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'availability >=99%'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-8` (requirement: `non_functional-requirement-8`)\n\n## Scope\n\n- availability >=99%\n\n## Acceptance Criteria\n\n- availability >=99%\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-8.\n- Observable: availability >=99%\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: availability >=99%\n- Failure condition: The delivered behavior violates the stated constraint: availability >=99%\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-8.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-1",
-      "issue_title": "Enforce invariant: Rule 1",
+      "issue_title": "Enforce invariant: A System must have a business owner before it becomes Active",
       "issue_body": "## Summary\n\nEnsure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-1` (state_invariant: `state-invariant-1`)\n\n## Scope\n\n- A System must have a business owner before it becomes Active.\n\n## Acceptance Criteria\n\n- A System must have a business owner before it becomes Active.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 1.\n- Observable: A System must have a business owner before it becomes Active.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must have a business owner before it becomes Active.\n- Failure condition: The invariant is breached: A System must have a business owner before it becomes Active.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-2",
-      "issue_title": "Enforce invariant: Rule 2",
+      "issue_title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
       "issue_body": "## Summary\n\nEnsure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-2` (state_invariant: `state-invariant-2`)\n\n## Scope\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Acceptance Criteria\n\n- A System lifecycle state change requires approval for deprecation.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 2.\n- Observable: A System lifecycle state change requires approval for deprecation.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System lifecycle state change requires approval for deprecation.\n- Failure condition: The invariant is breached: A System lifecycle state change requires approval for deprecation.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-2.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-3",
-      "issue_title": "Enforce invariant: Rule 3",
+      "issue_title": "Enforce invariant: A System must record vendor and contract dates",
       "issue_body": "## Summary\n\nEnsure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.state-invariants.state-invariant-3` (state_invariant: `state-invariant-3`)\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 3.\n- Observable: A System must record vendor and contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must record vendor and contract dates.\n- Failure condition: The invariant is breached: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element state-invariant-3.\n"
     },
     {

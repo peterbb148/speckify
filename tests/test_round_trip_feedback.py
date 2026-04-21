@@ -28,10 +28,10 @@ class RoundTripFeedbackTests(unittest.TestCase):
         )
         feedback_export = build_round_trip_feedback(bundle)
 
-        self.assertEqual(feedback_export["round_trip_status"]["change_record_count"], 35)
-        self.assertEqual(feedback_export["round_trip_status"]["feedback_proposal_count"], 26)
-        self.assertEqual(feedback_export["round_trip_status"]["planning_only_findings"], 9)
-        self.assertEqual(feedback_export["round_trip_status"]["upstream_affecting_findings"], 26)
+        self.assertEqual(feedback_export["round_trip_status"]["change_record_count"], 8)
+        self.assertEqual(feedback_export["round_trip_status"]["feedback_proposal_count"], 8)
+        self.assertEqual(feedback_export["round_trip_status"]["planning_only_findings"], 0)
+        self.assertEqual(feedback_export["round_trip_status"]["upstream_affecting_findings"], 8)
 
     def test_round_trip_feedback_emits_upstream_proposal_for_real_gap(self) -> None:
         """An upstream-affecting quality gap should yield a feedback proposal."""
@@ -45,13 +45,13 @@ class RoundTripFeedbackTests(unittest.TestCase):
             item
             for item in feedback_export["feedback_proposals"]
             if item["change_record_id"]
-            == "change.iu.rupify.acceptance-constraint-success-1.abstract-success-criterion"
+            == "change.iu.rupify.acceptance-constraint-requirement-2.very-short-acceptance"
         )
 
-        self.assertEqual(proposal["feedback_type"], "split_element")
-        self.assertIn("acceptance-constraint-success-1", proposal["target_source_ids"])
+        self.assertEqual(proposal["feedback_type"], "clarify_element")
+        self.assertIn("acceptance-constraint-requirement-2", proposal["target_source_ids"])
         self.assertIn(
-            "Refine the upstream success criterion into more concrete normative constraints.",
+            "Clarify the acceptance constraint upstream with concrete behavioral detail.",
             proposal["proposed_upstream_action"],
         )
 

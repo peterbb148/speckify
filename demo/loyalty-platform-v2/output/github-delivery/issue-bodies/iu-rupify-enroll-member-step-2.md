@@ -6,12 +6,12 @@
 - Source anchors: `anchor.rupify.use-case-steps.enroll-member-step-2`
 - Verification units: `vu.rupify.enroll-member-step-2`
 - Depends on:
-  - `iu.rupify.enroll-member-step-1` (Implement Enroll Member)
+  - `iu.rupify.enroll-member-step-1` (Implement use-case step: Enroll Member)
 - Reverse impact hint: Changes here may require upstream review of enroll-member-step-2.
 
 ## Summary
 
-Implement the behavior described by enroll member.
+Deliver the ordered step behavior for enroll member: Customer provides the required details and consents.
 
 ## Source Lineage
 
@@ -27,9 +27,11 @@ Implement the behavior described by enroll member.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies enroll member.
+- Intent: Confirm the use-case step is delivered for enroll member.
 - Observable: Customer provides the required details and consents.
-- Expected outcome: Customer provides the required details and consents.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: Customer provides the required details and consents.
+- Failure condition: The step behavior does not occur as required: Customer provides the required details and consents.
 
 ## Dependencies
 

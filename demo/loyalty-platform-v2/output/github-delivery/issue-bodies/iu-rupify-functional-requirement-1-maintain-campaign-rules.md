@@ -10,7 +10,7 @@
 
 ## Summary
 
-Allow operations managers to maintain campaign rules.
+Deliver workflow behavior for maintain campaign rules: Allow operations managers to maintain campaign rules.
 
 ## Source Lineage
 

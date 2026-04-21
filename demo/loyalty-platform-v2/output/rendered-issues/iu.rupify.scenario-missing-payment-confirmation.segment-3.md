@@ -1,6 +1,6 @@
 ## Summary
 
-System blocks fulfillment until confirmation arrives.
+Deliver the source-defined behavior for missing payment confirmation segment 3: System blocks fulfillment until confirmation arrives.
 
 ## Source Lineage
 

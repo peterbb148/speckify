@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3`
 - Verification units: `vu.rupify.acceptance-constraint-requirement-3`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-3` (Implement constraint: non_functional-requirement-3)
+  - `iu.rupify.non-functional-requirement-3` (Satisfy constraint: The platform must support integrations with external systems such as payment confirmation)
 - Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-3.
 
 ## Summary
@@ -30,7 +30,7 @@ Deliver behavior that satisfies the constraint 'The platform must support integr
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.
 - Observable: The platform must support integrations with external systems such as payment confirmation and reporting sources.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The platform must support integrations with external systems such as payment confirmation and reporting sources.
+- Expected outcome: The required behavior is delivered: The platform must support integrations with external systems such as payment confirmation and reporting sources.
 - Failure condition: The delivered behavior violates the stated constraint: The platform must support integrations with external systems such as payment confirmation and reporting sources.
 
 ## Dependencies

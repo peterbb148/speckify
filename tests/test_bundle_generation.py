@@ -107,7 +107,7 @@ class BundleGenerationTests(unittest.TestCase):
         )
         self.assertEqual(
             requirement["summary"],
-            "Support stage gates.",
+            "Deliver workflow behavior for support stage gates: Support stage gates.",
         )
 
     def test_generated_bundle_splits_multi_step_state_transition_chain(self) -> None:

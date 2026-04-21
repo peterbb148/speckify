@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by redeem reward.
+Deliver the ordered step behavior for redeem reward: Customer selects a reward.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by redeem reward.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies redeem reward.
+- Intent: Confirm the use-case step is delivered for redeem reward.
 - Observable: Customer selects a reward.
-- Expected outcome: Customer selects a reward.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: Customer selects a reward.
+- Failure condition: The step behavior does not occur as required: Customer selects a reward.
 
 ## Dependencies
 

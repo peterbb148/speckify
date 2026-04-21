@@ -19,7 +19,7 @@ Deliver behavior that satisfies the constraint 'filtering'.
 - Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-6.
 - Observable: filtering
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: filtering
+- Expected outcome: The required behavior is delivered: filtering
 - Failure condition: The delivered behavior violates the stated constraint: filtering
 
 ## Dependencies

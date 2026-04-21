@@ -10,7 +10,7 @@
 
 ## Summary
 
-Implement the behavior described by browse rewards.
+Deliver the use-case behavior for browse rewards: Browse Rewards.
 
 ## Source Lineage
 
@@ -26,9 +26,11 @@ Implement the behavior described by browse rewards.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies browse rewards.
+- Intent: Confirm the use-case behavior is delivered for browse rewards.
 - Observable: Browse Rewards
-- Expected outcome: Browse Rewards
+- Setup requirement: A representative invocation reaches the start of the use case.
+- Expected outcome: The end-to-end use-case behavior is completed as specified: Browse Rewards
+- Failure condition: The use-case behavior is incomplete or incorrect: Browse Rewards
 
 ## Dependencies
 

@@ -19,7 +19,7 @@ Deliver behavior that satisfies the constraint 'Operations managers can update t
 - Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 2.
 - Observable: Operations managers can update the reward catalog without engineering support for routine changes.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: Operations managers can update the reward catalog without engineering support for routine changes.
+- Expected outcome: The required behavior is delivered: Operations managers can update the reward catalog without engineering support for routine changes.
 - Failure condition: The delivered behavior violates the stated constraint: Operations managers can update the reward catalog without engineering support for routine changes.
 
 ## Dependencies

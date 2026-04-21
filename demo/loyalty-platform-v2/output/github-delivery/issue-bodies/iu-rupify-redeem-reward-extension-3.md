@@ -10,7 +10,7 @@
 
 ## Summary
 
-Implement the behavior described by redeem reward.
+Deliver the ordered step behavior for redeem reward: Payment confirmation is missing for a reward that depends on purchase completion.
 
 ## Source Lineage
 
@@ -26,9 +26,11 @@ Implement the behavior described by redeem reward.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies redeem reward.
+- Intent: Confirm the use-case step is delivered for redeem reward.
 - Observable: Payment confirmation is missing for a reward that depends on purchase completion.
-- Expected outcome: Payment confirmation is missing for a reward that depends on purchase completion.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: Payment confirmation is missing for a reward that depends on purchase completion.
+- Failure condition: The step behavior does not occur as required: Payment confirmation is missing for a reward that depends on purchase completion.
 
 ## Dependencies
 

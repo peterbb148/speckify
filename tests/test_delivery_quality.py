@@ -26,36 +26,19 @@ REVIEW_ROOT = ROOT / "fixtures" / "review"
 class DeliveryQualityTests(unittest.TestCase):
     """Quality-gate behavior for delivery exports."""
 
-    def test_current_it_delivery_export_is_not_publication_ready(self) -> None:
-        """Current IT delivery export should still expose concrete publication gaps."""
+    def test_current_it_delivery_export_is_publication_ready(self) -> None:
+        """Current IT delivery export should now satisfy the issue-ready gates."""
         report = assess_delivery_export_readiness(IT_DELIVERY_EXPORT)
 
-        self.assertFalse(report["publication_ready"])
-        self.assertEqual(report["failed_issue_count"], 20)
+        self.assertTrue(report["publication_ready"])
+        self.assertEqual(report["failed_issue_count"], 0)
 
-        first_issue = next(
-            issue
-            for issue in report["issues"]
-            if issue["implementation_unit_id"] == "iu.rupify.acceptance-constraint-requirement-1"
-        )
-        gate_ids = {failure["gate_id"] for failure in first_issue["failures"]}
-        self.assertIn("title_avoids_generic_ordinals", gate_ids)
-        self.assertIn("verification_shape_is_distinct", gate_ids)
-
-    def test_current_loyalty_delivery_export_is_not_publication_ready(self) -> None:
-        """Current loyalty delivery export should surface its remaining publication gaps."""
+    def test_current_loyalty_delivery_export_is_publication_ready(self) -> None:
+        """Current loyalty delivery export should now satisfy the issue-ready gates."""
         report = assess_delivery_export_readiness(LOYALTY_DELIVERY_EXPORT)
 
-        self.assertFalse(report["publication_ready"])
-        self.assertEqual(report["failed_issue_count"], 57)
-
-        generic_requirement = next(
-            issue
-            for issue in report["issues"]
-            if issue["implementation_unit_id"] == "iu.rupify.non-functional-requirement-2"
-        )
-        gate_ids = {failure["gate_id"] for failure in generic_requirement["failures"]}
-        self.assertIn("title_avoids_raw_source_identifiers", gate_ids)
+        self.assertTrue(report["publication_ready"])
+        self.assertEqual(report["failed_issue_count"], 0)
 
     def test_complete_issue_passes_when_all_required_fields_are_present(self) -> None:
         """A strong issue payload should pass every issue-ready gate."""

@@ -6,12 +6,12 @@
 - Source anchors: `anchor.rupify.use-case-steps.browse-rewards-step-3`
 - Verification units: `vu.rupify.browse-rewards-step-3`
 - Depends on:
-  - `iu.rupify.browse-rewards-step-2` (Implement Browse Rewards)
+  - `iu.rupify.browse-rewards-step-2` (Implement use-case step: Browse Rewards)
 - Reverse impact hint: Changes here may require upstream review of browse-rewards-step-3.
 
 ## Summary
 
-Implement the behavior described by browse rewards.
+Deliver the ordered step behavior for browse rewards: Customer filters or sorts the catalog.
 
 ## Source Lineage
 
@@ -27,9 +27,11 @@ Implement the behavior described by browse rewards.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies browse rewards.
+- Intent: Confirm the use-case step is delivered for browse rewards.
 - Observable: Customer filters or sorts the catalog.
-- Expected outcome: Customer filters or sorts the catalog.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: Customer filters or sorts the catalog.
+- Failure condition: The step behavior does not occur as required: Customer filters or sorts the catalog.
 
 ## Dependencies
 

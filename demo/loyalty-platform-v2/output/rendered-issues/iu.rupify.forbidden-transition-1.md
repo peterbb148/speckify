@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by forbidden transition 1.
+Implement the source-defined behavior for forbidden transition 1: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
 
 ## Source Lineage
 
@@ -18,7 +18,9 @@ Implement the behavior described by forbidden transition 1.
 
 - Intent: Confirm the implementation satisfies forbidden transition 1.
 - Observable: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
-- Expected outcome: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
+- Setup requirement: A representative invocation reaches the source-defined behavior boundary for this unit.
+- Expected outcome: The required behavior is delivered: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
+- Failure condition: The required behavior is not delivered: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
 
 ## Dependencies
 

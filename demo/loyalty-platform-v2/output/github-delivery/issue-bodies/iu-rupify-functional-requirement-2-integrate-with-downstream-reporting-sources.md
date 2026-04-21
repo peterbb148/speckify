@@ -10,7 +10,7 @@
 
 ## Summary
 
-Integrate with downstream reporting sources.
+Deliver workflow behavior for integrate with downstream reporting sources: Integrate with downstream reporting sources.
 
 ## Source Lineage
 

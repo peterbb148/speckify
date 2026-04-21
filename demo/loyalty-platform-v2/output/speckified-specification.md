@@ -15,7 +15,7 @@ Project: `speckify-planning-export`
 
 ### Acceptance Constraints
 
-#### Implement constraint: Acceptance Constraint 1
+#### Satisfy constraint: The system must protect member and reward transactions with appropriate security controls
 
 - ID: `iu.rupify.acceptance-constraint-requirement-1`
 - Summary: Deliver behavior that satisfies the constraint 'The system must protect member and reward transactions with appropriate security controls.'.
@@ -26,7 +26,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must protect member and reward transactions with appropriate security controls.
 
-#### Implement constraint: Acceptance Constraint 2
+#### Satisfy constraint: The member-facing experience must remain usable on common digital channels
 
 - ID: `iu.rupify.acceptance-constraint-requirement-2`
 - Summary: Deliver behavior that satisfies the constraint 'The member-facing experience must remain usable on common digital channels.'.
@@ -37,7 +37,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The member-facing experience must remain usable on common digital channels.
 
-#### Implement constraint: Acceptance Constraint 3
+#### Satisfy constraint: The platform must support integrations with external systems such as payment confirmation
 
 - ID: `iu.rupify.acceptance-constraint-requirement-3`
 - Summary: Deliver behavior that satisfies the constraint 'The platform must support integrations with external systems such as payment confirmation and reporting sources.'.
@@ -48,7 +48,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The platform must support integrations with external systems such as payment confirmation and reporting sources.
 
-#### Implement constraint: Acceptance Constraint 4
+#### Satisfy constraint: The system must allow customers to enroll in the loyalty program digitally
 
 - ID: `iu.rupify.acceptance-constraint-requirement-4`
 - Summary: Deliver behavior that satisfies the constraint 'The system must allow customers to enroll in the loyalty program digitally.'.
@@ -59,7 +59,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must allow customers to enroll in the loyalty program digitally.
 
-#### Implement constraint: Acceptance Constraint 5
+#### Satisfy constraint: The system must show point balance and available rewards to eligible members
 
 - ID: `iu.rupify.acceptance-constraint-requirement-5`
 - Summary: Deliver behavior that satisfies the constraint 'The system must show point balance and available rewards to eligible members.'.
@@ -70,7 +70,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must show point balance and available rewards to eligible members.
 
-#### Implement constraint: Acceptance Constraint 6
+#### Satisfy constraint: The system must allow members to redeem rewards when eligibility conditions are
 
 - ID: `iu.rupify.acceptance-constraint-requirement-6`
 - Summary: Deliver behavior that satisfies the constraint 'The system must allow members to redeem rewards when eligibility conditions are satisfied.'.
@@ -81,7 +81,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must allow members to redeem rewards when eligibility conditions are satisfied.
 
-#### Implement constraint: Acceptance Constraint 7
+#### Satisfy constraint: The system must provide reporting on redemptions and campaign performance
 
 - ID: `iu.rupify.acceptance-constraint-requirement-7`
 - Summary: Deliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.
@@ -92,7 +92,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must provide reporting on redemptions and campaign performance.
 
-#### Implement constraint: Success Criterion 1
+#### Satisfy constraint: Members can enroll and redeem rewards through one coherent digital journey
 
 - ID: `iu.rupify.acceptance-constraint-success-1`
 - Summary: Deliver behavior that satisfies the constraint 'Members can enroll and redeem rewards through one coherent digital journey.'.
@@ -101,7 +101,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Members can enroll and redeem rewards through one coherent digital journey.
 
-#### Implement constraint: Success Criterion 2
+#### Satisfy constraint: Operations managers can update the reward catalog without engineering support for routine
 
 - ID: `iu.rupify.acceptance-constraint-success-2`
 - Summary: Deliver behavior that satisfies the constraint 'Operations managers can update the reward catalog without engineering support for routine changes.'.
@@ -110,7 +110,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Operations managers can update the reward catalog without engineering support for routine changes.
 
-#### Implement constraint: Success Criterion 3
+#### Satisfy constraint: The business can review redemption and campaign performance in one reporting workflow
 
 - ID: `iu.rupify.acceptance-constraint-success-3`
 - Summary: Deliver behavior that satisfies the constraint 'The business can review redemption and campaign performance in one reporting workflow.'.
@@ -121,7 +121,7 @@ Project: `speckify-planning-export`
 
 ### Domain Invariants
 
-#### Enforce invariant: Rule 1
+#### Enforce invariant: A Redemption must not be fulfilled unless reward eligibility and available points
 
 - ID: `iu.rupify.domain-invariant-1`
 - Summary: Ensure the invariant 'A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.' is enforced in the implemented behavior.
@@ -130,7 +130,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
 
-#### Enforce invariant: Rule 2
+#### Enforce invariant: A Reward Catalog Entry must be validated before it becomes Published
 
 - ID: `iu.rupify.domain-invariant-2`
 - Summary: Ensure the invariant 'A Reward Catalog Entry must be validated before it becomes Published.' is enforced in the implemented behavior.
@@ -139,7 +139,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A Reward Catalog Entry must be validated before it becomes Published.
 
-#### Enforce invariant: Rule 3
+#### Enforce invariant: A Member must provide the required details and consents before enrollment completes
 
 - ID: `iu.rupify.domain-invariant-3`
 - Summary: Ensure the invariant 'A Member must provide the required details and consents before enrollment completes.' is enforced in the implemented behavior.
@@ -153,7 +153,7 @@ Project: `speckify-planning-export`
 #### Implement Forbidden Transition 1
 
 - ID: `iu.rupify.forbidden-transition-1`
-- Summary: Implement the behavior described by forbidden transition 1.
+- Summary: Implement the source-defined behavior for forbidden transition 1: A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
 - Source lineage:
   - `anchor.rupify.forbidden-transitions.forbidden-transition-1` (requirement: `forbidden-transition-1`)
 - Acceptance criteria:
@@ -164,7 +164,7 @@ Project: `speckify-planning-export`
 #### Implement workflow support: Maintain reward catalog entries
 
 - ID: `iu.rupify.functional-requirement-1.maintain-reward-catalog-entries`
-- Summary: Allow operations managers to maintain reward catalog entries.
+- Summary: Deliver workflow behavior for maintain reward catalog entries: Allow operations managers to maintain reward catalog entries.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
@@ -173,7 +173,7 @@ Project: `speckify-planning-export`
 #### Implement workflow support: Maintain campaign rules
 
 - ID: `iu.rupify.functional-requirement-1.maintain-campaign-rules`
-- Summary: Allow operations managers to maintain campaign rules.
+- Summary: Deliver workflow behavior for maintain campaign rules: Allow operations managers to maintain campaign rules.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
@@ -182,7 +182,7 @@ Project: `speckify-planning-export`
 #### Implement workflow support: Integrate with payment confirmation
 
 - ID: `iu.rupify.functional-requirement-2.integrate-with-payment-confirmation`
-- Summary: Integrate with payment confirmation.
+- Summary: Deliver workflow behavior for integrate with payment confirmation: Integrate with payment confirmation.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
@@ -191,7 +191,7 @@ Project: `speckify-planning-export`
 #### Implement workflow support: Integrate with downstream reporting sources
 
 - ID: `iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources`
-- Summary: Integrate with downstream reporting sources.
+- Summary: Deliver workflow behavior for integrate with downstream reporting sources: Integrate with downstream reporting sources.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
@@ -199,10 +199,10 @@ Project: `speckify-planning-export`
 
 ### Guard Conditions
 
-#### Implement guard enforcement: Guard Condition 2
+#### Implement guard enforcement: Catalog validation approval is required before a reward becomes Published
 
 - ID: `iu.rupify.guard-condition-2`
-- Summary: Catalog validation approval is required before a reward becomes Published
+- Summary: Deliver the source-defined behavior for catalog validation approval is required before a reward becomes published: Catalog validation approval is required before a reward becomes Published.
 - Source lineage:
   - `anchor.rupify.guard-conditions.guard-condition-2` (requirement: `guard-condition-2`)
 - Acceptance criteria:
@@ -210,7 +210,7 @@ Project: `speckify-planning-export`
 
 ### Non Functional Requirements
 
-#### Implement constraint: non_functional-requirement-1
+#### Satisfy constraint: The system must protect member and reward transactions with appropriate security controls
 
 - ID: `iu.rupify.non-functional-requirement-1`
 - Summary: Deliver behavior that satisfies the constraint 'The system must protect member and reward transactions with appropriate security controls.'.
@@ -219,7 +219,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must protect member and reward transactions with appropriate security controls.
 
-#### Implement constraint: non_functional-requirement-2
+#### Satisfy constraint: The member-facing experience must remain usable on common digital channels
 
 - ID: `iu.rupify.non-functional-requirement-2`
 - Summary: Deliver behavior that satisfies the constraint 'The member-facing experience must remain usable on common digital channels.'.
@@ -228,7 +228,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The member-facing experience must remain usable on common digital channels.
 
-#### Implement constraint: non_functional-requirement-3
+#### Satisfy constraint: The platform must support integrations with external systems such as payment confirmation
 
 - ID: `iu.rupify.non-functional-requirement-3`
 - Summary: Deliver behavior that satisfies the constraint 'The platform must support integrations with external systems such as payment confirmation and reporting sources.'.
@@ -237,7 +237,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The platform must support integrations with external systems such as payment confirmation and reporting sources.
 
-#### Implement constraint: non_functional-requirement-4
+#### Satisfy constraint: The system must allow customers to enroll in the loyalty program digitally
 
 - ID: `iu.rupify.non-functional-requirement-4`
 - Summary: Deliver behavior that satisfies the constraint 'The system must allow customers to enroll in the loyalty program digitally.'.
@@ -246,7 +246,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must allow customers to enroll in the loyalty program digitally.
 
-#### Implement constraint: non_functional-requirement-5
+#### Satisfy constraint: The system must show point balance and available rewards to eligible members
 
 - ID: `iu.rupify.non-functional-requirement-5`
 - Summary: Deliver behavior that satisfies the constraint 'The system must show point balance and available rewards to eligible members.'.
@@ -255,7 +255,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must show point balance and available rewards to eligible members.
 
-#### Implement constraint: non_functional-requirement-6
+#### Satisfy constraint: The system must allow members to redeem rewards when eligibility conditions are
 
 - ID: `iu.rupify.non-functional-requirement-6`
 - Summary: Deliver behavior that satisfies the constraint 'The system must allow members to redeem rewards when eligibility conditions are satisfied.'.
@@ -264,7 +264,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must allow members to redeem rewards when eligibility conditions are satisfied.
 
-#### Implement constraint: non_functional-requirement-7
+#### Satisfy constraint: The system must provide reporting on redemptions and campaign performance
 
 - ID: `iu.rupify.non-functional-requirement-7`
 - Summary: Deliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.
@@ -278,7 +278,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Invalid Catalog Change segment 1
 
 - ID: `iu.rupify.scenario-invalid-catalog-change.segment-1`
-- Summary: Operations Manager updates reward configuration.
+- Summary: Deliver the source-defined behavior for invalid catalog change segment 1: Operations Manager updates reward configuration.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
 - Acceptance criteria:
@@ -287,7 +287,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Invalid Catalog Change segment 2
 
 - ID: `iu.rupify.scenario-invalid-catalog-change.segment-2`
-- Summary: System validates the change.
+- Summary: Deliver the source-defined behavior for invalid catalog change segment 2: System validates the change.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
 - Dependencies:
@@ -298,7 +298,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Invalid Catalog Change segment 3
 
 - ID: `iu.rupify.scenario-invalid-catalog-change.segment-3`
-- Summary: System rejects the invalid change.
+- Summary: Deliver the source-defined behavior for invalid catalog change segment 3: System rejects the invalid change.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
 - Dependencies:
@@ -309,7 +309,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Missing Payment Confirmation segment 1
 
 - ID: `iu.rupify.scenario-missing-payment-confirmation.segment-1`
-- Summary: Customer selects a reward.
+- Summary: Deliver the source-defined behavior for missing payment confirmation segment 1: Customer selects a reward.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
 - Acceptance criteria:
@@ -318,7 +318,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Missing Payment Confirmation segment 2
 
 - ID: `iu.rupify.scenario-missing-payment-confirmation.segment-2`
-- Summary: System requests payment confirmation.
+- Summary: Deliver the source-defined behavior for missing payment confirmation segment 2: System requests payment confirmation.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
 - Dependencies:
@@ -329,7 +329,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Missing Payment Confirmation segment 3
 
 - ID: `iu.rupify.scenario-missing-payment-confirmation.segment-3`
-- Summary: System blocks fulfillment until confirmation arrives.
+- Summary: Deliver the source-defined behavior for missing payment confirmation segment 3: System blocks fulfillment until confirmation arrives.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
 - Dependencies:
@@ -340,7 +340,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Reporting Delay segment 1
 
 - ID: `iu.rupify.scenario-reporting-delay.segment-1`
-- Summary: Operations Manager opens the analytics dashboard.
+- Summary: Deliver the source-defined behavior for reporting delay segment 1: Operations Manager opens the analytics dashboard.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
 - Acceptance criteria:
@@ -349,7 +349,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Reporting Delay segment 2
 
 - ID: `iu.rupify.scenario-reporting-delay.segment-2`
-- Summary: System detects delayed reporting data.
+- Summary: Deliver the source-defined behavior for reporting delay segment 2: System detects delayed reporting data.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
 - Dependencies:
@@ -360,7 +360,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Reporting Delay segment 3
 
 - ID: `iu.rupify.scenario-reporting-delay.segment-3`
-- Summary: System shows a partial-data warning.
+- Summary: Deliver the source-defined behavior for reporting delay segment 3: System shows a partial-data warning.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
 - Dependencies:
@@ -371,7 +371,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Reward Inventory Exhausted segment 1
 
 - ID: `iu.rupify.scenario-reward-inventory-exhausted.segment-1`
-- Summary: Customer selects a reward.
+- Summary: Deliver the source-defined behavior for reward inventory exhausted segment 1: Customer selects a reward.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
 - Acceptance criteria:
@@ -380,7 +380,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Reward Inventory Exhausted segment 2
 
 - ID: `iu.rupify.scenario-reward-inventory-exhausted.segment-2`
-- Summary: System checks reward availability.
+- Summary: Deliver the source-defined behavior for reward inventory exhausted segment 2: System checks reward availability.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
 - Dependencies:
@@ -391,7 +391,7 @@ Project: `speckify-planning-export`
 #### Implement scenario handling: Reward Inventory Exhausted segment 3
 
 - ID: `iu.rupify.scenario-reward-inventory-exhausted.segment-3`
-- Summary: System reports that inventory is exhausted.
+- Summary: Deliver the source-defined behavior for reward inventory exhausted segment 3: System reports that inventory is exhausted.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
 - Dependencies:
@@ -401,7 +401,7 @@ Project: `speckify-planning-export`
 
 ### State Invariants
 
-#### Enforce invariant: Rule 1
+#### Enforce invariant: A Redemption must not be fulfilled unless reward eligibility and available points
 
 - ID: `iu.rupify.state-invariant-1`
 - Summary: Ensure the invariant 'A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.' is enforced in the implemented behavior.
@@ -410,7 +410,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A Redemption must not be fulfilled unless reward eligibility and available points are confirmed.
 
-#### Enforce invariant: Rule 2
+#### Enforce invariant: A Reward Catalog Entry must be validated before it becomes Published
 
 - ID: `iu.rupify.state-invariant-2`
 - Summary: Ensure the invariant 'A Reward Catalog Entry must be validated before it becomes Published.' is enforced in the implemented behavior.
@@ -526,28 +526,28 @@ Project: `speckify-planning-export`
 
 ### Use Case Steps
 
-#### Implement Browse Rewards
+#### Implement use-case step: Browse Rewards
 
 - ID: `iu.rupify.browse-rewards-extension-1`
-- Summary: Implement the behavior described by browse rewards.
+- Summary: Deliver the ordered step behavior for browse rewards: Catalog view degrades if an integration is temporarily unavailable.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-extension-1` (requirement: `browse-rewards-extension-1`)
 - Acceptance criteria:
   - Catalog view degrades if an integration is temporarily unavailable.
 
-#### Implement Browse Rewards
+#### Implement use-case step: Browse Rewards
 
 - ID: `iu.rupify.browse-rewards-step-1`
-- Summary: Implement the behavior described by browse rewards.
+- Summary: Deliver the ordered step behavior for browse rewards: Customer opens the rewards catalog.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-1` (requirement: `browse-rewards-step-1`)
 - Acceptance criteria:
   - Customer opens the rewards catalog.
 
-#### Implement Browse Rewards
+#### Implement use-case step: Browse Rewards
 
 - ID: `iu.rupify.browse-rewards-step-2`
-- Summary: Implement the behavior described by browse rewards.
+- Summary: Deliver the ordered step behavior for browse rewards: System displays available rewards and points balance.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-2` (requirement: `browse-rewards-step-2`)
 - Dependencies:
@@ -555,10 +555,10 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - System displays available rewards and points balance.
 
-#### Implement Browse Rewards
+#### Implement use-case step: Browse Rewards
 
 - ID: `iu.rupify.browse-rewards-step-3`
-- Summary: Implement the behavior described by browse rewards.
+- Summary: Deliver the ordered step behavior for browse rewards: Customer filters or sorts the catalog.
 - Source lineage:
   - `anchor.rupify.use-case-steps.browse-rewards-step-3` (requirement: `browse-rewards-step-3`)
 - Dependencies:
@@ -566,28 +566,28 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Customer filters or sorts the catalog.
 
-#### Implement Enroll Member
+#### Implement use-case step: Enroll Member
 
 - ID: `iu.rupify.enroll-member-extension-1`
-- Summary: Implement the behavior described by enroll member.
+- Summary: Deliver the ordered step behavior for enroll member: Enrollment is blocked when required consent is missing.
 - Source lineage:
   - `anchor.rupify.use-case-steps.enroll-member-extension-1` (requirement: `enroll-member-extension-1`)
 - Acceptance criteria:
   - Enrollment is blocked when required consent is missing.
 
-#### Implement Enroll Member
+#### Implement use-case step: Enroll Member
 
 - ID: `iu.rupify.enroll-member-step-1`
-- Summary: Implement the behavior described by enroll member.
+- Summary: Deliver the ordered step behavior for enroll member: Customer opens the loyalty enrollment flow.
 - Source lineage:
   - `anchor.rupify.use-case-steps.enroll-member-step-1` (requirement: `enroll-member-step-1`)
 - Acceptance criteria:
   - Customer opens the loyalty enrollment flow.
 
-#### Implement Enroll Member
+#### Implement use-case step: Enroll Member
 
 - ID: `iu.rupify.enroll-member-step-2`
-- Summary: Implement the behavior described by enroll member.
+- Summary: Deliver the ordered step behavior for enroll member: Customer provides the required details and consents.
 - Source lineage:
   - `anchor.rupify.use-case-steps.enroll-member-step-2` (requirement: `enroll-member-step-2`)
 - Dependencies:
@@ -595,10 +595,10 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Customer provides the required details and consents.
 
-#### Implement Enroll Member
+#### Implement use-case step: Enroll Member
 
 - ID: `iu.rupify.enroll-member-step-3`
-- Summary: Implement the behavior described by enroll member.
+- Summary: Deliver the ordered step behavior for enroll member: System validates the submission and creates the member account.
 - Source lineage:
   - `anchor.rupify.use-case-steps.enroll-member-step-3` (requirement: `enroll-member-step-3`)
 - Dependencies:
@@ -606,28 +606,28 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - System validates the submission and creates the member account.
 
-#### Implement Manage Reward Catalog
+#### Implement use-case step: Manage Reward Catalog
 
 - ID: `iu.rupify.manage-reward-catalog-extension-1`
-- Summary: Implement the behavior described by manage reward catalog.
+- Summary: Deliver the ordered step behavior for manage reward catalog: A change is rejected because it would make an active reward invalid.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-extension-1` (requirement: `manage-reward-catalog-extension-1`)
 - Acceptance criteria:
   - A change is rejected because it would make an active reward invalid.
 
-#### Implement Manage Reward Catalog
+#### Implement use-case step: Manage Reward Catalog
 
 - ID: `iu.rupify.manage-reward-catalog-step-1`
-- Summary: Implement the behavior described by manage reward catalog.
+- Summary: Deliver the ordered step behavior for manage reward catalog: Operations Manager opens catalog administration.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-1` (requirement: `manage-reward-catalog-step-1`)
 - Acceptance criteria:
   - Operations Manager opens catalog administration.
 
-#### Implement Manage Reward Catalog
+#### Implement use-case step: Manage Reward Catalog
 
 - ID: `iu.rupify.manage-reward-catalog-step-2`
-- Summary: Implement the behavior described by manage reward catalog.
+- Summary: Deliver the ordered step behavior for manage reward catalog: Operations Manager updates reward configuration.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-2` (requirement: `manage-reward-catalog-step-2`)
 - Dependencies:
@@ -635,10 +635,10 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Operations Manager updates reward configuration.
 
-#### Implement Manage Reward Catalog
+#### Implement use-case step: Manage Reward Catalog
 
 - ID: `iu.rupify.manage-reward-catalog-step-3`
-- Summary: Implement the behavior described by manage reward catalog.
+- Summary: Deliver the ordered step behavior for manage reward catalog: System validates and publishes the change.
 - Source lineage:
   - `anchor.rupify.use-case-steps.manage-reward-catalog-step-3` (requirement: `manage-reward-catalog-step-3`)
 - Dependencies:
@@ -646,46 +646,46 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - System validates and publishes the change.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-extension-1`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: Reward inventory is exhausted before completion.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-extension-1` (requirement: `redeem-reward-extension-1`)
 - Acceptance criteria:
   - Reward inventory is exhausted before completion.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-extension-2`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: Customer does not have enough points.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-extension-2` (requirement: `redeem-reward-extension-2`)
 - Acceptance criteria:
   - Customer does not have enough points.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-extension-3`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: Payment confirmation is missing for a reward that depends on purchase completion.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-extension-3` (requirement: `redeem-reward-extension-3`)
 - Acceptance criteria:
   - Payment confirmation is missing for a reward that depends on purchase completion.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-step-1`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: Customer selects a reward.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-1` (requirement: `redeem-reward-step-1`)
 - Acceptance criteria:
   - Customer selects a reward.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-step-2`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: System validates reward eligibility and available points.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-2` (requirement: `redeem-reward-step-2`)
 - Dependencies:
@@ -693,10 +693,10 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - System validates reward eligibility and available points.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-step-3`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: System reserves the reward and updates the member balance.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-3` (requirement: `redeem-reward-step-3`)
 - Dependencies:
@@ -704,10 +704,10 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - System reserves the reward and updates the member balance.
 
-#### Implement Redeem Reward
+#### Implement use-case step: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward-step-4`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the ordered step behavior for redeem reward: System confirms redemption to the customer.
 - Source lineage:
   - `anchor.rupify.use-case-steps.redeem-reward-step-4` (requirement: `redeem-reward-step-4`)
 - Dependencies:
@@ -715,28 +715,28 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - System confirms redemption to the customer.
 
-#### Implement Review Redemption Analytics
+#### Implement use-case step: Review Redemption Analytics
 
 - ID: `iu.rupify.review-redemption-analytics-extension-1`
-- Summary: Implement the behavior described by review redemption analytics.
+- Summary: Deliver the ordered step behavior for review redemption analytics: A reporting data source is delayed.
 - Source lineage:
   - `anchor.rupify.use-case-steps.review-redemption-analytics-extension-1` (requirement: `review-redemption-analytics-extension-1`)
 - Acceptance criteria:
   - A reporting data source is delayed.
 
-#### Implement Review Redemption Analytics
+#### Implement use-case step: Review Redemption Analytics
 
 - ID: `iu.rupify.review-redemption-analytics-step-1`
-- Summary: Implement the behavior described by review redemption analytics.
+- Summary: Deliver the ordered step behavior for review redemption analytics: Operations Manager opens the analytics dashboard.
 - Source lineage:
   - `anchor.rupify.use-case-steps.review-redemption-analytics-step-1` (requirement: `review-redemption-analytics-step-1`)
 - Acceptance criteria:
   - Operations Manager opens the analytics dashboard.
 
-#### Implement Review Redemption Analytics
+#### Implement use-case step: Review Redemption Analytics
 
 - ID: `iu.rupify.review-redemption-analytics-step-2`
-- Summary: Implement the behavior described by review redemption analytics.
+- Summary: Deliver the ordered step behavior for review redemption analytics: System shows redemption and campaign metrics.
 - Source lineage:
   - `anchor.rupify.use-case-steps.review-redemption-analytics-step-2` (requirement: `review-redemption-analytics-step-2`)
 - Dependencies:
@@ -746,37 +746,37 @@ Project: `speckify-planning-export`
 
 ### Use Cases
 
-#### Implement Browse Rewards
+#### Implement use case: Browse Rewards
 
 - ID: `iu.rupify.browse-rewards`
-- Summary: Implement the behavior described by browse rewards.
+- Summary: Deliver the use-case behavior for browse rewards: Browse Rewards.
 - Source lineage:
   - `anchor.rupify.use-cases.browse-rewards` (requirement: `browse-rewards`)
 - Acceptance criteria:
   - Browse Rewards
 
-#### Implement Enroll Member
+#### Implement use case: Enroll Member
 
 - ID: `iu.rupify.enroll-member`
-- Summary: Implement the behavior described by enroll member.
+- Summary: Deliver the use-case behavior for enroll member: Enroll Member.
 - Source lineage:
   - `anchor.rupify.use-cases.enroll-member` (requirement: `enroll-member`)
 - Acceptance criteria:
   - Enroll Member
 
-#### Implement Manage Reward Catalog
+#### Implement use case: Manage Reward Catalog
 
 - ID: `iu.rupify.manage-reward-catalog`
-- Summary: Implement the behavior described by manage reward catalog.
+- Summary: Deliver the use-case behavior for manage reward catalog: Manage Reward Catalog.
 - Source lineage:
   - `anchor.rupify.use-cases.manage-reward-catalog` (requirement: `manage-reward-catalog`)
 - Acceptance criteria:
   - Manage Reward Catalog
 
-#### Implement Redeem Reward
+#### Implement use case: Redeem Reward
 
 - ID: `iu.rupify.redeem-reward`
-- Summary: Implement the behavior described by redeem reward.
+- Summary: Deliver the use-case behavior for redeem reward: Redeem Reward.
 - Source lineage:
   - `anchor.rupify.use-cases.redeem-reward` (requirement: `redeem-reward`)
 - Dependencies:
@@ -784,10 +784,10 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - Redeem Reward
 
-#### Implement Review Redemption Analytics
+#### Implement use case: Review Redemption Analytics
 
 - ID: `iu.rupify.review-redemption-analytics`
-- Summary: Implement the behavior described by review redemption analytics.
+- Summary: Deliver the use-case behavior for review redemption analytics: Review Redemption Analytics.
 - Source lineage:
   - `anchor.rupify.use-cases.review-redemption-analytics` (requirement: `review-redemption-analytics`)
 - Acceptance criteria:

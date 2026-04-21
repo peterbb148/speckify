@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6`
 - Verification units: `vu.rupify.acceptance-constraint-requirement-6`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-6` (Implement constraint: non_functional-requirement-6)
+  - `iu.rupify.non-functional-requirement-6` (Satisfy constraint: The system must allow members to redeem rewards when eligibility conditions are)
 - Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-6.
 
 ## Summary
@@ -30,7 +30,7 @@ Deliver behavior that satisfies the constraint 'The system must allow members to
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.
 - Observable: The system must allow members to redeem rewards when eligibility conditions are satisfied.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The system must allow members to redeem rewards when eligibility conditions are satisfied.
+- Expected outcome: The required behavior is delivered: The system must allow members to redeem rewards when eligibility conditions are satisfied.
 - Failure condition: The delivered behavior violates the stated constraint: The system must allow members to redeem rewards when eligibility conditions are satisfied.
 
 ## Dependencies

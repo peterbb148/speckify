@@ -29,7 +29,7 @@ Deliver behavior that satisfies the constraint 'availability >=99%'.
 - Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-8.
 - Observable: availability >=99%
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: availability >=99%
+- Expected outcome: The required behavior is delivered: availability >=99%
 - Failure condition: The delivered behavior violates the stated constraint: availability >=99%
 
 ## Dependencies

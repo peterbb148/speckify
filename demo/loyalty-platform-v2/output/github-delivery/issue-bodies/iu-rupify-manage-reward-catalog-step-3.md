@@ -6,12 +6,12 @@
 - Source anchors: `anchor.rupify.use-case-steps.manage-reward-catalog-step-3`
 - Verification units: `vu.rupify.manage-reward-catalog-step-3`
 - Depends on:
-  - `iu.rupify.manage-reward-catalog-step-2` (Implement Manage Reward Catalog)
+  - `iu.rupify.manage-reward-catalog-step-2` (Implement use-case step: Manage Reward Catalog)
 - Reverse impact hint: Changes here may require upstream review of manage-reward-catalog-step-3.
 
 ## Summary
 
-Implement the behavior described by manage reward catalog.
+Deliver the ordered step behavior for manage reward catalog: System validates and publishes the change.
 
 ## Source Lineage
 
@@ -27,9 +27,11 @@ Implement the behavior described by manage reward catalog.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies manage reward catalog.
+- Intent: Confirm the use-case step is delivered for manage reward catalog.
 - Observable: System validates and publishes the change.
-- Expected outcome: System validates and publishes the change.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: System validates and publishes the change.
+- Failure condition: The step behavior does not occur as required: System validates and publishes the change.
 
 ## Dependencies
 

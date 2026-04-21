@@ -1,6 +1,6 @@
 ## Summary
 
-Support approval states.
+Deliver workflow behavior for support approval states: Support approval states.
 
 ## Source Lineage
 

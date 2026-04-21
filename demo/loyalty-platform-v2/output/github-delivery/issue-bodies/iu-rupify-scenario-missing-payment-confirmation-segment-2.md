@@ -11,7 +11,7 @@
 
 ## Summary
 
-System requests payment confirmation.
+Deliver the source-defined behavior for missing payment confirmation segment 2: System requests payment confirmation.
 
 ## Source Lineage
 

@@ -69,18 +69,18 @@ class ReviewFixtureTests(unittest.TestCase):
         bundle = json.loads((DEMO_OUTPUT / "planning-bundle.json").read_text())
         report = analyze_bundle_quality(bundle)
 
-        self.assertEqual(report["warning_count"], 35)
+        self.assertEqual(report["warning_count"], 8)
 
         warning_pairs = {
             (warning["implementation_unit_id"], warning["kind"])
             for warning in report["warnings"]
         }
         self.assertIn(
-            ("iu.rupify.acceptance-constraint-success-1", "abstract_success_criterion"),
+            ("iu.rupify.acceptance-constraint-requirement-2", "very_short_acceptance"),
             warning_pairs,
         )
         self.assertIn(
-            ("iu.rupify.non-functional-requirement-2", "generic_title"),
+            ("iu.rupify.acceptance-constraint-requirement-4", "very_short_acceptance"),
             warning_pairs,
         )
         self.assertIn(
@@ -89,8 +89,8 @@ class ReviewFixtureTests(unittest.TestCase):
         )
         self.assertIn(
             (
-                "iu.rupify.acceptance-constraint-requirement-1",
-                "weak_verification_distinction",
+                "iu.rupify.non-functional-requirement-6",
+                "very_short_acceptance",
             ),
             warning_pairs,
         )

@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by enroll member.
+Deliver the ordered step behavior for enroll member: System validates the submission and creates the member account.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by enroll member.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies enroll member.
+- Intent: Confirm the use-case step is delivered for enroll member.
 - Observable: System validates the submission and creates the member account.
-- Expected outcome: System validates the submission and creates the member account.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: System validates the submission and creates the member account.
+- Failure condition: The step behavior does not occur as required: System validates the submission and creates the member account.
 
 ## Dependencies
 

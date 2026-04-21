@@ -29,7 +29,7 @@ Deliver behavior that satisfies the constraint 'The business can review redempti
 - Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 3.
 - Observable: The business can review redemption and campaign performance in one reporting workflow.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The business can review redemption and campaign performance in one reporting workflow.
+- Expected outcome: The required behavior is delivered: The business can review redemption and campaign performance in one reporting workflow.
 - Failure condition: The delivered behavior violates the stated constraint: The business can review redemption and campaign performance in one reporting workflow.
 
 ## Dependencies

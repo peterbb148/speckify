@@ -3,9 +3,9 @@
   "project_id": "speckify-planning-export",
   "source_system": "rupify",
   "issue_count": 36,
-  "ready_issue_count": 16,
-  "failed_issue_count": 20,
-  "publication_ready": false,
+  "ready_issue_count": 36,
+  "failed_issue_count": 0,
+  "publication_ready": true,
   "gate_definitions": [
     {
       "id": "title_avoids_raw_source_identifiers",
@@ -63,174 +63,88 @@
       "description": "A bundle is publication-ready only if every exported issue passes all issue-level gates."
     }
   ],
-  "bundle_failures": [
-    {
-      "gate_id": "all_issues_pass",
-      "message": "Bundle is not publication-ready because 20 issue(s) failed at least one gate."
-    }
-  ],
+  "bundle_failures": [],
   "issues": [
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
-      "title": "Implement constraint: Acceptance Constraint 1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 1"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: UI must be web based",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
-      "title": "Implement constraint: Acceptance Constraint 2",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 2"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: SSO",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
-      "title": "Implement constraint: Acceptance Constraint 3",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 3"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: role-based access",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
-      "title": "Implement constraint: Acceptance Constraint 4",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 4"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: audit trail",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
-      "title": "Implement constraint: Acceptance Constraint 5",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 5"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: search",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
-      "title": "Implement constraint: Acceptance Constraint 6",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 6"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: filtering",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
-      "title": "Implement constraint: Acceptance Constraint 7",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 7"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
-      "title": "Implement constraint: Acceptance Constraint 8",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 8"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: availability >=99%",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "title": "Implement constraint: Success Criterion 1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Success Criterion 1"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: Better planning of IT systems purchasing and life cycle",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-1",
-      "title": "Enforce invariant: Rule 1",
+      "title": "Enforce invariant: A System must have a business owner before it becomes Active",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-2",
-      "title": "Enforce invariant: Rule 2",
+      "title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-3",
-      "title": "Enforce invariant: Rule 3",
+      "title": "Enforce invariant: A System must record vendor and contract dates",
       "ready": true,
       "failure_count": 0,
       "failures": []
@@ -238,184 +152,97 @@
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.support-approval-states",
       "title": "Implement workflow support: Support approval states",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: Support approval states."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.support-stage-gates",
       "title": "Implement workflow support: Support stage gates",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: Support stage gates."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "title": "Implement workflow support: functional-requirement-2",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement workflow support: functional-requirement-2"
-        }
-      ]
+      "title": "Implement workflow support: I think this will be the CMDB for IT Applications/systems - we",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
-      "title": "Implement constraint: non_functional-requirement-1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-1"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: UI must be web based",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "title": "Implement constraint: non_functional-requirement-2",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-2"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: SSO",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "title": "Implement constraint: non_functional-requirement-3",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-3"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: role-based access",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "title": "Implement constraint: non_functional-requirement-4",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-4"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: audit trail",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "title": "Implement constraint: non_functional-requirement-5",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-5"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: search",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "title": "Implement constraint: non_functional-requirement-6",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-6"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: filtering",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
-      "title": "Implement constraint: non_functional-requirement-7",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-7"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
-      "title": "Implement constraint: non_functional-requirement-8",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-8"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: availability >=99%",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-1",
-      "title": "Enforce invariant: Rule 1",
+      "title": "Enforce invariant: A System must have a business owner before it becomes Active",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-2",
-      "title": "Enforce invariant: Rule 2",
+      "title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-3",
-      "title": "Enforce invariant: Rule 3",
+      "title": "Enforce invariant: A System must record vendor and contract dates",
       "ready": true,
       "failure_count": 0,
       "failures": []

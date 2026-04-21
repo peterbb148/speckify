@@ -50,7 +50,7 @@ class RenderingTests(unittest.TestCase):
         self.assertIn("## Overview", specification)
         self.assertIn("## Implementation Units", specification)
         self.assertIn("### Acceptance Constraints", specification)
-        self.assertIn("#### Implement constraint: Acceptance Constraint 1", specification)
+        self.assertIn("#### Satisfy constraint: UI must be web based", specification)
         self.assertIn("- Dependency edges:", specification)
 
     def test_rendered_issue_projection_includes_derived_dependency_reason(self) -> None:

@@ -1,6 +1,6 @@
 ## Summary
 
-Customer selects a reward.
+Deliver the source-defined behavior for missing payment confirmation segment 1: Customer selects a reward.
 
 ## Source Lineage
 
