@@ -1,6 +1,6 @@
 ## Summary
 
-Support stage gates.
+Deliver workflow behavior for support stage gates: Support stage gates.
 
 ## Source Lineage
 

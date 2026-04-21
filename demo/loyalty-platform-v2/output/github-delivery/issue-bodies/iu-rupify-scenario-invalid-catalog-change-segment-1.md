@@ -10,7 +10,7 @@
 
 ## Summary
 
-Operations Manager updates reward configuration.
+Deliver the source-defined behavior for invalid catalog change segment 1: Operations Manager updates reward configuration.
 
 ## Source Lineage
 

@@ -19,7 +19,7 @@ Deliver behavior that satisfies the constraint 'The member-facing experience mus
 - Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-2.
 - Observable: The member-facing experience must remain usable on common digital channels.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The member-facing experience must remain usable on common digital channels.
+- Expected outcome: The required behavior is delivered: The member-facing experience must remain usable on common digital channels.
 - Failure condition: The delivered behavior violates the stated constraint: The member-facing experience must remain usable on common digital channels.
 
 ## Dependencies

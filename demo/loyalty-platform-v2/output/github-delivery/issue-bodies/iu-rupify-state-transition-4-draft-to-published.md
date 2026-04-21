@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.state-transitions.state-transition-4`
 - Verification units: `vu.rupify.state-transition-4.draft-to-published`
 - Depends on:
-  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Guard Condition 2)
+  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Catalog validation approval is required before a reward becomes Published)
 - Reverse impact hint: Changes here may require upstream review of state-transition-4.
 
 ## Summary

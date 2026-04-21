@@ -11,7 +11,7 @@
 
 ## Summary
 
-System rejects the invalid change.
+Deliver the source-defined behavior for invalid catalog change segment 3: System rejects the invalid change.
 
 ## Source Lineage
 

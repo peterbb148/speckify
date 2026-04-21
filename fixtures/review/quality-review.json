@@ -1,25 +1,10 @@
 {
-  "warning_count": 35,
+  "warning_count": 8,
   "warnings": [
     {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
       "kind": "very_short_acceptance",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
       "message": "Acceptance criteria may be too short to guide implementation: SSO"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
-      "message": "Observable and expected outcome are effectively identical."
     },
     {
       "kind": "very_short_acceptance",
@@ -27,69 +12,14 @@
       "message": "Acceptance criteria may be too short to guide implementation: audit trail"
     },
     {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
       "kind": "very_short_acceptance",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
       "message": "Acceptance criteria may be too short to guide implementation: search"
     },
     {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
       "kind": "very_short_acceptance",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
       "message": "Acceptance criteria may be too short to guide implementation: filtering"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "abstract_success_criterion",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "message": "Success-criterion output may still be too abstract for direct implementation planning."
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.functional-requirement-2",
-      "message": "Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-2"
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-1"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-2"
     },
     {
       "kind": "very_short_acceptance",
@@ -97,39 +27,9 @@
       "message": "Acceptance criteria may be too short to guide implementation: SSO"
     },
     {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-3"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-4"
-    },
-    {
       "kind": "very_short_acceptance",
       "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
       "message": "Acceptance criteria may be too short to guide implementation: audit trail"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-5"
     },
     {
       "kind": "very_short_acceptance",
@@ -137,44 +37,9 @@
       "message": "Acceptance criteria may be too short to guide implementation: search"
     },
     {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-6"
-    },
-    {
       "kind": "very_short_acceptance",
       "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
       "message": "Acceptance criteria may be too short to guide implementation: filtering"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-7"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
-      "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
-      "message": "Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-8"
-    },
-    {
-      "kind": "weak_verification_distinction",
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
-      "message": "Observable and expected outcome are effectively identical."
     }
   ]
 }

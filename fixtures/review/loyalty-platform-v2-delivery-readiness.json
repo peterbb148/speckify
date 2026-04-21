@@ -3,9 +3,9 @@
   "project_id": "speckify-planning-export",
   "source_system": "rupify",
   "issue_count": 76,
-  "ready_issue_count": 19,
-  "failed_issue_count": 57,
-  "publication_ready": false,
+  "ready_issue_count": 76,
+  "failed_issue_count": 0,
+  "publication_ready": true,
   "gate_definitions": [
     {
       "id": "title_avoids_raw_source_identifiers",
@@ -63,369 +63,175 @@
       "description": "A bundle is publication-ready only if every exported issue passes all issue-level gates."
     }
   ],
-  "bundle_failures": [
-    {
-      "gate_id": "all_issues_pass",
-      "message": "Bundle is not publication-ready because 57 issue(s) failed at least one gate."
-    }
-  ],
+  "bundle_failures": [],
   "issues": [
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-1",
-      "title": "Implement constraint: Acceptance Constraint 1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 1"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must protect member and reward transactions with appropriate security controls",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
-      "title": "Implement constraint: Acceptance Constraint 2",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 2"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The member-facing experience must remain usable on common digital channels",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
-      "title": "Implement constraint: Acceptance Constraint 3",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 3"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The platform must support integrations with external systems such as payment confirmation",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
-      "title": "Implement constraint: Acceptance Constraint 4",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 4"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must allow customers to enroll in the loyalty program digitally",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
-      "title": "Implement constraint: Acceptance Constraint 5",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 5"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must show point balance and available rewards to eligible members",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
-      "title": "Implement constraint: Acceptance Constraint 6",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 6"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must allow members to redeem rewards when eligibility conditions are",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
-      "title": "Implement constraint: Acceptance Constraint 7",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Acceptance Constraint 7"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must provide reporting on redemptions and campaign performance",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "title": "Implement constraint: Success Criterion 1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Success Criterion 1"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: Members can enroll and redeem rewards through one coherent digital journey",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-2",
-      "title": "Implement constraint: Success Criterion 2",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Success Criterion 2"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: Operations managers can update the reward catalog without engineering support for routine",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-3",
-      "title": "Implement constraint: Success Criterion 3",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement constraint: Success Criterion 3"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The business can review redemption and campaign performance in one reporting workflow",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards",
-      "title": "Implement Browse Rewards",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use case: Browse Rewards",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards-extension-1",
-      "title": "Implement Browse Rewards",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Browse Rewards",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards-step-1",
-      "title": "Implement Browse Rewards",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Browse Rewards",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards-step-2",
-      "title": "Implement Browse Rewards",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Browse Rewards",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.browse-rewards-step-3",
-      "title": "Implement Browse Rewards",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Browse Rewards",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-1",
-      "title": "Enforce invariant: Rule 1",
+      "title": "Enforce invariant: A Redemption must not be fulfilled unless reward eligibility and available points",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-2",
-      "title": "Enforce invariant: Rule 2",
+      "title": "Enforce invariant: A Reward Catalog Entry must be validated before it becomes Published",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-3",
-      "title": "Enforce invariant: Rule 3",
+      "title": "Enforce invariant: A Member must provide the required details and consents before enrollment completes",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.enroll-member",
-      "title": "Implement Enroll Member",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use case: Enroll Member",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.enroll-member-extension-1",
-      "title": "Implement Enroll Member",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Enroll Member",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.enroll-member-step-1",
-      "title": "Implement Enroll Member",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Enroll Member",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.enroll-member-step-2",
-      "title": "Implement Enroll Member",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Enroll Member",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.enroll-member-step-3",
-      "title": "Implement Enroll Member",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Enroll Member",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.forbidden-transition-1",
       "title": "Implement Forbidden Transition 1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-1.maintain-campaign-rules",
@@ -444,422 +250,191 @@
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources",
       "title": "Implement workflow support: Integrate with downstream reporting sources",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: Integrate with downstream reporting sources."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2.integrate-with-payment-confirmation",
       "title": "Implement workflow support: Integrate with payment confirmation",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: Integrate with payment confirmation."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.guard-condition-2",
-      "title": "Implement guard enforcement: Guard Condition 2",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "title_avoids_generic_ordinals",
-          "message": "Title still depends on a generic ordinal label: Implement guard enforcement: Guard Condition 2"
-        }
-      ]
+      "title": "Implement guard enforcement: Catalog validation approval is required before a reward becomes Published",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.manage-reward-catalog",
-      "title": "Implement Manage Reward Catalog",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use case: Manage Reward Catalog",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.manage-reward-catalog-extension-1",
-      "title": "Implement Manage Reward Catalog",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Manage Reward Catalog",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-1",
-      "title": "Implement Manage Reward Catalog",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Manage Reward Catalog",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-2",
-      "title": "Implement Manage Reward Catalog",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Manage Reward Catalog",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.manage-reward-catalog-step-3",
-      "title": "Implement Manage Reward Catalog",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Manage Reward Catalog",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
-      "title": "Implement constraint: non_functional-requirement-1",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-1"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must protect member and reward transactions with appropriate security controls",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "title": "Implement constraint: non_functional-requirement-2",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-2"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The member-facing experience must remain usable on common digital channels",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "title": "Implement constraint: non_functional-requirement-3",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-3"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The platform must support integrations with external systems such as payment confirmation",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "title": "Implement constraint: non_functional-requirement-4",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-4"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must allow customers to enroll in the loyalty program digitally",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "title": "Implement constraint: non_functional-requirement-5",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-5"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must show point balance and available rewards to eligible members",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "title": "Implement constraint: non_functional-requirement-6",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-6"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must allow members to redeem rewards when eligibility conditions are",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
-      "title": "Implement constraint: non_functional-requirement-7",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "title_avoids_raw_source_identifiers",
-          "message": "Title exposes a raw source-style identifier: Implement constraint: non_functional-requirement-7"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Satisfy constraint: The system must provide reporting on redemptions and campaign performance",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use case: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-extension-1",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-extension-2",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-extension-3",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-step-1",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-step-2",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-step-3",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.redeem-reward-step-4",
-      "title": "Implement Redeem Reward",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Redeem Reward",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.review-redemption-analytics",
-      "title": "Implement Review Redemption Analytics",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use case: Review Redemption Analytics",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.review-redemption-analytics-extension-1",
-      "title": "Implement Review Redemption Analytics",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Review Redemption Analytics",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-1",
-      "title": "Implement Review Redemption Analytics",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Review Redemption Analytics",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.review-redemption-analytics-step-2",
-      "title": "Implement Review Redemption Analytics",
-      "ready": false,
-      "failure_count": 2,
-      "failures": [
-        {
-          "gate_id": "verification_shape_is_complete",
-          "message": "Verification shape is missing: Setup requirement, Failure condition"
-        },
-        {
-          "gate_id": "verification_shape_is_distinct",
-          "message": "Observable and expected outcome are identical."
-        }
-      ]
+      "title": "Implement use-case step: Review Redemption Analytics",
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-1",
@@ -871,50 +446,30 @@
     {
       "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-2",
       "title": "Implement scenario handling: Invalid Catalog Change segment 2",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System validates the change."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-invalid-catalog-change.segment-3",
       "title": "Implement scenario handling: Invalid Catalog Change segment 3",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System rejects the invalid change."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-1",
       "title": "Implement scenario handling: Missing Payment Confirmation segment 1",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: Customer selects a reward."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-2",
       "title": "Implement scenario handling: Missing Payment Confirmation segment 2",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System requests payment confirmation."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-missing-payment-confirmation.segment-3",
@@ -933,73 +488,48 @@
     {
       "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-2",
       "title": "Implement scenario handling: Reporting Delay segment 2",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System detects delayed reporting data."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-reporting-delay.segment-3",
       "title": "Implement scenario handling: Reporting Delay segment 3",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System shows a partial-data warning."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-1",
       "title": "Implement scenario handling: Reward Inventory Exhausted segment 1",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: Customer selects a reward."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-2",
       "title": "Implement scenario handling: Reward Inventory Exhausted segment 2",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System checks reward availability."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.scenario-reward-inventory-exhausted.segment-3",
       "title": "Implement scenario handling: Reward Inventory Exhausted segment 3",
-      "ready": false,
-      "failure_count": 1,
-      "failures": [
-        {
-          "gate_id": "summary_is_substantive",
-          "message": "Summary is too short to stand alone: System reports that inventory is exhausted."
-        }
-      ]
+      "ready": true,
+      "failure_count": 0,
+      "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-1",
-      "title": "Enforce invariant: Rule 1",
+      "title": "Enforce invariant: A Redemption must not be fulfilled unless reward eligibility and available points",
       "ready": true,
       "failure_count": 0,
       "failures": []
     },
     {
       "implementation_unit_id": "iu.rupify.state-invariant-2",
-      "title": "Enforce invariant: Rule 2",
+      "title": "Enforce invariant: A Reward Catalog Entry must be validated before it becomes Published",
       "ready": true,
       "failure_count": 0,
       "failures": []

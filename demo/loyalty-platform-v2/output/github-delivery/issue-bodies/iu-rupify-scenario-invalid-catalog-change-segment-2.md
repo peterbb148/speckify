@@ -11,7 +11,7 @@
 
 ## Summary
 
-System validates the change.
+Deliver the source-defined behavior for invalid catalog change segment 2: System validates the change.
 
 ## Source Lineage
 

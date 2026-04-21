@@ -1,6 +1,6 @@
 ## Summary
 
-System checks reward availability.
+Deliver the source-defined behavior for reward inventory exhausted segment 2: System checks reward availability.
 
 ## Source Lineage
 

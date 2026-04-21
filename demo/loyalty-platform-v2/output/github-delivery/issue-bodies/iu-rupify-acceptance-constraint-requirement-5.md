@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5`
 - Verification units: `vu.rupify.acceptance-constraint-requirement-5`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-5` (Implement constraint: non_functional-requirement-5)
+  - `iu.rupify.non-functional-requirement-5` (Satisfy constraint: The system must show point balance and available rewards to eligible members)
 - Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-5.
 
 ## Summary
@@ -30,7 +30,7 @@ Deliver behavior that satisfies the constraint 'The system must show point balan
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.
 - Observable: The system must show point balance and available rewards to eligible members.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The system must show point balance and available rewards to eligible members.
+- Expected outcome: The required behavior is delivered: The system must show point balance and available rewards to eligible members.
 - Failure condition: The delivered behavior violates the stated constraint: The system must show point balance and available rewards to eligible members.
 
 ## Dependencies

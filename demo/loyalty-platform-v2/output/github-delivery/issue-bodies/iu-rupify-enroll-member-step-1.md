@@ -10,7 +10,7 @@
 
 ## Summary
 
-Implement the behavior described by enroll member.
+Deliver the ordered step behavior for enroll member: Customer opens the loyalty enrollment flow.
 
 ## Source Lineage
 
@@ -26,9 +26,11 @@ Implement the behavior described by enroll member.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies enroll member.
+- Intent: Confirm the use-case step is delivered for enroll member.
 - Observable: Customer opens the loyalty enrollment flow.
-- Expected outcome: Customer opens the loyalty enrollment flow.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: Customer opens the loyalty enrollment flow.
+- Failure condition: The step behavior does not occur as required: Customer opens the loyalty enrollment flow.
 
 ## Dependencies
 

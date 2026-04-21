@@ -10,7 +10,7 @@
 
 ## Summary
 
-Implement the behavior described by enroll member.
+Deliver the ordered step behavior for enroll member: Enrollment is blocked when required consent is missing.
 
 ## Source Lineage
 
@@ -26,9 +26,11 @@ Implement the behavior described by enroll member.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies enroll member.
+- Intent: Confirm the use-case step is delivered for enroll member.
 - Observable: Enrollment is blocked when required consent is missing.
-- Expected outcome: Enrollment is blocked when required consent is missing.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: Enrollment is blocked when required consent is missing.
+- Failure condition: The step behavior does not occur as required: Enrollment is blocked when required consent is missing.
 
 ## Dependencies
 

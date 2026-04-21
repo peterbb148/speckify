@@ -1,6 +1,6 @@
 ## Summary
 
-System detects delayed reporting data.
+Deliver the source-defined behavior for reporting delay segment 2: System detects delayed reporting data.
 
 ## Source Lineage
 

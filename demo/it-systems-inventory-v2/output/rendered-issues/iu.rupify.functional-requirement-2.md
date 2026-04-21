@@ -1,6 +1,6 @@
 ## Summary
 
-I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+Deliver workflow behavior for i think this will be the cmdb for it applications/systems - we: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
 
 ## Source Lineage
 

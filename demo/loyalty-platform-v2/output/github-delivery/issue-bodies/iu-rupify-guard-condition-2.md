@@ -10,7 +10,7 @@
 
 ## Summary
 
-Catalog validation approval is required before a reward becomes Published
+Deliver the source-defined behavior for catalog validation approval is required before a reward becomes published: Catalog validation approval is required before a reward becomes Published.
 
 ## Source Lineage
 

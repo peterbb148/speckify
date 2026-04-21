@@ -29,7 +29,7 @@ Deliver behavior that satisfies the constraint 'UI must be web based'.
 - Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-1.
 - Observable: UI must be web based
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: UI must be web based
+- Expected outcome: The required behavior is delivered: UI must be web based
 - Failure condition: The delivered behavior violates the stated constraint: UI must be web based
 
 ## Dependencies

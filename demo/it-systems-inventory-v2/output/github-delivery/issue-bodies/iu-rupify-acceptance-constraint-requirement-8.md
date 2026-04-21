@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-8`
 - Verification units: `vu.rupify.acceptance-constraint-requirement-8`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-8` (Implement constraint: non_functional-requirement-8)
+  - `iu.rupify.non-functional-requirement-8` (Satisfy constraint: availability >=99%)
 - Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-8.
 
 ## Summary
@@ -30,7 +30,7 @@ Deliver behavior that satisfies the constraint 'availability >=99%'.
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 8.
 - Observable: availability >=99%
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: availability >=99%
+- Expected outcome: The required behavior is delivered: availability >=99%
 - Failure condition: The delivered behavior violates the stated constraint: availability >=99%
 
 ## Dependencies

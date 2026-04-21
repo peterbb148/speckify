@@ -7,7 +7,7 @@
 - Verification units: `vu.rupify.state-transition-4.published-to-retired`
 - Depends on:
   - `iu.rupify.state-transition-4.draft-to-published` (Implement lifecycle transition: Draft to Published)
-  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Guard Condition 2)
+  - `iu.rupify.guard-condition-2` (Implement guard enforcement: Catalog validation approval is required before a reward becomes Published)
 - Reverse impact hint: Changes here may require upstream review of state-transition-4.
 
 ## Summary

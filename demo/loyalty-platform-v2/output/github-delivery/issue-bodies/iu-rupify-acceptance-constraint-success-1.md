@@ -29,7 +29,7 @@ Deliver behavior that satisfies the constraint 'Members can enroll and redeem re
 - Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.
 - Observable: Members can enroll and redeem rewards through one coherent digital journey.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: Members can enroll and redeem rewards through one coherent digital journey.
+- Expected outcome: The required behavior is delivered: Members can enroll and redeem rewards through one coherent digital journey.
 - Failure condition: The delivered behavior violates the stated constraint: Members can enroll and redeem rewards through one coherent digital journey.
 
 ## Dependencies

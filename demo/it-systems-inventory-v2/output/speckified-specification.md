@@ -15,7 +15,7 @@ Project: `speckify-planning-export`
 
 ### Acceptance Constraints
 
-#### Implement constraint: Acceptance Constraint 1
+#### Satisfy constraint: UI must be web based
 
 - ID: `iu.rupify.acceptance-constraint-requirement-1`
 - Summary: Deliver behavior that satisfies the constraint 'UI must be web based'.
@@ -26,7 +26,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - UI must be web based
 
-#### Implement constraint: Acceptance Constraint 2
+#### Satisfy constraint: SSO
 
 - ID: `iu.rupify.acceptance-constraint-requirement-2`
 - Summary: Deliver behavior that satisfies the constraint 'SSO'.
@@ -37,7 +37,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - SSO
 
-#### Implement constraint: Acceptance Constraint 3
+#### Satisfy constraint: role-based access
 
 - ID: `iu.rupify.acceptance-constraint-requirement-3`
 - Summary: Deliver behavior that satisfies the constraint 'role-based access'.
@@ -48,7 +48,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - role-based access
 
-#### Implement constraint: Acceptance Constraint 4
+#### Satisfy constraint: audit trail
 
 - ID: `iu.rupify.acceptance-constraint-requirement-4`
 - Summary: Deliver behavior that satisfies the constraint 'audit trail'.
@@ -59,7 +59,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - audit trail
 
-#### Implement constraint: Acceptance Constraint 5
+#### Satisfy constraint: search
 
 - ID: `iu.rupify.acceptance-constraint-requirement-5`
 - Summary: Deliver behavior that satisfies the constraint 'search'.
@@ -70,7 +70,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - search
 
-#### Implement constraint: Acceptance Constraint 6
+#### Satisfy constraint: filtering
 
 - ID: `iu.rupify.acceptance-constraint-requirement-6`
 - Summary: Deliver behavior that satisfies the constraint 'filtering'.
@@ -81,7 +81,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - filtering
 
-#### Implement constraint: Acceptance Constraint 7
+#### Satisfy constraint: performance (regular >1s for web page rendering)
 
 - ID: `iu.rupify.acceptance-constraint-requirement-7`
 - Summary: Deliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.
@@ -92,7 +92,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - performance (regular >1s for web page rendering)
 
-#### Implement constraint: Acceptance Constraint 8
+#### Satisfy constraint: availability >=99%
 
 - ID: `iu.rupify.acceptance-constraint-requirement-8`
 - Summary: Deliver behavior that satisfies the constraint 'availability >=99%'.
@@ -103,7 +103,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - availability >=99%
 
-#### Implement constraint: Success Criterion 1
+#### Satisfy constraint: Better planning of IT systems purchasing and life cycle
 
 - ID: `iu.rupify.acceptance-constraint-success-1`
 - Summary: Deliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.
@@ -114,7 +114,7 @@ Project: `speckify-planning-export`
 
 ### Domain Invariants
 
-#### Enforce invariant: Rule 1
+#### Enforce invariant: A System must have a business owner before it becomes Active
 
 - ID: `iu.rupify.domain-invariant-1`
 - Summary: Ensure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.
@@ -123,7 +123,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System must have a business owner before it becomes Active.
 
-#### Enforce invariant: Rule 2
+#### Enforce invariant: A System lifecycle state change requires approval for deprecation
 
 - ID: `iu.rupify.domain-invariant-2`
 - Summary: Ensure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.
@@ -132,7 +132,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System lifecycle state change requires approval for deprecation.
 
-#### Enforce invariant: Rule 3
+#### Enforce invariant: A System must record vendor and contract dates
 
 - ID: `iu.rupify.domain-invariant-3`
 - Summary: Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.
@@ -146,7 +146,7 @@ Project: `speckify-planning-export`
 #### Implement workflow support: Support stage gates
 
 - ID: `iu.rupify.functional-requirement-1.support-stage-gates`
-- Summary: Support stage gates.
+- Summary: Deliver workflow behavior for support stage gates: Support stage gates.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
@@ -155,16 +155,16 @@ Project: `speckify-planning-export`
 #### Implement workflow support: Support approval states
 
 - ID: `iu.rupify.functional-requirement-1.support-approval-states`
-- Summary: Support approval states.
+- Summary: Deliver workflow behavior for support approval states: Support approval states.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
   - Approval states is supported.
 
-#### Implement workflow support: functional-requirement-2
+#### Implement workflow support: I think this will be the CMDB for IT Applications/systems - we
 
 - ID: `iu.rupify.functional-requirement-2`
-- Summary: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
+- Summary: Deliver workflow behavior for i think this will be the cmdb for it applications/systems - we: I think this will be the CMDB for IT Applications/systems - we need to be able to export data to various system for reporting.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
@@ -172,7 +172,7 @@ Project: `speckify-planning-export`
 
 ### Non Functional Requirements
 
-#### Implement constraint: non_functional-requirement-1
+#### Satisfy constraint: UI must be web based
 
 - ID: `iu.rupify.non-functional-requirement-1`
 - Summary: Deliver behavior that satisfies the constraint 'UI must be web based'.
@@ -181,7 +181,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - UI must be web based
 
-#### Implement constraint: non_functional-requirement-2
+#### Satisfy constraint: SSO
 
 - ID: `iu.rupify.non-functional-requirement-2`
 - Summary: Deliver behavior that satisfies the constraint 'SSO'.
@@ -190,7 +190,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - SSO
 
-#### Implement constraint: non_functional-requirement-3
+#### Satisfy constraint: role-based access
 
 - ID: `iu.rupify.non-functional-requirement-3`
 - Summary: Deliver behavior that satisfies the constraint 'role-based access'.
@@ -199,7 +199,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - role-based access
 
-#### Implement constraint: non_functional-requirement-4
+#### Satisfy constraint: audit trail
 
 - ID: `iu.rupify.non-functional-requirement-4`
 - Summary: Deliver behavior that satisfies the constraint 'audit trail'.
@@ -208,7 +208,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - audit trail
 
-#### Implement constraint: non_functional-requirement-5
+#### Satisfy constraint: search
 
 - ID: `iu.rupify.non-functional-requirement-5`
 - Summary: Deliver behavior that satisfies the constraint 'search'.
@@ -217,7 +217,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - search
 
-#### Implement constraint: non_functional-requirement-6
+#### Satisfy constraint: filtering
 
 - ID: `iu.rupify.non-functional-requirement-6`
 - Summary: Deliver behavior that satisfies the constraint 'filtering'.
@@ -226,7 +226,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - filtering
 
-#### Implement constraint: non_functional-requirement-7
+#### Satisfy constraint: performance (regular >1s for web page rendering)
 
 - ID: `iu.rupify.non-functional-requirement-7`
 - Summary: Deliver behavior that satisfies the constraint 'performance (regular >1s for web page rendering)'.
@@ -235,7 +235,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - performance (regular >1s for web page rendering)
 
-#### Implement constraint: non_functional-requirement-8
+#### Satisfy constraint: availability >=99%
 
 - ID: `iu.rupify.non-functional-requirement-8`
 - Summary: Deliver behavior that satisfies the constraint 'availability >=99%'.
@@ -246,7 +246,7 @@ Project: `speckify-planning-export`
 
 ### State Invariants
 
-#### Enforce invariant: Rule 1
+#### Enforce invariant: A System must have a business owner before it becomes Active
 
 - ID: `iu.rupify.state-invariant-1`
 - Summary: Ensure the invariant 'A System must have a business owner before it becomes Active.' is enforced in the implemented behavior.
@@ -255,7 +255,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System must have a business owner before it becomes Active.
 
-#### Enforce invariant: Rule 2
+#### Enforce invariant: A System lifecycle state change requires approval for deprecation
 
 - ID: `iu.rupify.state-invariant-2`
 - Summary: Ensure the invariant 'A System lifecycle state change requires approval for deprecation.' is enforced in the implemented behavior.
@@ -264,7 +264,7 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - A System lifecycle state change requires approval for deprecation.
 
-#### Enforce invariant: Rule 3
+#### Enforce invariant: A System must record vendor and contract dates
 
 - ID: `iu.rupify.state-invariant-3`
 - Summary: Ensure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.

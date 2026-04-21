@@ -6,7 +6,7 @@
 - Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`
 - Verification units: `vu.rupify.acceptance-constraint-requirement-4`
 - Depends on:
-  - `iu.rupify.non-functional-requirement-4` (Implement constraint: non_functional-requirement-4)
+  - `iu.rupify.non-functional-requirement-4` (Satisfy constraint: The system must allow customers to enroll in the loyalty program digitally)
 - Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-4.
 
 ## Summary
@@ -30,7 +30,7 @@ Deliver behavior that satisfies the constraint 'The system must allow customers 
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.
 - Observable: The system must allow customers to enroll in the loyalty program digitally.
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: The system must allow customers to enroll in the loyalty program digitally.
+- Expected outcome: The required behavior is delivered: The system must allow customers to enroll in the loyalty program digitally.
 - Failure condition: The delivered behavior violates the stated constraint: The system must allow customers to enroll in the loyalty program digitally.
 
 ## Dependencies

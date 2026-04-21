@@ -11,7 +11,7 @@
 
 ## Summary
 
-System shows a partial-data warning.
+Deliver the source-defined behavior for reporting delay segment 3: System shows a partial-data warning.
 
 ## Source Lineage
 

@@ -1,6 +1,6 @@
 ## Summary
 
-Implement the behavior described by redeem reward.
+Deliver the ordered step behavior for redeem reward: System validates reward eligibility and available points.
 
 ## Source Lineage
 
@@ -16,9 +16,11 @@ Implement the behavior described by redeem reward.
 
 ## Verification Shape
 
-- Intent: Confirm the implementation satisfies redeem reward.
+- Intent: Confirm the use-case step is delivered for redeem reward.
 - Observable: System validates reward eligibility and available points.
-- Expected outcome: System validates reward eligibility and available points.
+- Setup requirement: The workflow is positioned at the step where this behavior should occur.
+- Expected outcome: The step completes with the expected behavior: System validates reward eligibility and available points.
+- Failure condition: The step behavior does not occur as required: System validates reward eligibility and available points.
 
 ## Dependencies
 

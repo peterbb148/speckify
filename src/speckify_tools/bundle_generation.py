@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -18,6 +19,12 @@ FAMILY_VIEW_MAP = {
     "state_invariants": ("state", "state_invariant"),
     "state_transitions": ("state", "state_transition"),
 }
+
+RAW_SOURCE_IDENTIFIER_RE = re.compile(r"^[a-z]+(?:[_-][a-z0-9]+)*-\d+$")
+GENERIC_ORDINAL_TITLE_RE = re.compile(
+    r"^(?:Acceptance Constraint|Requirement|Constraint|Scenario|Use Case|Guard Condition|Success Criterion|Rule)\s+\d+$",
+    flags=re.IGNORECASE,
+)
 
 
 def _slug(value: str) -> str:
@@ -67,6 +74,58 @@ def _element_summary(element: RupifyElement) -> str:
     if element.text:
         return element.text
     return f"Derived from Rupify element {element.id}."
+
+
+def _humanize_identifier(value: str) -> str:
+    """Convert a source-style identifier into readable words."""
+    words = value.replace("_", " ").replace("-", " ").split()
+    if not words:
+        return value
+    return words[0].capitalize() + "".join(f" {word}" for word in words[1:])
+
+
+def _looks_like_raw_source_identifier(value: str) -> bool:
+    """Return whether one value still looks like a raw source identifier."""
+    return bool(RAW_SOURCE_IDENTIFIER_RE.fullmatch(value.strip()))
+
+
+def _looks_like_generic_ordinal(value: str) -> bool:
+    """Return whether one value still looks like a generic ordinal label."""
+    return bool(GENERIC_ORDINAL_TITLE_RE.fullmatch(value.strip()))
+
+
+def _single_line(text: str) -> str:
+    """Flatten text into one trimmed line."""
+    return " ".join(text.split()).strip()
+
+
+def _trim_sentence(text: str, *, max_words: int = 12) -> str:
+    """Trim one text fragment to a bounded, sentence-like label."""
+    flattened = _single_line(text).rstrip(".")
+    words = flattened.split()
+    if len(words) <= max_words:
+        return flattened
+    return " ".join(words[:max_words])
+
+
+def _best_delivery_label(
+    element: RupifyElement,
+    title: str,
+    summary: str,
+    acceptance: str,
+) -> str:
+    """Resolve a publication-friendly label for one implementation unit."""
+    candidates = [title, summary, acceptance]
+    for candidate in candidates:
+        normalized = _trim_sentence(candidate)
+        if not normalized:
+            continue
+        if _looks_like_raw_source_identifier(normalized):
+            continue
+        if _looks_like_generic_ordinal(normalized):
+            continue
+        return normalized
+    return _humanize_identifier(element.id)
 
 
 def _eligible_elements(export: RupifyPlanningExport) -> list[RupifyElement]:
@@ -212,25 +271,36 @@ def _decompose_element(element: RupifyElement) -> list[dict[str, str | None]]:
     ]
 
 
-def _implementation_title(element: RupifyElement, title: str) -> str:
+def _implementation_title(
+    element: RupifyElement,
+    title: str,
+    summary: str,
+    acceptance: str,
+) -> str:
     """Derive a more usable implementation title."""
+    label = _best_delivery_label(element, title, summary, acceptance)
     if element.family in {"acceptance_constraints", "non_functional_requirements"}:
-        return f"Implement constraint: {title}"
+        return f"Satisfy constraint: {label}"
     if element.family in {"domain_invariants", "state_invariants"}:
-        return f"Enforce invariant: {title}"
+        return f"Enforce invariant: {label}"
     if element.family == "state_transitions":
-        return f"Implement lifecycle transition: {title}"
+        return f"Implement lifecycle transition: {label}"
     if element.family == "functional_requirements":
-        return f"Implement workflow support: {title}"
+        return f"Implement workflow support: {label}"
     if element.family == "scenarios":
-        return f"Implement scenario handling: {title}"
+        return f"Implement scenario handling: {label}"
     if element.family == "guard_conditions":
-        return f"Implement guard enforcement: {title}"
-    return f"Implement {title}"
+        return f"Implement guard enforcement: {label}"
+    if element.family == "use_cases":
+        return f"Implement use case: {label}"
+    if element.family == "use_case_steps":
+        return f"Implement use-case step: {label}"
+    return f"Implement {label}"
 
 
 def _implementation_summary(element: RupifyElement, title: str, summary: str, acceptance: str) -> str:
     """Derive a more usable implementation summary."""
+    label = _best_delivery_label(element, title, summary, acceptance)
     if element.family in {"acceptance_constraints", "non_functional_requirements"}:
         return f"Deliver behavior that satisfies the constraint '{acceptance}'."
     if element.family in {"domain_invariants", "state_invariants"}:
@@ -238,10 +308,14 @@ def _implementation_summary(element: RupifyElement, title: str, summary: str, ac
     if element.family == "state_transitions":
         return summary
     if element.family == "functional_requirements":
-        return summary
+        return f"Deliver workflow behavior for {label.lower()}: {summary.rstrip('.') }."
+    if element.family == "use_cases":
+        return f"Deliver the use-case behavior for {label.lower()}: {summary.rstrip('.') }."
+    if element.family == "use_case_steps":
+        return f"Deliver the ordered step behavior for {label.lower()}: {summary.rstrip('.') }."
     if element.family in {"scenarios", "guard_conditions"}:
-        return summary
-    return f"Implement the behavior described by {title.lower()}."
+        return f"Deliver the source-defined behavior for {label.lower()}: {summary.rstrip('.') }."
+    return f"Implement the source-defined behavior for {label.lower()}: {acceptance.rstrip('.') }."
 
 
 def _verification_contract(
@@ -255,7 +329,7 @@ def _verification_contract(
     verification_intent = f"Confirm the implementation satisfies {title.lower()}."
     observables = [acceptance]
     setup_requirements: list[str] = []
-    expected_outcomes = [acceptance]
+    expected_outcomes = [f"The required behavior is delivered: {acceptance}"]
     failure_conditions: list[str] = []
     invariants_preserved: list[str] = []
 
@@ -302,6 +376,27 @@ def _verification_contract(
         setup_requirements = ["A request reaches the boundary where the guard condition must be checked."]
         expected_outcomes = [f"The guard enforcement is applied correctly: {acceptance}"]
         failure_conditions = [f"The guard condition is not enforced as required: {acceptance}"]
+
+    elif element.family == "use_cases":
+        verification_intent = f"Confirm the use-case behavior is delivered for {title.lower()}."
+        setup_requirements = ["A representative invocation reaches the start of the use case."]
+        expected_outcomes = [f"The end-to-end use-case behavior is completed as specified: {acceptance}"]
+        failure_conditions = [f"The use-case behavior is incomplete or incorrect: {acceptance}"]
+
+    elif element.family == "use_case_steps":
+        verification_intent = f"Confirm the use-case step is delivered for {title.lower()}."
+        setup_requirements = ["The workflow is positioned at the step where this behavior should occur."]
+        expected_outcomes = [f"The step completes with the expected behavior: {acceptance}"]
+        failure_conditions = [f"The step behavior does not occur as required: {acceptance}"]
+
+    if not setup_requirements:
+        setup_requirements = [
+            "A representative invocation reaches the source-defined behavior boundary for this unit."
+        ]
+    if not expected_outcomes:
+        expected_outcomes = [f"The required behavior is delivered: {acceptance}"]
+    if not failure_conditions:
+        failure_conditions = [f"The required behavior is not delivered: {acceptance}"]
 
     return {
         "implementation_unit_id": implementation_unit_id,
@@ -598,7 +693,7 @@ def generate_planning_bundle(
             implementation_units.append(
                 {
                     "id": implementation_unit_id,
-                    "title": _implementation_title(element, title),
+                    "title": _implementation_title(element, title, summary, acceptance),
                     "summary": _implementation_summary(element, title, summary, acceptance),
                     "derived_from_spec_unit_ids": [spec_unit_id],
                     "source_anchor_ids": [anchor_id],

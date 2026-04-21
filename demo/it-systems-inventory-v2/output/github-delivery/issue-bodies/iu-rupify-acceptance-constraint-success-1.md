@@ -29,7 +29,7 @@ Deliver behavior that satisfies the constraint 'Better planning of IT systems pu
 - Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.
 - Observable: Better planning of IT systems purchasing and life cycle
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: Better planning of IT systems purchasing and life cycle
+- Expected outcome: The required behavior is delivered: Better planning of IT systems purchasing and life cycle
 - Failure condition: The delivered behavior violates the stated constraint: Better planning of IT systems purchasing and life cycle
 
 ## Dependencies

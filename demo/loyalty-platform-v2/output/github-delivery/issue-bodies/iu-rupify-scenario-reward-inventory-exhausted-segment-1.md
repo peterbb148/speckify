@@ -10,7 +10,7 @@
 
 ## Summary
 
-Customer selects a reward.
+Deliver the source-defined behavior for reward inventory exhausted segment 1: Customer selects a reward.
 
 ## Source Lineage
 

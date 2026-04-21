@@ -19,7 +19,7 @@ Deliver behavior that satisfies the constraint 'SSO'.
 - Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.
 - Observable: SSO
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: SSO
+- Expected outcome: The required behavior is delivered: SSO
 - Failure condition: The delivered behavior violates the stated constraint: SSO
 
 ## Dependencies

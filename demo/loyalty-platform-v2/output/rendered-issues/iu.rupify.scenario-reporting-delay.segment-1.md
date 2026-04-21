@@ -1,6 +1,6 @@
 ## Summary
 
-Operations Manager opens the analytics dashboard.
+Deliver the source-defined behavior for reporting delay segment 1: Operations Manager opens the analytics dashboard.
 
 ## Source Lineage
 

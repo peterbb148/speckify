@@ -19,7 +19,7 @@ Deliver behavior that satisfies the constraint 'role-based access'.
 - Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.
 - Observable: role-based access
 - Setup requirement: The relevant system boundary or UI surface is available for inspection.
-- Expected outcome: role-based access
+- Expected outcome: The required behavior is delivered: role-based access
 - Failure condition: The delivered behavior violates the stated constraint: role-based access
 
 ## Dependencies

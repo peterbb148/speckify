@@ -1,6 +1,6 @@
 ## Summary
 
-System reports that inventory is exhausted.
+Deliver the source-defined behavior for reward inventory exhausted segment 3: System reports that inventory is exhausted.
 
 ## Source Lineage
 

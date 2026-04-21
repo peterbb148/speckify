@@ -10,7 +10,7 @@
 
 ## Summary
 
-Integrate with payment confirmation.
+Deliver workflow behavior for integrate with payment confirmation: Integrate with payment confirmation.
 
 ## Source Lineage
 
