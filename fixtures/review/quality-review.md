@@ -1,6 +1,6 @@
 # Quality Review Report
 
-- Warning count: 36
+- Warning count: 35
 
 ## Warnings
 
@@ -18,7 +18,6 @@
 - `iu.rupify.acceptance-constraint-requirement-8` [weak_verification_distinction] Observable and expected outcome are effectively identical.
 - `iu.rupify.acceptance-constraint-success-1` [abstract_success_criterion] Success-criterion output may still be too abstract for direct implementation planning.
 - `iu.rupify.acceptance-constraint-success-1` [weak_verification_distinction] Observable and expected outcome are effectively identical.
-- `iu.rupify.functional-requirement-1` [generic_title] Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-1
 - `iu.rupify.functional-requirement-2` [generic_title] Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-2
 - `iu.rupify.non-functional-requirement-1` [generic_title] Title still exposes a raw requirement identifier: Implement constraint: non_functional-requirement-1
 - `iu.rupify.non-functional-requirement-1` [weak_verification_distinction] Observable and expected outcome are effectively identical.

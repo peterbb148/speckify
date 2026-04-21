@@ -378,58 +378,6 @@
     "status": "proposed"
   },
   {
-    "id": "change.iu.rupify.functional-requirement-1.generic-title",
-    "impact_scope": "planning_only",
-    "change_class": "verification_refinement",
-    "warning_kind": "generic_title",
-    "summary": "Implement workflow support: functional-requirement-1: Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-1",
-    "affected_implementation_unit_ids": [
-      "iu.rupify.functional-requirement-1"
-    ],
-    "affected_verification_unit_ids": [
-      "vu.rupify.functional-requirement-1"
-    ],
-    "source_anchor_ids": [
-      "anchor.rupify.functional-requirements.functional-requirement-1"
-    ],
-    "trace_bundle_ids": [
-      "tb.rupify.functional-requirement-1"
-    ],
-    "evidence": [
-      "Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-1"
-    ],
-    "recommended_action": [
-      "Refine downstream rendering and naming for source anchors: anchor.rupify.functional-requirements.functional-requirement-1."
-    ],
-    "status": "proposed"
-  },
-  {
-    "id": "change.iu.rupify.functional-requirement-2.generic-title",
-    "impact_scope": "planning_only",
-    "change_class": "verification_refinement",
-    "warning_kind": "generic_title",
-    "summary": "Implement workflow support: functional-requirement-2: Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-2",
-    "affected_implementation_unit_ids": [
-      "iu.rupify.functional-requirement-2"
-    ],
-    "affected_verification_unit_ids": [
-      "vu.rupify.functional-requirement-2"
-    ],
-    "source_anchor_ids": [
-      "anchor.rupify.functional-requirements.functional-requirement-2"
-    ],
-    "trace_bundle_ids": [
-      "tb.rupify.functional-requirement-2"
-    ],
-    "evidence": [
-      "Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-2"
-    ],
-    "recommended_action": [
-      "Refine downstream rendering and naming for source anchors: anchor.rupify.functional-requirements.functional-requirement-2."
-    ],
-    "status": "proposed"
-  },
-  {
     "id": "change.iu.rupify.non-functional-requirement-1.generic-title",
     "impact_scope": "planning_only",
     "change_class": "verification_refinement",

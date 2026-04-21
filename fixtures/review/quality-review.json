@@ -1,5 +1,5 @@
 {
-  "warning_count": 36,
+  "warning_count": 35,
   "warnings": [
     {
       "kind": "weak_verification_distinction",
@@ -70,11 +70,6 @@
       "kind": "weak_verification_distinction",
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
       "message": "Observable and expected outcome are effectively identical."
-    },
-    {
-      "kind": "generic_title",
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "message": "Title still exposes a raw requirement identifier: Implement workflow support: functional-requirement-1"
     },
     {
       "kind": "generic_title",

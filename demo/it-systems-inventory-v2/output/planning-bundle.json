@@ -568,9 +568,23 @@
       ]
     },
     {
-      "id": "su.rupify.functional-requirement-1",
-      "title": "functional-requirement-1",
-      "summary": "Yes business processes like stage gates and approval states must be supported",
+      "id": "su.rupify.functional-requirement-1.support-stage-gates",
+      "title": "Support stage gates",
+      "summary": "Support stage gates.",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "obligation_kind": "requirement",
+      "normative": true,
+      "status": "proposed",
+      "notes": [
+        "Derived from Rupify functional_requirements element functional-requirement-1."
+      ]
+    },
+    {
+      "id": "su.rupify.functional-requirement-1.support-approval-states",
+      "title": "Support approval states",
+      "summary": "Support approval states.",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
@@ -1280,26 +1294,57 @@
       ]
     },
     {
-      "id": "iu.rupify.functional-requirement-1",
-      "title": "Implement workflow support: functional-requirement-1",
-      "summary": "Yes business processes like stage gates and approval states must be supported",
+      "id": "iu.rupify.functional-requirement-1.support-stage-gates",
+      "title": "Implement workflow support: Support stage gates",
+      "summary": "Support stage gates.",
       "derived_from_spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.support-stage-gates"
       ],
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "dependencies": [],
       "implementation_scope": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Support stage gates."
       ],
       "non_goals": [],
       "constraints": [],
       "acceptance_criteria": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Stage gates is supported."
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.support-stage-gates"
+      ],
+      "drift_checks": [
+        "Preserve lineage to Rupify element functional-requirement-1."
+      ],
+      "reverse_impact_hint": "Changes here may require upstream review of functional-requirement-1.",
+      "labels": [
+        "planning",
+        "functional-requirements"
+      ]
+    },
+    {
+      "id": "iu.rupify.functional-requirement-1.support-approval-states",
+      "title": "Implement workflow support: Support approval states",
+      "summary": "Support approval states.",
+      "derived_from_spec_unit_ids": [
+        "su.rupify.functional-requirement-1.support-approval-states"
+      ],
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "dependencies": [],
+      "implementation_scope": [
+        "Support approval states."
+      ],
+      "non_goals": [],
+      "constraints": [],
+      "acceptance_criteria": [
+        "Approval states is supported."
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.support-approval-states"
       ],
       "drift_checks": [
         "Preserve lineage to Rupify element functional-requirement-1."
@@ -2313,24 +2358,49 @@
       ]
     },
     {
-      "id": "vu.rupify.functional-requirement-1",
-      "title": "Verify functional-requirement-1",
+      "id": "vu.rupify.functional-requirement-1.support-stage-gates",
+      "title": "Verify Support stage gates",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "verification_intent": "Confirm workflow support is present for functional-requirement-1.",
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.support-stage-gates",
+      "verification_intent": "Confirm workflow support is present for support stage gates.",
       "observables": [
-        "Yes business processes like stage gates and approval states must be supported"
+        "Stage gates is supported."
       ],
       "setup_requirements": [
         "The relevant workflow capability is reachable in the system."
       ],
       "expected_outcomes": [
-        "The workflow behavior is supported: Yes business processes like stage gates and approval states must be supported"
+        "The workflow behavior is supported: Stage gates is supported."
       ],
       "failure_conditions": [
-        "The workflow behavior is missing or incomplete: Yes business processes like stage gates and approval states must be supported"
+        "The workflow behavior is missing or incomplete: Stage gates is supported."
+      ],
+      "invariants_preserved": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "vu.rupify.functional-requirement-1.support-approval-states",
+      "title": "Verify Support approval states",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.support-approval-states",
+      "verification_intent": "Confirm workflow support is present for support approval states.",
+      "observables": [
+        "Approval states is supported."
+      ],
+      "setup_requirements": [
+        "The relevant workflow capability is reachable in the system."
+      ],
+      "expected_outcomes": [
+        "The workflow behavior is supported: Approval states is supported."
+      ],
+      "failure_conditions": [
+        "The workflow behavior is missing or incomplete: Approval states is supported."
       ],
       "invariants_preserved": [],
       "notes": [
@@ -3134,18 +3204,37 @@
       ]
     },
     {
-      "id": "tb.rupify.functional-requirement-1",
+      "id": "tb.rupify.functional-requirement-1.support-stage-gates",
       "source_anchor_ids": [
         "anchor.rupify.functional-requirements.functional-requirement-1"
       ],
       "spec_unit_ids": [
-        "su.rupify.functional-requirement-1"
+        "su.rupify.functional-requirement-1.support-stage-gates"
       ],
       "implementation_unit_ids": [
-        "iu.rupify.functional-requirement-1"
+        "iu.rupify.functional-requirement-1.support-stage-gates"
       ],
       "verification_unit_ids": [
-        "vu.rupify.functional-requirement-1"
+        "vu.rupify.functional-requirement-1.support-stage-gates"
+      ],
+      "assembly_rule_ids": [],
+      "notes": [
+        "Derived from decomposition slice of functional-requirement-1."
+      ]
+    },
+    {
+      "id": "tb.rupify.functional-requirement-1.support-approval-states",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "spec_unit_ids": [
+        "su.rupify.functional-requirement-1.support-approval-states"
+      ],
+      "implementation_unit_ids": [
+        "iu.rupify.functional-requirement-1.support-approval-states"
+      ],
+      "verification_unit_ids": [
+        "vu.rupify.functional-requirement-1.support-approval-states"
       ],
       "assembly_rule_ids": [],
       "notes": [
@@ -3673,6 +3762,20 @@
   ],
   "assembly_rules": [
     {
+      "id": "assembly.functional-requirement-1",
+      "source_anchor_ids": [
+        "anchor.rupify.functional-requirements.functional-requirement-1"
+      ],
+      "member_spec_unit_ids": [
+        "su.rupify.functional-requirement-1.support-stage-gates",
+        "su.rupify.functional-requirement-1.support-approval-states"
+      ],
+      "rule_type": "conjunctive_set",
+      "notes": [
+        "Recombine explicitly structured sub-obligations into the original source element."
+      ]
+    },
+    {
       "id": "assembly.state-transition-1",
       "source_anchor_ids": [
         "anchor.rupify.state-transitions.state-transition-1"
@@ -3781,9 +3884,14 @@
       "issue_body": "## Summary\n\nEnsure the invariant 'A System must record vendor and contract dates.' is enforced in the implemented behavior.\n\n## Source Lineage\n\n- `anchor.rupify.domain-invariants.domain-invariant-3` (domain_invariant: `domain-invariant-3`)\n\n## Scope\n\n- A System must record vendor and contract dates.\n\n## Acceptance Criteria\n\n- A System must record vendor and contract dates.\n\n## Verification Shape\n\n- Intent: Confirm the invariant remains enforced for rule 3.\n- Observable: A System must record vendor and contract dates.\n- Setup requirement: A representative system record exists in a state where the rule applies.\n- Expected outcome: The invariant remains true: A System must record vendor and contract dates.\n- Failure condition: The invariant is breached: A System must record vendor and contract dates.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element domain-invariant-3.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.functional-requirement-1",
-      "issue_title": "Implement workflow support: functional-requirement-1",
-      "issue_body": "## Summary\n\nYes business processes like stage gates and approval states must be supported\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Acceptance Criteria\n\n- Yes business processes like stage gates and approval states must be supported\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for functional-requirement-1.\n- Observable: Yes business processes like stage gates and approval states must be supported\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Yes business processes like stage gates and approval states must be supported\n- Failure condition: The workflow behavior is missing or incomplete: Yes business processes like stage gates and approval states must be supported\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.support-stage-gates",
+      "issue_title": "Implement workflow support: Support stage gates",
+      "issue_body": "## Summary\n\nSupport stage gates.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support stage gates.\n\n## Acceptance Criteria\n\n- Stage gates is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support stage gates.\n- Observable: Stage gates is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Stage gates is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Stage gates is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
+    },
+    {
+      "implementation_unit_id": "iu.rupify.functional-requirement-1.support-approval-states",
+      "issue_title": "Implement workflow support: Support approval states",
+      "issue_body": "## Summary\n\nSupport approval states.\n\n## Source Lineage\n\n- `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)\n\n## Scope\n\n- Support approval states.\n\n## Acceptance Criteria\n\n- Approval states is supported.\n\n## Verification Shape\n\n- Intent: Confirm workflow support is present for support approval states.\n- Observable: Approval states is supported.\n- Setup requirement: The relevant workflow capability is reachable in the system.\n- Expected outcome: The workflow behavior is supported: Approval states is supported.\n- Failure condition: The workflow behavior is missing or incomplete: Approval states is supported.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element functional-requirement-1.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.functional-requirement-2",

@@ -3,13 +3,13 @@
   "decomposition_profile": "rupify-structural-decomposition-v1",
   "counts": {
     "source_anchors": 29,
-    "spec_units": 35,
-    "implementation_units": 35,
-    "verification_units": 35,
-    "trace_bundles": 35,
+    "spec_units": 36,
+    "implementation_units": 36,
+    "verification_units": 36,
+    "trace_bundles": 36,
     "dependency_edges": 14,
-    "assembly_rules": 3,
-    "rendered_issues": 35
+    "assembly_rules": 4,
+    "rendered_issues": 36
   },
   "sample_titles": [
     "Implement constraint: Acceptance Constraint 1",
@@ -22,12 +22,11 @@
     "Implement constraint: Acceptance Constraint 8"
   ],
   "quality_signals": {
-    "structural_transition_units": [
-      "iu.rupify.state-transition-1.proposed-to-active",
-      "iu.rupify.state-transition-1.active-to-retiring",
-      "iu.rupify.state-transition-1.retiring-to-retired"
+    "split_functional_requirement": [
+      "iu.rupify.functional-requirement-1.support-stage-gates",
+      "iu.rupify.functional-requirement-1.support-approval-states"
     ],
-    "sample_dependency_edges": [
+    "transition_dependencies": [
       {
         "id": "dep.rupify.state-transition-1.active-to-retiring.requires-rupify.state-transition-1.proposed-to-active",
         "from_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
@@ -41,45 +40,6 @@
         "to_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
         "dependency_type": "requires",
         "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
-      },
-      {
-        "id": "dep.rupify.state-transition-2.active-to-retiring.requires-rupify.state-transition-2.proposed-to-active",
-        "from_implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
-        "to_implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
-        "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
-      }
-    ],
-    "sample_assembly_rules": [
-      {
-        "id": "assembly.state-transition-1",
-        "source_anchor_ids": [
-          "anchor.rupify.state-transitions.state-transition-1"
-        ],
-        "member_spec_unit_ids": [
-          "su.rupify.state-transition-1.proposed-to-active",
-          "su.rupify.state-transition-1.active-to-retiring",
-          "su.rupify.state-transition-1.retiring-to-retired"
-        ],
-        "rule_type": "ordered_sequence",
-        "notes": [
-          "Recombine split lifecycle transitions into the original source transition chain."
-        ]
-      },
-      {
-        "id": "assembly.state-transition-2",
-        "source_anchor_ids": [
-          "anchor.rupify.state-transitions.state-transition-2"
-        ],
-        "member_spec_unit_ids": [
-          "su.rupify.state-transition-2.proposed-to-active",
-          "su.rupify.state-transition-2.active-to-retiring",
-          "su.rupify.state-transition-2.retiring-to-retired"
-        ],
-        "rule_type": "ordered_sequence",
-        "notes": [
-          "Recombine split lifecycle transitions into the original source transition chain."
-        ]
       }
     ]
   }

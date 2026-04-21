@@ -5,11 +5,11 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 66
-- Generated verification units: 66
-- Trace bundles: 66
-- Dependency edges: 31
-- Assembly rules: 4
+- Generated implementation units: 76
+- Generated verification units: 76
+- Trace bundles: 76
+- Dependency edges: 39
+- Assembly rules: 10
 
 ## Implementation Units
 
@@ -161,23 +161,41 @@ Project: `speckify-planning-export`
 
 ### Functional Requirements
 
-#### Implement workflow support: functional-requirement-1
+#### Implement workflow support: Maintain reward catalog entries
 
-- ID: `iu.rupify.functional-requirement-1`
-- Summary: The system must allow operations managers to maintain reward catalog entries and campaign rules.
+- ID: `iu.rupify.functional-requirement-1.maintain-reward-catalog-entries`
+- Summary: Allow operations managers to maintain reward catalog entries.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
 - Acceptance criteria:
-  - The system must allow operations managers to maintain reward catalog entries and campaign rules.
+  - Operations managers can maintain reward catalog entries.
 
-#### Implement workflow support: functional-requirement-2
+#### Implement workflow support: Maintain campaign rules
 
-- ID: `iu.rupify.functional-requirement-2`
-- Summary: The platform must integrate with payment confirmation and downstream reporting sources.
+- ID: `iu.rupify.functional-requirement-1.maintain-campaign-rules`
+- Summary: Allow operations managers to maintain campaign rules.
+- Source lineage:
+  - `anchor.rupify.functional-requirements.functional-requirement-1` (requirement: `functional-requirement-1`)
+- Acceptance criteria:
+  - Operations managers can maintain campaign rules.
+
+#### Implement workflow support: Integrate with payment confirmation
+
+- ID: `iu.rupify.functional-requirement-2.integrate-with-payment-confirmation`
+- Summary: Integrate with payment confirmation.
 - Source lineage:
   - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
 - Acceptance criteria:
-  - The platform must integrate with payment confirmation and downstream reporting sources.
+  - Payment confirmation is supported.
+
+#### Implement workflow support: Integrate with downstream reporting sources
+
+- ID: `iu.rupify.functional-requirement-2.integrate-with-downstream-reporting-sources`
+- Summary: Integrate with downstream reporting sources.
+- Source lineage:
+  - `anchor.rupify.functional-requirements.functional-requirement-2` (requirement: `functional-requirement-2`)
+- Acceptance criteria:
+  - Downstream reporting sources is supported.
 
 ### Guard Conditions
 
@@ -257,41 +275,129 @@ Project: `speckify-planning-export`
 
 ### Scenarios
 
-#### Implement scenario handling: Invalid Catalog Change
+#### Implement scenario handling: Invalid Catalog Change segment 1
 
-- ID: `iu.rupify.scenario-invalid-catalog-change`
-- Summary: Publication is rejected because the new reward configuration would break an active offer.
+- ID: `iu.rupify.scenario-invalid-catalog-change.segment-1`
+- Summary: Operations Manager updates reward configuration.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
 - Acceptance criteria:
-  - Publication is rejected because the new reward configuration would break an active offer.
+  - Operations Manager updates reward configuration.
 
-#### Implement scenario handling: Missing Payment Confirmation
+#### Implement scenario handling: Invalid Catalog Change segment 2
 
-- ID: `iu.rupify.scenario-missing-payment-confirmation`
-- Summary: Redemption pauses until dependent payment confirmation arrives.
+- ID: `iu.rupify.scenario-invalid-catalog-change.segment-2`
+- Summary: System validates the change.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
+- Dependencies:
+  - `iu.rupify.scenario-invalid-catalog-change.segment-1`
+- Acceptance criteria:
+  - System validates the change.
+
+#### Implement scenario handling: Invalid Catalog Change segment 3
+
+- ID: `iu.rupify.scenario-invalid-catalog-change.segment-3`
+- Summary: System rejects the invalid change.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-invalid-catalog-change` (requirement: `scenario-invalid-catalog-change`)
+- Dependencies:
+  - `iu.rupify.scenario-invalid-catalog-change.segment-2`
+- Acceptance criteria:
+  - System rejects the invalid change.
+
+#### Implement scenario handling: Missing Payment Confirmation segment 1
+
+- ID: `iu.rupify.scenario-missing-payment-confirmation.segment-1`
+- Summary: Customer selects a reward.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
 - Acceptance criteria:
-  - Redemption pauses until dependent payment confirmation arrives.
+  - Customer selects a reward.
 
-#### Implement scenario handling: Reporting Delay
+#### Implement scenario handling: Missing Payment Confirmation segment 2
 
-- ID: `iu.rupify.scenario-reporting-delay`
-- Summary: Analytics view is partial because a reporting source is delayed.
+- ID: `iu.rupify.scenario-missing-payment-confirmation.segment-2`
+- Summary: System requests payment confirmation.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
+- Dependencies:
+  - `iu.rupify.scenario-missing-payment-confirmation.segment-1`
+- Acceptance criteria:
+  - System requests payment confirmation.
+
+#### Implement scenario handling: Missing Payment Confirmation segment 3
+
+- ID: `iu.rupify.scenario-missing-payment-confirmation.segment-3`
+- Summary: System blocks fulfillment until confirmation arrives.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-missing-payment-confirmation` (requirement: `scenario-missing-payment-confirmation`)
+- Dependencies:
+  - `iu.rupify.scenario-missing-payment-confirmation.segment-2`
+- Acceptance criteria:
+  - System blocks fulfillment until confirmation arrives.
+
+#### Implement scenario handling: Reporting Delay segment 1
+
+- ID: `iu.rupify.scenario-reporting-delay.segment-1`
+- Summary: Operations Manager opens the analytics dashboard.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
 - Acceptance criteria:
-  - Analytics view is partial because a reporting source is delayed.
+  - Operations Manager opens the analytics dashboard.
 
-#### Implement scenario handling: Reward Inventory Exhausted
+#### Implement scenario handling: Reporting Delay segment 2
 
-- ID: `iu.rupify.scenario-reward-inventory-exhausted`
-- Summary: Redemption fails because no reward inventory remains.
+- ID: `iu.rupify.scenario-reporting-delay.segment-2`
+- Summary: System detects delayed reporting data.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
+- Dependencies:
+  - `iu.rupify.scenario-reporting-delay.segment-1`
+- Acceptance criteria:
+  - System detects delayed reporting data.
+
+#### Implement scenario handling: Reporting Delay segment 3
+
+- ID: `iu.rupify.scenario-reporting-delay.segment-3`
+- Summary: System shows a partial-data warning.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-reporting-delay` (requirement: `scenario-reporting-delay`)
+- Dependencies:
+  - `iu.rupify.scenario-reporting-delay.segment-2`
+- Acceptance criteria:
+  - System shows a partial-data warning.
+
+#### Implement scenario handling: Reward Inventory Exhausted segment 1
+
+- ID: `iu.rupify.scenario-reward-inventory-exhausted.segment-1`
+- Summary: Customer selects a reward.
 - Source lineage:
   - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
 - Acceptance criteria:
-  - Redemption fails because no reward inventory remains.
+  - Customer selects a reward.
+
+#### Implement scenario handling: Reward Inventory Exhausted segment 2
+
+- ID: `iu.rupify.scenario-reward-inventory-exhausted.segment-2`
+- Summary: System checks reward availability.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
+- Dependencies:
+  - `iu.rupify.scenario-reward-inventory-exhausted.segment-1`
+- Acceptance criteria:
+  - System checks reward availability.
+
+#### Implement scenario handling: Reward Inventory Exhausted segment 3
+
+- ID: `iu.rupify.scenario-reward-inventory-exhausted.segment-3`
+- Summary: System reports that inventory is exhausted.
+- Source lineage:
+  - `anchor.rupify.scenarios.scenario-reward-inventory-exhausted` (requirement: `scenario-reward-inventory-exhausted`)
+- Dependencies:
+  - `iu.rupify.scenario-reward-inventory-exhausted.segment-2`
+- Acceptance criteria:
+  - System reports that inventory is exhausted.
 
 ### State Invariants
 

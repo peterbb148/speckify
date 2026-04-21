@@ -97,7 +97,7 @@ class RenderingTests(unittest.TestCase):
         rendered_issue = next(
             item
             for item in bundle["rendered_issues"]
-            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1"
+            if item["implementation_unit_id"] == "iu.rupify.functional-requirement-1.support-stage-gates"
         )
 
         self.assertIn(

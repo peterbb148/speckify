@@ -30,17 +30,17 @@ class GeneratedValidationTests(unittest.TestCase):
             bundle["bundle_metadata"]["decomposition_profile"],
             "rupify-structural-decomposition-v1",
         )
-        self.assertEqual(len(bundle["trace_bundles"]), 35)
+        self.assertEqual(len(bundle["trace_bundles"]), 36)
         self.assertEqual(len(bundle["dependency_edges"]), 14)
-        self.assertEqual(len(bundle["assembly_rules"]), 3)
+        self.assertEqual(len(bundle["assembly_rules"]), 4)
 
     def test_generated_bundle_from_loyalty_export_passes(self) -> None:
         """The loyalty-platform V2 export should generate a valid bundle end to end."""
         bundle = validate_generated_bundle_file(LOYALTY_RUPIFY_EXPORT, SCHEMA_DIR)
 
-        self.assertEqual(len(bundle["trace_bundles"]), 66)
-        self.assertEqual(len(bundle["dependency_edges"]), 31)
-        self.assertEqual(len(bundle["assembly_rules"]), 4)
+        self.assertEqual(len(bundle["trace_bundles"]), 76)
+        self.assertEqual(len(bundle["dependency_edges"]), 39)
+        self.assertEqual(len(bundle["assembly_rules"]), 10)
 
     def test_broken_generated_bundle_fails_reference_validation(self) -> None:
         """Reference drift in a generated bundle should fail explicitly."""
