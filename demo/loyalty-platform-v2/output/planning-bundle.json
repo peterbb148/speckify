@@ -112,36 +112,10 @@
       }
     },
     {
-      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1",
-      "source_system": "rupify",
-      "source_type": "constraint",
-      "source_id": "acceptance-constraint-success-1",
-      "view": "constraint",
-      "normative": true,
-      "ready_state": "ready",
-      "trace": {
-        "source_round": 2,
-        "source_key": "success_criteria"
-      }
-    },
-    {
       "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-success-2",
       "source_system": "rupify",
       "source_type": "constraint",
       "source_id": "acceptance-constraint-success-2",
-      "view": "constraint",
-      "normative": true,
-      "ready_state": "ready",
-      "trace": {
-        "source_round": 2,
-        "source_key": "success_criteria"
-      }
-    },
-    {
-      "id": "anchor.rupify.acceptance-constraints.acceptance-constraint-success-3",
-      "source_system": "rupify",
-      "source_type": "constraint",
-      "source_id": "acceptance-constraint-success-3",
       "view": "constraint",
       "normative": true,
       "ready_state": "ready",
@@ -927,20 +901,6 @@
       ]
     },
     {
-      "id": "su.rupify.acceptance-constraint-success-1",
-      "title": "Success Criterion 1",
-      "summary": "Members can enroll and redeem rewards through one coherent digital journey.",
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
-      ],
-      "obligation_kind": "constraint",
-      "normative": true,
-      "status": "proposed",
-      "notes": [
-        "Derived from Rupify acceptance_constraints element acceptance-constraint-success-1."
-      ]
-    },
-    {
       "id": "su.rupify.acceptance-constraint-success-2",
       "title": "Success Criterion 2",
       "summary": "Operations managers can update the reward catalog without engineering support for routine changes.",
@@ -952,20 +912,6 @@
       "status": "proposed",
       "notes": [
         "Derived from Rupify acceptance_constraints element acceptance-constraint-success-2."
-      ]
-    },
-    {
-      "id": "su.rupify.acceptance-constraint-success-3",
-      "title": "Success Criterion 3",
-      "summary": "The business can review redemption and campaign performance in one reporting workflow.",
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-3"
-      ],
-      "obligation_kind": "constraint",
-      "normative": true,
-      "status": "proposed",
-      "notes": [
-        "Derived from Rupify acceptance_constraints element acceptance-constraint-success-3."
       ]
     },
     {
@@ -2126,37 +2072,6 @@
       ]
     },
     {
-      "id": "iu.rupify.acceptance-constraint-success-1",
-      "title": "Satisfy constraint: Members can enroll and redeem rewards through one coherent digital journey",
-      "summary": "Deliver behavior that satisfies the constraint 'Members can enroll and redeem rewards through one coherent digital journey.'.",
-      "derived_from_spec_unit_ids": [
-        "su.rupify.acceptance-constraint-success-1"
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
-      ],
-      "dependencies": [],
-      "implementation_scope": [
-        "Members can enroll and redeem rewards through one coherent digital journey."
-      ],
-      "non_goals": [],
-      "constraints": [],
-      "acceptance_criteria": [
-        "Members can enroll and redeem rewards through one coherent digital journey."
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-success-1"
-      ],
-      "drift_checks": [
-        "Preserve lineage to Rupify element acceptance-constraint-success-1."
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-1.",
-      "labels": [
-        "planning",
-        "acceptance-constraints"
-      ]
-    },
-    {
       "id": "iu.rupify.acceptance-constraint-success-2",
       "title": "Satisfy constraint: Operations managers can update the reward catalog without engineering support for routine",
       "summary": "Deliver behavior that satisfies the constraint 'Operations managers can update the reward catalog without engineering support for routine changes.'.",
@@ -2182,37 +2097,6 @@
         "Preserve lineage to Rupify element acceptance-constraint-success-2."
       ],
       "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-2.",
-      "labels": [
-        "planning",
-        "acceptance-constraints"
-      ]
-    },
-    {
-      "id": "iu.rupify.acceptance-constraint-success-3",
-      "title": "Satisfy constraint: The business can review redemption and campaign performance in one reporting workflow",
-      "summary": "Deliver behavior that satisfies the constraint 'The business can review redemption and campaign performance in one reporting workflow.'.",
-      "derived_from_spec_unit_ids": [
-        "su.rupify.acceptance-constraint-success-3"
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-3"
-      ],
-      "dependencies": [],
-      "implementation_scope": [
-        "The business can review redemption and campaign performance in one reporting workflow."
-      ],
-      "non_goals": [],
-      "constraints": [],
-      "acceptance_criteria": [
-        "The business can review redemption and campaign performance in one reporting workflow."
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-success-3"
-      ],
-      "drift_checks": [
-        "Preserve lineage to Rupify element acceptance-constraint-success-3."
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-3.",
       "labels": [
         "planning",
         "acceptance-constraints"
@@ -4502,31 +4386,6 @@
       ]
     },
     {
-      "id": "vu.rupify.acceptance-constraint-success-1",
-      "title": "Verify Success Criterion 1",
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
-      ],
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "verification_intent": "Confirm the delivered behavior satisfies the stated constraint for success criterion 1.",
-      "observables": [
-        "Members can enroll and redeem rewards through one coherent digital journey."
-      ],
-      "setup_requirements": [
-        "The relevant system boundary or UI surface is available for inspection."
-      ],
-      "expected_outcomes": [
-        "The required behavior is delivered: Members can enroll and redeem rewards through one coherent digital journey."
-      ],
-      "failure_conditions": [
-        "The delivered behavior violates the stated constraint: Members can enroll and redeem rewards through one coherent digital journey."
-      ],
-      "invariants_preserved": [],
-      "notes": [
-        "Derived from decomposition slice of acceptance-constraint-success-1."
-      ]
-    },
-    {
       "id": "vu.rupify.acceptance-constraint-success-2",
       "title": "Verify Success Criterion 2",
       "source_anchor_ids": [
@@ -4549,31 +4408,6 @@
       "invariants_preserved": [],
       "notes": [
         "Derived from decomposition slice of acceptance-constraint-success-2."
-      ]
-    },
-    {
-      "id": "vu.rupify.acceptance-constraint-success-3",
-      "title": "Verify Success Criterion 3",
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-3"
-      ],
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-3",
-      "verification_intent": "Confirm the delivered behavior satisfies the stated constraint for success criterion 3.",
-      "observables": [
-        "The business can review redemption and campaign performance in one reporting workflow."
-      ],
-      "setup_requirements": [
-        "The relevant system boundary or UI surface is available for inspection."
-      ],
-      "expected_outcomes": [
-        "The required behavior is delivered: The business can review redemption and campaign performance in one reporting workflow."
-      ],
-      "failure_conditions": [
-        "The delivered behavior violates the stated constraint: The business can review redemption and campaign performance in one reporting workflow."
-      ],
-      "invariants_preserved": [],
-      "notes": [
-        "Derived from decomposition slice of acceptance-constraint-success-3."
       ]
     },
     {
@@ -6381,25 +6215,6 @@
       ]
     },
     {
-      "id": "tb.rupify.acceptance-constraint-success-1",
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
-      ],
-      "spec_unit_ids": [
-        "su.rupify.acceptance-constraint-success-1"
-      ],
-      "implementation_unit_ids": [
-        "iu.rupify.acceptance-constraint-success-1"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-success-1"
-      ],
-      "assembly_rule_ids": [],
-      "notes": [
-        "Derived from decomposition slice of acceptance-constraint-success-1."
-      ]
-    },
-    {
       "id": "tb.rupify.acceptance-constraint-success-2",
       "source_anchor_ids": [
         "anchor.rupify.acceptance-constraints.acceptance-constraint-success-2"
@@ -6416,25 +6231,6 @@
       "assembly_rule_ids": [],
       "notes": [
         "Derived from decomposition slice of acceptance-constraint-success-2."
-      ]
-    },
-    {
-      "id": "tb.rupify.acceptance-constraint-success-3",
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-3"
-      ],
-      "spec_unit_ids": [
-        "su.rupify.acceptance-constraint-success-3"
-      ],
-      "implementation_unit_ids": [
-        "iu.rupify.acceptance-constraint-success-3"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-success-3"
-      ],
-      "assembly_rule_ids": [],
-      "notes": [
-        "Derived from decomposition slice of acceptance-constraint-success-3."
       ]
     },
     {
@@ -8151,19 +7947,9 @@
       "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'The system must provide reporting on redemptions and campaign performance.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-7` (constraint: `acceptance-constraint-requirement-7`)\n\n## Scope\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Acceptance Criteria\n\n- The system must provide reporting on redemptions and campaign performance.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 7.\n- Observable: The system must provide reporting on redemptions and campaign performance.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: The system must provide reporting on redemptions and campaign performance.\n- Failure condition: The delivered behavior violates the stated constraint: The system must provide reporting on redemptions and campaign performance.\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-7`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-7.\n"
     },
     {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "issue_title": "Satisfy constraint: Members can enroll and redeem rewards through one coherent digital journey",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'Members can enroll and redeem rewards through one coherent digital journey.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)\n\n## Scope\n\n- Members can enroll and redeem rewards through one coherent digital journey.\n\n## Acceptance Criteria\n\n- Members can enroll and redeem rewards through one coherent digital journey.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.\n- Observable: Members can enroll and redeem rewards through one coherent digital journey.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: Members can enroll and redeem rewards through one coherent digital journey.\n- Failure condition: The delivered behavior violates the stated constraint: Members can enroll and redeem rewards through one coherent digital journey.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n"
-    },
-    {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-2",
       "issue_title": "Satisfy constraint: Operations managers can update the reward catalog without engineering support for routine",
       "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'Operations managers can update the reward catalog without engineering support for routine changes.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-2` (constraint: `acceptance-constraint-success-2`)\n\n## Scope\n\n- Operations managers can update the reward catalog without engineering support for routine changes.\n\n## Acceptance Criteria\n\n- Operations managers can update the reward catalog without engineering support for routine changes.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 2.\n- Observable: Operations managers can update the reward catalog without engineering support for routine changes.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: Operations managers can update the reward catalog without engineering support for routine changes.\n- Failure condition: The delivered behavior violates the stated constraint: Operations managers can update the reward catalog without engineering support for routine changes.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-2.\n"
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-3",
-      "issue_title": "Satisfy constraint: The business can review redemption and campaign performance in one reporting workflow",
-      "issue_body": "## Summary\n\nDeliver behavior that satisfies the constraint 'The business can review redemption and campaign performance in one reporting workflow.'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-3` (constraint: `acceptance-constraint-success-3`)\n\n## Scope\n\n- The business can review redemption and campaign performance in one reporting workflow.\n\n## Acceptance Criteria\n\n- The business can review redemption and campaign performance in one reporting workflow.\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 3.\n- Observable: The business can review redemption and campaign performance in one reporting workflow.\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: The business can review redemption and campaign performance in one reporting workflow.\n- Failure condition: The delivered behavior violates the stated constraint: The business can review redemption and campaign performance in one reporting workflow.\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-3.\n"
     },
     {
       "implementation_unit_id": "iu.rupify.domain-invariant-1",

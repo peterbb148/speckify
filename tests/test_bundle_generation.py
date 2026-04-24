@@ -10,13 +10,12 @@ from speckify_tools.rupify_import import import_rupify_export, import_rupify_exp
 from speckify_tools.validation import validate_bundle
 
 
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
+ROOT = Path(__file__).resolve().parents[1]
+RUPIFY_EXPORT = ROOT / "demo" / "it-systems-inventory-v2" / "input" / "speckify-planning-export.json"
+LOYALTY_RUPIFY_EXPORT = (
+    ROOT / "demo" / "loyalty-platform-v2" / "input" / "speckify-planning-export.json"
 )
-LOYALTY_RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json"
-)
-SCHEMA_DIR = Path("/Volumes/Data/GitHub/Peterbb148/speckify/schemas")
+SCHEMA_DIR = ROOT / "schemas"
 
 
 class BundleGenerationTests(unittest.TestCase):
@@ -36,14 +35,14 @@ class BundleGenerationTests(unittest.TestCase):
             bundle["bundle_metadata"]["decomposition_profile"],
             "rupify-structural-decomposition-v1",
         )
-        self.assertEqual(len(bundle["source_anchors"]), 29)
-        self.assertEqual(len(bundle["spec_units"]), 36)
-        self.assertEqual(len(bundle["implementation_units"]), 36)
-        self.assertEqual(len(bundle["verification_units"]), 36)
-        self.assertEqual(len(bundle["trace_bundles"]), 36)
-        self.assertEqual(len(bundle["dependency_edges"]), 14)
+        self.assertEqual(len(bundle["source_anchors"]), 18)
+        self.assertEqual(len(bundle["spec_units"]), 25)
+        self.assertEqual(len(bundle["implementation_units"]), 25)
+        self.assertEqual(len(bundle["verification_units"]), 25)
+        self.assertEqual(len(bundle["trace_bundles"]), 25)
+        self.assertEqual(len(bundle["dependency_edges"]), 9)
         self.assertEqual(len(bundle["assembly_rules"]), 4)
-        self.assertEqual(len(bundle["rendered_issues"]), 36)
+        self.assertEqual(len(bundle["rendered_issues"]), 25)
         self.assertEqual(bundle["unresolved_ambiguities"], [])
 
         validate_bundle(bundle, SCHEMA_DIR)

@@ -1,6 +1,6 @@
 # Rupify Hand-off Import Report
 
-Source export: `/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json`
+Source export: `demo/loyalty-platform-v2/input/speckify-planning-export.json`
 
 Clean import: `true`
 
@@ -8,9 +8,9 @@ Clean import: `true`
 
 - Elements: 108
 - Trace links: 144
-- Ready normative elements: 62
-- Importable ready normative elements: 62
-- Blocked or partial normative elements: 20
+- Ready normative elements: 60
+- Importable ready normative elements: 60
+- Blocked or partial normative elements: 22
 
 ## Errors
 

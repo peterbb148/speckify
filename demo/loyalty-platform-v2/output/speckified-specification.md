@@ -5,9 +5,9 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 76
-- Generated verification units: 76
-- Trace bundles: 76
+- Generated implementation units: 74
+- Generated verification units: 74
+- Trace bundles: 74
 - Dependency edges: 39
 - Assembly rules: 10
 
@@ -92,15 +92,6 @@ Project: `speckify-planning-export`
 - Acceptance criteria:
   - The system must provide reporting on redemptions and campaign performance.
 
-#### Satisfy constraint: Members can enroll and redeem rewards through one coherent digital journey
-
-- ID: `iu.rupify.acceptance-constraint-success-1`
-- Summary: Deliver behavior that satisfies the constraint 'Members can enroll and redeem rewards through one coherent digital journey.'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)
-- Acceptance criteria:
-  - Members can enroll and redeem rewards through one coherent digital journey.
-
 #### Satisfy constraint: Operations managers can update the reward catalog without engineering support for routine
 
 - ID: `iu.rupify.acceptance-constraint-success-2`
@@ -109,15 +100,6 @@ Project: `speckify-planning-export`
   - `anchor.rupify.acceptance-constraints.acceptance-constraint-success-2` (constraint: `acceptance-constraint-success-2`)
 - Acceptance criteria:
   - Operations managers can update the reward catalog without engineering support for routine changes.
-
-#### Satisfy constraint: The business can review redemption and campaign performance in one reporting workflow
-
-- ID: `iu.rupify.acceptance-constraint-success-3`
-- Summary: Deliver behavior that satisfies the constraint 'The business can review redemption and campaign performance in one reporting workflow.'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-success-3` (constraint: `acceptance-constraint-success-3`)
-- Acceptance criteria:
-  - The business can review redemption and campaign performance in one reporting workflow.
 
 ### Domain Invariants
 

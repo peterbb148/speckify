@@ -11,9 +11,7 @@ from speckify_tools.delivery_export import build_github_delivery_export
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
-)
+RUPIFY_EXPORT = ROOT / "demo" / "it-systems-inventory-v2" / "input" / "speckify-planning-export.json"
 DEMO_OUTPUT = ROOT / "demo" / "it-systems-inventory-v2" / "output"
 
 

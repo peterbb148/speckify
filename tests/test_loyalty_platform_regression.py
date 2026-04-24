@@ -11,9 +11,7 @@ from speckify_tools.rupify_handoff_demo import write_demo_outputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json"
-)
+RUPIFY_EXPORT = ROOT / "demo" / "loyalty-platform-v2" / "input" / "speckify-planning-export.json"
 EXPECTED_DEMO_DIR = ROOT / "demo" / "loyalty-platform-v2"
 REVIEW_SUMMARY = ROOT / "fixtures" / "review" / "loyalty-platform-v2-summary.json"
 
@@ -21,6 +19,17 @@ REVIEW_SUMMARY = ROOT / "fixtures" / "review" / "loyalty-platform-v2-summary.jso
 def _relative_files(root: Path) -> list[Path]:
     """List relative file paths under a directory."""
     return sorted(path.relative_to(root) for path in root.rglob("*") if path.is_file())
+
+
+def _normalize_report_markdown(text: str) -> str:
+    """Normalize source-path lines that legitimately vary by execution location."""
+    lines = []
+    for line in text.splitlines():
+        if line.startswith("Source export: "):
+            lines.append("Source export: `<normalized>`")
+        else:
+            lines.append(line)
+    return "\n".join(lines) + ("\n" if text.endswith("\n") else "")
 
 
 class LoyaltyPlatformRegressionTests(unittest.TestCase):
@@ -46,8 +55,8 @@ class LoyaltyPlatformRegressionTests(unittest.TestCase):
                 expected_path = EXPECTED_DEMO_DIR / relative_path
                 actual_path = actual_demo_dir / relative_path
                 self.assertEqual(
-                    actual_path.read_text(),
-                    expected_path.read_text(),
+                    _normalize_report_markdown(actual_path.read_text()),
+                    _normalize_report_markdown(expected_path.read_text()),
                     msg=f"Mismatch for {relative_path}",
                 )
 
@@ -58,10 +67,10 @@ class LoyaltyPlatformRegressionTests(unittest.TestCase):
         review_summary = json.loads(REVIEW_SUMMARY.read_text())
 
         self.assertTrue(import_report["clean_import"])
-        self.assertEqual(import_report["counts"]["ready_normative_count"], 62)
-        self.assertEqual(len(bundle["implementation_units"]), 76)
-        self.assertEqual(len(bundle["rendered_issues"]), 76)
-        self.assertEqual(review_summary["counts"]["implementation_units"], 76)
+        self.assertEqual(import_report["counts"]["ready_normative_count"], 60)
+        self.assertEqual(len(bundle["implementation_units"]), 74)
+        self.assertEqual(len(bundle["rendered_issues"]), 74)
+        self.assertEqual(review_summary["counts"]["implementation_units"], 74)
         self.assertEqual(review_summary["counts"]["dependency_edges"], 39)
 
 

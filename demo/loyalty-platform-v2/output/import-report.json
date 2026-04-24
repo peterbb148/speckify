@@ -6,9 +6,9 @@
   "counts": {
     "element_count": 108,
     "trace_link_count": 144,
-    "ready_normative_count": 62,
-    "importable_ready_normative_count": 62,
-    "blocked_or_partial_normative_count": 20
+    "ready_normative_count": 60,
+    "importable_ready_normative_count": 60,
+    "blocked_or_partial_normative_count": 22
   },
   "family_counts": {
     "acceptance_constraints": 10,
@@ -37,8 +37,8 @@
   },
   "readiness_counts": {
     "": 45,
-    "blocked": 1,
-    "ready": 62
+    "blocked": 3,
+    "ready": 60
   },
   "semantic_counts": {
     "": 9,
@@ -49,7 +49,7 @@
   "unresolved_trace_references": [],
   "summary": {
     "blocking_ambiguity_count": 0,
-    "ready_normative_count": 62,
+    "ready_normative_count": 60,
     "trace_link_count": 144
   },
   "importable_ready_normative_by_family": {
@@ -90,19 +90,9 @@
         "text": "The system must provide reporting on redemptions and campaign performance."
       },
       {
-        "id": "acceptance-constraint-success-1",
-        "name": "Success Criterion 1",
-        "text": "Members can enroll and redeem rewards through one coherent digital journey."
-      },
-      {
         "id": "acceptance-constraint-success-2",
         "name": "Success Criterion 2",
         "text": "Operations managers can update the reward catalog without engineering support for routine changes."
-      },
-      {
-        "id": "acceptance-constraint-success-3",
-        "name": "Success Criterion 3",
-        "text": "The business can review redemption and campaign performance in one reporting workflow."
       }
     ],
     "domain_invariants": [

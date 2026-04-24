@@ -48,201 +48,6 @@
     },
     {
       "sequence_number": 2,
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
-      "issue_slug": "iu-rupify-acceptance-constraint-requirement-2",
-      "title": "Satisfy constraint: SSO",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "acceptance-constraints"
-      ],
-      "dependency_ids": [
-        "iu.rupify.non-functional-requirement-2"
-      ],
-      "dependency_titles": [
-        {
-          "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-          "title": "Satisfy constraint: SSO"
-        }
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-requirement-2"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-2.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-2`\n- Issue slug: `iu-rupify-acceptance-constraint-requirement-2`\n- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`\n- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2`\n- Verification units: `vu.rupify.acceptance-constraint-requirement-2`\n- Depends on:\n  - `iu.rupify.non-functional-requirement-2` (Satisfy constraint: SSO)\n- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-2.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-2`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-2.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: SSO",
-        "body_path": "issue-bodies/iu-rupify-acceptance-constraint-requirement-2.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "acceptance-constraints"
-        ]
-      }
-    },
-    {
-      "sequence_number": 3,
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
-      "issue_slug": "iu-rupify-acceptance-constraint-requirement-3",
-      "title": "Satisfy constraint: role-based access",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "acceptance-constraints"
-      ],
-      "dependency_ids": [
-        "iu.rupify.non-functional-requirement-3"
-      ],
-      "dependency_titles": [
-        {
-          "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-          "title": "Satisfy constraint: role-based access"
-        }
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-requirement-3"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-3.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-3`\n- Issue slug: `iu-rupify-acceptance-constraint-requirement-3`\n- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`\n- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3`\n- Verification units: `vu.rupify.acceptance-constraint-requirement-3`\n- Depends on:\n  - `iu.rupify.non-functional-requirement-3` (Satisfy constraint: role-based access)\n- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-3.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-3`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-3.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: role-based access",
-        "body_path": "issue-bodies/iu-rupify-acceptance-constraint-requirement-3.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "acceptance-constraints"
-        ]
-      }
-    },
-    {
-      "sequence_number": 4,
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
-      "issue_slug": "iu-rupify-acceptance-constraint-requirement-4",
-      "title": "Satisfy constraint: audit trail",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "acceptance-constraints"
-      ],
-      "dependency_ids": [
-        "iu.rupify.non-functional-requirement-4"
-      ],
-      "dependency_titles": [
-        {
-          "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-          "title": "Satisfy constraint: audit trail"
-        }
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-requirement-4"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-4.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-4`\n- Issue slug: `iu-rupify-acceptance-constraint-requirement-4`\n- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`\n- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4`\n- Verification units: `vu.rupify.acceptance-constraint-requirement-4`\n- Depends on:\n  - `iu.rupify.non-functional-requirement-4` (Satisfy constraint: audit trail)\n- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-4.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-4`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-4.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: audit trail",
-        "body_path": "issue-bodies/iu-rupify-acceptance-constraint-requirement-4.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "acceptance-constraints"
-        ]
-      }
-    },
-    {
-      "sequence_number": 5,
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
-      "issue_slug": "iu-rupify-acceptance-constraint-requirement-5",
-      "title": "Satisfy constraint: search",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "acceptance-constraints"
-      ],
-      "dependency_ids": [
-        "iu.rupify.non-functional-requirement-5"
-      ],
-      "dependency_titles": [
-        {
-          "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-          "title": "Satisfy constraint: search"
-        }
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-requirement-5"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-5.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-5`\n- Issue slug: `iu-rupify-acceptance-constraint-requirement-5`\n- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`\n- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5`\n- Verification units: `vu.rupify.acceptance-constraint-requirement-5`\n- Depends on:\n  - `iu.rupify.non-functional-requirement-5` (Satisfy constraint: search)\n- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-5.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-5`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-5.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: search",
-        "body_path": "issue-bodies/iu-rupify-acceptance-constraint-requirement-5.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "acceptance-constraints"
-        ]
-      }
-    },
-    {
-      "sequence_number": 6,
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
-      "issue_slug": "iu-rupify-acceptance-constraint-requirement-6",
-      "title": "Satisfy constraint: filtering",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "acceptance-constraints"
-      ],
-      "dependency_ids": [
-        "iu.rupify.non-functional-requirement-6"
-      ],
-      "dependency_titles": [
-        {
-          "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-          "title": "Satisfy constraint: filtering"
-        }
-      ],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-requirement-6"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-requirement-6.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.acceptance-constraint-requirement-6`\n- Issue slug: `iu-rupify-acceptance-constraint-requirement-6`\n- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`\n- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6`\n- Verification units: `vu.rupify.acceptance-constraint-requirement-6`\n- Depends on:\n  - `iu.rupify.non-functional-requirement-6` (Satisfy constraint: filtering)\n- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-requirement-6.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for acceptance constraint 6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- `iu.rupify.non-functional-requirement-6`: Acceptance-constraint work should follow the linked underlying requirement.\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-requirement-6.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: filtering",
-        "body_path": "issue-bodies/iu-rupify-acceptance-constraint-requirement-6.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "acceptance-constraints"
-        ]
-      }
-    },
-    {
-      "sequence_number": 7,
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
       "issue_slug": "iu-rupify-acceptance-constraint-requirement-7",
       "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
@@ -281,7 +86,7 @@
       }
     },
     {
-      "sequence_number": 8,
+      "sequence_number": 3,
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
       "issue_slug": "iu-rupify-acceptance-constraint-requirement-8",
       "title": "Satisfy constraint: availability >=99%",
@@ -320,39 +125,7 @@
       }
     },
     {
-      "sequence_number": 9,
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "issue_slug": "iu-rupify-acceptance-constraint-success-1",
-      "title": "Satisfy constraint: Better planning of IT systems purchasing and life cycle",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "acceptance-constraints"
-      ],
-      "dependency_ids": [],
-      "dependency_titles": [],
-      "source_anchor_ids": [
-        "anchor.rupify.acceptance-constraints.acceptance-constraint-success-1"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.acceptance-constraint-success-1"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of acceptance-constraint-success-1.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.acceptance-constraint-success-1`\n- Issue slug: `iu-rupify-acceptance-constraint-success-1`\n- Labels: `speckify`, `planning`, `source:rupify`, `acceptance-constraints`\n- Source anchors: `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1`\n- Verification units: `vu.rupify.acceptance-constraint-success-1`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of acceptance-constraint-success-1.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.\n\n## Source Lineage\n\n- `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)\n\n## Scope\n\n- Better planning of IT systems purchasing and life cycle\n\n## Acceptance Criteria\n\n- Better planning of IT systems purchasing and life cycle\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for success criterion 1.\n- Observable: Better planning of IT systems purchasing and life cycle\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: Better planning of IT systems purchasing and life cycle\n- Failure condition: The delivered behavior violates the stated constraint: Better planning of IT systems purchasing and life cycle\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element acceptance-constraint-success-1.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: Better planning of IT systems purchasing and life cycle",
-        "body_path": "issue-bodies/iu-rupify-acceptance-constraint-success-1.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "acceptance-constraints"
-        ]
-      }
-    },
-    {
-      "sequence_number": 10,
+      "sequence_number": 4,
       "implementation_unit_id": "iu.rupify.domain-invariant-1",
       "issue_slug": "iu-rupify-domain-invariant-1",
       "title": "Enforce invariant: A System must have a business owner before it becomes Active",
@@ -384,7 +157,7 @@
       }
     },
     {
-      "sequence_number": 11,
+      "sequence_number": 5,
       "implementation_unit_id": "iu.rupify.domain-invariant-2",
       "issue_slug": "iu-rupify-domain-invariant-2",
       "title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
@@ -416,7 +189,7 @@
       }
     },
     {
-      "sequence_number": 12,
+      "sequence_number": 6,
       "implementation_unit_id": "iu.rupify.domain-invariant-3",
       "issue_slug": "iu-rupify-domain-invariant-3",
       "title": "Enforce invariant: A System must record vendor and contract dates",
@@ -448,7 +221,7 @@
       }
     },
     {
-      "sequence_number": 13,
+      "sequence_number": 7,
       "implementation_unit_id": "iu.rupify.functional-requirement-1.support-approval-states",
       "issue_slug": "iu-rupify-functional-requirement-1-support-approval-states",
       "title": "Implement workflow support: Support approval states",
@@ -480,7 +253,7 @@
       }
     },
     {
-      "sequence_number": 14,
+      "sequence_number": 8,
       "implementation_unit_id": "iu.rupify.functional-requirement-1.support-stage-gates",
       "issue_slug": "iu-rupify-functional-requirement-1-support-stage-gates",
       "title": "Implement workflow support: Support stage gates",
@@ -512,7 +285,7 @@
       }
     },
     {
-      "sequence_number": 15,
+      "sequence_number": 9,
       "implementation_unit_id": "iu.rupify.functional-requirement-2",
       "issue_slug": "iu-rupify-functional-requirement-2",
       "title": "Implement workflow support: I think this will be the CMDB for IT Applications/systems - we",
@@ -544,7 +317,7 @@
       }
     },
     {
-      "sequence_number": 16,
+      "sequence_number": 10,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
       "issue_slug": "iu-rupify-non-functional-requirement-1",
       "title": "Satisfy constraint: UI must be web based",
@@ -576,167 +349,7 @@
       }
     },
     {
-      "sequence_number": 17,
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "issue_slug": "iu-rupify-non-functional-requirement-2",
-      "title": "Satisfy constraint: SSO",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "non-functional-requirements"
-      ],
-      "dependency_ids": [],
-      "dependency_titles": [],
-      "source_anchor_ids": [
-        "anchor.rupify.non-functional-requirements.non-functional-requirement-2"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.non-functional-requirement-2"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-2.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.non-functional-requirement-2`\n- Issue slug: `iu-rupify-non-functional-requirement-2`\n- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`\n- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-2`\n- Verification units: `vu.rupify.non-functional-requirement-2`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-2.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'SSO'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-2` (requirement: `non_functional-requirement-2`)\n\n## Scope\n\n- SSO\n\n## Acceptance Criteria\n\n- SSO\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-2.\n- Observable: SSO\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: SSO\n- Failure condition: The delivered behavior violates the stated constraint: SSO\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-2.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: SSO",
-        "body_path": "issue-bodies/iu-rupify-non-functional-requirement-2.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "non-functional-requirements"
-        ]
-      }
-    },
-    {
-      "sequence_number": 18,
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "issue_slug": "iu-rupify-non-functional-requirement-3",
-      "title": "Satisfy constraint: role-based access",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "non-functional-requirements"
-      ],
-      "dependency_ids": [],
-      "dependency_titles": [],
-      "source_anchor_ids": [
-        "anchor.rupify.non-functional-requirements.non-functional-requirement-3"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.non-functional-requirement-3"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-3.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.non-functional-requirement-3`\n- Issue slug: `iu-rupify-non-functional-requirement-3`\n- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`\n- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-3`\n- Verification units: `vu.rupify.non-functional-requirement-3`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-3.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'role-based access'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)\n\n## Scope\n\n- role-based access\n\n## Acceptance Criteria\n\n- role-based access\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-3.\n- Observable: role-based access\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: role-based access\n- Failure condition: The delivered behavior violates the stated constraint: role-based access\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-3.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: role-based access",
-        "body_path": "issue-bodies/iu-rupify-non-functional-requirement-3.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "non-functional-requirements"
-        ]
-      }
-    },
-    {
-      "sequence_number": 19,
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "issue_slug": "iu-rupify-non-functional-requirement-4",
-      "title": "Satisfy constraint: audit trail",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "non-functional-requirements"
-      ],
-      "dependency_ids": [],
-      "dependency_titles": [],
-      "source_anchor_ids": [
-        "anchor.rupify.non-functional-requirements.non-functional-requirement-4"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.non-functional-requirement-4"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-4.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.non-functional-requirement-4`\n- Issue slug: `iu-rupify-non-functional-requirement-4`\n- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`\n- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-4`\n- Verification units: `vu.rupify.non-functional-requirement-4`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-4.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'audit trail'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)\n\n## Scope\n\n- audit trail\n\n## Acceptance Criteria\n\n- audit trail\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-4.\n- Observable: audit trail\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: audit trail\n- Failure condition: The delivered behavior violates the stated constraint: audit trail\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-4.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: audit trail",
-        "body_path": "issue-bodies/iu-rupify-non-functional-requirement-4.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "non-functional-requirements"
-        ]
-      }
-    },
-    {
-      "sequence_number": 20,
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "issue_slug": "iu-rupify-non-functional-requirement-5",
-      "title": "Satisfy constraint: search",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "non-functional-requirements"
-      ],
-      "dependency_ids": [],
-      "dependency_titles": [],
-      "source_anchor_ids": [
-        "anchor.rupify.non-functional-requirements.non-functional-requirement-5"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.non-functional-requirement-5"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-5.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.non-functional-requirement-5`\n- Issue slug: `iu-rupify-non-functional-requirement-5`\n- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`\n- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-5`\n- Verification units: `vu.rupify.non-functional-requirement-5`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-5.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'search'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)\n\n## Scope\n\n- search\n\n## Acceptance Criteria\n\n- search\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-5.\n- Observable: search\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: search\n- Failure condition: The delivered behavior violates the stated constraint: search\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-5.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: search",
-        "body_path": "issue-bodies/iu-rupify-non-functional-requirement-5.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "non-functional-requirements"
-        ]
-      }
-    },
-    {
-      "sequence_number": 21,
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "issue_slug": "iu-rupify-non-functional-requirement-6",
-      "title": "Satisfy constraint: filtering",
-      "labels": [
-        "speckify",
-        "planning",
-        "source:rupify",
-        "non-functional-requirements"
-      ],
-      "dependency_ids": [],
-      "dependency_titles": [],
-      "source_anchor_ids": [
-        "anchor.rupify.non-functional-requirements.non-functional-requirement-6"
-      ],
-      "verification_unit_ids": [
-        "vu.rupify.non-functional-requirement-6"
-      ],
-      "reverse_impact_hint": "Changes here may require upstream review of non_functional-requirement-6.",
-      "body_markdown": "## Delivery Metadata\n\n- Implementation unit id: `iu.rupify.non-functional-requirement-6`\n- Issue slug: `iu-rupify-non-functional-requirement-6`\n- Labels: `speckify`, `planning`, `source:rupify`, `non-functional-requirements`\n- Source anchors: `anchor.rupify.non-functional-requirements.non-functional-requirement-6`\n- Verification units: `vu.rupify.non-functional-requirement-6`\n- Depends on: none\n- Reverse impact hint: Changes here may require upstream review of non_functional-requirement-6.\n\n## Summary\n\nDeliver behavior that satisfies the constraint 'filtering'.\n\n## Source Lineage\n\n- `anchor.rupify.non-functional-requirements.non-functional-requirement-6` (requirement: `non_functional-requirement-6`)\n\n## Scope\n\n- filtering\n\n## Acceptance Criteria\n\n- filtering\n\n## Verification Shape\n\n- Intent: Confirm the delivered behavior satisfies the stated constraint for non_functional-requirement-6.\n- Observable: filtering\n- Setup requirement: The relevant system boundary or UI surface is available for inspection.\n- Expected outcome: The required behavior is delivered: filtering\n- Failure condition: The delivered behavior violates the stated constraint: filtering\n\n## Dependencies\n\n- None\n\n## Drift Checks\n\n- Preserve lineage to Rupify element non_functional-requirement-6.\n",
-      "create_payload": {
-        "title": "Satisfy constraint: filtering",
-        "body_path": "issue-bodies/iu-rupify-non-functional-requirement-6.md",
-        "labels": [
-          "speckify",
-          "planning",
-          "source:rupify",
-          "non-functional-requirements"
-        ]
-      }
-    },
-    {
-      "sequence_number": 22,
+      "sequence_number": 11,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-7",
       "issue_slug": "iu-rupify-non-functional-requirement-7",
       "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
@@ -768,7 +381,7 @@
       }
     },
     {
-      "sequence_number": 23,
+      "sequence_number": 12,
       "implementation_unit_id": "iu.rupify.non-functional-requirement-8",
       "issue_slug": "iu-rupify-non-functional-requirement-8",
       "title": "Satisfy constraint: availability >=99%",
@@ -800,7 +413,7 @@
       }
     },
     {
-      "sequence_number": 24,
+      "sequence_number": 13,
       "implementation_unit_id": "iu.rupify.state-invariant-1",
       "issue_slug": "iu-rupify-state-invariant-1",
       "title": "Enforce invariant: A System must have a business owner before it becomes Active",
@@ -832,7 +445,7 @@
       }
     },
     {
-      "sequence_number": 25,
+      "sequence_number": 14,
       "implementation_unit_id": "iu.rupify.state-invariant-2",
       "issue_slug": "iu-rupify-state-invariant-2",
       "title": "Enforce invariant: A System lifecycle state change requires approval for deprecation",
@@ -864,7 +477,7 @@
       }
     },
     {
-      "sequence_number": 26,
+      "sequence_number": 15,
       "implementation_unit_id": "iu.rupify.state-invariant-3",
       "issue_slug": "iu-rupify-state-invariant-3",
       "title": "Enforce invariant: A System must record vendor and contract dates",
@@ -896,7 +509,7 @@
       }
     },
     {
-      "sequence_number": 27,
+      "sequence_number": 16,
       "implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
       "issue_slug": "iu-rupify-state-transition-1-active-to-retiring",
       "title": "Implement lifecycle transition: Active to Retiring",
@@ -935,7 +548,7 @@
       }
     },
     {
-      "sequence_number": 28,
+      "sequence_number": 17,
       "implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
       "issue_slug": "iu-rupify-state-transition-1-proposed-to-active",
       "title": "Implement lifecycle transition: Proposed to Active",
@@ -967,7 +580,7 @@
       }
     },
     {
-      "sequence_number": 29,
+      "sequence_number": 18,
       "implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
       "issue_slug": "iu-rupify-state-transition-1-retiring-to-retired",
       "title": "Implement lifecycle transition: Retiring to Retired",
@@ -1006,7 +619,7 @@
       }
     },
     {
-      "sequence_number": 30,
+      "sequence_number": 19,
       "implementation_unit_id": "iu.rupify.state-transition-2.active-to-retiring",
       "issue_slug": "iu-rupify-state-transition-2-active-to-retiring",
       "title": "Implement lifecycle transition: Active to Retiring",
@@ -1045,7 +658,7 @@
       }
     },
     {
-      "sequence_number": 31,
+      "sequence_number": 20,
       "implementation_unit_id": "iu.rupify.state-transition-2.proposed-to-active",
       "issue_slug": "iu-rupify-state-transition-2-proposed-to-active",
       "title": "Implement lifecycle transition: Proposed to Active",
@@ -1077,7 +690,7 @@
       }
     },
     {
-      "sequence_number": 32,
+      "sequence_number": 21,
       "implementation_unit_id": "iu.rupify.state-transition-2.retiring-to-retired",
       "issue_slug": "iu-rupify-state-transition-2-retiring-to-retired",
       "title": "Implement lifecycle transition: Retiring to Retired",
@@ -1116,7 +729,7 @@
       }
     },
     {
-      "sequence_number": 33,
+      "sequence_number": 22,
       "implementation_unit_id": "iu.rupify.state-transition-3.active-to-retiring",
       "issue_slug": "iu-rupify-state-transition-3-active-to-retiring",
       "title": "Implement lifecycle transition: Active to Retiring",
@@ -1155,7 +768,7 @@
       }
     },
     {
-      "sequence_number": 34,
+      "sequence_number": 23,
       "implementation_unit_id": "iu.rupify.state-transition-3.proposed-to-active",
       "issue_slug": "iu-rupify-state-transition-3-proposed-to-active",
       "title": "Implement lifecycle transition: Proposed to Active",
@@ -1187,7 +800,7 @@
       }
     },
     {
-      "sequence_number": 35,
+      "sequence_number": 24,
       "implementation_unit_id": "iu.rupify.state-transition-3.retiring-to-retired",
       "issue_slug": "iu-rupify-state-transition-3-retiring-to-retired",
       "title": "Implement lifecycle transition: Retiring to Retired",
@@ -1226,7 +839,7 @@
       }
     },
     {
-      "sequence_number": 36,
+      "sequence_number": 25,
       "implementation_unit_id": "iu.rupify.state-transition-4.active-to-deprecated",
       "issue_slug": "iu-rupify-state-transition-4-active-to-deprecated",
       "title": "Implement lifecycle transition: Active to Deprecated",

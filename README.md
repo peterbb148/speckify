@@ -64,6 +64,15 @@ This repository will define the models, transformation logic, and output formats
 to convert UML-based specifications into traceable implementation tasks and test
 definitions.
 
+## Project Status
+
+Speckify is now structured as a public open-source repository with:
+
+- a formal GitHub SpecKit constitution
+- tracked end-to-end demos against real Rupify bundles
+- issue-ready delivery exports for downstream publication systems
+- repository-level CI, CodeQL, Dependabot, and open-source governance files
+
 ## Design Notes
 
 - [GitHub SpecKit Constitution](docs/github-speckit-constitution.md)

@@ -10,9 +10,7 @@ from speckify_tools.rupify_handoff_demo import write_demo_outputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
-)
+RUPIFY_EXPORT = ROOT / "demo" / "it-systems-inventory-v2" / "input" / "speckify-planning-export.json"
 EXPECTED_DEMO_DIR = ROOT / "demo" / "it-systems-inventory-v2"
 
 
@@ -23,6 +21,17 @@ def _relative_files(root: Path) -> list[Path]:
         for path in root.rglob("*")
         if path.is_file()
     )
+
+
+def _normalize_report_markdown(text: str) -> str:
+    """Normalize source-path lines that legitimately vary by execution location."""
+    lines = []
+    for line in text.splitlines():
+        if line.startswith("Source export: "):
+            lines.append("Source export: `<normalized>`")
+        else:
+            lines.append(line)
+    return "\n".join(lines) + ("\n" if text.endswith("\n") else "")
 
 
 class ITSystemsInventoryV2RegressionTests(unittest.TestCase):
@@ -48,8 +57,8 @@ class ITSystemsInventoryV2RegressionTests(unittest.TestCase):
                 expected_path = EXPECTED_DEMO_DIR / relative_path
                 actual_path = actual_demo_dir / relative_path
                 self.assertEqual(
-                    actual_path.read_text(),
-                    expected_path.read_text(),
+                    _normalize_report_markdown(actual_path.read_text()),
+                    _normalize_report_markdown(expected_path.read_text()),
                     msg=f"Mismatch for {relative_path}",
                 )
 

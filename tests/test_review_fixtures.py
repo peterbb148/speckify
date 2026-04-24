@@ -69,31 +69,8 @@ class ReviewFixtureTests(unittest.TestCase):
         bundle = json.loads((DEMO_OUTPUT / "planning-bundle.json").read_text())
         report = analyze_bundle_quality(bundle)
 
-        self.assertEqual(report["warning_count"], 8)
-
-        warning_pairs = {
-            (warning["implementation_unit_id"], warning["kind"])
-            for warning in report["warnings"]
-        }
-        self.assertIn(
-            ("iu.rupify.acceptance-constraint-requirement-2", "very_short_acceptance"),
-            warning_pairs,
-        )
-        self.assertIn(
-            ("iu.rupify.acceptance-constraint-requirement-4", "very_short_acceptance"),
-            warning_pairs,
-        )
-        self.assertIn(
-            ("iu.rupify.non-functional-requirement-2", "very_short_acceptance"),
-            warning_pairs,
-        )
-        self.assertIn(
-            (
-                "iu.rupify.non-functional-requirement-6",
-                "very_short_acceptance",
-            ),
-            warning_pairs,
-        )
+        self.assertEqual(report["warning_count"], 0)
+        self.assertEqual(report["warnings"], [])
 
     def test_loyalty_platform_v2_review_summary_matches_demo_bundle(self) -> None:
         """The second real-world review summary should reflect the loyalty V2 demo bundle."""
@@ -106,8 +83,8 @@ class ReviewFixtureTests(unittest.TestCase):
             review_summary["decomposition_profile"],
             bundle["bundle_metadata"]["decomposition_profile"],
         )
-        self.assertEqual(review_summary["counts"]["implementation_units"], 76)
-        self.assertEqual(review_summary["counts"]["source_anchors"], 62)
+        self.assertEqual(review_summary["counts"]["implementation_units"], 74)
+        self.assertEqual(review_summary["counts"]["source_anchors"], 60)
 
 
 if __name__ == "__main__":

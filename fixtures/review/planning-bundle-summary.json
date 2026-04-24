@@ -2,45 +2,10 @@
   "bundle_id": "bundle.speckify-planning-export",
   "decomposition_profile": "rupify-structural-decomposition-v1",
   "counts": {
-    "source_anchors": 29,
-    "spec_units": 36,
-    "implementation_units": 36,
-    "verification_units": 36,
-    "trace_bundles": 36,
-    "dependency_edges": 14,
-    "assembly_rules": 4,
-    "rendered_issues": 36
-  },
-  "sample_titles": [
-    "Implement constraint: Acceptance Constraint 1",
-    "Implement constraint: Acceptance Constraint 2",
-    "Implement constraint: Acceptance Constraint 3",
-    "Implement constraint: Acceptance Constraint 4",
-    "Implement constraint: Acceptance Constraint 5",
-    "Implement constraint: Acceptance Constraint 6",
-    "Implement constraint: Acceptance Constraint 7",
-    "Implement constraint: Acceptance Constraint 8"
-  ],
-  "quality_signals": {
-    "split_functional_requirement": [
-      "iu.rupify.functional-requirement-1.support-stage-gates",
-      "iu.rupify.functional-requirement-1.support-approval-states"
-    ],
-    "transition_dependencies": [
-      {
-        "id": "dep.rupify.state-transition-1.active-to-retiring.requires-rupify.state-transition-1.proposed-to-active",
-        "from_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
-        "to_implementation_unit_id": "iu.rupify.state-transition-1.proposed-to-active",
-        "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
-      },
-      {
-        "id": "dep.rupify.state-transition-1.retiring-to-retired.requires-rupify.state-transition-1.active-to-retiring",
-        "from_implementation_unit_id": "iu.rupify.state-transition-1.retiring-to-retired",
-        "to_implementation_unit_id": "iu.rupify.state-transition-1.active-to-retiring",
-        "dependency_type": "requires",
-        "reason": "Later lifecycle transitions require the earlier transition in the same source chain."
-      }
-    ]
+    "source_anchors": 18,
+    "implementation_units": 25,
+    "verification_units": 25,
+    "dependency_edges": 9,
+    "assembly_rules": 4
   }
 }

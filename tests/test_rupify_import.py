@@ -14,7 +14,11 @@ from speckify_tools.rupify_import import (
 
 
 RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
+    Path(__file__).resolve().parents[1]
+    / "demo"
+    / "it-systems-inventory-v2"
+    / "input"
+    / "speckify-planning-export.json"
 )
 
 
@@ -27,7 +31,7 @@ class RupifyImportTests(unittest.TestCase):
         self.assertEqual(export.export_metadata.export_kind, "speckify_planning_export")
         self.assertEqual(len(export.elements), 82)
         self.assertEqual(len(export.trace_links), 127)
-        self.assertEqual(export.summary.ready_normative_count, 29)
+        self.assertEqual(export.summary.ready_normative_count, 18)
         element = next(item for item in export.elements if item.id == "functional-requirement-1")
         self.assertEqual(element.attributes, {"requirement_kind": "functional"})
         self.assertEqual(element.semantic_parts, [])
