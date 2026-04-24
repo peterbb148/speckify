@@ -14,7 +14,11 @@ from speckify_tools.rupify_import import (
 
 
 RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
+    Path(__file__).resolve().parents[1]
+    / "demo"
+    / "it-systems-inventory-v2"
+    / "input"
+    / "speckify-planning-export.json"
 )
 
 

@@ -9,9 +9,8 @@ from speckify_tools.bundle_generation import generate_planning_bundle_file
 from speckify_tools.rendering import render_specification_markdown
 
 
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
-)
+ROOT = Path(__file__).resolve().parents[1]
+RUPIFY_EXPORT = ROOT / "demo" / "it-systems-inventory-v2" / "input" / "speckify-planning-export.json"
 
 
 class RenderingTests(unittest.TestCase):

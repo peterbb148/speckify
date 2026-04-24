@@ -11,11 +11,9 @@ from speckify_tools.validation import BundleValidationError, validate_bundle, va
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_DIR = ROOT / "schemas"
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
-)
-LOYALTY_RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json"
+RUPIFY_EXPORT = ROOT / "demo" / "it-systems-inventory-v2" / "input" / "speckify-planning-export.json"
+LOYALTY_RUPIFY_EXPORT = (
+    ROOT / "demo" / "loyalty-platform-v2" / "input" / "speckify-planning-export.json"
 )
 
 

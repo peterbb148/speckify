@@ -1,6 +1,6 @@
 # Rupify Hand-off Import Report
 
-Source export: `/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json`
+Source export: `demo/loyalty-platform-v2/input/speckify-planning-export.json`
 
 Clean import: `true`
 

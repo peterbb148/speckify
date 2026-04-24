@@ -10,13 +10,12 @@ from speckify_tools.rupify_import import import_rupify_export, import_rupify_exp
 from speckify_tools.validation import validate_bundle
 
 
-RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/it-systems-inventory-v2/exports/speckify-planning-export.json"
+ROOT = Path(__file__).resolve().parents[1]
+RUPIFY_EXPORT = ROOT / "demo" / "it-systems-inventory-v2" / "input" / "speckify-planning-export.json"
+LOYALTY_RUPIFY_EXPORT = (
+    ROOT / "demo" / "loyalty-platform-v2" / "input" / "speckify-planning-export.json"
 )
-LOYALTY_RUPIFY_EXPORT = Path(
-    "/Volumes/Data/GitHub/Peterbb148/rupify/examples/loyalty-platform-v2/exports/speckify-planning-export.json"
-)
-SCHEMA_DIR = Path("/Volumes/Data/GitHub/Peterbb148/speckify/schemas")
+SCHEMA_DIR = ROOT / "schemas"
 
 
 class BundleGenerationTests(unittest.TestCase):
