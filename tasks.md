@@ -44,3 +44,4 @@
 - [DONE] 2026-04-21 Define a formal scenario operator from explicit flow-of-events while keeping guards fail-closed
 - [DONE] 2026-04-21 Define issue-ready quality gates for delivery exports
 - [DONE] 2026-04-21 Improve delivery payload quality against issue-ready gates
+- [DONE] 2026-04-24 Prepare Speckify repository files and GitHub config for public open-source release

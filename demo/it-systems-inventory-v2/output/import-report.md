@@ -8,9 +8,9 @@ Clean import: `true`
 
 - Elements: 82
 - Trace links: 127
-- Ready normative elements: 29
-- Importable ready normative elements: 29
-- Blocked or partial normative elements: 29
+- Ready normative elements: 18
+- Importable ready normative elements: 18
+- Blocked or partial normative elements: 40
 
 ## Errors
 

@@ -5,10 +5,10 @@ Project: `speckify-planning-export`
 ## Overview
 
 - Source system: `rupify`
-- Generated implementation units: 36
-- Generated verification units: 36
-- Trace bundles: 36
-- Dependency edges: 14
+- Generated implementation units: 25
+- Generated verification units: 25
+- Trace bundles: 25
+- Dependency edges: 9
 - Assembly rules: 4
 
 ## Implementation Units
@@ -25,61 +25,6 @@ Project: `speckify-planning-export`
   - `iu.rupify.non-functional-requirement-1`
 - Acceptance criteria:
   - UI must be web based
-
-#### Satisfy constraint: SSO
-
-- ID: `iu.rupify.acceptance-constraint-requirement-2`
-- Summary: Deliver behavior that satisfies the constraint 'SSO'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-2` (constraint: `acceptance-constraint-requirement-2`)
-- Dependencies:
-  - `iu.rupify.non-functional-requirement-2`
-- Acceptance criteria:
-  - SSO
-
-#### Satisfy constraint: role-based access
-
-- ID: `iu.rupify.acceptance-constraint-requirement-3`
-- Summary: Deliver behavior that satisfies the constraint 'role-based access'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-3` (constraint: `acceptance-constraint-requirement-3`)
-- Dependencies:
-  - `iu.rupify.non-functional-requirement-3`
-- Acceptance criteria:
-  - role-based access
-
-#### Satisfy constraint: audit trail
-
-- ID: `iu.rupify.acceptance-constraint-requirement-4`
-- Summary: Deliver behavior that satisfies the constraint 'audit trail'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-4` (constraint: `acceptance-constraint-requirement-4`)
-- Dependencies:
-  - `iu.rupify.non-functional-requirement-4`
-- Acceptance criteria:
-  - audit trail
-
-#### Satisfy constraint: search
-
-- ID: `iu.rupify.acceptance-constraint-requirement-5`
-- Summary: Deliver behavior that satisfies the constraint 'search'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-5` (constraint: `acceptance-constraint-requirement-5`)
-- Dependencies:
-  - `iu.rupify.non-functional-requirement-5`
-- Acceptance criteria:
-  - search
-
-#### Satisfy constraint: filtering
-
-- ID: `iu.rupify.acceptance-constraint-requirement-6`
-- Summary: Deliver behavior that satisfies the constraint 'filtering'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-requirement-6` (constraint: `acceptance-constraint-requirement-6`)
-- Dependencies:
-  - `iu.rupify.non-functional-requirement-6`
-- Acceptance criteria:
-  - filtering
 
 #### Satisfy constraint: performance (regular >1s for web page rendering)
 
@@ -102,15 +47,6 @@ Project: `speckify-planning-export`
   - `iu.rupify.non-functional-requirement-8`
 - Acceptance criteria:
   - availability >=99%
-
-#### Satisfy constraint: Better planning of IT systems purchasing and life cycle
-
-- ID: `iu.rupify.acceptance-constraint-success-1`
-- Summary: Deliver behavior that satisfies the constraint 'Better planning of IT systems purchasing and life cycle'.
-- Source lineage:
-  - `anchor.rupify.acceptance-constraints.acceptance-constraint-success-1` (constraint: `acceptance-constraint-success-1`)
-- Acceptance criteria:
-  - Better planning of IT systems purchasing and life cycle
 
 ### Domain Invariants
 
@@ -180,51 +116,6 @@ Project: `speckify-planning-export`
   - `anchor.rupify.non-functional-requirements.non-functional-requirement-1` (requirement: `non_functional-requirement-1`)
 - Acceptance criteria:
   - UI must be web based
-
-#### Satisfy constraint: SSO
-
-- ID: `iu.rupify.non-functional-requirement-2`
-- Summary: Deliver behavior that satisfies the constraint 'SSO'.
-- Source lineage:
-  - `anchor.rupify.non-functional-requirements.non-functional-requirement-2` (requirement: `non_functional-requirement-2`)
-- Acceptance criteria:
-  - SSO
-
-#### Satisfy constraint: role-based access
-
-- ID: `iu.rupify.non-functional-requirement-3`
-- Summary: Deliver behavior that satisfies the constraint 'role-based access'.
-- Source lineage:
-  - `anchor.rupify.non-functional-requirements.non-functional-requirement-3` (requirement: `non_functional-requirement-3`)
-- Acceptance criteria:
-  - role-based access
-
-#### Satisfy constraint: audit trail
-
-- ID: `iu.rupify.non-functional-requirement-4`
-- Summary: Deliver behavior that satisfies the constraint 'audit trail'.
-- Source lineage:
-  - `anchor.rupify.non-functional-requirements.non-functional-requirement-4` (requirement: `non_functional-requirement-4`)
-- Acceptance criteria:
-  - audit trail
-
-#### Satisfy constraint: search
-
-- ID: `iu.rupify.non-functional-requirement-5`
-- Summary: Deliver behavior that satisfies the constraint 'search'.
-- Source lineage:
-  - `anchor.rupify.non-functional-requirements.non-functional-requirement-5` (requirement: `non_functional-requirement-5`)
-- Acceptance criteria:
-  - search
-
-#### Satisfy constraint: filtering
-
-- ID: `iu.rupify.non-functional-requirement-6`
-- Summary: Deliver behavior that satisfies the constraint 'filtering'.
-- Source lineage:
-  - `anchor.rupify.non-functional-requirements.non-functional-requirement-6` (requirement: `non_functional-requirement-6`)
-- Acceptance criteria:
-  - filtering
 
 #### Satisfy constraint: performance (regular >1s for web page rendering)
 

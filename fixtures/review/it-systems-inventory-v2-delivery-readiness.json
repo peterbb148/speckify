@@ -2,8 +2,8 @@
   "bundle_id": "bundle.speckify-planning-export",
   "project_id": "speckify-planning-export",
   "source_system": "rupify",
-  "issue_count": 36,
-  "ready_issue_count": 36,
+  "issue_count": 25,
+  "ready_issue_count": 25,
   "failed_issue_count": 0,
   "publication_ready": true,
   "gate_definitions": [
@@ -73,41 +73,6 @@
       "failures": []
     },
     {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-2",
-      "title": "Satisfy constraint: SSO",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-3",
-      "title": "Satisfy constraint: role-based access",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-4",
-      "title": "Satisfy constraint: audit trail",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-5",
-      "title": "Satisfy constraint: search",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-6",
-      "title": "Satisfy constraint: filtering",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-7",
       "title": "Satisfy constraint: performance (regular >1s for web page rendering)",
       "ready": true,
@@ -117,13 +82,6 @@
     {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-requirement-8",
       "title": "Satisfy constraint: availability >=99%",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "title": "Satisfy constraint: Better planning of IT systems purchasing and life cycle",
       "ready": true,
       "failure_count": 0,
       "failures": []
@@ -173,41 +131,6 @@
     {
       "implementation_unit_id": "iu.rupify.non-functional-requirement-1",
       "title": "Satisfy constraint: UI must be web based",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-2",
-      "title": "Satisfy constraint: SSO",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-3",
-      "title": "Satisfy constraint: role-based access",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-4",
-      "title": "Satisfy constraint: audit trail",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-5",
-      "title": "Satisfy constraint: search",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.non-functional-requirement-6",
-      "title": "Satisfy constraint: filtering",
       "ready": true,
       "failure_count": 0,
       "failures": []

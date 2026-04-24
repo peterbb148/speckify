@@ -2,8 +2,8 @@
   "bundle_id": "bundle.speckify-planning-export",
   "project_id": "speckify-planning-export",
   "source_system": "rupify",
-  "issue_count": 76,
-  "ready_issue_count": 76,
+  "issue_count": 74,
+  "ready_issue_count": 74,
   "failed_issue_count": 0,
   "publication_ready": true,
   "gate_definitions": [
@@ -115,22 +115,8 @@
       "failures": []
     },
     {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-1",
-      "title": "Satisfy constraint: Members can enroll and redeem rewards through one coherent digital journey",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
       "implementation_unit_id": "iu.rupify.acceptance-constraint-success-2",
       "title": "Satisfy constraint: Operations managers can update the reward catalog without engineering support for routine",
-      "ready": true,
-      "failure_count": 0,
-      "failures": []
-    },
-    {
-      "implementation_unit_id": "iu.rupify.acceptance-constraint-success-3",
-      "title": "Satisfy constraint: The business can review redemption and campaign performance in one reporting workflow",
       "ready": true,
       "failure_count": 0,
       "failures": []

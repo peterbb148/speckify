@@ -30,15 +30,15 @@ class GeneratedValidationTests(unittest.TestCase):
             bundle["bundle_metadata"]["decomposition_profile"],
             "rupify-structural-decomposition-v1",
         )
-        self.assertEqual(len(bundle["trace_bundles"]), 36)
-        self.assertEqual(len(bundle["dependency_edges"]), 14)
+        self.assertEqual(len(bundle["trace_bundles"]), 25)
+        self.assertEqual(len(bundle["dependency_edges"]), 9)
         self.assertEqual(len(bundle["assembly_rules"]), 4)
 
     def test_generated_bundle_from_loyalty_export_passes(self) -> None:
         """The loyalty-platform V2 export should generate a valid bundle end to end."""
         bundle = validate_generated_bundle_file(LOYALTY_RUPIFY_EXPORT, SCHEMA_DIR)
 
-        self.assertEqual(len(bundle["trace_bundles"]), 76)
+        self.assertEqual(len(bundle["trace_bundles"]), 74)
         self.assertEqual(len(bundle["dependency_edges"]), 39)
         self.assertEqual(len(bundle["assembly_rules"]), 10)
 

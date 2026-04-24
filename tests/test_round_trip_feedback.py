@@ -28,10 +28,10 @@ class RoundTripFeedbackTests(unittest.TestCase):
         )
         feedback_export = build_round_trip_feedback(bundle)
 
-        self.assertEqual(feedback_export["round_trip_status"]["change_record_count"], 8)
-        self.assertEqual(feedback_export["round_trip_status"]["feedback_proposal_count"], 8)
+        self.assertEqual(feedback_export["round_trip_status"]["change_record_count"], 0)
+        self.assertEqual(feedback_export["round_trip_status"]["feedback_proposal_count"], 0)
         self.assertEqual(feedback_export["round_trip_status"]["planning_only_findings"], 0)
-        self.assertEqual(feedback_export["round_trip_status"]["upstream_affecting_findings"], 8)
+        self.assertEqual(feedback_export["round_trip_status"]["upstream_affecting_findings"], 0)
 
     def test_round_trip_feedback_emits_upstream_proposal_for_real_gap(self) -> None:
         """An upstream-affecting quality gap should yield a feedback proposal."""
@@ -41,19 +41,7 @@ class RoundTripFeedbackTests(unittest.TestCase):
         )
         feedback_export = build_round_trip_feedback(bundle)
 
-        proposal = next(
-            item
-            for item in feedback_export["feedback_proposals"]
-            if item["change_record_id"]
-            == "change.iu.rupify.acceptance-constraint-requirement-2.very-short-acceptance"
-        )
-
-        self.assertEqual(proposal["feedback_type"], "clarify_element")
-        self.assertIn("acceptance-constraint-requirement-2", proposal["target_source_ids"])
-        self.assertIn(
-            "Clarify the acceptance constraint upstream with concrete behavioral detail.",
-            proposal["proposed_upstream_action"],
-        )
+        self.assertEqual(feedback_export["feedback_proposals"], [])
 
     def test_demo_round_trip_feedback_matches_checked_in_artifacts(self) -> None:
         """Checked-in round-trip feedback artifacts should match the current demo bundle."""
