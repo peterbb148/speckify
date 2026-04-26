@@ -58,6 +58,15 @@ Speckify operates downstream of Rupify and upstream of GitHub SpecKit:
   artifacts.
 - GitHub SpecKit consumes those artifacts to drive implementation work.
 
+## How Speckify Fits With Rupify
+
+Speckify is the downstream specification system in the current toolchain. It consumes
+Rupify's published bundles and planning exports, then decomposes that specification into
+implementation-ready work, validation structure, and round-trip feedback proposals.
+
+Rupify defines and packages the specification; Speckify refines that packaged
+specification into delivery planning.
+
 ## Repository Goal
 
 This repository will define the models, transformation logic, and output formats needed
